@@ -20,13 +20,13 @@
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
-
 $colors: (
 
   primary:    #00b1f3,
   secondary: #0c74b0,
   danger:     #f61425,
   light:      #f3f4f5,
+  grey:       #495058,
   dark:       #1d1f20,
 
 );
@@ -66,9 +66,9 @@ $colors: (
 
 
 
-$text-color:                 color($colors, dark) !default;
+$text-color:                 color($colors, grey) !default;
 $link-color:                 color($colors, primary) !default;
-$background-color:           #fff !default;
+$background-color:           white !default;
 $subdued-text-color:         #666 !default;
 
 $font-family-base:           -apple-system, "Helvetica Neue", "Roboto", sans-serif !default;

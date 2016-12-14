@@ -8,6 +8,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import {TeamPage} from "../pages/team/team";
 import {PersonalPage} from "../pages/personal/personal";
 import {WorkPage} from "../pages/work/work";
+import {IonProfileHeader} from "../components/profileheader/ion-profile-header";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {WorkPage} from "../pages/work/work";
     TeamPage,
     PersonalPage,
     WorkPage,
-    TabsPage
+    TabsPage,
+    IonProfileHeader
   ],
   imports: [
     IonicModule.forRoot(MyApp)
