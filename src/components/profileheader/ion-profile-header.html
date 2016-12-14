@@ -1,0 +1,22 @@
+<div class="profile-container">
+  <div
+    class="background-img-container {{_options.background && _options.background.classes}}"
+    [ngStyle]="{
+            'background-image': 'url(' + _options.background.url + ')',
+            'filter': 'blur(' + _options.background.blur.value + ')'
+          }"></div>
+  <div class="background-img-blur" [ngStyle]="{
+          'background-image': 'linear-gradient(to top right, ' + _options.background.blur.colors.start + ' 0%,
+          ' + _options.background.blur.colors.mid + ' 45%, ' + _options.background.blur.colors.end + ' 60%)'
+        }"></div>
+
+  <div class="content-container">
+    <div class="img-container">
+      <img src="{{_options.img.url}}" class="{{_options.img && _options.img.classes}}" />
+    </div>
+    <h2 class="{{_options.name && _options.name.classes}}">{{_options.name.text}}</h2>
+    <h5 *ngIf="_options.subtext && _options.subtext.text" class="{{_options.subtext && _options.subtext.classes}}"
+        [innerHTML]="trustContent(_options.subtext.text)">
+    </h5>
+  </div>
+</div>

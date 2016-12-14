@@ -6,13 +6,25 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar *navbar transparent>
     <ion-title>personal</ion-title>
   </ion-navbar>
 
 </ion-header>
 
+<ion-content class="content-stable">
+  <ion-profile-header [options]="options"></ion-profile-header>
 
-<ion-content padding>
+  <ion-list>
 
+    <ion-item *ngFor="let value of personalMenu">
+      <ion-icon name="{{ value.icon }}" item-left></ion-icon>
+      <h2>{{ value.title }}</h2>
+      <p>{{ value.subtitle }}</p>
+      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </ion-item>
+
+
+
+  </ion-list>
 </ion-content>
