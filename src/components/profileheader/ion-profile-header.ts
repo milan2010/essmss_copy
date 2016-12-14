@@ -9,7 +9,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class IonProfileHeader {
   @Input() options: IonProfileHeaderOptions;
 
-  _options = {};
+  _options;
 
   constructor(private _sanitizer: DomSanitizer) { }
 

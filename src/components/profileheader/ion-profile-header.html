@@ -1,4 +1,4 @@
-<div class="profile-container">
+<div class="profile-container" *ngIf="_options && _options.background">
   <div
     class="background-img-container {{_options.background && _options.background.classes}}"
     [ngStyle]="{
