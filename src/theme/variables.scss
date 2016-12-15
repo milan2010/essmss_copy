@@ -2,7 +2,6 @@
 // http://ionicframework.com/docs/v2/theming/
 @import "ionic.globals";
 
-
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
@@ -30,6 +29,8 @@ $colors: (
   dark:       #1d1f20,
 
 );
+
+
 
 // App iOS Variables
 // --------------------------------------------------
@@ -63,17 +64,16 @@ $colors: (
 // Default Theme
 // ----------------------------------
 
-
-
-
 $text-color:                 color($colors, grey) !default;
 $link-color:                 color($colors, primary) !default;
 $background-color:           white !default;
 $subdued-text-color:         #666 !default;
 
-$font-family-base:           -apple-system, "Helvetica Neue", "Roboto", sans-serif !default;
+$font-family-base:           "VWText", "Roboto", sans-serif;
+$font-family-md-base:         $font-family-base;
+$font-family-wp-base:         $font-family-base;
 $font-size-base:             1.4rem !default; // 1.4rem == 14px
-
+$headings-font-weight:       700;
 $content-padding:            16px !default;
 $content-margin:             16px !default;
 
