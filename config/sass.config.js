@@ -42,8 +42,8 @@ module.exports = {
    */
   includePaths: [
     'node_modules/ionic-angular/themes',
-    'node_modules/ionicons/dist/scss',
-    'node_modules/basscss-sass/scss'
+    'node_modules/basscss-sass/scss',
+    'node_modules/ionicons/dist/scss'
   ],
 
   /**
@@ -71,7 +71,9 @@ module.exports = {
    * to be imported so their values override default variables.
    */
   variableSassFiles: [
-    '{{SRC}}/theme/variables.scss'
+    '{{SRC}}/theme/fonts.scss',
+    '{{SRC}}/theme/variables.scss',
+    '{{SRC}}/theme/components.scss'
   ],
 
   /**
