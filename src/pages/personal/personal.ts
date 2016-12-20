@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
+import { PaystubPage } from '../paystub/paystub';
+
 
 /*
  Generated class for the Personal page.
@@ -30,8 +32,9 @@ export class PersonalPage {
       },
       {
         icon: 'md-document',
-        title: 'Lohnabrechnung',
-        subtitle: 'Aktueller Stand'
+        title: 'Entgeldnachweis',
+        subtitle: 'Aktueller Stand',
+        link: PaystubPage
       },
       {
         icon: 'ios-contact',

@@ -17,7 +17,7 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let value of personalMenu">
+    <ion-item *ngFor="let value of personalMenu" [navPush]='value.link'>
       <ion-icon name="{{ value.icon }}" item-left></ion-icon>
       <h2>{{ value.title }}</h2>
       <p>{{ value.subtitle }}</p>

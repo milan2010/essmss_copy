@@ -9,6 +9,7 @@ import {TeamPage} from "../pages/team/team";
 import {PersonalPage} from "../pages/personal/personal";
 import {WorkPage} from "../pages/work/work";
 import {IonProfileHeader} from "../components/profileheader/ion-profile-header";
+import {PaystubPage} from "../pages/paystub/paystub";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {IonProfileHeader} from "../components/profileheader/ion-profile-header";
     PersonalPage,
     WorkPage,
     TabsPage,
+    PaystubPage,
     IonProfileHeader
   ],
   imports: [
@@ -34,6 +36,7 @@ import {IonProfileHeader} from "../components/profileheader/ion-profile-header";
     TeamPage,
     PersonalPage,
     WorkPage,
+    PaystubPage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
