@@ -2,7 +2,6 @@
 import { Inject } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { LoadingController } from 'ionic-angular';
-import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 
@@ -14,9 +13,9 @@ export class LoginService {
         return new Promise((resolve, reject) => {
             let loading = this.loadingCtrl.create();
             loading.present();
-            
+
             // let headers = new Headers();
-            // headers.append("Authorization", "Basic " + btoa(username + ":" + password)); 
+            // headers.append("Authorization", "Basic " + btoa(username + ":" + password));
             // headers.append("Content-Type", "application/x-www-form-urlencoded");
             // this.http.post('login', {}, headers)
 
@@ -29,7 +28,7 @@ export class LoginService {
                 .catch(function (error: Response) {
                     loading.dismiss();
                     reject(error);
-                })
+                });
         });
     }
 }
