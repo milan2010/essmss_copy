@@ -2,11 +2,11 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
 //Profile Subnavigations
-import { PaystubPage } from "../paystub/paystub";
-import { PersonaldataPage } from "../personaldata/personaldata";
-import { ContactpersonPage } from "../contactperson/contactperson";
-import { AbsencePage } from "../absence/absence";
-import { WorkingtimePage } from "../workingtime/workingtime";
+import {PaystubPage} from "./paystub/paystub";
+import {PersonaldataPage} from "./personaldata/personaldata";
+import {ContactpersonPage} from "./contactperson/contactperson";
+import {AbsencePage} from "./absence/absence";
+import {WorkingtimePage} from "./workingtime/workingtime";
 
 /*
  Generated class for the Personal page.

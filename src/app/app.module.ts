@@ -9,11 +9,11 @@ import { PersonalPage } from "./pages/personal/personal";
 import { WorkPage } from "./pages/work/work";
 import { IonProfileHeader } from "./pages/profileheader/ion-profile-header";
 //Profile Subnavigations
-import { PaystubPage } from "./pages/paystub/paystub";
-import { PersonaldataPage } from "./pages/personaldata/personaldata";
-import { ContactpersonPage } from "./pages/contactperson/contactperson";
-import { AbsencePage } from "./pages/absence/absence";
-import { WorkingtimePage } from "./pages/workingtime/workingtime";
+import { PaystubPage } from "./pages/personal/paystub/paystub";
+import { PersonaldataPage } from "./pages/personal/personaldata/personaldata";
+import { ContactpersonPage } from "./pages/personal/contactperson/contactperson";
+import { AbsencePage } from "./pages/personal/absence/absence";
+import { WorkingtimePage } from "./pages/personal/workingtime/workingtime";
 
 @NgModule({
   declarations: [
