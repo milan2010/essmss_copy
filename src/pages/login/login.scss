@@ -1,0 +1,47 @@
+page-login {
+    $button-width: 250px;
+
+    .start-content {
+        margin: auto !important;
+        text-align: center;
+        padding-top: 55vh;
+        h2 {
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+
+        .message {
+            margin: auto;
+            width: $button-width;
+        }
+    }
+
+    .login-content {
+        padding-top: 55vh;
+
+        form {
+            width: $button-width;
+            margin: auto;
+
+            ion-item {
+                border: none !important;
+                padding: 0;
+                .item-inner {
+                    border: 1px solid black !important;
+                    padding: 0 2.6rem;
+                    border-radius: 64px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    button {
+        margin: auto !important;
+        width: $button-width;
+        display: block !important;
+        span{
+            text-transform: uppercase;
+        }
+    }
+}
