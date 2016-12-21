@@ -8,7 +8,12 @@ import { TeamPage } from "../pages/team/team";
 import { PersonalPage } from "../pages/personal/personal";
 import { WorkPage } from "../pages/work/work";
 import { IonProfileHeader } from "../pages/profileheader/ion-profile-header";
+//Profile Subnavigations
 import { PaystubPage } from "../pages/paystub/paystub";
+import { PersonaldataPage } from "../pages/personaldata/personaldata";
+import { ContactpersonPage } from "../pages/contactperson/contactperson";
+import { AbsencePage } from "../pages/absence/absence";
+import { WorkingtimePage } from "../pages/workingtime/workingtime";
 
 @NgModule({
   declarations: [
@@ -19,8 +24,12 @@ import { PaystubPage } from "../pages/paystub/paystub";
     PersonalPage,
     WorkPage,
     TabsPage,
+    IonProfileHeader,
     PaystubPage,
-    IonProfileHeader
+    PersonaldataPage,
+    ContactpersonPage,
+    AbsencePage,
+    WorkingtimePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -32,9 +41,14 @@ import { PaystubPage } from "../pages/paystub/paystub";
     TeamPage,
     PersonalPage,
     WorkPage,
+    TabsPage,
     PaystubPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    PersonaldataPage,
+    ContactpersonPage,
+    AbsencePage,
+    WorkingtimePage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })

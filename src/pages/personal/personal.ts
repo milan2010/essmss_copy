@@ -1,7 +1,12 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import { PaystubPage } from '../paystub/paystub';
 
+//Profile Subnavigations
+import { PaystubPage } from "../paystub/paystub";
+import { PersonaldataPage } from "../personaldata/personaldata";
+import { ContactpersonPage } from "../contactperson/contactperson";
+import { AbsencePage } from "../absence/absence";
+import { WorkingtimePage } from "../workingtime/workingtime";
 
 /*
  Generated class for the Personal page.
@@ -23,12 +28,14 @@ export class PersonalPage {
       {
         icon: 'md-time',
         title: 'Arbeitszeit',
-        subtitle: 'Aktueller Stand'
+        subtitle: 'Aktueller Stand',
+        link: WorkingtimePage
       },
       {
         icon: 'md-plane',
         title: 'Urlaub & Abwesenheit',
-        subtitle: 'Aktueller Stand'
+        subtitle: 'Aktueller Stand',
+        link: AbsencePage
       },
       {
         icon: 'md-document',
@@ -39,12 +46,14 @@ export class PersonalPage {
       {
         icon: 'ios-contact',
         title: 'Stammdaten',
-        subtitle: 'Aktueller Stand'
+        subtitle: 'Aktueller Stand',
+        link: PersonaldataPage
       },
       {
         icon: 'ios-contacts',
         title: 'Ansprechpartner',
-        subtitle: 'Aktueller Stand'
+        subtitle: 'Aktueller Stand',
+        link: ContactpersonPage
       }];
 
     this.options = {
