@@ -1,0 +1,91 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')",
+				"type": "HCM_PEOPLE_PROFILE_SRV.EmployeeData",
+				"content_type": "application/octet-stream",
+				"media_src": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/$value"
+			},
+			"Employeenumber": "00016218",
+			"Ename": "Reich Frank",
+			"ContentType": "",
+			"PhotoUrl": "",
+			"BldingNo": "",
+			"RoomNo": "",
+			"Phone": "",
+			"Email": "",
+			"OrgunitTxt": "Projekt mobile Arbeit - OE-A",
+			"PositionTxt": "Fachreferent/in für Planung",
+			"City": "",
+			"Country": "",
+			"Localtime": null,
+			"QualificationSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/QualificationSet"
+				}
+			},
+			"TimeRecording": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/TimeRecording"
+				}
+			},
+			"PaystubSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/PaystubSet"
+				}
+			},
+			"CourseSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/CourseSet"
+				}
+			},
+			"ProgressionSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/ProgressionSet"
+				}
+			},
+			"VacationSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/VacationSet"
+				}
+			},
+			"SocialMediaSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/SocialMediaSet"
+				}
+			},
+			"Configuration": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/Configuration"
+				}
+			},
+			"PersonalInfoSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/PersonalInfoSet"
+				}
+			},
+			"NotesSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/NotesSet"
+				}
+			},
+			"CompensationSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/CompensationSet"
+				}
+			},
+			"PerformanceSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/PerformanceSet"
+				}
+			},
+			"TimeBalanceSet": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/TimeBalanceSet"
+				}
+			}
+		}]
+	}
+}

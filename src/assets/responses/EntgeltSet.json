@@ -1,0 +1,174 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='01')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='01')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "01",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='01')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='02')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='02')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "02",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='02')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='03')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='03')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "03",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='03')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='04')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='04')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "04",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='04')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='05')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='05')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "05",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='05')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='06')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='06')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "06",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='06')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='07')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='07')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "07",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='07')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='08')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='08')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "08",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='08')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='09')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='09')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "09",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='09')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='10')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='10')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "10",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='10')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='11')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='11')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "11",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='11')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='12')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='12')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2016",
+			"Monat": "12",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2016',Monat='12')/DETAILS"
+				}
+			}
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2017',Monat='01')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2017',Monat='01')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.Entgelt"
+			},
+			"Jahr": "2017",
+			"Monat": "01",
+			"DETAILS": {
+				"__deferred": {
+					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltSet(Jahr='2017',Monat='01')/DETAILS"
+				}
+			}
+		}]
+	}
+}

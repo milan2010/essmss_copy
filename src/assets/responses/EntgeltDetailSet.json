@@ -1,0 +1,49 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='04',Jahr='2016')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='04',Jahr='2016')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+			},
+			"Bezeichnung": "Gesamtbetrag",
+			"Monat": "04",
+			"Betrag": "5000",
+			"Jahr": "2016",
+			"Einheit": "EUR"
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Money',Monat='01',Jahr='2017')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Money',Monat='01',Jahr='2017')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+			},
+			"Bezeichnung": "Money",
+			"Monat": "01",
+			"Betrag": "1",
+			"Jahr": "2017",
+			"Einheit": "$"
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='01',Jahr='2016')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='01',Jahr='2016')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+			},
+			"Bezeichnung": "Gesamtbetrag",
+			"Monat": "01",
+			"Betrag": "10000",
+			"Jahr": "2016",
+			"Einheit": "EUR"
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='02',Jahr='2016')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='02',Jahr='2016')",
+				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+			},
+			"Bezeichnung": "Gesamtbetrag",
+			"Monat": "02",
+			"Betrag": "300",
+			"Jahr": "2016",
+			"Einheit": "EUR"
+		}]
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanZusatzinfosSet(Bezeichnung='Nachschicht',Id='20161220')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanZusatzinfosSet(Bezeichnung='Nachschicht',Id='20161220')",
+				"type": "/VWK/009_ESS_SCHICHTPLAN_SRV.SchichtplanZusatzinfos"
+			},
+			"Bezeichnung": "Nachschicht",
+			"Id": "20161220",
+			"Betrag": "1",
+			"Einheit": "1"
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanZusatzinfosSet(Bezeichnung='Sp%C3%A4tschicht',Id='20161221')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanZusatzinfosSet(Bezeichnung='Sp%C3%A4tschicht',Id='20161221')",
+				"type": "/VWK/009_ESS_SCHICHTPLAN_SRV.SchichtplanZusatzinfos"
+			},
+			"Bezeichnung": "Spätschicht",
+			"Id": "20161221",
+			"Betrag": "2",
+			"Einheit": "2"
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanZusatzinfosSet(Bezeichnung='Fr%C3%BChschicht',Id='20161222')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanZusatzinfosSet(Bezeichnung='Fr%C3%BChschicht',Id='20161222')",
+				"type": "/VWK/009_ESS_SCHICHTPLAN_SRV.SchichtplanZusatzinfos"
+			},
+			"Bezeichnung": "Frühschicht",
+			"Id": "20161222",
+			"Betrag": "3",
+			"Einheit": "3"
+		}, {
+			"__metadata": {
+				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanZusatzinfosSet(Bezeichnung='Tarifurlaub',Id='20161223')",
+				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanZusatzinfosSet(Bezeichnung='Tarifurlaub',Id='20161223')",
+				"type": "/VWK/009_ESS_SCHICHTPLAN_SRV.SchichtplanZusatzinfos"
+			},
+			"Bezeichnung": "Tarifurlaub",
+			"Id": "20161223",
+			"Betrag": "4",
+			"Einheit": "4"
+		}]
+	}
+}
