@@ -10,7 +10,7 @@ import { TabsPage } from '../tabs/tabs';
 })
 
 export class LoginPage {
-  showStart = false;
+  showStart = true;
   data = this.formBuilder.group({
     username: ['', Validators.required],
     password: ['', Validators.required],
