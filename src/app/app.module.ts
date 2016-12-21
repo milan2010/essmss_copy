@@ -2,18 +2,18 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LoginPage } from './pages/login/login.component';
-import { HubPage } from './pages/hub/hub';
-import { TabsPage } from './pages/tabs/tabs';
-import { TeamPage } from "./pages/team/team";
-import { PersonalPage } from "./pages/personal/personal";
-import { WorkPage } from "./pages/work/work";
-import { IonProfileHeader } from "./pages/profileheader/ion-profile-header";
+import { HubPage } from './pages/hub/hub.components';
+import { TabsPage } from './pages/tabs/tabs.component';
+import { TeamPage } from "./pages/team/team.components";
+import { PersonalPage } from "./pages/personal/personal.components";
+import { WorkPage } from "./pages/work/work.components";
+import { IonProfileHeader } from "./pages/personal/profileheader/ion-profile-header.components";
 //Profile Subnavigations
-import { PaystubPage } from "./pages/personal/paystub/paystub";
-import { PersonaldataPage } from "./pages/personal/personaldata/personaldata";
-import { ContactpersonPage } from "./pages/personal/contactperson/contactperson";
-import { AbsencePage } from "./pages/personal/absence/absence";
-import { WorkingtimePage } from "./pages/personal/workingtime/workingtime";
+import { PaystubPage } from "./pages/personal/paystub/paystub.components";
+import { PersonaldataPage } from "./pages/personal/personaldata/personaldata.components";
+import { ContactpersonPage } from "./pages/personal/contactperson/contactperson.components";
+import { AbsencePage } from "./pages/personal/absence/absence.components";
+import { WorkingtimePage } from "./pages/personal/workingtime/workingtime.components";
 
 @NgModule({
   declarations: [

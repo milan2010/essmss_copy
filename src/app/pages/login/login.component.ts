@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { LoadingController } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { TabsPage } from '../tabs/tabs.component';
 import { LoginService } from './login.service';
 import { UserService } from '../../services/user.service'
 
