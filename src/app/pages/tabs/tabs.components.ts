@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-
 import {HubPage} from '../hub/hub';
 import {TeamPage} from '../team/team';
 import {WorkPage} from '../work/work';

@@ -8,12 +8,6 @@ import {ContactpersonPage} from "./contactperson/contactperson";
 import {AbsencePage} from "./absence/absence";
 import {WorkingtimePage} from "./workingtime/workingtime";
 
-/*
- Generated class for the Personal page.
-
- See http://ionicframework.com/docs/v2/components/#navigation for more info on
- Ionic pages and navigation.
- */
 @Component({
   selector: 'page-personal',
   templateUrl: 'personal.html'

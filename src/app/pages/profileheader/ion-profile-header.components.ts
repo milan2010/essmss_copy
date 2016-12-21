@@ -1,5 +1,5 @@
-import { Component, Input, SimpleChange} from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import {Component, Input, SimpleChange} from '@angular/core';
+import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 //import { Content } from 'ionic-angular'
 
 @Component({
@@ -11,7 +11,8 @@ export class IonProfileHeader {
 
   _options;
 
-  constructor(private _sanitizer: DomSanitizer) { }
+  constructor(private _sanitizer: DomSanitizer) {
+  }
 
   ngOnInit() {
     if (this.options === undefined || this.options === null) {
@@ -20,7 +21,7 @@ export class IonProfileHeader {
     this._options = this.options;
   }
 
-  ngOnChanges(changes: { [propName: string]: SimpleChange }) {
+  ngOnChanges(changes: {[propName: string]: SimpleChange}) {
     let o: SimpleChange = changes['options'];
     if (this.options && o && !o.isFirstChange()) {
       console.log('updating options');
