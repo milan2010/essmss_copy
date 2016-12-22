@@ -1,12 +1,11 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
 
-//Profile Subnavigations
 import {PaystubPage} from "./paystub/paystub.components";
 import {PersonaldataPage} from "./personaldata/personaldata.components";
 import {ContactpersonPage} from "./contactperson/contactperson.components";
 import {AbsencePage} from "./absence/absence.components";
 import {WorkingtimePage} from "./workingtime/workingtime.components";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'page-personal',
@@ -16,8 +15,11 @@ export class PersonalPage {
   test: string;
   personalMenu: any[];
   options: any;
+  userData: null;
 
-  constructor(public navCtrl: NavController) {
+  constructor(private userService: UserService) {
+    this.userData = userService.getData();
+
     this.personalMenu = [
       {
         icon: 'md-time',

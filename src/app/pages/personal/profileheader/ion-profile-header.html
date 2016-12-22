@@ -1,22 +1,15 @@
-<div class="profile-container" *ngIf="_options && _options.background">
-  <div
-    class="background-img-container {{_options.background && _options.background.classes}}"
-    [ngStyle]="{
-            'background-image': 'url(' + _options.background.url + ')',
-            'filter': 'blur(' + _options.background.blur.value + ')'
-          }"></div>
-  <div class="background-img-blur" [ngStyle]="{
-          'background-image': 'linear-gradient(to top right, ' + _options.background.blur.colors.start + ' 0%,
-          ' + _options.background.blur.colors.mid + ' 45%, ' + _options.background.blur.colors.end + ' 60%)'
-        }"></div>
-
-  <div class="content-container">
+<ion-row>
+  <ion-col width-25>
     <div class="img-container">
-      <img src="{{_options.img.url}}" class="{{_options.img && _options.img.classes}}"/>
+      <img src="assets/img/bernd.png"/>
     </div>
-    <h2 class="{{_options.name && _options.name.classes}}">{{_options.name.text}}</h2>
-    <h5 *ngIf="_options.subtext && _options.subtext.text" class="{{_options.subtext && _options.subtext.classes}}"
-        [innerHTML]="trustContent(_options.subtext.text)">
-    </h5>
-  </div>
-</div>
+  </ion-col>
+
+  <ion-col width-75>
+    <div class="content-container">
+      <span class="user-name">{{data.Ename}}</span>
+      <span class="user-position">{{data.PositionTxt}}</span>
+      <span class="user-orgaunit"><ion-icon name="pin"></ion-icon>{{data.OrgunitTxt}}</span>
+    </div>
+  </ion-col>
+</ion-row>

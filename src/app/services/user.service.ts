@@ -17,4 +17,8 @@ export class UserService {
   isLoggedIn(): boolean {
     return !!this.user;
   }
+
+  getData() {
+    return this.user;
+  }
 }
