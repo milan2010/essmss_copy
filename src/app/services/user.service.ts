@@ -3,6 +3,7 @@ import {Injectable} from "@angular/core";
 @Injectable()
 export class UserService {
     user = null;
+
     constructor() {
         this.user = JSON.parse(localStorage.getItem("user"));
      }

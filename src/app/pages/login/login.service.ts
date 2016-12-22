@@ -1,5 +1,5 @@
 import {Inject, Injectable} from '@angular/core';
-import {Http, Response, Headers} from '@angular/http';
+import {Http, Response} from '@angular/http';
 import {LoadingController} from 'ionic-angular';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
@@ -32,4 +32,5 @@ export class LoginService {
         });
     });
   }
+
 }
