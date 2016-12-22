@@ -1,19 +1,19 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { LoginPage } from './pages/login/login.component';
-import { HubPage } from './pages/hub/hub.components';
-import { TabsPage } from './pages/tabs/tabs.component';
-import { TeamPage } from "./pages/team/team.components";
-import { PersonalPage } from "./pages/personal/personal.components";
-import { WorkPage } from "./pages/work/work.components";
-import { IonProfileHeader } from "./pages/personal/profileheader/ion-profile-header.components";
-//Profile Subnavigations
-import { PaystubPage } from "./pages/personal/paystub/paystub.components";
-import { PersonaldataPage } from "./pages/personal/personaldata/personaldata.components";
-import { ContactpersonPage } from "./pages/personal/contactperson/contactperson.components";
-import { AbsencePage } from "./pages/personal/absence/absence.components";
-import { WorkingtimePage } from "./pages/personal/workingtime/workingtime.components";
+import {NgModule, ErrorHandler} from '@angular/core';
+import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
+
+import {MyApp} from './app.component';
+import {LoginPage} from './pages/login/login.component';
+import {HubPage} from './pages/hub/hub.components';
+import {TabsPage} from './pages/tabs/tabs.component';
+import {TeamPage} from "./pages/team/team.components";
+import {PersonalPage} from "./pages/personal/personal.components";
+import {WorkPage} from "./pages/work/work.components";
+import {IonProfileHeader} from "./pages/personal/profileheader/ion-profile-header.components";
+import {PaystubPage} from "./pages/personal/paystub/paystub.components";
+import {PersonaldataPage} from "./pages/personal/personaldata/personaldata.components";
+import {ContactpersonPage} from "./pages/personal/contactperson/contactperson.components";
+import {AbsencePage} from "./pages/personal/absence/absence.components";
+import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.components";
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { WorkingtimePage } from "./pages/personal/workingtime/workingtime.compon
     AbsencePage,
     WorkingtimePage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
-export class AppModule { }
+export class AppModule {
+}

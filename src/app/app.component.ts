@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
-import { UserService } from './services/user.service';
-import { LoginPage } from './pages/login/login.component';
-import { TabsPage } from './pages/tabs/tabs.component';
+import {Component} from '@angular/core';
+import {Platform} from 'ionic-angular';
+import {StatusBar, Splashscreen} from 'ionic-native';
+
+import {UserService} from './services/user.service';
+import {LoginPage} from './pages/login/login.component';
+import {TabsPage} from './pages/tabs/tabs.component';
 
 @Component({
   templateUrl: 'app.html',
