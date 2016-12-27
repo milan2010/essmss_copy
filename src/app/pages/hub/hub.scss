@@ -1,20 +1,43 @@
-.home-page-content {
+page-home {
 
-  .scroll-content {
-    .top-selection {
-      height: 25vh;
-      color: white;
-      background-image: url("../assets/img/header3.jpeg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 35%;
+  ion-header {
+    .toolbar-background {
+      background: #2284b9;
+      border-bottom: #2284b9;
     }
 
-
-    .middle-content {
-      background: #2da3d2;
-      height: 50vh;
+    .toolbar-title {
       color: white;
+    }
+  }
+
+  .home-header {
+    position: relative;
+
+    .welcome-header {
+      background: #2284b9;
+      padding: 15px;
+      span {
+        color: white;
+        font-size: 28px;
+        display: block;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    ion-profile-header {
+      padding-bottom: 10px;
+    }
+
+    ion-fab {
+      bottom: -25px;
+      button {
+        background-color: #2875aa;
+        ion-icon {
+          //color: white;
+        }
+      }
     }
   }
 }

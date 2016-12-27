@@ -1,24 +1,33 @@
 <ion-header>
   <ion-navbar>
-    <ion-buttons start>
-      <button ion-button icon-only>
-        <ion-icon name="cloud-circle"></ion-icon>
-      </button>
-    </ion-buttons>
-
-    <ion-title start>V.io</ion-title>
+    <ion-title start>SEIT GESTERN</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="home-page-content">
-  <div class="row top-selection padding">
-    <div class="flex justify-around mt2">
-      <h1 class="regular">Guten Morgen <b>Bernd</b>!</h1>
-      <div class="mt1">
-        <img src="assets/img/white-cloud.svg" width="70px"><br>
-      <span>6° Wolfsburg</span></div>
-    </div>
-  </div>
+
+  <ion-row class="home-header">
+    <ion-col no-padding>
+      <ion-row class="welcome-header">
+        <ion-col>
+          <span class="welcome-message">Guten Morgen,</span>
+          <span class="welcome-name">{{userData.Ename}}!</span>
+        </ion-col>
+      </ion-row>
+
+      <ion-profile-header [data]="userData"></ion-profile-header>
+
+      <ion-fab right edge>
+        <button ion-fab><ion-icon name="arrow-dropleft"></ion-icon></button>
+        <ion-fab-list>
+          <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+          <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+          <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+          <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-col>
+  </ion-row>
 
   <ion-card>
     <img src="assets/img/header4.jpeg"/>
