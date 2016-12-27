@@ -1,17 +1,21 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {TeamService} from "./team.service";
 
 @Component({
   selector: 'page-team',
-  templateUrl: 'team.html'
+  templateUrl: 'team.html',
+  providers: [TeamService]
 })
 export class TeamPage {
+  team = null;
 
-  constructor(public navCtrl: NavController) {
+  constructor(private teamService: TeamService) {
+    teamService.getTeam()
+      .then(data => {
+        this.team = data;
+      })
+      .catch(error => {
+        console.log(error);
+      })
   }
-
-  ionViewDidLoad() {
-    console.log('Hello TeamPage Page');
-  }
-
 }

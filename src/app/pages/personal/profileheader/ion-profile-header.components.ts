@@ -1,4 +1,4 @@
-import {Component, Input, SimpleChange} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'ion-profile-header',
@@ -10,5 +10,3 @@ export class IonProfileHeader {
   constructor() {
   }
 }
-
-
