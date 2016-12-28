@@ -5,20 +5,23 @@ import {Http, Response} from "@angular/http";
 @Injectable()
 export class TeamService {
 
+  private team: Object = null;
+
   constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
 
   }
 
   getTeam() {
-    return new Promise((resolve, reject) => {
+    return new Promise<Object>((resolve, reject) => {
       let loading = this.loadingCtrl.create();
       loading.present();
 
       this.http.get('assets/responses/Team.json', {})
         .toPromise()
-        .then(function (res: Response) {
+        .then(res => {
           loading.dismiss();
-          resolve(res.json().d.results[0]);
+          this.team = res.json().d.results[0];
+          resolve(this.team);
         })
         .catch(function (error: Response) {
           loading.dismiss();
@@ -26,5 +29,4 @@ export class TeamService {
         });
     });
   }
-
 }

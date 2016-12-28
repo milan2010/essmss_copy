@@ -1,5 +1,8 @@
 import {Component} from '@angular/core';
+
 import {TeamService} from "./team.service";
+import {TeamMembersPage} from "./members/members.components";
+import {NavController} from "ionic-angular";
 
 @Component({
   selector: 'page-team',
@@ -9,7 +12,7 @@ import {TeamService} from "./team.service";
 export class TeamPage {
   team = null;
 
-  constructor(private teamService: TeamService) {
+  constructor(private nav: NavController, private teamService: TeamService) {
     teamService.getTeam()
       .then(data => {
         this.team = data;
@@ -17,5 +20,9 @@ export class TeamPage {
       .catch(error => {
         console.log(error);
       })
+  }
+
+  goToMembers() {
+    this.nav.push(TeamMembersPage);
   }
 }

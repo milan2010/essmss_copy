@@ -14,6 +14,7 @@ import {PersonaldataPage} from "./pages/personal/personaldata/personaldata.compo
 import {ContactpersonPage} from "./pages/personal/contactperson/contactperson.components";
 import {AbsencePage} from "./pages/personal/absence/absence.components";
 import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.components";
+import {TeamMembersPage} from "./pages/team/members/members.components";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.componen
     LoginPage,
     HubPage,
     TeamPage,
+    TeamMembersPage,
     PersonalPage,
     WorkPage,
     TabsPage,
@@ -39,6 +41,7 @@ import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.componen
     MyApp,
     HubPage,
     TeamPage,
+    TeamMembersPage,
     PersonalPage,
     WorkPage,
     TabsPage,
