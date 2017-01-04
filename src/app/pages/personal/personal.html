@@ -10,7 +10,11 @@
   <ion-list>
 
     <ion-item *ngFor="let value of personalMenu" [navPush]='value.link'>
-      <ion-icon name="{{ value.icon }}" item-left></ion-icon>
+
+      <ion-avatar item-left class="item-avatar">
+        <ion-icon name="{{ value.icon }}"></ion-icon>
+      </ion-avatar>
+
       <h2>{{ value.title }}</h2>
       <p>{{ value.subtitle }}</p>
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>

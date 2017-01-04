@@ -1,3 +1,11 @@
 page-team-members {
 
+  ion-icon {
+    &.ion-md-mail {
+      margin-right: 25px !important;
+    }
+    &.item-icon {
+      color: #00a8e8;
+    }
+  }
 }
