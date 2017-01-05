@@ -30,6 +30,9 @@ $colors: (
 
 );
 
+$grey-light: lighten(color($colors, grey), 25%);
+$grey-dark: darken(color($colors, grey), 5%);
+
 
 
 // App iOS Variables
@@ -69,7 +72,7 @@ $link-color:                 color($colors, primary) !default;
 $background-color:           white !default;
 $subdued-text-color:         #666 !default;
 
-$font-family-base:           "VWText", "Roboto", sans-serif;
+$font-family-base:           "VWTextRegular", "Roboto", sans-serif;
 $font-family-md-base:         $font-family-base;
 $font-family-wp-base:         $font-family-base;
 $font-size-base:             1.4rem !default; // 1.4rem == 14px

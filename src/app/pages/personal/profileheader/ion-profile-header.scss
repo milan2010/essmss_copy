@@ -2,7 +2,12 @@ ion-profile-header {
   display: block;
 
   ion-item {
-    background-color: #2284b9 !important;
+    // Needs latest Compass, add '@import "compass"' to your scss
+    // Permalink - use to edit and share this gradient:
+    // http://colorzilla.com/gradient-editor/#2284b9+0,04ace5+100
+    background-color: #2284b9; // Old browsers
+    @include gradient-vertical(#2284b9, #04ace5);
+
     p {
       color: white !important;
     }

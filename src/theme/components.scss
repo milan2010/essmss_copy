@@ -1,0 +1,33 @@
+//Toolbar
+
+.toolbar {
+  &-content {
+    top: 15px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &-title{
+    text-align: center;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: "VWTextLight", "Roboto", sans-serif;
+}
+
+//Icons
+
+.ion-ios-arrow-forward {
+  color: $grey-light;
+}
+
+.list-ios > .item-block:first-child {
+  border: none !important;
+}
+
+.list-ios > .item-block:last-child {
+  border: none !important;
+}

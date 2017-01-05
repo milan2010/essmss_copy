@@ -7,6 +7,8 @@
 <ion-content class="home-page-content">
 
   <ion-row class="home-header">
+
+
     <ion-col no-padding>
       <ion-row class="welcome-header">
         <ion-col>
@@ -18,29 +20,45 @@
       <ion-profile-header [data]="userData"></ion-profile-header>
 
       <ion-fab right edge>
-        <button ion-fab><ion-icon name="funnel"></ion-icon></button>
-        <ion-fab-list>
-          <button ion-fab><ion-icon name="heart"></ion-icon></button>
-          <button ion-fab><ion-icon name="calendar"></ion-icon></button>
-          <button ion-fab><ion-icon name="information"></ion-icon></button>
-          <button ion-fab><ion-icon name="paper"></ion-icon></button>
+        <button ion-fab>
+          <ion-icon name="funnel"></ion-icon>
+        </button>
+        <ion-fab-list side="left">
+          <button ion-fab>
+            <ion-icon name="heart"></ion-icon>
+          </button>
+          <button ion-fab>
+            <ion-icon name="calendar"></ion-icon>
+          </button>
+          <button ion-fab>
+            <ion-icon name="information"></ion-icon>
+          </button>
+          <button ion-fab>
+            <ion-icon name="paper"></ion-icon>
+          </button>
         </ion-fab-list>
       </ion-fab>
     </ion-col>
   </ion-row>
-
-  <ion-card>
-    <img src="assets/img/header4.jpeg"/>
-    <ion-card-content>
-      <ion-card-title>
-        Traumhafte Winterwelt
-        <p>16 Dezember 2016</p>
-      </ion-card-title>
-      <p>
-        Sechs Wochen voller wunderbarer Winterüberraschungen: Vom 25. November bis zum 8. Januar verwandelt sich unsere Park- und Lagunenlandschaft in eine traumhafte Winterwelt. Ein weitläufiger Wintermarkt mit Kaminhaus und festlich geschmücktem Tannenbaum lädt zum Bummeln und Entspannen ein. Wer Lust auf Aktivität hat, kann die rund 6.000 qm große Eislauffläche erobern, Kinder die große Schneewelt entdecken. Neu sind in diesem Jahr rund 15-minütige Eisrevuen mit dem Thema „Sound of Movies“, bei denen professionelle Eistänzer vier Mal täglich eigens choreografierte Shows zeigen.
-      </p>
-    </ion-card-content>
-  </ion-card>
-
-
+  <ion-list *ngIf="news">
+    <ion-card *ngFor="let article of news.articles">
+      <img src="{{article.urlToImage}}"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{article.title}}
+          <p>{{article.publishedAt | date:'dd.MM.yyyy'}}</p>
+        </ion-card-title>
+        <p>
+          {{article.description}}
+        </p>
+      </ion-card-content>
+      <ion-row no-padding>
+        <ion-col text-right>
+          <button ion-button clear small color="primary">
+            <ion-icon name='heart'></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
 </ion-content>
