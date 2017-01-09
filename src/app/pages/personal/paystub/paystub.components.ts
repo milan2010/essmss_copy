@@ -1,4 +1,4 @@
-import { PaystubService } from '../../../services/paystub.service'
+import {PaystubService} from '../../../services/paystub.service'
 
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
@@ -10,9 +10,9 @@ import {NavController} from 'ionic-angular';
 })
 export class PaystubPage {
   payStubData = null;
+
   constructor(public navCtrl: NavController, private paystubService: PaystubService) {
   }
-
 
 
   ionViewDidLoad() {

@@ -30,7 +30,7 @@ export class LoginPage {
     this.loginService.auth(this.data.username, this.data.password)
       .then(data => {
         this.userService.setUser(data);
-        this.navCtrl.push(TabsPage, {});
+        this.navCtrl.push(TabsPage);
       })
       .catch(error => {
         console.log(error);

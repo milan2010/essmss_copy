@@ -15,7 +15,7 @@ export class PersonalPage {
   test: string;
   personalMenu: any[];
   options: any;
-  userData: null;
+  userData:Object = null;
 
   constructor(private userService: UserService) {
     this.userData = userService.getData();
