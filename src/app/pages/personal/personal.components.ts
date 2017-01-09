@@ -6,10 +6,13 @@ import {ContactpersonPage} from "./contactperson/contactperson.components";
 import {AbsencePage} from "./absence/absence.components";
 import {WorkingtimePage} from "./workingtime/workingtime.components";
 import {UserService} from "../../services/user.service";
+import {LoginPage} from "../login/login.component";
+import {NavController} from "ionic-angular";
 
 @Component({
   selector: 'page-personal',
-  templateUrl: 'personal.html'
+  templateUrl: 'personal.html',
+  providers: [UserService]
 })
 export class PersonalPage {
   test: string;
@@ -17,8 +20,8 @@ export class PersonalPage {
   options: any;
   userData:Object = null;
 
-  constructor(private userService: UserService) {
-    this.userData = userService.getData();
+  constructor(private userService: UserService, public navCtrl: NavController) {
+    this.userData = this.userService.getData();
 
     this.personalMenu = [
       {
@@ -85,4 +88,8 @@ export class PersonalPage {
     console.log('Hello PersonalPage Page');
   }
 
+  logOut = function () {
+    this.userService.logOut();
+    window.location.reload();
+  }
 }
