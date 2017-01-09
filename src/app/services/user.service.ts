@@ -8,9 +8,13 @@ export class UserService {
   }
 
   setUser(userData) {
-    console.log(userData);
     this.user = userData;
     localStorage.setItem('user', JSON.stringify(this.user));
+  }
+
+  logOut() {
+    this.user = null;
+    localStorage.removeItem('user');
   }
 
   isLoggedIn(): boolean {
