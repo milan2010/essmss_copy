@@ -15,6 +15,7 @@ import {ContactpersonPage} from "./pages/personal/contactperson/contactperson.co
 import {AbsencePage} from "./pages/personal/absence/absence.components";
 import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.components";
 import {TeamMembersPage} from "./pages/team/members/members.components";
+import {SettingsPage} from "./pages/settings/settings.component";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {TeamMembersPage} from "./pages/team/members/members.components";
     PersonaldataPage,
     ContactpersonPage,
     AbsencePage,
-    WorkingtimePage
+    WorkingtimePage,
+    SettingsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -51,7 +53,8 @@ import {TeamMembersPage} from "./pages/team/members/members.components";
     PersonaldataPage,
     ContactpersonPage,
     AbsencePage,
-    WorkingtimePage
+    WorkingtimePage,
+    SettingsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
