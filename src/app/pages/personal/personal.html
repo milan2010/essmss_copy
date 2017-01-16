@@ -1,16 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button icon-only menuToggle>
-    </button>
-
-    <ion-title start>PROFIL</ion-title>
-
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="white" (click)="goToSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>PROFIL</ion-title>
     <ion-buttons right>
       <button ion-button icon-only (click)="logOut()">
         <ion-icon name="md-exit" color="white"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="content-stable">
