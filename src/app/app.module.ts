@@ -16,6 +16,8 @@ import {AbsencePage} from "./pages/personal/absence/absence.components";
 import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.components";
 import {TeamMembersPage} from "./pages/team/members/members.components";
 import {Calendar} from "./shared/calendar/calendar.component";
+import {SettingsPage} from "./pages/settings/settings.component";
+import {ChatPage} from "./pages/chat/chat.component";
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import {Calendar} from "./shared/calendar/calendar.component";
     ContactpersonPage,
     AbsencePage,
     WorkingtimePage,
-    Calendar
+    Calendar,
+    SettingsPage,
+    ChatPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -53,7 +57,9 @@ import {Calendar} from "./shared/calendar/calendar.component";
     PersonaldataPage,
     ContactpersonPage,
     AbsencePage,
-    WorkingtimePage
+    WorkingtimePage,
+    SettingsPage,
+    ChatPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

@@ -13,7 +13,7 @@ import {UserService} from '../../services/user.service'
 })
 
 export class LoginPage {
-  showStart = false;
+  showStart = true;
   data = this.formBuilder.group({
     username: ['', Validators.required],
     password: ['', Validators.required],
@@ -27,7 +27,7 @@ export class LoginPage {
       return;
     }
 
-    this.loginService.auth(this.data.username, this.data.password)
+    this.loginService.auth(this.data.value.username, this.data.value.password)
       .then(data => {
         this.userService.setUser(data);
         this.navCtrl.push(TabsPage);

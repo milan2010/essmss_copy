@@ -1,5 +1,4 @@
 //Toolbar
-
 .toolbar {
   &-content {
     top: 15px;
@@ -30,4 +29,15 @@
 
 .list-ios > .item-block:last-child {
   border: none !important;
+}
+
+//Toast
+
+.toast {
+    &-success {
+      &.toast-ios .toast-message, .toast-md .toast-message  {
+        text-align: center;
+        background-color: color($colors, success);
+      }
+    }
 }

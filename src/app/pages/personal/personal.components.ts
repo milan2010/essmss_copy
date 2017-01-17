@@ -6,8 +6,9 @@ import {ContactpersonPage} from "./contactperson/contactperson.components";
 import {AbsencePage} from "./absence/absence.components";
 import {WorkingtimePage} from "./workingtime/workingtime.components";
 import {UserService} from "../../services/user.service";
-import {LoginPage} from "../login/login.component";
+//import {LoginPage} from "../login/login.component";
 import {NavController} from "ionic-angular";
+import {SettingsPage} from "../settings/settings.component";
 
 @Component({
   selector: 'page-personal',
@@ -18,7 +19,7 @@ export class PersonalPage {
   test: string;
   personalMenu: any[];
   options: any;
-  userData:Object = null;
+  userData: Object = null;
 
   constructor(private userService: UserService, public navCtrl: NavController) {
     this.userData = this.userService.getData();
@@ -91,5 +92,9 @@ export class PersonalPage {
   logOut = function () {
     this.userService.logOut();
     window.location.reload();
+  };
+
+  goToSettings = function () {
+    this.navCtrl.push(SettingsPage);
   }
 }

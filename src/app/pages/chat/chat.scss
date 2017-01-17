@@ -1,0 +1,12 @@
+.chat {
+  margin-bottom: .5em;
+  &-incoming {
+    background-color: rgba(0, 177, 243, 0.29);
+    border-radius: 0 1rem 1rem 1rem;
+  }
+
+  &-outgoing{
+    background-color: rgba(106, 187, 0, 0.29);
+    border-radius: 1rem 1rem 0 1rem;
+  }
+}
