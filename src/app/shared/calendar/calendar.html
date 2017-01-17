@@ -1,0 +1,26 @@
+<div class="calendar-header">
+  <ion-icon name="md-arrow-dropleft-circle" (click)="previous()"></ion-icon>
+  <span>{{month.format("MMMM YYYY")}}</span>
+  <ion-icon name="md-arrow-dropright-circle" (click)="next()"></ion-icon>
+</div>
+
+<div class="week names">
+  <span class="day">Su</span>
+  <span class="day">Mo</span>
+  <span class="day">Tu</span>
+  <span class="day">We</span>
+  <span class="day">Th</span>
+  <span class="day">Fr</span>
+  <span class="day">Sa</span>
+</div>
+
+<div class="week" *ngFor="let week of weeks">
+  <div class="day" (click)="select(day)" *ngFor="let day of week.days" [ngClass]="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }">
+    <span class="number">
+      {{day.number}}
+    </span>
+    <span class="letter">
+      S
+    </span>
+  </div>
+</div>
