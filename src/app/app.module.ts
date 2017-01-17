@@ -33,7 +33,8 @@ import {SettingsPage} from "./pages/settings/settings.component";
     ContactpersonPage,
     AbsencePage,
     WorkingtimePage,
-    SettingsPage
+    SettingsPage,
+
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -54,7 +55,8 @@ import {SettingsPage} from "./pages/settings/settings.component";
     ContactpersonPage,
     AbsencePage,
     WorkingtimePage,
-    SettingsPage
+    SettingsPage,
+
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
