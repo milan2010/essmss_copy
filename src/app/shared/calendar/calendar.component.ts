@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
@@ -7,6 +7,7 @@ import * as moment from 'moment';
 })
 export class Calendar {
 
+  @Input() data = [];
   selected = null;
   month = null;
   weeks = [];
@@ -27,15 +28,15 @@ export class Calendar {
 
   next = function () {
     let next = this.month.clone();
-    this.removeTime(next.month(next.month() + 1)).date(1);
-    this.month.month(this.month.month() + 1);
+    this.removeTime(next.add(1, 'months').startOf('month').startOf('week'));
+    this.month.add(1, 'months');
     this.buildMonth(next);
   };
 
   previous = function () {
     let previous = this.month.clone();
-    this.removeTime(previous.month(previous.month() - 1).date(1));
-    this.month.month(this.month.month() - 1);
+    this.removeTime(previous.subtract(1, 'months').startOf('month').startOf('week'));
+    this.month.subtract(1, 'months');
     this.buildMonth(previous);
   };
 
@@ -58,13 +59,34 @@ export class Calendar {
   buildWeek = function (date, month) {
     let days = [];
     for (let i = 0; i < 7; i++) {
-      days.push({
+
+      let day = {
         name: date.format("dd").substring(0, 1),
         number: date.date(),
         isCurrentMonth: date.month() === month.month(),
         isToday: date.isSame(new Date(), "day"),
-        date: date
-      });
+        date: date,
+        plan: {}
+      };
+
+      for (let j = 0; j < this.data.length; j++) {
+
+        if (this.data[j]) {
+          let datePlan = moment(this.data[j].Datum);
+
+          if (day.date.month() === datePlan.month() && day.date.date() === datePlan.date()) {
+            day.plan = {
+              begin : this.data[j].Beguz,
+              end: this.data[j].Enduz,
+              type : this.data[j].Kuerzel,
+              background: this.data[j].Background
+            }
+          }
+        }
+
+      }
+
+      days.push(day);
       date = date.clone();
       date.add(1, "d");
     }

@@ -15,12 +15,13 @@
 </div>
 
 <div class="week" *ngFor="let week of weeks">
-  <div class="day" (click)="select(day)" *ngFor="let day of week.days" [ngClass]="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }">
+  <div class="day" (click)="select(day)" *ngFor="let day of week.days" [ngClass]="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), plan: day.plan.background }"
+       [style.backgroundColor]="day.plan.background">
     <span class="number">
       {{day.number}}
     </span>
     <span class="letter">
-      S
+      {{day.plan.type ? day.plan.type : ''}}
     </span>
   </div>
 </div>

@@ -7,6 +7,6 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <calendar *ngIf="workingTimeData" [data]="workingTimeData"></calendar>
 </ion-content>
