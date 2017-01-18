@@ -8,7 +8,10 @@ import * as moment from 'moment';
 export class Calendar {
 
   @Input() data = [];
-  selected = null;
+  selected = {
+    date: null,
+    plan: null
+  };
   month = null;
   weeks = [];
 
@@ -16,17 +19,17 @@ export class Calendar {
   }
 
   ngOnChanges() {
-    this.selected = this.removeTime(this.selected || moment());
-    this.month = this.selected.clone();
+    this.selected.date = this.removeTime(this.selected.date || moment());
+    this.month = this.selected.date.clone();
 
-    let start = this.selected.clone();
+    let start = this.selected.date.clone();
     start.date(1);
     this.removeTime(start.day(0));
     this.buildMonth(start);
   }
 
   select = function (day) {
-    this.selected = day.date;
+    this.selected = day;
   };
 
   next = function () {
@@ -78,11 +81,11 @@ export class Calendar {
 
           if (day.date.month() === datePlan.month() && day.date.date() === datePlan.date()) {
             day.plan = {
-              begin : this.data[j].Beguz,
-              end: this.data[j].Enduz,
-              type : this.data[j].Kuerzel,
+              begin: this.parseTime(this.data[j].Beguz),
+              end: this.parseTime(this.data[j].Enduz),
+              type: this.data[j].Kuerzel,
               background: this.data[j].Background
-            }
+            };
           }
         }
 
@@ -94,4 +97,16 @@ export class Calendar {
     }
     return days;
   };
+
+  parseTime = function (time) {
+    let h = time.slice(time.indexOf('H') - 2, time.indexOf('H'));
+    let m = time.slice(time.indexOf('M') - 2, time.indexOf('M'));
+    let s = time.slice(time.indexOf('S') - 2, time.indexOf('S'));
+    return h + ':' + m + (s === '00' ? '' : s) + ' Uhr';
+  };
+
+  getLongDateFormat = function () {
+    return this.selected.date.format('dddd, DD. MMMM YYYY');
+    // return 'Donnerstag, 06. Dezember 2016';
+  }
 }
