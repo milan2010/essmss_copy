@@ -8,7 +8,7 @@ import {WorkingTimeService} from "./workingtime.services";
   providers: [WorkingTimeService]
 })
 export class WorkingtimePage {
-  workingTimeData:Object = null;
+  workingTimeData:Object = [];
 
   constructor(public navCtrl: NavController, private workingTimeService: WorkingTimeService) {
     workingTimeService.getData()
@@ -20,9 +20,4 @@ export class WorkingtimePage {
         console.log(error);
       })
   }
-
-  ionViewDidLoad() {
-    console.log('Hello WorkingtimePage Page');
-  }
-
 }

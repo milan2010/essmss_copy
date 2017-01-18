@@ -13,6 +13,9 @@ export class Calendar {
   weeks = [];
 
   constructor() {
+  }
+
+  ngOnChanges() {
     this.selected = this.removeTime(this.selected || moment());
     this.month = this.selected.clone();
 
@@ -45,7 +48,6 @@ export class Calendar {
   };
 
   buildMonth = function (start) {
-    console.log(start);
     this.weeks = [];
     let done = false, date = start.clone(), monthIndex = date.month(), count = 0;
     while (!done) {
