@@ -14,6 +14,7 @@ export class Calendar {
   };
   month = null;
   weeks = [];
+  types = [];
 
   constructor() {
   }
@@ -71,7 +72,12 @@ export class Calendar {
         isCurrentMonth: date.month() === month.month(),
         isToday: date.isSame(new Date(), "day"),
         date: date,
-        plan: {}
+        plan: {
+          begin: null,
+          end: null,
+          type: null,
+          background: null
+        }
       };
 
       for (let j = 0; j < this.data.length; j++) {
@@ -86,6 +92,20 @@ export class Calendar {
               type: this.data[j].Kuerzel,
               background: this.data[j].Background
             };
+
+            let addType = true;
+            for (let t = 0; t < this.types.length; t++) {
+              if (this.types[t].id === day.plan.type) {
+                addType = false;
+                break;
+              }
+            }
+            if (addType) {
+              this.types.push({
+                id: day.plan.type,
+                background: day.plan.background
+              })
+            }
           }
         }
 

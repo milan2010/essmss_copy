@@ -1,7 +1,7 @@
 <div class="calendar-header">
-  <ion-icon name="md-arrow-dropleft-circle" (click)="previous()"></ion-icon>
+  <ion-icon name="arrow-back" (click)="previous()"></ion-icon>
   <span>{{month.format("MMMM YYYY")}}</span>
-  <ion-icon name="md-arrow-dropright-circle" (click)="next()"></ion-icon>
+  <ion-icon name="arrow-forward" (click)="next()"></ion-icon>
 </div>
 
 <div class="week names">
@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<div class="selected-day-info" padding="" *ngIf="selected.date">
+<div class="selected-day-info" *ngIf="selected.date">
   <div class="long-date-format">
     <h3>{{getLongDateFormat()}}</h3>
   </div>
@@ -42,4 +42,13 @@
     <span>Überstunden</span>
     <span class="right">1</span>
   </div>
+</div>
+
+<div class="plan-types" *ngFor="let type of types">
+  <span class="type-badge" [style.backgroundColor]="type.background">
+    {{type.id}}
+  </span>
+  <span class="type-name">
+    schichit
+  </span>
 </div>
