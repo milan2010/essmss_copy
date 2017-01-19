@@ -1,69 +1,114 @@
 {
-	"d": {
-		"results": [{
-			"__metadata": {
-				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161220')",
-				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161220')",
-				"type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
-			},
-			"Beguz": "PT22H00M00S",
-			"Id": "20161220",
-			"Datum": "\/Date(1482192000000)\/",
-			"Enduz": "PT06H00M00S",
-			"Kuerzel": "N",
-			"Zusatzinfos": {
-				"__deferred": {
-					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161220')/Zusatzinfos"
-				}
-			}
-		}, {
-			"__metadata": {
-				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161221')",
-				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161221')",
-				"type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
-			},
-			"Beguz": "PT14H00M00S",
-			"Id": "20161221",
-			"Datum": "\/Date(1482278400000)\/",
-			"Enduz": "PT22H00M00S",
-			"Kuerzel": "S",
-			"Zusatzinfos": {
-				"__deferred": {
-					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161221')/Zusatzinfos"
-				}
-			}
-		}, {
-			"__metadata": {
-				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161222')",
-				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161222')",
-				"type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
-			},
-			"Beguz": "PT06H00M00S",
-			"Id": "20161222",
-			"Datum": "\/Date(1482364800000)\/",
-			"Enduz": "PT14H00M00S",
-			"Kuerzel": "F",
-			"Zusatzinfos": {
-				"__deferred": {
-					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161222')/Zusatzinfos"
-				}
-			}
-		}, {
-			"__metadata": {
-				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')",
-				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')",
-				"type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
-			},
-			"Beguz": "PT08H00M00S",
-			"Id": "20161223",
-			"Datum": "\/Date(1482451200000)\/",
-			"Enduz": "PT16H00M00S",
-			"Kuerzel": "TU",
-			"Zusatzinfos": {
-				"__deferred": {
-					"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')/Zusatzinfos"
-				}
-			}
-		}]
-	}
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161220')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161220')",
+          "type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
+        },
+        "Beguz": "PT22H00M00S",
+        "Id": "20161220",
+        "Datum": "\/Date(1482192000000)\/",
+        "Enduz": "PT06H00M00S",
+        "Kuerzel": "N",
+        "Background": "#00355a",
+        "Zusatzinfos": {
+          "__deferred": {
+            "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161220')/Zusatzinfos"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161221')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161221')",
+          "type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
+        },
+        "Beguz": "PT14H00M00S",
+        "Id": "20161221",
+        "Datum": "\/Date(1482278400000)\/",
+        "Enduz": "PT22H00M00S",
+        "Kuerzel": "S",
+        "Background": "#00a8e8",
+        "Zusatzinfos": {
+          "__deferred": {
+            "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161221')/Zusatzinfos"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161222')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161222')",
+          "type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
+        },
+        "Beguz": "PT06H00M00S",
+        "Id": "20161222",
+        "Datum": "\/Date(1482364800000)\/",
+        "Enduz": "PT14H00M00S",
+        "Kuerzel": "F",
+        "Background": "#1e69a2",
+        "Zusatzinfos": {
+          "__deferred": {
+            "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161222')/Zusatzinfos"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')",
+          "type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
+        },
+        "Beguz": "PT08H00M00S",
+        "Id": "20161223",
+        "Datum": "\/Date(1482451200000)\/",
+        "Enduz": "PT16H00M00S",
+        "Kuerzel": "TU",
+        "Background": "#e1e1e1",
+        "Zusatzinfos": {
+          "__deferred": {
+            "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')/Zusatzinfos"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')",
+          "type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
+        },
+        "Beguz": "PT08H00M00S",
+        "Id": "20170121",
+        "Datum": "\/Date(1485043200000)\/",
+        "Enduz": "PT16H00M00S",
+        "Kuerzel": "TU",
+        "Background": "#e1e1e1",
+        "Zusatzinfos": {
+          "__deferred": {
+            "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')/Zusatzinfos"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')",
+          "type": "/VWK/009_ESS_SCHICHTPLAN_SRV.Schichtplan"
+        },
+        "Beguz": "PT08H00M00S",
+        "Id": "20170121",
+        "Datum": "\/Date(1485129600000)\/",
+        "Enduz": "PT16H00M00S",
+        "Kuerzel": "TU",
+        "Background": "#e1e1e1",
+        "Zusatzinfos": {
+          "__deferred": {
+            "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')/Zusatzinfos"
+          }
+        }
+      }
+    ]
+  }
 }

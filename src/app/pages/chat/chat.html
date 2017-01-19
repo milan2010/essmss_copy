@@ -16,8 +16,9 @@
 <ion-content padding>
 
   <ion-list no-lines>
-    <ion-item text-wrap primary *ngFor='let message of messages' class="chat chat-incoming">
+    <ion-item text-wrap primary *ngFor='let message of messages' class="chat chat-incoming" [ngClass]="{'chat-incoming': !message.incoming, 'chat-outgoing': message.incoming}">
       <h2>{{message.author}}</h2>
+      <small class="text-color-grey-light">{{message.createdAt | date: 'dd.MM.yyyy'}}</small>
       <p>{{message.content}}</p>
     </ion-item>
   </ion-list>
@@ -27,8 +28,8 @@
 <ion-footer>
   <ion-list class="mar-no">
     <ion-item>
-      <ion-input type="text" placeholder="Deine Nachricht"></ion-input>
-      <button ion-button outline item-right>Senden</button>
+      <ion-input type="text" placeholder="Deine Nachricht" [(ngModel)]="m.content"></ion-input>
+      <button ion-button outline item-right (click)="sendMessage(m)">Senden</button>
     </ion-item>
   </ion-list>
 

@@ -11,20 +11,32 @@ import {NavController} from 'ionic-angular';
   selector: 'page-chat',
   templateUrl: 'chat.html'
 })
+
 export class ChatPage {
+
+  m = {};
 
   messages = [{
     author: 'Finn',
     content: 'Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien.',
-    incoming: 0
+    incoming: 0,
+    createdAt: new Date()
   },
     {
       author: 'Bernd',
       content: 'Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen.',
-      incoming: 1
+      incoming: 1,
+      createdAt: new Date()
     }];
 
   constructor(public navCtrl: NavController) {
+  }
+
+  sendMessage(message){
+    console.log(message);
+    Object.assign({createdAt: new Date()}, message);
+
+    this.messages.push(message);
   }
 
   ionViewDidLoad() {
