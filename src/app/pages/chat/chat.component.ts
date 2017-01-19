@@ -14,7 +14,10 @@ import {NavController} from 'ionic-angular';
 
 export class ChatPage {
 
-  m = {};
+  m = {
+      author: 'Finn',
+      incoming: 0
+  };
 
   messages = [{
     author: 'Finn',
@@ -33,10 +36,10 @@ export class ChatPage {
   }
 
   sendMessage(message){
-    console.log(message);
-    Object.assign({createdAt: new Date()}, message);
-
-    this.messages.push(message);
+    let completeMessage = Object.assign({createdAt: new Date()}, message);
+    message.content = "";
+    
+    this.messages.push(completeMessage);
   }
 
   ionViewDidLoad() {
