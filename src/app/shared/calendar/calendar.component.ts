@@ -53,6 +53,7 @@ export class Calendar {
 
   buildMonth = function (start) {
     this.weeks = [];
+    this.types = [];
     let done = false, date = start.clone(), monthIndex = date.month(), count = 0;
     while (!done) {
       this.weeks.push({days: this.buildWeek(date.clone(), this.month)});
