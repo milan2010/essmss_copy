@@ -1,49 +1,66 @@
 {
-	"d": {
-		"results": [{
-			"__metadata": {
-				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='04',Jahr='2016')",
-				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='04',Jahr='2016')",
-				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
-			},
-			"Bezeichnung": "Gesamtbetrag",
-			"Monat": "04",
-			"Betrag": "5000",
-			"Jahr": "2016",
-			"Einheit": "EUR"
-		}, {
-			"__metadata": {
-				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Money',Monat='01',Jahr='2017')",
-				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Money',Monat='01',Jahr='2017')",
-				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
-			},
-			"Bezeichnung": "Money",
-			"Monat": "01",
-			"Betrag": "1",
-			"Jahr": "2017",
-			"Einheit": "$"
-		}, {
-			"__metadata": {
-				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='01',Jahr='2016')",
-				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='01',Jahr='2016')",
-				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
-			},
-			"Bezeichnung": "Gesamtbetrag",
-			"Monat": "01",
-			"Betrag": "10000",
-			"Jahr": "2016",
-			"Einheit": "EUR"
-		}, {
-			"__metadata": {
-				"id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='02',Jahr='2016')",
-				"uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag',Monat='02',Jahr='2016')",
-				"type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
-			},
-			"Bezeichnung": "Gesamtbetrag",
-			"Monat": "02",
-			"Betrag": "300",
-			"Jahr": "2016",
-			"Einheit": "EUR"
-		}]
-	}
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag%20Brutto',Monat='08',Jahr='2016')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag%20Brutto',Monat='08',Jahr='2016')",
+          "type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+        },
+        "Bezeichnung": "Gesamtbetrag Brutto",
+        "Monat": "08",
+        "Betrag": "2016",
+        "Jahr": "2016",
+        "Einheit": "EUR"
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag%20Netto',Monat='08',Jahr='2016')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Gesamtbetrag%20Netto',Monat='08',Jahr='2016')",
+          "type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+        },
+        "Bezeichnung": "Gesamtbetrag Netto",
+        "Monat": "08",
+        "Betrag": "1916 ",
+        "Jahr": "2016",
+        "Einheit": "EUR"
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Verg%C3%BCtete%20Mehrarbeit',Monat='08',Jahr='2016')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Verg%C3%BCtete%20Mehrarbeit',Monat='08',Jahr='2016')",
+          "type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+        },
+        "Bezeichnung": "Vergütete Mehrarbeit",
+        "Monat": "08",
+        "Betrag": "80.0 ",
+        "Jahr": "2016",
+        "Einheit": "$"
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Bargeldlose%20Aufwertung',Monat='01',Jahr='2016')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Bargeldlose%20Aufwertung',Monat='01',Jahr='2016')",
+          "type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+        },
+        "Bezeichnung": "Bargeldlose Aufwertung",
+        "Monat": "01",
+        "Betrag": "16.0 ",
+        "Jahr": "2016",
+        "Einheit": "EUR"
+      },
+      {
+        "__metadata": {
+          "id": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Telefonabrechnung%20privat',Monat='08',Jahr='2016')",
+          "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_ENTGELTNACHWEIS_SRV/EntgeltDetailSet(Bezeichnung='Telefonabrechnung%20privat',Monat='08',Jahr='2016')",
+          "type": "/VWK/009_ESS_ENTGELTNACHWEIS_SRV.EntgeltDetail"
+        },
+        "Bezeichnung": "Telefonabrechnung privat",
+        "Monat": "08",
+        "Betrag": "1.6 ",
+        "Jahr": "2016",
+        "Einheit": "EUR"
+      }
+    ]
+  }
 }
