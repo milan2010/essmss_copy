@@ -1,102 +1,49 @@
 import {Inject} from '@angular/core';
-import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {Http, Headers} from '@angular/http';
+import {Component, OnInit, OnDestroy} from '@angular/core';
+import {FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {ChatService} from '../../services/chat.service'
 
-/*
- Generated class for the Chat page.
-
- See http://ionicframework.com/docs/v2/components/#navigation for more info on
- Ionic pages and navigation.
- */
 @Component({
   selector: 'page-chat',
-  templateUrl: 'chat.html'
+  templateUrl: 'chat.html',
+  providers: [ChatService]
 })
+export class ChatPage implements OnInit, OnDestroy {
+  chatForm: FormGroup;
+  messages = [];
+  connection;
+  status;
 
-export class ChatPage {
-
-  userId = 10815; // TODO: get ID from user object
-  chatbotId = 99999;
-  key = this.getKey();
-
-  m = {
-      author: 'Bernd',
-      incoming: 1
-  };
-
-  messages = [
-  {
-    author: 'Bernd',
-    content: 'Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen.',
-    incoming: 1,
-    createdAt: new Date()
-  },
-  {
-    author: 'Finn',
-    content: 'Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien.',
-    incoming: 0,
-    createdAt: new Date()
-  }];
-
-  constructor(public navCtrl: NavController, @Inject(Http) private http: Http) {
+  constructor(private _fb: FormBuilder, private _cs: ChatService) {
   }
   
-  getKey() {
-    let date = new Date();
-    let today = date.getFullYear() + "-" + ('0' + (date.getMonth() + 1)).slice(-2) + "-" + ('0' + date.getDate()).slice(-2);
-      
-    return today + "-" + this.userId + "-" + this.chatbotId;
+  sendMessage() {
+    if(this.chatForm.valid) {
+      this._cs.sendMessage(this.chatForm.value.message);
+      this.chatForm.reset();
+    }
   }
 
-  sendMessage(message){
-    let newMessage = Object.assign({createdAt: new Date()}, message);
-    message.content = "";
-    
-    this.messages.push(newMessage);
-    
-    // TODO: Add backend service and activate method saveMessage()
-    // this.saveMessage(); 
-  }
+  ngOnInit() {
+    this.connection = this._cs.getMessages().subscribe(message => {
+      this.messages.unshift(message);
+      this.status = true;
+    });
 
-  ionViewDidLoad() {
-    console.log('Hello ChatPage Page');
-    
-    // TODO: Add backend service and activate method readMessage()
-    //this.readMessage(); 
-  }
-  
-  // TODO: Adjust to http.post with body
-  // TODO: Send only one message to the server not the whole message object
-  saveMessage() {
-      let headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      
-      let messageJson = { message : this.messages };
-      
-      this.http.get('http://localhost:3000/messages/'+this.key+'/'+JSON.stringify(messageJson), {headers})
-      .subscribe(res => {
-          console.log(res);
-      }, (err) => {
-          console.log(err);
-      });
-  }
-  
-  readMessage() {
-      let headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      
-      this.http.get('http://localhost:3000/messages/'+this.key, {headers})
-      .subscribe(res => {
-          console.log(res);
-          if(res.text().length > 0) {
-              let messageJson = res.json();
-              this.messages = messageJson.message;
-          }
-      }, (err) => {
-          console.log(err);
-      });
-  }
+    this._cs.checkStatus().then(status => {
+      this.status = status;
+    }, error => {
+      this.status = error;
+    });
 
+    this.chatForm = new FormGroup( {
+      'message': new FormControl( '', [ Validators.required, Validators.minLength(2) ] )
+    });
+  } // ngOnInit()
 
+  ngOnDestroy() {
+    this.connection.unsubscribe();
+  }
 }

@@ -1,6 +1,12 @@
 {
   "name": "myV",
-  "app_id": "",
+  "app_id": "eea083e3",
   "v2": true,
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://cors.api.com/api"
+    }
+  ],
   "typescript": true
 }
