@@ -36,11 +36,11 @@ calendar {
       cursor: pointer;
     }
 
-    > .ion-ios-arrow-back {
+    > .left-arrow {
       text-align: left;
     }
 
-    > .ion-ios-arrow-forward {
+    > .right-arrow {
       text-align: right;
       margin-left: $icon-width*-1;
     }

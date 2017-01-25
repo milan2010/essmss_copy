@@ -101,6 +101,7 @@ export class Calendar {
                 break;
               }
             }
+
             if (addType) {
               this.types.push({
                 id: day.plan.type,
