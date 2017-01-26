@@ -1,9 +1,11 @@
 import {Component, Input} from '@angular/core';
 import * as moment from 'moment';
+import {CalendarTypesService} from "../../services/calendar-types.service";
 
 @Component({
   selector: 'calendar',
-  templateUrl: 'calendar.html'
+  templateUrl: 'calendar.html',
+  providers: [CalendarTypesService]
 })
 export class Calendar {
 
@@ -15,10 +17,19 @@ export class Calendar {
   };
   month = null;
   weeks = [];
-  types = [];
+  types = {};
 
-  constructor() {
+  constructor(private calendarTypesService: CalendarTypesService) {
     this.weekDays = moment().localeData().weekdaysShort();
+
+    calendarTypesService.getData()
+      .then(data => {
+        this.types = data;
+        console.log(this.types);
+      })
+      .catch(error => {
+        console.log(error);
+      })
   }
 
   ngOnChanges() {
@@ -96,20 +107,20 @@ export class Calendar {
               background: this.data[j].Background
             };
 
-            let addType = true;
-            for (let t = 0; t < this.types.length; t++) {
-              if (this.types[t].id === day.plan.type) {
-                addType = false;
-                break;
-              }
-            }
-
-            if (addType) {
-              this.types.push({
-                id: day.plan.type,
-                background: day.plan.background
-              })
-            }
+            // let addType = true;
+            // for (let t = 0; t < this.types.length; t++) {
+            //   if (this.types[t].id === day.plan.type) {
+            //     addType = false;
+            //     break;
+            //   }
+            // }
+            //
+            // if (addType) {
+            //   this.types.push({
+            //     id: day.plan.type,
+            //     background: day.plan.background
+            //   })
+            // }
           }
         }
 

@@ -1,0 +1,24 @@
+{
+  "d": {
+    "results": [
+      {
+        "id": "1",
+        "name": "Spätschicht",
+        "symbol": "S",
+        "background": "#00a8e8"
+      },
+      {
+        "id": "2",
+        "name": "Frühsschicht",
+        "symbol": "F",
+        "background": "#1e69a2"
+      },
+      {
+        "id": "3",
+        "name": "Nachtschicht",
+        "symbol": "N",
+        "background": "#00355a"
+      }
+    ]
+  }
+}

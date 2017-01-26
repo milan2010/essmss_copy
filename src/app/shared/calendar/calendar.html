@@ -40,9 +40,9 @@
 
 <div class="plan-types" *ngFor="let type of types">
   <span class="type-badge" [style.backgroundColor]="type.background">
-    {{type.id}}
+    {{type.symbol}}
   </span>
   <span class="type-name">
-    schichit
+    {{type.name}}
   </span>
 </div>

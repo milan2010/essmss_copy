@@ -13,11 +13,11 @@
     <div class="expense-info" *ngIf="expanded===item.id && item.expense">
       <div class="expense-info-title">
         <span>{{item.expense.name}}</span>
-        <span class="right">{{item.expense.total | currency:item.expense.currency  }} {{item.expense.currency}}</span>
+        <span class="right">{{item.expense.total }} {{item.expense.currency}}</span>
       </div>
       <div class="expense-info-detail">
         <span>Zuschläge gesamt</span>
-        <span class="right">{{item.expense.totalSubcharge | currency:item.expense.currency  }} {{item.expense.currency}}</span>
+        <span class="right">{{item.expense.totalSubcharge  }} {{item.expense.currency}}</span>
       </div>
       <div class="expense-info-detail">
         <span>Entnahme Überstunden</span>
