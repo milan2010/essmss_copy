@@ -17,7 +17,7 @@ export class Calendar {
   };
   month = null;
   weeks = [];
-  types = {};
+  types = [];
 
   constructor(private calendarTypesService: CalendarTypesService) {
     this.weekDays = moment().localeData().weekdaysShort();

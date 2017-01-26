@@ -4,14 +4,14 @@ import {LoadingController} from "ionic-angular";
 @Injectable()
 export class CalendarTypesService {
 
-  private data: Object = null;
+  private data: Array<String> = null;
 
   constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
 
   }
 
   getData() {
-    return new Promise<Object>((resolve, reject) => {
+    return new Promise<Array<String>>((resolve, reject) => {
       let loading = this.loadingCtrl.create();
       loading.present();
 
