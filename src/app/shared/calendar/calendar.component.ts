@@ -113,6 +113,10 @@ export class Calendar {
 
       }
 
+      if (day.isToday) {
+        this.select(day);
+      }
+
       days.push(day);
       date = date.clone();
       date.add(1, "d");

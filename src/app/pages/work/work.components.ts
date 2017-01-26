@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
 
 @Component({
   selector: 'page-work',
@@ -7,10 +7,7 @@ import { NavController } from 'ionic-angular';
 })
 export class WorkPage {
 
-  constructor(public navCtrl: NavController) {}
-
-  ionViewDidLoad() {
-    console.log('Hello WorkPage Page');
+  constructor(public navCtrl: NavController) {
   }
 
 }
