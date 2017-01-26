@@ -5,13 +5,7 @@
 </div>
 
 <div class="week names">
-  <span class="day">Su</span>
-  <span class="day">Mo</span>
-  <span class="day">Tu</span>
-  <span class="day">We</span>
-  <span class="day">Th</span>
-  <span class="day">Fr</span>
-  <span class="day">Sa</span>
+  <span class="day" *ngFor="let day of weekDays">{{day}}</span>
 </div>
 
 <div class="week" *ngFor="let week of weeks">
