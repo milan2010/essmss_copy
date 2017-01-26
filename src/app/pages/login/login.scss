@@ -43,12 +43,15 @@ page-login {
     .login-content {
     
     	color: white;
+    	margin: auto !important;
+        text-align: center;
 
 	    ion-img {
 	    	width: 20vh;
 	    	height: 20vh;
 	    	margin: 0 auto;
 	    	margin-top: 10rem;
+	    	background-color: inherit;
 	    }
 	    
 	    form ion-item {
