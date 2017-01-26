@@ -38,11 +38,13 @@ calendar {
 
     > .left-arrow {
       text-align: left;
+      padding-left: 25px;
     }
 
     > .right-arrow {
       text-align: right;
       margin-left: $icon-width*-1;
+      padding-right: 25px;
     }
 
     > span {
