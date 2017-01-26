@@ -1,3 +1,70 @@
 page-paystub {
+  $item-padding: 25px;
 
+  expense-item-list {
+    display: block;
+
+    expense-item-list {
+      .expense-item {
+        .item {
+          z-index: 99;
+        }
+      }
+    }
+
+    .list {
+      margin: 0;
+    }
+
+    .expense-item {
+      .item {
+        padding: 0;
+        box-shadow: 0px 10px 30px 0px #e6e6e6;
+        z-index: 100;
+        .item-inner {
+          padding: 0 $item-padding;
+          .year-month-title {
+            padding: 5px 0;
+            font-size: 18px;
+            color: black;
+          }
+
+          .date-range {
+            padding: 5px 0;
+            .icon {
+              padding-right: 5px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .expense-info {
+        padding: 10px $item-padding;
+        background: #f1f1f1;
+        color: black;
+        border-bottom: 1px solid #ccc;
+
+        .expense-info-title {
+          padding: 10px 0;
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        .expense-info-detail {
+          padding: 10px 0;
+        }
+
+        .right {
+          float: right;
+        }
+
+        button {
+          width: 250px;
+          margin: 20px auto;
+          display: block;
+        }
+      }
+    }
+  }
 }

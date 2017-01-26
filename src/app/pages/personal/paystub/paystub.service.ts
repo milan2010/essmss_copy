@@ -1,14 +1,13 @@
+import {Http, Response} from '@angular/http';
 import {Injectable, Inject} from "@angular/core";
-import {Http, Response} from "@angular/http";
 import {LoadingController} from "ionic-angular";
 
 @Injectable()
-export class WorkingTimeService {
+export class PaystubService {
 
   private data: Object = null;
 
   constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
-
   }
 
   getData() {
@@ -16,7 +15,7 @@ export class WorkingTimeService {
       let loading = this.loadingCtrl.create();
       loading.present();
 
-      this.http.get('assets/responses/SchichtplanSet.json', {})
+      this.http.get('assets/responses/EntgeltDetailSet.json', {})
         .toPromise()
         .then(res => {
           loading.dismiss();
