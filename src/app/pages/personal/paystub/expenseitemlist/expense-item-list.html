@@ -1,0 +1,41 @@
+<ion-list>
+  <div class="expense-item" *ngFor="let item of list">
+    <ion-item (click)="expand(item.id)">
+      <p class="year-month-title">{{item.name}}</p>
+      <p class="date-range"><ion-icon name="md-calendar"></ion-icon>{{item.fromTo}}</p>
+
+      <ion-icon name="ios-arrow-forward" item-right *ngIf="expanded!==item.id"></ion-icon>
+      <ion-icon name="ios-arrow-down" item-right *ngIf="expanded===item.id"></ion-icon>
+    </ion-item>
+
+    <expense-item-list *ngIf="expanded===item.id && item.subItems" [list]="item.subItems"></expense-item-list>
+
+    <div class="expense-info" *ngIf="expanded===item.id && item.expense">
+      <div class="expense-info-title">
+        <span>{{item.expense.name}}</span>
+        <span class="right">{{item.expense.total | currency:item.expense.currency  }} {{item.expense.currency}}</span>
+      </div>
+      <div class="expense-info-detail">
+        <span>Zuschläge gesamt</span>
+        <span class="right">{{item.expense.totalSubcharge | currency:item.expense.currency  }} {{item.expense.currency}}</span>
+      </div>
+      <div class="expense-info-detail">
+        <span>Entnahme Überstunden</span>
+        <span class="right">45 MIN</span>
+      </div>
+      <div class="expense-info-detail">
+        <span>Zulauf Überstunden</span>
+        <span class="right">30 MIN</span>
+      </div>
+      <div class="expense-info-detail">
+        <span>Zulauf Überstunden</span>
+        <span class="right">30 MIN</span>
+      </div>
+      <div class="expense-info-detail">
+        <span>Aufwertung Ausweis</span>
+        <span class="right">-6,00 EUR</span>
+      </div>
+      <button ion-button round>HERUNTERLADEN</button>
+    </div>
+  </div>
+</ion-list>

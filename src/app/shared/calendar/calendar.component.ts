@@ -8,6 +8,7 @@ import * as moment from 'moment';
 export class Calendar {
 
   @Input() data = [];
+  weekDays = [];
   selected = {
     date: null,
     plan: null
@@ -17,6 +18,7 @@ export class Calendar {
   types = [];
 
   constructor() {
+    this.weekDays = moment().localeData().weekdaysShort();
   }
 
   ngOnChanges() {
@@ -101,6 +103,7 @@ export class Calendar {
                 break;
               }
             }
+
             if (addType) {
               this.types.push({
                 id: day.plan.type,
@@ -110,6 +113,10 @@ export class Calendar {
           }
         }
 
+      }
+
+      if (day.isToday) {
+        this.select(day);
       }
 
       days.push(day);

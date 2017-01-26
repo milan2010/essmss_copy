@@ -18,6 +18,7 @@ import {TeamMembersPage} from "./pages/team/members/members.components";
 import {Calendar} from "./shared/calendar/calendar.component";
 import {SettingsPage} from "./pages/settings/settings.component";
 import {ChatPage} from "./pages/chat/chat.component";
+import {ExpenseItemList} from "./pages/personal/paystub/expenseitemlist/expense-item-list";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {ChatPage} from "./pages/chat/chat.component";
     WorkingtimePage,
     Calendar,
     SettingsPage,
-    ChatPage
+    ChatPage,
+    ExpenseItemList
   ],
   imports: [
     IonicModule.forRoot(MyApp)

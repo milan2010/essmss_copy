@@ -8,13 +8,12 @@ import {WorkingTimeService} from "./workingtime.services";
   providers: [WorkingTimeService]
 })
 export class WorkingtimePage {
-  workingTimeData:Object = [];
+  workingTimeData: Object = [];
 
   constructor(public navCtrl: NavController, private workingTimeService: WorkingTimeService) {
     workingTimeService.getData()
       .then(data => {
         this.workingTimeData = data;
-        console.log(this.workingTimeData);
       })
       .catch(error => {
         console.log(error);

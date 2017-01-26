@@ -1,17 +1,11 @@
 <div class="calendar-header">
-  <ion-icon name="arrow-back" (click)="previous()"></ion-icon>
+  <ion-icon name="arrow-back" (click)="previous()" class="left-arrow"></ion-icon>
   <span>{{month.format("MMMM YYYY")}}</span>
-  <ion-icon name="arrow-forward" (click)="next()"></ion-icon>
+  <ion-icon name="arrow-forward" (click)="next()" class="right-arrow"></ion-icon>
 </div>
 
 <div class="week names">
-  <span class="day">Su</span>
-  <span class="day">Mo</span>
-  <span class="day">Tu</span>
-  <span class="day">We</span>
-  <span class="day">Th</span>
-  <span class="day">Fr</span>
-  <span class="day">Sa</span>
+  <span class="day" *ngFor="let day of weekDays">{{day}}</span>
 </div>
 
 <div class="week" *ngFor="let week of weeks">
@@ -32,16 +26,16 @@
   </div>
   <div class="selected-day-start">
     <span>Beginn Arbeitszeit</span>
-    <span class="right">{{ selected.plan ? selected.plan.begin : '-' }}</span>
+    <span class="right">{{ selected.plan && selected.plan.begin ? selected.plan.begin : '-' }}</span>
   </div>
   <div class="selected-day-end">
     <span>Ende Arbeitszeit</span>
-    <span class="right">{{ selected.plan ? selected.plan.end : '-' }}</span>
+    <span class="right">{{ selected.plan && selected.plan.end ? selected.plan.end : '-' }}</span>
   </div>
-  <div class="selected-day-overtime">
-    <span>Überstunden</span>
-    <span class="right">1</span>
-  </div>
+  <!--<div class="selected-day-overtime">-->
+    <!--<span>Überstunden</span>-->
+    <!--<span class="right">1</span>-->
+  <!--</div>-->
 </div>
 
 <div class="plan-types" *ngFor="let type of types">
