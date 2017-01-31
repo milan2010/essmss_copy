@@ -13,18 +13,17 @@ export class WorkingtimePage {
   workingTimeTypes: Array<Object> = [];
 
   constructor(public navCtrl: NavController, private workingTimeService: WorkingTimeService, private workingtimeTypesService: WorkingtimeTypesService) {
-    workingTimeService.getData()
-      .then(data => {
-        this.workingTimeData = data;
-      })
-      .catch(error => {
-        console.log(error);
-      });
-
     workingtimeTypesService.getData()
       .then(data => {
         this.workingTimeTypes = data;
-        console.log(this.workingTimeTypes);
+
+        workingTimeService.getData()
+          .then(data => {
+            this.workingTimeData = data;
+          })
+          .catch(error => {
+            console.log(error);
+          });
       })
       .catch(error => {
         console.log(error);

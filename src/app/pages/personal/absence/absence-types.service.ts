@@ -3,7 +3,7 @@ import {Http, Response} from "@angular/http";
 import {LoadingController} from "ionic-angular";
 
 @Injectable()
-export class WorkingtimeTypesService {
+export class AbsenceTypesService {
   private data: Array<String> = null;
 
   constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
@@ -19,7 +19,7 @@ export class WorkingtimeTypesService {
         return this.data;
       }
 
-      this.http.get('assets/responses/SchichtplanTypes.json', {})
+      this.http.get('assets/responses/AbsenceTypes.json', {})
         .toPromise()
         .then(res => {
           loading.dismiss();
