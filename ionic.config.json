@@ -2,11 +2,5 @@
   "name": "myV",
   "app_id": "ba851305",
   "v2": true,
-  "proxies": [
-    {
-      "path": "/api",
-      "proxyUrl": "http://cors.api.com/api"
-    }
-  ],
   "typescript": true
 }
