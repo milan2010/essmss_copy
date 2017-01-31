@@ -21,6 +21,14 @@ export class UserService {
     return !!this.user;
   }
 
+  isManager():boolean {
+    return this.user.Employeenumber === '00016217';
+  }
+
+  isEmployee():boolean {
+    return this.user.Employeenumber === '00016218';
+  }
+
   getData() {
     return this.user;
   }
