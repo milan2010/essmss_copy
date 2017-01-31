@@ -10,6 +10,9 @@
       <ion-avatar item-left>
         <img src="assets/img/bernd.png">
       </ion-avatar>
+      <ion-icon *ngIf="member.status === 'available'" name="checkmark-circle" item-left class="status"></ion-icon>
+      <ion-icon *ngIf="member.status === 'away'" name="timer" item-left class="status"></ion-icon>
+      <ion-icon *ngIf="member.status === 'not-available'" name="close-circle" item-left class="status"></ion-icon>
 
       <h2>{{member.name}}</h2>
       <p>{{member.role}}</p>

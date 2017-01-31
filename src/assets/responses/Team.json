@@ -7,37 +7,43 @@
             "name" : "Olaf Muller",
             "role" : "Meister",
             "email" : "omuller@email.com",
-            "phone" : "1234567890"
+            "phone" : "1234567890",
+            "status" : "available"
           },
           {
             "name" : "Josef Hermann",
             "role" : "Teamsprecher",
             "email" : "jhermann@email.com",
-            "phone" : "1234567890"
+            "phone" : "1234567890",
+            "status" : "not-available"
           },
           {
             "name" : "Wilhelm Ackert",
             "role" : "Monteur Maschine 1",
             "email" : "olaf@email.com",
-            "phone" : "1234567890"
+            "phone" : "1234567890",
+            "status" : "available"
           },
           {
             "name" : "Sebastian Saal",
             "role" : "Monteur Maschine 2",
             "email" : "ssaal@email.com",
-            "phone" : "1234567890"
+            "phone" : "1234567890",
+            "status" : "away"
           },
           {
             "name" : "Christian Harnisch",
             "role" : "Monteur Maschine 3",
             "email" : "ssaal@email.com",
-            "phone" : "1234567890"
+            "phone" : "1234567890",
+            "status" : "away"
           },
           {
             "name" : "John Albrecht",
             "role" : "Monteur Maschine 4",
             "email" : "ssaal@email.com",
-            "phone" : "1234567890"
+            "phone" : "1234567890",
+            "status" : "not-available"
           }
         ],
         "calendar": {
