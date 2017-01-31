@@ -1,31 +1,13 @@
+<ion-item>
 
-  <ion-item>
+  <ion-avatar item-left>
+    <img src="{{data.PhotoUrl}}">
+  </ion-avatar>
 
-    <ion-avatar item-left>
-      <img src="assets/img/bernd.png">
-    </ion-avatar>
-
-    <p class="user-name">{{data.Ename}}</p>
-    <p class="user-position">{{data.PositionTxt | translate}}</p>
-    <p class="user-orgaunit"><ion-icon name="pin" class="light"></ion-icon>{{data.OrgunitTxt | translate}}</p>
-  </ion-item>
-
-
-
-<!--<ion-row>-->
-  <!--<ion-col width-25 class="avatar-container">-->
-
-    <!--<ion-avatar item-left>-->
-      <!--<img src="assets/img/bernd.png">-->
-    <!--</ion-avatar>-->
-
-  <!--</ion-col>-->
-
-  <!--<ion-col width-75>-->
-    <!--<div class="content-container">-->
-      <!--<span class="user-name">{{data.Ename}}</span>-->
-      <!--<span class="user-position">{{data.PositionTxt}}</span>-->
-      <!--<span class="user-orgaunit"><ion-icon name="pin"></ion-icon>{{data.OrgunitTxt}}</span>-->
-    <!--</div>-->
-  <!--</ion-col>-->
-<!--</ion-row>-->
+  <p class="user-name">{{data.Ename}}</p>
+  <p class="user-position">{{data.PositionTxt | translate}}</p>
+  <p class="user-orgaunit">
+    <ion-icon name="pin" class="light"></ion-icon>
+    {{data.OrgunitTxt | translate}}
+  </p>
+</ion-item>

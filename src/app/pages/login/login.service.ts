@@ -15,10 +15,12 @@ export class LoginService {
       let loading = this.loadingCtrl.create();
       loading.present();
 
+      let url = 'assets/responses/' + (username.toLowerCase() === 'manager' ? 'ManagerDataSet.json' : 'EmployeeDataSet.json');
+
       let headers = new Headers();
       headers.append("Authorization", "Basic " + btoa(username + ":" + password));
       headers.append("Content-Type", "application/x-www-form-urlencoded");
-      this.http.get('assets/responses/EmployeeDataSet.json', {})
+      this.http.get(url, {})
         .toPromise()
         .then(function (res: Response) {
           loading.dismiss();

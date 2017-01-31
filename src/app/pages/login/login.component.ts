@@ -15,14 +15,15 @@ import {UserService} from '../../services/user.service'
 export class LoginPage {
   showStart = true;
   data = this.formBuilder.group({
-    username: [''],
-    password: [''],
+    username: ['manager'],
+    password: ['12345678'],
   });
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, private loginService: LoginService, private userService: UserService) {
   }
 
   login = function () {
+    console.log(this.data);
     if (this.data.invalid) {
       return;
     }
