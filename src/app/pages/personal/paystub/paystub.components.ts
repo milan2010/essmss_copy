@@ -2,7 +2,6 @@ import {PaystubService} from './paystub.service'
 
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {ExpenseItemList} from "./expenseitemlist/expense-item-list";
 
 @Component({
   selector: 'page-paystub',
