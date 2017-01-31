@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {InAppBrowser} from 'ionic-native';
 
 import {TeamService} from "../team.service";
 
@@ -19,4 +20,12 @@ export class TeamMembersPage {
         console.log(error);
       })
   }
+
+  sendEmail = function (email) {
+    new InAppBrowser('mailto:' + email, '_system');
+  };
+
+  callPhone = function (phone) {
+    new InAppBrowser('tel:' + phone, '_system');
+  };
 }

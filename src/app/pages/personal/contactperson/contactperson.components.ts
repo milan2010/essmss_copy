@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
+import {InAppBrowser} from "ionic-native";
 
 @Component({
   selector: 'page-contactperson',
@@ -21,6 +22,7 @@ export class ContactpersonPage {
         "name" : "Peter Berner",
         "role" : "Teamsprecher",
         "email" : "peter.berner@email.com",
+        "phone" : "1234567890",
         "image" : "assets/img/PeterBerner.png"
       },
       {
@@ -46,4 +48,12 @@ export class ContactpersonPage {
       }
     ]
   }
+
+  sendEmail = function (email) {
+    new InAppBrowser('mailto:' + email, '_system');
+  };
+
+  callPhone = function (phone) {
+    new InAppBrowser('tel:' + phone, '_system');
+  };
 }

@@ -7,7 +7,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding no-bounce>
 
   <ion-list *ngIf="contacts.length > 0">
     <ion-item *ngFor="let contact of contacts" class="no-padding">
@@ -18,8 +18,8 @@
       <h2>{{contact.name}}</h2>
       <p>{{contact.role}}</p>
 
-      <ion-icon name="md-mail" item-right class="blue-icon"></ion-icon>
-      <ion-icon name="call" item-right class="blue-icon"></ion-icon>
+      <ion-icon name="md-mail" item-right class="blue-icon" (click)="sendEmail(contact.email)"></ion-icon>
+      <ion-icon name="call" item-right class="blue-icon" (click)="callPhone(contact.phone)"></ion-icon>
     </ion-item>
   </ion-list>
 

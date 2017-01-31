@@ -6,7 +6,7 @@
           {
             "name" : "Olaf Müller",
             "role" : "Meister",
-            "email" : "omuller@email.com",
+            "email" : "omuller@volkswagen.com",
             "phone" : "1234567890",
             "status" : "available",
             "image" : "assets/img/OlafMueller.jpg"
@@ -14,7 +14,7 @@
           {
             "name" : "Josef Hermann",
             "role" : "Teamsprecher",
-            "email" : "jhermann@email.com",
+            "email" : "jhermann@volkswagen.com",
             "phone" : "1234567890",
             "status" : "not-available",
             "image" : "assets/img/JosefHermann.jpg"
@@ -30,7 +30,7 @@
           {
             "name" : "Sebastian Saal",
             "role" : "Monteur Maschine 2",
-            "email" : "ssaal@email.com",
+            "email" : "ssaal@volkswagen.com",
             "phone" : "1234567890",
             "status" : "away",
             "image" : "assets/img/SebastianSaal.jpg"
@@ -38,7 +38,7 @@
           {
             "name" : "Christian Harnisch",
             "role" : "Monteur Maschine 3",
-            "email" : "ssaal@email.com",
+            "email" : "ssaal@volkswagen.com",
             "phone" : "1234567890",
             "status" : "away",
             "image" : "assets/img/ChristianHarnisch.jpg"
@@ -46,7 +46,7 @@
           {
             "name" : "John Albrecht",
             "role" : "Monteur Maschine 4",
-            "email" : "ssaal@email.com",
+            "email" : "ssaal@volkswagen.com",
             "phone" : "1234567890",
             "status" : "not-available",
             "image" : "assets/img/JohnAlbrecht.jpg"

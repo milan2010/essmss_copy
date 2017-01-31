@@ -1,11 +1,11 @@
-<ion-content class="login-content">
+<ion-content class="login-content" no-bounce>
   <div *ngIf=showStart class="start-content">
     <ion-row>
       <ion-col>
         <ion-img src="assets/img/viologowhite.png"></ion-img>
       </ion-col>
     </ion-row>
-    
+
     <ion-row>
       <ion-col>
         <h2>
@@ -27,14 +27,14 @@
       <ion-col>
 		<ion-item-divider class="divider"></ion-item-divider>
 	  </ion-col>
-	</ion-row>    
+	</ion-row>
 	<ion-row>
       <ion-col>
         <button ion-button round (click)="showStart = false;">Start</button>
       </ion-col>
     </ion-row>
   </div>
-  
+
   <div *ngIf=!showStart class="login-content">
     <ion-row>
       <ion-col>
