@@ -3,20 +3,23 @@ import {Http, Response} from "@angular/http";
 import {LoadingController} from "ionic-angular";
 
 @Injectable()
-export class WorkingTimeService {
-
-  private data: Array<Object> = null;
+export class WorkingtimeTypesService {
+  private data: Array<String> = null;
 
   constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
-
   }
 
   getData() {
-    return new Promise<Array<Object>>((resolve, reject) => {
+    return new Promise<Array<String>>((resolve, reject) => {
       let loading = this.loadingCtrl.create();
       // loading.present();
 
-      this.http.get('assets/responses/SchichtplanSet.json', {})
+      if (this.data != null) {
+        loading.dismiss();
+        return this.data;
+      }
+
+      this.http.get('assets/responses/SchichtplanTypes.json', {})
         .toPromise()
         .then(res => {
           loading.dismiss();

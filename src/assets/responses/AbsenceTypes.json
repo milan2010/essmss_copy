@@ -1,0 +1,54 @@
+{
+  "d": {
+    "results": [
+      {
+        "id": 1,
+        "name": "Urlaub genehmigt",
+        "symbol": "U",
+        "background": "#1db2e8"
+      },
+      {
+        "id": 2,
+        "name": "Urlaub beantragt",
+        "symbol": "Ub",
+        "background": "#2875aa"
+      },
+      {
+        "id": 3,
+        "name": "Bildungsurlaub",
+        "symbol": "Bu",
+        "background": "#053d64"
+      },
+      {
+        "id": 4,
+        "name": "Sonderurlaub",
+        "symbol": "S",
+        "background": "#b9c729"
+      },
+      {
+        "id": 5,
+        "name": "Krankheit",
+        "symbol": "K",
+        "background": "#54ac39"
+      },
+      {
+        "id": 6,
+        "name": "Krankheit Kind",
+        "symbol": "KK",
+        "background": "#095d4d"
+      },
+      {
+        "id": 7,
+        "name": "Entnahme Gleitzeit",
+        "symbol": "EGZ",
+        "background": "#04413c"
+      },
+      {
+        "id": 8,
+        "name": "Weiterbildung",
+        "symbol": "W",
+        "background": "#cfd7d9"
+      }
+    ]
+  }
+}

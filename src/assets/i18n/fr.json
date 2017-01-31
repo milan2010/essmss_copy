@@ -1,0 +1,67 @@
+{
+  "HUB": {
+    "TITLE": "Mon Information"
+  },
+  "TEAM": {
+    "TITLE": "Mon Équipe"
+  },
+  "CHAT": {
+    "TITLE": "Chat"
+  },
+  "WORK": {
+    "TITLE": "Mon Travail"
+  },
+  "PERSONAL": {
+    "TITLE": "Mon Profil",
+    "USERDATA": {
+      "POSITION": {
+        "P1": "Referent pour la planification"
+      },
+      "ORGANISATION":{
+        "O1": "Projet mobile travail - OE-A"
+      }
+    },
+    "MENU": {
+      "WORKTIME": {
+        "TITLE": "Journée de travail",
+        "SUBTITLE": "État actuel"
+      },
+      "HOLIDAY": {
+        "TITLE": "Vacances et absence",
+        "SUBTITLE": "État actuel"
+      },
+      "PAYMENT": {
+        "TITLE": "Bénéfice preuve",
+        "SUBTITLE": "État actuel"
+      },
+      "DATA": {
+        "TITLE": "Données",
+        "SUBTITLE": "État actuel"
+      },
+      "CONTACT": {
+        "TITLE": "Personne de contact",
+        "SUBTITLE": "État actuel"
+      }
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Paramètres",
+    "HEADER-GENERAL": "Général",
+    "SOUND": {
+      "LABEL": "Sons"
+    },
+    "VIBRATION": {
+      "LABEL": "Vibration"
+    },
+    "LANGUAGESELECT": {
+      "LABEL": "Langue",
+      "OKTEXT": "Ok",
+      "CANCELTEXT": "Annuler",
+      "OPTIONS": {
+        "DE": "DE",
+        "EN": "EN",
+        "FR": "FR"
+      }
+    }
+  }
+}

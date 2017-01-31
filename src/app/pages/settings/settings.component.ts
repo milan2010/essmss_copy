@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {ToastController} from 'ionic-angular';
 
+import { TranslateService } from 'ng2-translate';
+
 /*
  Generated class for the Settings page.
 
@@ -13,16 +15,17 @@ import {ToastController} from 'ionic-angular';
   templateUrl: 'settings.html'
 })
 export class SettingsPage {
-  settings = {
+  settings: { vibration: boolean, sound:boolean, language:string } = {
     vibration: false,
-    sound: false
+    sound: false,
+    language: 'de'
   };
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, private translate: TranslateService) {
+    this.settings.language = this.translate.currentLang;
   }
 
   ionViewDidLoad() {
-    console.log('Hello SettingsPage Page');
   }
 
   presentToast() {
@@ -36,11 +39,15 @@ export class SettingsPage {
   }
 
   updateSound(settings) {
-    this.presentToast()
+    this.presentToast();
   }
 
   updateVibration(settings) {
-    this.presentToast()
+    this.presentToast();
+  }
+
+  setLanguage() {
+    this.translate.use(this.settings.language);
   }
 
 }

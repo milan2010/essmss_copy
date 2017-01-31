@@ -1,17 +1,32 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {AbsenceService} from "./absence.service";
+import {AbsenceTypesService} from "./absence-types.service";
 
 @Component({
   selector: 'page-absence',
-  templateUrl: 'absence.html'
+  templateUrl: 'absence.html',
+  providers: [AbsenceService, AbsenceTypesService]
 })
 export class AbsencePage {
+  absenceData: Array<Object> = [];
+  absenceTypes: Array<Object> = [];
 
-  constructor(public navCtrl: NavController) {
+  constructor(private absenceService: AbsenceService, private absenceTypesService: AbsenceTypesService) {
+
+    absenceTypesService.getData()
+      .then(data => {
+        this.absenceTypes = data;
+
+        absenceService.getData()
+          .then(data => {
+            this.absenceData = data;
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
-
-  ionViewDidLoad() {
-    console.log('Hello AbsencePage Page');
-  }
-
 }

@@ -1,15 +1,15 @@
 import {Component, Input} from '@angular/core';
 import * as moment from 'moment';
-import {CalendarTypesService} from "../../services/calendar-types.service";
 
 @Component({
   selector: 'calendar',
-  templateUrl: 'calendar.html',
-  providers: [CalendarTypesService]
+  templateUrl: 'calendar.html'
 })
 export class Calendar {
 
   @Input() data = [];
+  @Input() types = [];
+  @Input() showSelectedDay = true;
   weekDays = [];
   selected = {
     date: null,
@@ -17,19 +17,9 @@ export class Calendar {
   };
   month = null;
   weeks = [];
-  types = [];
 
-  constructor(private calendarTypesService: CalendarTypesService) {
+  constructor() {
     this.weekDays = moment().localeData().weekdaysShort();
-
-    calendarTypesService.getData()
-      .then(data => {
-        this.types = data;
-        console.log(this.types);
-      })
-      .catch(error => {
-        console.log(error);
-      })
   }
 
   ngOnChanges() {
@@ -104,23 +94,8 @@ export class Calendar {
               begin: this.parseTime(this.data[j].Beguz),
               end: this.parseTime(this.data[j].Enduz),
               type: this.data[j].Kuerzel,
-              background: this.data[j].Background
+              background: this.getBackground(this.data[j].Kuerzel)
             };
-
-            // let addType = true;
-            // for (let t = 0; t < this.types.length; t++) {
-            //   if (this.types[t].id === day.plan.type) {
-            //     addType = false;
-            //     break;
-            //   }
-            // }
-            //
-            // if (addType) {
-            //   this.types.push({
-            //     id: day.plan.type,
-            //     background: day.plan.background
-            //   })
-            // }
           }
         }
 
@@ -135,6 +110,14 @@ export class Calendar {
       date.add(1, "d");
     }
     return days;
+  };
+
+  getBackground = function(type) {
+    for (let t = 0; t < this.types.length; t++) {
+      if (this.types[t].symbol === type) {
+        return this.types[t].background;
+      }
+    }
   };
 
   parseTime = function (time) {

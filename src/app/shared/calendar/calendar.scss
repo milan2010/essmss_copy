@@ -62,81 +62,85 @@ calendar {
     }
   }
 
-  > div.week {
+  .weeks {
     float: left;
-    width: 100%;
-    border-top: solid 1px $border-colour;
-
-    &:first-child {
-      border-top: none;
-    }
-
-    &.names {
-      > span {
-        color: #a0a0a0;
-        font-weight: bold;
-        font-size: 14px;
-      }
-
-      .day {
-        height: 40px;
-        background: #e1e1e1;
-        border-left: solid 1px #e1e1e1;
-      }
-    }
-
-    > .day {
+    border-bottom: 1px solid #CCC;
+    > div.week {
       float: left;
-      width: (100%/7);
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      border-left: solid 1px $border-colour;
-      padding: 3px 3px 3px 3px;
-      font-size: 0.75em;
-      text-align: center;
-      height: 60px;
-      line-height: 30px !important;
-      display: inline-block;
-      vertical-align: middle;
-      background: white;
-      cursor: pointer;
+      width: 100%;
+      border-top: solid 1px $border-colour;
 
       &:first-child {
-        border-left: none;
+        border-top: none;
       }
 
-      &.today {
-        background: #E3F2FF;
+      &.names {
+        > span {
+          color: #a0a0a0;
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        .day {
+          height: 40px;
+          background: #e1e1e1;
+          border-left: solid 1px #e1e1e1;
+        }
       }
 
-      &.different-month {
-        color: #C0C0C0;
-      }
+      > .day {
+        float: left;
+        width: (100%/7);
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        border-left: solid 1px $border-colour;
+        padding: 3px 3px 3px 3px;
+        font-size: 0.75em;
+        text-align: center;
+        height: 60px;
+        line-height: 30px !important;
+        display: inline-block;
+        vertical-align: middle;
+        background: white;
+        cursor: pointer;
 
-      &.selected {
-        border: 3px solid #CCC;
-        border-left: 4px solid #ccc;
-        padding: 0;
-      }
+        &:first-child {
+          border-left: none;
+        }
 
-      &.plan {
-        color: white;
-      }
+        &.today {
+          background: #E3F2FF;
+        }
 
-      span {
-        display: block;
-      }
+        &.different-month {
+          color: #C0C0C0;
+        }
 
-      .number {
-        font-size: 14px;
-        line-height: 18px;
-        padding-left: 22%;
-        text-align: left;
-      }
+        &.selected {
+          border: 3px solid #CCC;
+          border-left: 4px solid #ccc;
+          padding: 0;
+        }
 
-      .letter {
-        font-size: 18px;
-        line-height: 30px;
+        &.plan {
+          color: white;
+        }
+
+        span {
+          display: block;
+        }
+
+        .number {
+          font-size: 14px;
+          line-height: 18px;
+          padding-left: 22%;
+          text-align: left;
+        }
+
+        .letter {
+          font-size: 18px;
+          line-height: 30px;
+        }
       }
     }
   }
@@ -147,7 +151,6 @@ calendar {
     width: 100%;
     color: black;
     padding: 30px;
-    border-top: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
 
     div {
@@ -178,12 +181,12 @@ calendar {
     padding: 30px;
 
     .type-badge {
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
       color: white;
-      border-radius: 12px;
+      border-radius: 14px;
       text-align: center;
-      padding: 3px 2px;
+      padding: 5px 2px;
       display: inline-block;
     }
 

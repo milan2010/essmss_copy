@@ -5,7 +5,7 @@
         <ion-icon name="settings"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>PROFIL</ion-title>
+    <ion-title>{{ 'PERSONAL.TITLE' | translate }}</ion-title>
     <ion-buttons right>
       <button ion-button icon-only (click)="logOut()">
         <ion-icon name="md-exit" color="white"></ion-icon>
@@ -25,8 +25,8 @@
         <ion-icon name="{{ value.icon }}"></ion-icon>
       </ion-avatar>
 
-      <h2>{{ value.title }}</h2>
-      <p>{{ value.subtitle }}</p>
+      <h2>{{ value.title | translate }}</h2>
+      <p>{{ value.subtitle | translate }}</p>
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
     </ion-item>
 
