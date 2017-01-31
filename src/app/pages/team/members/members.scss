@@ -16,15 +16,15 @@ page-team-members {
       font-size: 20px;
     }
 
-    &[name=checkmark-circle] {
+    &.available {
       color: $AVAILABLE;
     }
 
-    &[name=timer] {
+    &.away {
       color: $AWAY;
     }
 
-    &[name=close-circle] {
+    &.not-available {
       color: $NOTAVAILABLE;
     }
   }
