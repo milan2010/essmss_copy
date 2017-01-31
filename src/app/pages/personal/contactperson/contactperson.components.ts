@@ -11,44 +11,39 @@ export class ContactpersonPage {
   constructor(public navCtrl: NavController) {
     this.contacts = [
       {
-        "name" : "Olaf Muller",
+        "name" : "Herbert Meiser",
         "role" : "Meister",
-        "email" : "omuller@email.com",
-        "phone" : "1234567890"
+        "email" : "herbert.meister@email.com",
+        "phone" : "1234567890",
+        "image" : "assets/img/HerbertMeiser.jpg"
       },
       {
-        "name" : "Josef Hermann",
+        "name" : "Peter Berner",
         "role" : "Teamsprecher",
-        "email" : "jhermann@email.com",
-        "phone" : "1234567890"
+        "email" : "peter.berner@email.com",
+        "image" : "assets/img/PeterBerner.png"
       },
       {
-        "name" : "Wilhelm Ackert",
-        "role" : "Monteur Maschine 1",
-        "email" : "olaf@email.com",
-        "phone" : "1234567890"
+        "name" : "Claudia Kleber",
+        "role" : "Personalreferentin",
+        "email" : "ClaudiaKleber@email.com",
+        "phone" : "1234567890",
+        "image" : "assets/img/ClaudiaKleber.jpg"
       },
       {
-        "name" : "Sebastian Saal",
-        "role" : "Monteur Maschine 2",
-        "email" : "ssaal@email.com",
-        "phone" : "1234567890"
+        "name" : "Markus Maier",
+        "role" : "Unterabteilungsleiter",
+        "email" : "MarkusMeier@email.com",
+        "phone" : "1234567890",
+        "image" : "assets/img/MarkusMeier.jpg"
       },
       {
-        "name" : "Christian Harnisch",
-        "role" : "Monteur Maschine 3",
-        "email" : "ssaal@email.com",
-        "phone" : "1234567890"
-      },
-      {
-        "name" : "John Albrecht",
-        "role" : "Monteur Maschine 4",
-        "email" : "ssaal@email.com",
-        "phone" : "1234567890"
+        "name" : "Sylvia Gerber",
+        "role" : "Vertrauensfrau",
+        "email" : "SylviaGerber@email.com",
+        "phone" : "1234567890",
+        "image" : "assets/img/SylviaGerber.jpg"
       }
     ]
-
-
   }
-
 }

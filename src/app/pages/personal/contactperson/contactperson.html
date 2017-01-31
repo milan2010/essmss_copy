@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>contactperson</ion-title>
+    <ion-title>ANSPRECHPARTNER</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -12,7 +12,7 @@
   <ion-list *ngIf="contacts.length > 0">
     <ion-item *ngFor="let contact of contacts" class="no-padding">
       <ion-avatar item-left>
-        <img src="assets/img/bernd.png">
+        <img src="{{contact.image}}">
       </ion-avatar>
 
       <h2>{{contact.name}}</h2>
