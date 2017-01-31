@@ -12,7 +12,6 @@
         "Datum": "\/Date(1482192000000)\/",
         "Enduz": "PT06H00M00S",
         "Kuerzel": "N",
-        "Background": "#00355a",
         "Zusatzinfos": {
           "__deferred": {
             "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161220')/Zusatzinfos"
@@ -30,7 +29,6 @@
         "Datum": "\/Date(1482278400000)\/",
         "Enduz": "PT22H00M00S",
         "Kuerzel": "S",
-        "Background": "#00a8e8",
         "Zusatzinfos": {
           "__deferred": {
             "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161221')/Zusatzinfos"
@@ -48,7 +46,6 @@
         "Datum": "\/Date(1482364800000)\/",
         "Enduz": "PT14H00M00S",
         "Kuerzel": "F",
-        "Background": "#1e69a2",
         "Zusatzinfos": {
           "__deferred": {
             "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161222')/Zusatzinfos"
@@ -66,7 +63,6 @@
         "Datum": "\/Date(1482451200000)\/",
         "Enduz": "PT16H00M00S",
         "Kuerzel": "TU",
-        "Background": "#e1e1e1",
         "Zusatzinfos": {
           "__deferred": {
             "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')/Zusatzinfos"
@@ -84,7 +80,6 @@
         "Datum": "\/Date(1485043200000)\/",
         "Enduz": "PT16H00M00S",
         "Kuerzel": "N",
-        "Background": "#00355a",
         "Zusatzinfos": {
           "__deferred": {
             "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')/Zusatzinfos"
@@ -102,7 +97,6 @@
         "Datum": "\/Date(1485129600000)\/",
         "Enduz": "PT16H00M00S",
         "Kuerzel": "N",
-        "Background": "#00355a",
         "Zusatzinfos": {
           "__deferred": {
             "uri": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/VWK/009_ESS_SCHICHTPLAN_SRV/SchichtplanSet('20161223')/Zusatzinfos"

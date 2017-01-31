@@ -1,8 +1,6 @@
-import {Inject} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {Http, Headers} from '@angular/http';
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
+
 import {ChatService} from '../../services/chat.service'
 
 @Component({
@@ -18,7 +16,7 @@ export class ChatPage implements OnInit, OnDestroy {
 
   constructor(private _fb: FormBuilder, private _cs: ChatService) {
   }
-  
+
   sendMessage() {
     if(this.chatForm.valid) {
       this._cs.sendMessage(this.chatForm.value.message);

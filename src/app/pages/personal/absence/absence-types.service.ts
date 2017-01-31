@@ -1,26 +1,25 @@
 import {Injectable, Inject} from "@angular/core";
 import {Http, Response} from "@angular/http";
 import {LoadingController} from "ionic-angular";
-@Injectable()
-export class CalendarTypesService {
 
+@Injectable()
+export class AbsenceTypesService {
   private data: Array<String> = null;
 
   constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
-
   }
 
   getData() {
     return new Promise<Array<String>>((resolve, reject) => {
       let loading = this.loadingCtrl.create();
-      loading.present();
+      // loading.present();
 
       if (this.data != null) {
         loading.dismiss();
         return this.data;
       }
 
-      this.http.get('assets/responses/CalendarTypes.json', {})
+      this.http.get('assets/responses/AbsenceTypes.json', {})
         .toPromise()
         .then(res => {
           loading.dismiss();

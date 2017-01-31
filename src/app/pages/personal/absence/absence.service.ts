@@ -1,9 +1,9 @@
+import {LoadingController} from "ionic-angular";
 import {Injectable, Inject} from "@angular/core";
 import {Http, Response} from "@angular/http";
-import {LoadingController} from "ionic-angular";
 
 @Injectable()
-export class WorkingTimeService {
+export class AbsenceService {
 
   private data: Array<Object> = null;
 
@@ -16,7 +16,7 @@ export class WorkingTimeService {
       let loading = this.loadingCtrl.create();
       // loading.present();
 
-      this.http.get('assets/responses/SchichtplanSet.json', {})
+      this.http.get('assets/responses/AbsenceData.json', {})
         .toPromise()
         .then(res => {
           loading.dismiss();
