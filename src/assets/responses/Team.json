@@ -4,52 +4,58 @@
       {
         "members": [
           {
-            "name" : "Olaf Müller",
-            "role" : "Meister",
-            "email" : "omuller@volkswagen.com",
-            "phone" : "1234567890",
-            "status" : "available",
-            "image" : "assets/img/OlafMueller.jpg"
+            "Ename" : "Olaf Müller",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Meister",
+            "Email" : "omuller@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "available",
+            "PhotoUrl" : "assets/img/OlafMueller.jpg"
           },
           {
-            "name" : "Josef Hermann",
-            "role" : "Teamsprecher",
-            "email" : "jhermann@volkswagen.com",
-            "phone" : "1234567890",
-            "status" : "not-available",
-            "image" : "assets/img/JosefHermann.jpg"
+            "Ename" : "Josef Hermann",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Teamsprecher",
+            "Email" : "jhermann@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "not-available",
+            "PhotoUrl" : "assets/img/JosefHermann.jpg"
           },
           {
-            "name" : "Wilhelm Ackert",
-            "role" : "Monteur Maschine 1",
-            "email" : "olaf@email.com",
-            "phone" : "1234567890",
-            "status" : "available",
-            "image" : "assets/img/WilhelmAckert.jpg"
+            "Ename" : "Wilhelm Ackert",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Monteur Maschine 1",
+            "Email" : "olaf@email.com",
+            "Phone" : "1234567890",
+            "Status" : "available",
+            "PhotoUrl" : "assets/img/WilhelmAckert.jpg"
           },
           {
-            "name" : "Sebastian Saal",
-            "role" : "Monteur Maschine 2",
-            "email" : "ssaal@volkswagen.com",
-            "phone" : "1234567890",
-            "status" : "away",
-            "image" : "assets/img/SebastianSaal.jpg"
+            "Ename" : "Sebastian Saal",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Monteur Maschine 2",
+            "Email" : "ssaal@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "away",
+            "PhotoUrl" : "assets/img/SebastianSaal.jpg"
           },
           {
-            "name" : "Christian Harnisch",
-            "role" : "Monteur Maschine 3",
-            "email" : "ssaal@volkswagen.com",
-            "phone" : "1234567890",
-            "status" : "away",
-            "image" : "assets/img/ChristianHarnisch.jpg"
+            "Ename" : "Christian Harnisch",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Monteur Maschine 3",
+            "Email" : "ssaal@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "away",
+            "PhotoUrl" : "assets/img/ChristianHarnisch.jpg"
           },
           {
-            "name" : "John Albrecht",
-            "role" : "Monteur Maschine 4",
-            "email" : "ssaal@volkswagen.com",
-            "phone" : "1234567890",
-            "status" : "not-available",
-            "image" : "assets/img/JohnAlbrecht.jpg"
+            "Ename" : "John Albrecht",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Monteur Maschine 4",
+            "Email" : "ssaal@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "not-available",
+            "PhotoUrl" : "assets/img/JohnAlbrecht.jpg"
           }
         ],
         "calendar": {

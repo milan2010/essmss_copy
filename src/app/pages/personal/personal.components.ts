@@ -85,10 +85,6 @@ export class PersonalPage {
 
   }
 
-  ionViewDidLoad() {
-    console.log('Hello PersonalPage Page');
-  }
-
   logOut = function () {
     this.userService.logOut();
     window.location.reload();

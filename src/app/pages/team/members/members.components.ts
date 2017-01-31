@@ -1,7 +1,9 @@
 import {Component} from "@angular/core";
 import {InAppBrowser} from 'ionic-native';
+import {NavController} from "ionic-angular";
 
 import {TeamService} from "../team.service";
+import {TeamMemberDetailsPage} from "../memberdetails/member-details.component";
 
 @Component({
   selector: 'page-team-members',
@@ -11,7 +13,7 @@ import {TeamService} from "../team.service";
 export class TeamMembersPage {
   team: Object = null;
 
-  constructor(private teamService: TeamService) {
+  constructor(private teamService: TeamService, public navCtrl: NavController) {
     teamService.getTeam()
       .then(data => {
         this.team = data;
@@ -28,4 +30,8 @@ export class TeamMembersPage {
   callPhone = function (phone) {
     new InAppBrowser('tel:' + phone, '_system');
   };
+
+  goToMemberDetails = function (member) {
+    this.navCtrl.push(TeamMemberDetailsPage, member);
+  }
 }
