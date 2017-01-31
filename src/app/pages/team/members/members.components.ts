@@ -22,12 +22,10 @@ export class TeamMembersPage {
   }
 
   sendEmail = function (email) {
-    let browser = new InAppBrowser('mailto:' + email, '_system');
-    browser.show();
+    new InAppBrowser('mailto:' + email, '_system');
   };
 
   callPhone = function (phone) {
-    let browser = new InAppBrowser('tel:' + phone, '_system');
-    browser.show();
+    new InAppBrowser('tel:' + phone, '_system');
   };
 }
