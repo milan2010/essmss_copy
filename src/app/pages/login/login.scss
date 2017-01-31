@@ -6,6 +6,16 @@ page-login {
     	background-image: linear-gradient(to bottom, #2284b9 0%, #04ace5 100%);
     }
     
+    .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus) {
+    	border-bottom-color: none;
+    	box-shadow: none !important;
+	}
+	
+	.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    	border-bottom-color: none;
+    	box-shadow: none;
+	}
+    
     button {
         margin: auto !important;
         width: $button-width;
