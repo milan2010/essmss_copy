@@ -1,17 +1,7 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons left>
-      <button ion-button icon-only color="white" (click)="goToSettings()">
-        <ion-icon name="settings"></ion-icon>
-      </button>
-    </ion-buttons>
+  <ion-navbar>
     <ion-title>{{ 'PERSONAL.TITLE' | translate }}</ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only (click)="logOut()">
-        <ion-icon name="md-exit" color="white"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 
 <ion-content class="content-stable" no-bounce>
@@ -19,7 +9,7 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let value of personalMenu" [navPush]='value.link'>
+    <ion-item *ngFor="let value of userMenu" [navPush]='value.link'>
 
       <ion-avatar item-left class="item-avatar">
         <ion-icon name="{{ value.icon }}"></ion-icon>

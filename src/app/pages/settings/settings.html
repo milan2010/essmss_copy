@@ -7,17 +7,17 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content no-bounce>
   <ion-list>
     <ion-list-header>{{ 'SETTINGS.HEADER-GENERAL' | translate }}</ion-list-header>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label>{{ 'SETTINGS.VIBRATION.LABEL' | translate }}</ion-label>
       <ion-toggle value="vibration" checked="true" [(ngModel)]="settings.vibration" (ionChange)="updateVibration(settings.vibration)"></ion-toggle>
     </ion-item>
     <ion-item>
       <ion-label>{{ 'SETTINGS.SOUND.LABEL' | translate }}</ion-label>
       <ion-toggle value="sound" checked="true" [(ngModel)]="settings.sound" (ionChange)="updateSound(settings.sound)"></ion-toggle>
-    </ion-item>
+    </ion-item> -->
     <ion-item>
       <ion-label>{{ 'SETTINGS.LANGUAGESELECT.LABEL' | translate }}</ion-label>
       <ion-select cancelText="{{ 'SETTINGS.LANGUAGESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.LANGUAGESELECT.OKTEXT' | translate }}" [(ngModel)]="settings.language" (ionChange)="setLanguage()">

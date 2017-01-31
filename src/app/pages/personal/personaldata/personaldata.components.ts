@@ -6,12 +6,17 @@ import {NavController} from 'ionic-angular';
   templateUrl: 'personaldata.html'
 })
 export class PersonaldataPage {
+  edit:boolean = false;
 
   constructor(public navCtrl: NavController) {
   }
 
-  ionViewDidLoad() {
-    console.log('Hello PersonaldataPage Page');
+  editPersonalData(){
+    this.edit = true;
+  }
+
+  savePersonalData() {
+    this.edit = false;
   }
 
 }

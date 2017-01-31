@@ -1,12 +1,57 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>personaldata</ion-title>
+    <ion-title>Stammdaten</ion-title>
+    <!-- <ion-buttons right>
+      <button *ngIf="!edit" ion-button clear (click)="editPersonalData()">Bearbeiten</button>
+      <button *ngIf="edit" ion-button clear (click)="savePersonalData()">Speichern</button>
+    </ion-buttons> -->
   </ion-navbar>
 
 </ion-header>
 
+<ion-content>
 
-<ion-content padding>
+  <ion-list>
+    <ion-list-header>Name</ion-list-header>
+    <ion-item>
+      <ion-label>Vorname</ion-label>
+      <ion-input type="text" value="Bernd" disabled="{{ !edit }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nachname</ion-label>
+      <ion-input type="text" value="Möller" disabled="{{ !edit }}"></ion-input>
+    </ion-item>
+  </ion-list>
 
+  <ion-list>
+    <ion-list-header>Adresse</ion-list-header>
+    <ion-item>
+      <ion-label>Straße</ion-label>
+      <ion-input type="text" value="Kirchgasse" disabled="{{ !edit }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hausnummer</ion-label>
+      <ion-input type="text" value="4" disabled="{{ !edit }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Postleitzahl</ion-label>
+      <ion-input type="text" value="10115" disabled="{{ !edit }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Stadt</ion-label>
+      <ion-input type="text" value="Berlin" disabled="{{ !edit }}"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Kontakt</ion-list-header>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" value="bernd.moeller@vw.de" disabled="{{ !edit }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mobil</ion-label>
+      <ion-input type="text" value="0170-1234567" disabled="{{ !edit }}"></ion-input>
+    </ion-item>
+  </ion-list>
 </ion-content>

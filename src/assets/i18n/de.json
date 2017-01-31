@@ -58,9 +58,9 @@
       "OKTEXT": "Übernehmen",
       "CANCELTEXT": "Abbrechen",
       "OPTIONS": {
-        "DE": "DE",
-        "EN": "EN",
-        "FR": "FR"
+        "DE": "Deutsch",
+        "EN": "English",
+        "FR": "Francais"
       }
     }
   }

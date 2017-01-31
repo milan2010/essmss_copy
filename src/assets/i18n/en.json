@@ -58,9 +58,9 @@
       "OKTEXT": "Ok",
       "CANCELTEXT": "Cancel",
       "OPTIONS": {
-        "DE": "DE",
-        "EN": "EN",
-        "FR": "FR"
+        "DE": "Deutsch",
+        "EN": "English",
+        "FR": "Francais"
       }
     }
   }

@@ -21,6 +21,7 @@ import {Calendar} from "./shared/calendar/calendar.component";
 import {SettingsPage} from "./pages/settings/settings.component";
 import {ChatPage} from "./pages/chat/chat.component";
 import {ExpenseItemList} from "./pages/personal/paystub/expenseitemlist/expense-item-list";
+import {TeamMemberDetailsPage} from "./pages/team/memberdetails/member-details.component";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -34,6 +35,7 @@ export function createTranslateLoader(http: Http) {
     HubPage,
     TeamPage,
     TeamMembersPage,
+    TeamMemberDetailsPage,
     PersonalPage,
     WorkPage,
     TabsPage,
@@ -63,6 +65,7 @@ export function createTranslateLoader(http: Http) {
     HubPage,
     TeamPage,
     TeamMembersPage,
+    TeamMemberDetailsPage,
     PersonalPage,
     WorkPage,
     TabsPage,
