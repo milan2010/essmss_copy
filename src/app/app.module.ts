@@ -1,5 +1,7 @@
 import {NgModule, ErrorHandler} from '@angular/core';
+import { HttpModule, Http } from '@angular/http';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 
 import {MyApp} from './app.component';
 import {LoginPage} from './pages/login/login.component';
@@ -19,6 +21,11 @@ import {Calendar} from "./shared/calendar/calendar.component";
 import {SettingsPage} from "./pages/settings/settings.component";
 import {ChatPage} from "./pages/chat/chat.component";
 import {ExpenseItemList} from "./pages/personal/paystub/expenseitemlist/expense-item-list";
+
+export function createTranslateLoader(http: Http) {
+  return new TranslateStaticLoader(http, './assets/i18n', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -42,7 +49,13 @@ import {ExpenseItemList} from "./pages/personal/paystub/expenseitemlist/expense-
     ExpenseItemList
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

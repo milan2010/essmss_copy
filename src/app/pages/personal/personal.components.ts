@@ -27,32 +27,32 @@ export class PersonalPage {
     this.personalMenu = [
       {
         icon: 'md-time',
-        title: 'Arbeitszeit',
-        subtitle: 'Aktueller Stand',
+        title: 'PERSONAL.MENU.WORKTIME.TITLE',
+        subtitle: 'PERSONAL.MENU.WORKTIME.SUBTITLE',
         link: WorkingtimePage
       },
       {
         icon: 'md-plane',
-        title: 'Urlaub & Abwesenheit',
-        subtitle: 'Aktueller Stand',
+        title: 'PERSONAL.MENU.HOLIDAY.TITLE',
+        subtitle: 'PERSONAL.MENU.HOLIDAY.SUBTITLE',
         link: AbsencePage
       },
       {
         icon: 'md-document',
-        title: 'Entgeldnachweis',
-        subtitle: 'Aktueller Stand',
+        title: 'PERSONAL.MENU.PAYMENT.TITLE',
+        subtitle: 'PERSONAL.MENU.PAYMENT.SUBTITLE',
         link: PaystubPage
       },
       {
         icon: 'ios-contact',
-        title: 'Stammdaten',
-        subtitle: 'Aktueller Stand',
+        title: 'PERSONAL.MENU.DATA.TITLE',
+        subtitle: 'PERSONAL.MENU.DATA.SUBTITLE',
         link: PersonaldataPage
       },
       {
         icon: 'ios-contacts',
-        title: 'Ansprechpartner',
-        subtitle: 'Aktueller Stand',
+        title: 'PERSONAL.MENU.CONTACT.TITLE',
+        subtitle: 'PERSONAL.MENU.CONTACT.SUBTITLE',
         link: ContactpersonPage
       }];
 

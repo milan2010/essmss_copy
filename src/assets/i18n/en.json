@@ -1,0 +1,67 @@
+{
+  "HUB": {
+    "TITLE": "My Information"
+  },
+  "TEAM": {
+    "TITLE": "My Team"
+  },
+  "CHAT": {
+    "TITLE": "Chat"
+  },
+  "WORK": {
+    "TITLE": "My Work"
+  },
+  "PERSONAL": {
+    "TITLE": "My Profile",
+    "USERDATA": {
+      "POSITION": {
+        "P1": "Planning expert"
+      },
+      "ORGANISATION":{
+        "O1": "Project mobile work - OE-A"
+      }
+    },
+    "MENU": {
+      "WORKTIME": {
+        "TITLE": "Work time",
+        "SUBTITLE": "Current status"
+      },
+      "HOLIDAY": {
+        "TITLE": "Leave and absence",
+        "SUBTITLE": "Current status"
+      },
+      "PAYMENT": {
+        "TITLE": "Proof of payment",
+        "SUBTITLE": "Current status"
+      },
+      "DATA": {
+        "TITLE": "Base data",
+        "SUBTITLE": "Current status"
+      },
+      "CONTACT": {
+        "TITLE": "Contact person",
+        "SUBTITLE": "Current status"
+      }
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Settings",
+    "HEADER-GENERAL": "General",
+    "SOUND": {
+      "LABEL": "Sound"
+    },
+    "VIBRATION": {
+      "LABEL": "Vibration"
+    },
+    "LANGUAGESELECT": {
+      "LABEL": "Language",
+      "OKTEXT": "Ok",
+      "CANCELTEXT": "Cancel",
+      "OPTIONS": {
+        "DE": "DE",
+        "EN": "EN",
+        "FR": "FR"
+      }
+    }
+  }
+}

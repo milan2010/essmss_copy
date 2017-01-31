@@ -1,0 +1,67 @@
+{
+  "HUB": {
+    "TITLE": "Meine Infos"
+  },
+  "TEAM": {
+    "TITLE": "Mein Team"
+  },
+  "CHAT": {
+    "TITLE": "Chat"
+  },
+  "WORK": {
+    "TITLE": "Meine Arbeit"
+  },
+  "PERSONAL": {
+    "TITLE": "Meine Profil",
+    "USERDATA": {
+      "POSITION": {
+        "P1": "Fachreferent/in für Planung"
+      },
+      "ORGANISATION":{
+        "O1": "Projekt mobile Arbeit - OE-A"
+      }
+    },
+    "MENU": {
+      "WORKTIME": {
+        "TITLE": "Arbeitszeit",
+        "SUBTITLE": "Aktueller Stand"
+      },
+      "HOLIDAY": {
+        "TITLE": "Urlaub & Abwesenheit",
+        "SUBTITLE": "Aktueller Stand"
+      },
+      "PAYMENT": {
+        "TITLE": "Entgeldnachweis",
+        "SUBTITLE": "Aktueller Stand"
+      },
+      "DATA": {
+        "TITLE": "Stammdaten",
+        "SUBTITLE": "Aktueller Stand"
+      },
+      "CONTACT": {
+        "TITLE": "Ansprechpartner",
+        "SUBTITLE": "Aktueller Stand"
+      }
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Einstellungen",
+    "HEADER-GENERAL": "Allgemein",
+    "SOUND": {
+      "LABEL": "Ton"
+    },
+    "VIBRATION": {
+      "LABEL": "Vibration"
+    },
+    "LANGUAGESELECT": {
+      "LABEL": "Sprache",
+      "OKTEXT": "Übernehmen",
+      "CANCELTEXT": "Abbrechen",
+      "OPTIONS": {
+        "DE": "DE",
+        "EN": "EN",
+        "FR": "FR"
+      }
+    }
+  }
+}

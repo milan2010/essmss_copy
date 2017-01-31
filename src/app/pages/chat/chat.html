@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>chat</ion-title>
+    <ion-title>{{ 'CHAT.TITLE' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,7 +8,7 @@
   <ion-list no-lines>
     <ion-item text-wrap primary *ngFor='let message of messages' class="chat chat-incoming" [ngClass]="{'chat-incoming': !message.incoming, 'chat-outgoing': message.incoming}">
       <ion-avatar item-left>
-      	<img src="assets/img/{{message.author}}.png" alt="{{message.author}}"> 
+      	<img src="assets/img/{{message.author}}.png" alt="{{message.author}}">
       </ion-avatar>
       <h2 text-capitalize>{{message.author}}</h2>
       <small class="text-color-grey-light">{{message.date | date: 'dd.MM.yyyy'}}</small>
