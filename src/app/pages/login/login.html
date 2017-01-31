@@ -46,11 +46,12 @@
       <ion-col>
         <form [formGroup]="data" (ngSubmit)="login()">
           <ion-list>
-            <ion-item class="login-input">
-              <ion-input type="text" placeholder="User-ID" formControlName="username"></ion-input>
+            <ion-item>
+  				<ion-icon name="person" item-left></ion-icon>
+              	<ion-input type="text" placeholder="User-ID" formControlName="username"></ion-input>
             </ion-item>
-
-            <ion-item class="login-input">
+            <ion-item>
+              <ion-icon name="lock" item-left></ion-icon>
               <ion-input type="password" placeholder="Passwort" formControlName="password"></ion-input>
             </ion-item>
           </ion-list>

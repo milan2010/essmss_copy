@@ -1,7 +1,6 @@
 page-login {
 
     $button-width: 250px;
-    
 
     ion-content {
     	background-image: linear-gradient(to bottom, #2284b9 0%, #04ace5 100%);
@@ -24,20 +23,22 @@ page-login {
     	padding: 0 1rem;
     	height: 2.2em;
     }
+    
+    .button.activated {
+    	background-color: #eee;
+    	color: #00b1f3;
+  	} 
 
 	input.text-input::-webkit-input-placeholder {
 		color: white;
-		background-image: url("../../assets/img/vio_logo_white.png");
 	}
 	
 	input.text-input::-moz-placeholder {
 		color: white;
-		background-image: url("../../assets/img/vio_logo_white.png");
 	}
 	
 	input.text-input::-ms-input-placeholder {
 		color: white;
-		background-image: url("../../assets/img/vio_logo_white.png");
 	}
 	    
     .login-content {
@@ -54,19 +55,30 @@ page-login {
 	    	background-color: inherit;
 	    }
 	    
-	    form ion-item {
-	    	background: none;
-	    }
+	    .list {
+		    margin: 0 auto;
+		    .item-block .item-inner {
+		      border-bottom: none;
+		    }
+		  }
 	    
-	    input.text-input {
-	    	font-size: 1.4rem;
-	    }
-	    
-	    form ion-item.login-input .item-inner {
-			border: 2px solid white !important;
+	    .item {
 			background-color: #2284b9;
+		    color: white;
 		}
 		
+		.item.divider {
+			background-color: white;
+		}
+	    
+	    .list > .item-block:first-child,
+		  .list > .item-block:last-child,
+		  .list > .item-block {
+		    border: 2px solid white !important;
+		    border-radius: 30px;
+		    margin: 0 0 15px 0;
+		  }
+	    
 		.divider {
 			min-height: 1px;
     		height: 2px;
@@ -99,23 +111,10 @@ page-login {
             width: $button-width;
             margin: auto;
             padding-top: 15vh;
-
-            ion-item {
-                border: none !important;
-                padding: 0;
-                .item-inner {
-                    border: 1px solid black !important;
-                    padding: 0 2.6rem;
-                    border-radius: 64px;
-                    margin-bottom: 20px;
-                }
-            }
         }		
-	    
     } 
     
     
- 
     .start-content {
     
         margin: auto !important;

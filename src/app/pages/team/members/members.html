@@ -8,7 +8,7 @@
   <ion-list *ngIf="team">
     <ion-item *ngFor="let member of team.members" class="no-padding">
       <ion-avatar item-left>
-        <img src="assets/img/bernd.png">
+        <img src="{{member.image}}">
       </ion-avatar>
       <ion-icon *ngIf="member.status === 'available'" name="checkmark-circle" item-left class="status"></ion-icon>
       <ion-icon *ngIf="member.status === 'away'" name="timer" item-left class="status"></ion-icon>
