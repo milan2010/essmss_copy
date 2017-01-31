@@ -15,7 +15,7 @@ export class LoginService {
       let loading = this.loadingCtrl.create();
       loading.present();
 
-      let url = 'assets/responses/' + (username.toLowerCase() === 'employee' ? 'EmployeeDataSet.json' : 'ManagerDataSet.json');
+      let url = 'assets/responses/' + (username.toLowerCase() === 'manager' ? 'ManagerDataSet.json' : 'EmployeeDataSet.json');
 
       let headers = new Headers();
       headers.append("Authorization", "Basic " + btoa(username + ":" + password));

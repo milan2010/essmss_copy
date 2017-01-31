@@ -24,7 +24,7 @@ export class LoginPage {
 
   login = function () {
     console.log(this.data);
-    if (this.data.invalid || (this.data.value.username && this.data.value.username.toLowerCase() !== 'manager' && this.data.value.username.toLowerCase() !== 'employee')) {
+    if (this.data.invalid) {
       return;
     }
 
