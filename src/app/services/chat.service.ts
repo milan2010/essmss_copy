@@ -2,7 +2,7 @@ import {Observable} from 'rxjs/Observable';
 import * as io from 'socket.io-client';
 
 export class ChatService {
-  private url = 'http://localhost:9000';
+  private url = 'https://vwchatbot.herokuapp.com';
   private socket;
 
   sendMessage(message) {
