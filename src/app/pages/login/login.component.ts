@@ -15,8 +15,8 @@ import {UserService} from '../../services/user.service'
 export class LoginPage {
   showStart = true;
   data = this.formBuilder.group({
-    username: ['', Validators.required],
-    password: ['', Validators.required],
+    username: [''],
+    password: [''],
   });
 
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, private loginService: LoginService, private userService: UserService) {
