@@ -5,16 +5,16 @@ import {LoadingController} from "ionic-angular";
 @Injectable()
 export class WorkingTimeService {
 
-  private data: Object = null;
+  private data: Array<Object> = null;
 
   constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
 
   }
 
   getData() {
-    return new Promise<Object>((resolve, reject) => {
+    return new Promise<Array<Object>>((resolve, reject) => {
       let loading = this.loadingCtrl.create();
-      loading.present();
+      // loading.present();
 
       this.http.get('assets/responses/SchichtplanSet.json', {})
         .toPromise()

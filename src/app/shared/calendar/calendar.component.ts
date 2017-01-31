@@ -1,15 +1,14 @@
 import {Component, Input} from '@angular/core';
 import * as moment from 'moment';
-import {CalendarTypesService} from "../../services/calendar-types.service";
 
 @Component({
   selector: 'calendar',
-  templateUrl: 'calendar.html',
-  providers: [CalendarTypesService]
+  templateUrl: 'calendar.html'
 })
 export class Calendar {
 
   @Input() data = [];
+  @Input() types = [];
   weekDays = [];
   selected = {
     date: null,
@@ -17,19 +16,9 @@ export class Calendar {
   };
   month = null;
   weeks = [];
-  types = [];
 
-  constructor(private calendarTypesService: CalendarTypesService) {
+  constructor() {
     this.weekDays = moment().localeData().weekdaysShort();
-
-    calendarTypesService.getData()
-      .then(data => {
-        this.types = data;
-        console.log(this.types);
-      })
-      .catch(error => {
-        console.log(error);
-      })
   }
 
   ngOnChanges() {
