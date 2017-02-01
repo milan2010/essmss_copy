@@ -6,29 +6,29 @@
           {
             "Ename" : "Mark Meier",
             "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
-            "PositionTxt" : "Manager",
+            "PositionTxt" : "Meister",
             "Email" : "jhermann@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "available",
+            "Status" : "",
             "PhotoUrl" : "assets/img/MarkMeier.jpg"
           },
           {
             "Ename" : "Olaf Müller",
             "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
-            "PositionTxt" : "Meister",
+            "PositionTxt" : "Teamsprecher",
             "Email" : "omuller@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "available",
+            "Status" : "",
             "PhotoUrl" : "assets/img/OlafMueller.jpg"
           },
           {
-            "Ename" : "Wilhelm Ackert",
+            "Ename" : "Josef Hermann",
             "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
-            "PositionTxt" : "Monteur Maschine 1",
-            "Email" : "olaf@email.com",
+            "PositionTxt" : "Teamsprecher",
+            "Email" : "jhermann@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "available",
-            "PhotoUrl" : "assets/img/WilhelmAckert.jpg"
+            "Status" : "",
+            "PhotoUrl" : "assets/img/JosefHermann.jpg"
           },
           {
             "Ename" : "Sebastian Saal",
@@ -36,7 +36,7 @@
             "PositionTxt" : "Monteur Maschine 2",
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "away",
+            "Status" : "",
             "PhotoUrl" : "assets/img/SebastianSaal.jpg"
           },
           {
@@ -45,7 +45,7 @@
             "PositionTxt" : "Monteur Maschine 3",
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "away",
+            "Status" : "",
             "PhotoUrl" : "assets/img/ChristianHarnisch.jpg"
           },
           {
@@ -54,7 +54,7 @@
             "PositionTxt" : "Monteur Maschine 4",
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "not-available",
+            "Status" : "",
             "PhotoUrl" : "assets/img/JohnAlbrecht.jpg"
           }
         ],
