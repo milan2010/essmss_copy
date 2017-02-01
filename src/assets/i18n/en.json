@@ -15,7 +15,8 @@
     "TITLE": "My Profile",
     "USERDATA": {
       "POSITION": {
-        "P1": "Planning expert"
+        "P1": "Manager",
+        "P2": "Team speaker"
       },
       "ORGANISATION":{
         "O1": "Project mobile work - OE-A"

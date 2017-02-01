@@ -1,0 +1,66 @@
+{
+  "d": {
+    "results": [
+      {
+        "members": [
+          {
+            "Ename" : "Mark Meier",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Manager",
+            "Email" : "jhermann@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "available",
+            "PhotoUrl" : "assets/img/MarkMeier.jpg"
+          },
+          {
+            "Ename" : "Olaf Müller",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Meister",
+            "Email" : "omuller@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "available",
+            "PhotoUrl" : "assets/img/OlafMueller.jpg"
+          },
+          {
+            "Ename" : "Wilhelm Ackert",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Monteur Maschine 1",
+            "Email" : "olaf@email.com",
+            "Phone" : "1234567890",
+            "Status" : "available",
+            "PhotoUrl" : "assets/img/WilhelmAckert.jpg"
+          },
+          {
+            "Ename" : "Sebastian Saal",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Monteur Maschine 2",
+            "Email" : "ssaal@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "away",
+            "PhotoUrl" : "assets/img/SebastianSaal.jpg"
+          },
+          {
+            "Ename" : "Christian Harnisch",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Monteur Maschine 3",
+            "Email" : "ssaal@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "away",
+            "PhotoUrl" : "assets/img/ChristianHarnisch.jpg"
+          },
+          {
+            "Ename" : "John Albrecht",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Monteur Maschine 4",
+            "Email" : "ssaal@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "not-available",
+            "PhotoUrl" : "assets/img/JohnAlbrecht.jpg"
+          }
+        ],
+        "calendar": {
+        }
+      }
+    ]
+  }
+}
