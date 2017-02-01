@@ -25,6 +25,7 @@ import {TeamMemberDetailsPage} from "./pages/team/memberdetails/member-details.c
 import {NewsItem} from "./pages/hub/news-item/news-item.component";
 import {MessageItem} from "./pages/hub/message-item/message-item.component";
 import {ExpenseItem} from "./pages/hub/expense-item/expense-item.component";
+import {CalendarItem} from "./pages/hub/calendar-item/calendar-item.component";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -54,7 +55,8 @@ export function createTranslateLoader(http: Http) {
     ExpenseItemList,
     NewsItem,
     MessageItem,
-    ExpenseItem
+    ExpenseItem,
+    CalendarItem
   ],
   imports: [
     HttpModule,
@@ -86,7 +88,8 @@ export function createTranslateLoader(http: Http) {
     ChatPage,
     NewsItem,
     MessageItem,
-    ExpenseItem
+    ExpenseItem,
+    CalendarItem
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

@@ -24,6 +24,15 @@
       "type": 2
     },
     {
+      "title": "Eat & Drink",
+      "description": "Have some party.",
+      "location": "Sausalitos Wolfsburg",
+      "time": "01.02.17 17:00hs",
+      "photoUrl": "assets/img/PeterBerner.png",
+      "sender": "Peter Berner",
+      "type": 4
+    },
+    {
       "author": "Sandra Dassler",
       "title": "Keine Koffer im Berlinale-Kino",
       "description": "Berlinale-Chef Dieter Kosslick setzt auf Sicherheit, aber so diskret wie möglich. Besucher müssen verstärkt mit Taschenkontrollen rechnen.",

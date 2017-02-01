@@ -1,0 +1,22 @@
+<ion-card-content>
+  <ion-card-title>
+    {{content.title}}
+  </ion-card-title>
+  <span class="location">{{content.location}}</span>
+  <span class="time">{{content.time}}</span>
+  <p>{{content.description}}
+  </p>
+</ion-card-content>
+<ion-row no-padding>
+  <ion-col class="sender">
+    <ion-avatar item-left>
+      <img src="{{content.photoUrl}}">
+    </ion-avatar>
+    <span>{{content.sender}}</span>
+  </ion-col>
+  <ion-col text-right>
+    <button ion-button clear small color="primary">
+      <ion-icon name='heart'></ion-icon>
+    </button>
+  </ion-col>
+</ion-row>
