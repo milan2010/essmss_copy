@@ -44,6 +44,7 @@
     <ion-card *ngFor="let article of news.articles" [ngSwitch]="article.type">
       <news-item *ngSwitchCase="1" [content]="article"></news-item>
       <message-item *ngSwitchCase="2" [content]="article"></message-item>
+      <expense-item *ngSwitchCase="3" [content]="article"></expense-item>
     </ion-card>
   </ion-list>
 </ion-content>
