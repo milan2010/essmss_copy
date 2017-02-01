@@ -20,11 +20,11 @@ export class Calendar {
   weeks = [];
 
   constructor() {
-    this.weekDays = moment().localeData().weekdaysShort();
+    this.weekDays = moment().locale('de').localeData().weekdaysShort();
   }
 
   ngOnChanges() {
-    this.selected.date = this.removeTime(this.selected.date || moment());
+    this.selected.date = this.removeTime(this.selected.date || moment().locale('de'));
     this.month = this.selected.date.clone();
 
     let start = this.selected.date.clone();
@@ -66,8 +66,7 @@ export class Calendar {
       monthIndex = date.month();
     }
 
-
-    this.monthName = moment().localeData().months()[this.month.get('month')];
+    this.monthName = this.month.localeData().months()[this.month.get('month')];
   };
 
   buildWeek = function (date, month) {
