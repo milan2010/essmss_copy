@@ -11,6 +11,7 @@ export class Calendar {
   @Input() types = [];
   @Input() showSelectedDay = true;
   weekDays = [];
+  monthName = '';
   selected = {
     date: null,
     plan: null
@@ -64,6 +65,9 @@ export class Calendar {
       done = count++ > 2 && monthIndex !== date.month();
       monthIndex = date.month();
     }
+
+
+    this.monthName = moment().localeData().months()[this.month.get('month')];
   };
 
   buildWeek = function (date, month) {
@@ -130,5 +134,5 @@ export class Calendar {
   getLongDateFormat = function () {
     return this.selected.date.format('dddd, DD. MMMM YYYY');
     // return 'Donnerstag, 06. Dezember 2016';
-  }
+  };
 }
