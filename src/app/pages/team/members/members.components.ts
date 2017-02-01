@@ -27,12 +27,14 @@ export class TeamMembersPage {
       })
   }
 
-  sendEmail = function (email) {
-    new InAppBrowser('mailto:' + email, '_system');
+  sendEmail = function (e, email) {
+      e.stopPropagation();
+      new InAppBrowser('mailto:' + email, '_system');
   };
 
-  callPhone = function (phone) {
-    new InAppBrowser('tel:' + phone, '_system');
+  callPhone = function (e, phone) {
+      e.stopPropagation();
+      new InAppBrowser('tel:' + phone, '_system');
   };
 
   goToMemberDetails = function (member) {

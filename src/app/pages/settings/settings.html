@@ -29,26 +29,26 @@
 </ion-list>
 
 <ion-list>
-  <ion-list-header>News-Feed</ion-list-header>
+  <ion-list-header>{{ 'SETTINGS.FEED.TITLE' | translate }}</ion-list-header>
   <button ion-item detail-none (click)="toggleCalendar()">
-    <ion-label>Kalender</ion-label>
+    <ion-label>{{ 'SETTINGS.FEED.CALENDAR.TITLE' | translate }}</ion-label>
     <ion-icon [name]="settings.feed.calendar ? 'calendar' : 'calendar-outline'" [color]="settings.feed.calendar ? 'primary' : ''" item-left></ion-icon>
   </button>
   <button ion-item detail-none (click)="toggleNews()">
-    <ion-label>Nachrichten</ion-label>
+    <ion-label>{{ 'SETTINGS.FEED.NEWS.TITLE' | translate }}</ion-label>
     <ion-icon [name]="settings.feed.news ? 'paper' : 'paper-outline'" [color]="settings.feed.news ? 'primary' : ''" item-left></ion-icon>
   </button>
   <button ion-item detail-none (click)="toggleExpense()">
-    <ion-label>Ausgaben</ion-label>
-    <ion-icon [name]="settings.feed.expense ? 'logo-euro' : 'logo-euro-outline'" [color]="settings.feed.expense ? 'primary' : ''" item-left></ion-icon>
+    <ion-label>{{ 'SETTINGS.FEED.EXPENSE.TITLE' | translate }}</ion-label>
+    <ion-icon [name]="settings.feed.expense ? 'logo-euro' : 'logo-euro'" [color]="settings.feed.expense ? 'primary' : ''" item-left></ion-icon>
   </button>
   <button ion-item detail-none (click)="toggleMessage()">
-    <ion-label>Benachrichtigungen</ion-label>
-    <ion-icon [name]="settings.feed.message ? 'information' : 'information-outline'" [color]="settings.feed.message ? 'primary' : ''" item-left></ion-icon>
+    <ion-label>{{ 'SETTINGS.FEED.MESSAGE.TITLE' | translate }}</ion-label>
+    <ion-icon [name]="settings.feed.message ? 'information' : 'information'" [color]="settings.feed.message ? 'primary' : ''" item-left></ion-icon>
   </button>
 </ion-list>
 
 <button ion-button full color="danger" (click)="logOut()">
-  Logout
+  {{ 'SETTINGS.LOGOUT' | translate | uppercase }}
 </button>
 </ion-content>

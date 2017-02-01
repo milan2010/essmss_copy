@@ -4,8 +4,8 @@
       {
         "feed":{
           "calendar": true,
-          "news": false,
-          "expense": false,
+          "news": true,
+          "expense": true,
           "message": true
         }
       }

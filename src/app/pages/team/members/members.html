@@ -17,8 +17,8 @@
       <h2>{{member.Ename}}</h2>
       <p>{{member.PositionTxt}}</p>
 
-      <ion-icon name="md-mail" item-right class="blue-icon" (click)="sendEmail(member.Email)"></ion-icon>
-      <ion-icon name="call" item-right class="blue-icon" (click)="callPhone(member.Phone)"></ion-icon>
+      <ion-icon name="md-mail" item-right class="blue-icon" (click)="sendEmail($event, member.Email)"></ion-icon>
+      <ion-icon name="call" item-right class="blue-icon" (click)="callPhone($event, member.Phone)"></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>
