@@ -26,6 +26,7 @@ import {NewsItem} from "./pages/hub/news-item/news-item.component";
 import {MessageItem} from "./pages/hub/message-item/message-item.component";
 import {ExpenseItem} from "./pages/hub/expense-item/expense-item.component";
 import {CalendarItem} from "./pages/hub/calendar-item/calendar-item.component";
+import {PresswerkPage} from "./pages/work/presswerk/presswerk.components";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -56,7 +57,8 @@ export function createTranslateLoader(http: Http) {
     NewsItem,
     MessageItem,
     ExpenseItem,
-    CalendarItem
+    CalendarItem,
+    PresswerkPage
   ],
   imports: [
     HttpModule,
@@ -89,7 +91,8 @@ export function createTranslateLoader(http: Http) {
     NewsItem,
     MessageItem,
     ExpenseItem,
-    CalendarItem
+    CalendarItem,
+    PresswerkPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

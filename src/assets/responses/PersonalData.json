@@ -1,0 +1,32 @@
+{
+  "d": {
+    "results": [
+      {
+        "type": "manager",
+        "data": {
+          "firstname": "Mark",
+          "lastname": "Meier",
+          "street": "Kirchstraße",
+          "number": "42",
+          "postcode": "38440",
+          "city": "Wolfsburg",
+          "email": "mark.meier@vw.de",
+          "mobile": "12345 / 123456"
+        }
+      },
+      {
+        "type": "employee",
+        "data": {
+          "firstname": "Wilhelm",
+          "lastname": "Acker",
+          "street": "Hofgasse",
+          "number": "3",
+          "postcode": "38440",
+          "city": "Wolfsburg",
+          "email": "wilhelm.acker@vw.de",
+          "mobile": "12345 / 987654"
+        }
+      }
+    ]
+  }
+}
