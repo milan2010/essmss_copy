@@ -3,51 +3,72 @@ import {NavController} from 'ionic-angular';
 import {ToastController} from 'ionic-angular';
 
 import { TranslateService } from 'ng2-translate';
+import {UserService} from "../../services/user.service";
+import {UserSettingsService} from "../../services/usersettings.service";
 
-/*
- Generated class for the Settings page.
 
- See http://ionicframework.com/docs/v2/components/#navigation for more info on
- Ionic pages and navigation.
- */
 @Component({
   selector: 'page-settings',
-  templateUrl: 'settings.html'
+  templateUrl: 'settings.html',
+  providers: [UserService, UserSettingsService]
 })
 export class SettingsPage {
-  settings: { vibration: boolean, sound:boolean, language:string } = {
-    vibration: false,
-    sound: false,
-    language: 'de'
+  userData: Object = null;
+  language:string = "de";
+  settings: { feed:{ calendar:boolean, news:boolean, expense:boolean, message:boolean } } = {
+    feed:{
+      calendar: true,
+      news: false,
+      expense: false,
+      message: true
+    }
   };
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController, private translate: TranslateService) {
-    this.settings.language = this.translate.currentLang;
-  }
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, private translate: TranslateService, private userService: UserService, private userSettingsService: UserSettingsService) {
+    this.userData = this.userService.getData();
 
-  ionViewDidLoad() {
-  }
-
-  presentToast() {
-    let toast = this.toastCtrl.create({
-      message: 'Settings Saved!',
-      duration: 2000,
-      position: 'bottom',
-      cssClass: 'toast-success'
+    this.userSettingsService.getData()
+    .then(data => {
+      this.settings = data;
+    })
+    .catch(error => {
+      console.log(error);
     });
-    toast.present();
+
+    this.language = this.translate.currentLang;
   }
 
-  updateSound(settings) {
-    this.presentToast();
+  logOut(){
+    this.userService.logOut();
+    window.location.reload();
   }
 
-  updateVibration(settings) {
-    this.presentToast();
+  ionViewWillLeave() {
+    this.setUserSettings();
+  }
+
+  setUserSettings(){
+    this.userSettingsService.setData(this.settings);
   }
 
   setLanguage() {
-    this.translate.use(this.settings.language);
+    this.translate.use(this.language);
+  }
+
+  toggleCalendar() {
+    this.settings.feed.calendar = !this.settings.feed.calendar;
+  }
+
+  toggleNews() {
+    this.settings.feed.news = !this.settings.feed.news;
+  }
+
+  toggleExpense() {
+    this.settings.feed.expense = !this.settings.feed.expense;
+  }
+
+  toggleMessage() {
+    this.settings.feed.message = !this.settings.feed.message;
   }
 
 }

@@ -6,25 +6,49 @@
 
 </ion-header>
 
+<ion-content>
 
-<ion-content no-bounce>
   <ion-list>
     <ion-list-header>{{ 'SETTINGS.HEADER-GENERAL' | translate }}</ion-list-header>
     <!-- <ion-item>
-      <ion-label>{{ 'SETTINGS.VIBRATION.LABEL' | translate }}</ion-label>
-      <ion-toggle value="vibration" checked="true" [(ngModel)]="settings.vibration" (ionChange)="updateVibration(settings.vibration)"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>{{ 'SETTINGS.SOUND.LABEL' | translate }}</ion-label>
-      <ion-toggle value="sound" checked="true" [(ngModel)]="settings.sound" (ionChange)="updateSound(settings.sound)"></ion-toggle>
-    </ion-item> -->
-    <ion-item>
-      <ion-label>{{ 'SETTINGS.LANGUAGESELECT.LABEL' | translate }}</ion-label>
-      <ion-select cancelText="{{ 'SETTINGS.LANGUAGESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.LANGUAGESELECT.OKTEXT' | translate }}" [(ngModel)]="settings.language" (ionChange)="setLanguage()">
-        <ion-option value="de">{{ 'SETTINGS.LANGUAGESELECT.OPTIONS.DE' | translate }}</ion-option>
-        <ion-option value="en">{{ 'SETTINGS.LANGUAGESELECT.OPTIONS.EN' | translate }}</ion-option>
-        <ion-option value="fr">{{ 'SETTINGS.LANGUAGESELECT.OPTIONS.FR' | translate }}</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+    <ion-label>{{ 'SETTINGS.VIBRATION.LABEL' | translate }}</ion-label>
+    <ion-toggle value="vibration" checked="true" [(ngModel)]="settings.vibration" (ionChange)="updateVibration(settings.vibration)"></ion-toggle>
+  </ion-item>
+  <ion-item>
+  <ion-label>{{ 'SETTINGS.SOUND.LABEL' | translate }}</ion-label>
+  <ion-toggle value="sound" checked="true" [(ngModel)]="settings.sound" (ionChange)="updateSound(settings.sound)"></ion-toggle>
+</ion-item> -->
+<ion-item>
+  <ion-label>{{ 'SETTINGS.LANGUAGESELECT.LABEL' | translate }}</ion-label>
+  <ion-select cancelText="{{ 'SETTINGS.LANGUAGESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.LANGUAGESELECT.OKTEXT' | translate }}" [(ngModel)]="language" (ionChange)="setLanguage()">
+    <ion-option value="de">{{ 'SETTINGS.LANGUAGESELECT.OPTIONS.DE' | translate }}</ion-option>
+    <ion-option value="en">{{ 'SETTINGS.LANGUAGESELECT.OPTIONS.EN' | translate }}</ion-option>
+    <ion-option value="fr">{{ 'SETTINGS.LANGUAGESELECT.OPTIONS.FR' | translate }}</ion-option>
+  </ion-select>
+</ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-list-header>News-Feed</ion-list-header>
+  <button ion-item detail-none (click)="toggleCalendar()">
+    <ion-label>Kalender</ion-label>
+    <ion-icon [name]="settings.feed.calendar ? 'chatbubbles' : 'chatbubbles-outline'" [color]="settings.feed.calendar ? 'primary' : ''" item-left></ion-icon>
+  </button>
+  <button ion-item detail-none (click)="toggleNews()">
+    <ion-label>Nachrichten</ion-label>
+    <ion-icon [name]="settings.feed.news ? 'paper' : 'paper-outline'" [color]="settings.feed.news ? 'primary' : ''" item-left></ion-icon>
+  </button>
+  <button ion-item detail-none (click)="toggleExpense()">
+    <ion-label>Ausgaben</ion-label>
+    <ion-icon [name]="settings.feed.expense ? 'checkbox' : 'checkbox-outline'" [color]="settings.feed.expense ? 'primary' : ''" item-left></ion-icon>
+  </button>
+  <button ion-item detail-none (click)="toggleMessage()">
+    <ion-label>Benachrichtigungen</ion-label>
+    <ion-icon [name]="settings.feed.message ? 'checkbox' : 'checkbox-outline'" [color]="settings.feed.message ? 'primary' : ''" item-left></ion-icon>
+  </button>
+</ion-list>
+
+<button ion-button full color="danger" (click)="logOut()">
+  Logout
+</button>
 </ion-content>
