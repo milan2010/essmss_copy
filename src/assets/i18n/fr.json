@@ -48,11 +48,27 @@
   "SETTINGS": {
     "TITLE": "Paramètres",
     "HEADER-GENERAL": "Général",
+    "LOGOUT": "Déconnecter",
     "SOUND": {
       "LABEL": "Sons"
     },
     "VIBRATION": {
       "LABEL": "Vibration"
+    },
+    "FEED": {
+      "TITLE": "News-Feed",
+      "CALENDAR": {
+        "TITLE": "Calendrier"
+      },
+      "NEWS": {
+        "TITLE": "Nouvelles"
+      },
+      "EXPENSE": {
+        "TITLE": "Dépense"
+      },
+      "MESSAGE": {
+        "TITLE": "Notifications"
+      }
     },
     "LANGUAGESELECT": {
       "LABEL": "Langue",
