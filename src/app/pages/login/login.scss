@@ -14,7 +14,17 @@ page-login {
       text-transform: uppercase;
     }
   }
-
+    
+  .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus) {
+  	border-bottom-color: none;
+  	box-shadow: none !important;
+  }
+	
+  .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+   	border-bottom-color: none;
+   	box-shadow: none;
+  }
+    
   .button {
     color: #00b1f3;
     background-color: white;

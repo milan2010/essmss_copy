@@ -1,21 +1,24 @@
 //Toolbar
-/*
-.toolbar {
-  &-content {
-    top: 15px;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
 
-  &-title{
+.toolbar-title {
+  	margin: 0 auto;
     text-align: center;
   }
-}
-*/
 
 .title {
   font-family: "VWTextLight", "Roboto", sans-serif;
+}
+
+ion-title.title.title-md {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.back-button.show-back-button {
+  z-index: 1000;
 }
 
 //Icons

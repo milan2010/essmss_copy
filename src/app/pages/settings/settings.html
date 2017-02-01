@@ -32,7 +32,7 @@
   <ion-list-header>News-Feed</ion-list-header>
   <button ion-item detail-none (click)="toggleCalendar()">
     <ion-label>Kalender</ion-label>
-    <ion-icon [name]="settings.feed.calendar ? 'chatbubbles' : 'chatbubbles-outline'" [color]="settings.feed.calendar ? 'primary' : ''" item-left></ion-icon>
+    <ion-icon [name]="settings.feed.calendar ? 'calendar' : 'calendar-outline'" [color]="settings.feed.calendar ? 'primary' : ''" item-left></ion-icon>
   </button>
   <button ion-item detail-none (click)="toggleNews()">
     <ion-label>Nachrichten</ion-label>
@@ -40,11 +40,11 @@
   </button>
   <button ion-item detail-none (click)="toggleExpense()">
     <ion-label>Ausgaben</ion-label>
-    <ion-icon [name]="settings.feed.expense ? 'checkbox' : 'checkbox-outline'" [color]="settings.feed.expense ? 'primary' : ''" item-left></ion-icon>
+    <ion-icon [name]="settings.feed.expense ? 'logo-euro' : 'logo-euro-outline'" [color]="settings.feed.expense ? 'primary' : ''" item-left></ion-icon>
   </button>
   <button ion-item detail-none (click)="toggleMessage()">
     <ion-label>Benachrichtigungen</ion-label>
-    <ion-icon [name]="settings.feed.message ? 'checkbox' : 'checkbox-outline'" [color]="settings.feed.message ? 'primary' : ''" item-left></ion-icon>
+    <ion-icon [name]="settings.feed.message ? 'information' : 'information-outline'" [color]="settings.feed.message ? 'primary' : ''" item-left></ion-icon>
   </button>
 </ion-list>
 

@@ -19,46 +19,33 @@
 
       <ion-profile-header [data]="userData"></ion-profile-header>
 
-      <ion-fab right edge>
+      <ion-fab right edge #fab>
         <button ion-fab>
-          <ion-icon name="funnel"></ion-icon>
+          <ion-icon name="funnel" (click)="setFilter(0)"></ion-icon>
         </button>
         <ion-fab-list side="left">
-          <button ion-fab *ngIf="userSettings.feed.calendar">
-            <ion-icon name="chatbubbles"></ion-icon>
+          <button ion-fab (click)="setFilter(3, fab)" *ngIf="userSettings.feed.expense">
+            <ion-icon name="logo-euro"></ion-icon>
           </button>
-          <button ion-fab *ngIf="userSettings.feed.news">
+          <button ion-fab (click)="setFilter(4, fab)" *ngIf="userSettings.feed.calendar">
+            <ion-icon name="calendar"></ion-icon>
+          </button>
+          <button ion-fab (click)="setFilter(2, fab)" *ngIf="userSettings.feed.message">
+            <ion-icon name="information"></ion-icon>
+          </button>
+          <button ion-fab (click)="setFilter(1, fab)" *ngIf="userSettings.feed.news">
             <ion-icon name="paper"></ion-icon>
-          </button>
-          <button ion-fab *ngIf="userSettings.feed.expense">
-            <ion-icon name="checkbox"></ion-icon>
-          </button>
-          <button ion-fab *ngIf="userSettings.feed.message">
-            <ion-icon name="checkbox"></ion-icon>
           </button>
         </ion-fab-list>
       </ion-fab>
     </ion-col>
   </ion-row>
   <ion-list *ngIf="news">
-    <ion-card *ngFor="let article of news.articles">
-      <img src="{{article.urlToImage}}"/>
-      <ion-card-content>
-        <ion-card-title>
-          {{article.title}}
-          <p>{{article.publishedAt | date:'dd.MM.yyyy'}}</p>
-        </ion-card-title>
-        <p>
-          {{article.description}}
-        </p>
-      </ion-card-content>
-      <ion-row no-padding>
-        <ion-col text-right>
-          <button ion-button clear small color="primary">
-            <ion-icon name='heart'></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
+    <ion-card *ngFor="let article of filtered" [ngSwitch]="article.type">
+      <news-item *ngSwitchCase="1" [content]="article"></news-item>
+      <message-item *ngSwitchCase="2" [content]="article"></message-item>
+      <expense-item *ngSwitchCase="3" [content]="article"></expense-item>
+      <calendar-item *ngSwitchCase="4" [content]="article"></calendar-item>
     </ion-card>
   </ion-list>
 </ion-content>

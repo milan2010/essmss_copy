@@ -4,6 +4,15 @@
       {
         "members": [
           {
+            "Ename" : "Mark Meier",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Manager",
+            "Email" : "jhermann@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "available",
+            "PhotoUrl" : "assets/img/MarkMeier.jpg"
+          },
+          {
             "Ename" : "Olaf Müller",
             "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
             "PositionTxt" : "Meister",
@@ -11,15 +20,6 @@
             "Phone" : "1234567890",
             "Status" : "available",
             "PhotoUrl" : "assets/img/OlafMueller.jpg"
-          },
-          {
-            "Ename" : "Josef Hermann",
-            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
-            "PositionTxt" : "Teamsprecher",
-            "Email" : "jhermann@volkswagen.com",
-            "Phone" : "1234567890",
-            "Status" : "not-available",
-            "PhotoUrl" : "assets/img/JosefHermann.jpg"
           },
           {
             "Ename" : "Wilhelm Ackert",
