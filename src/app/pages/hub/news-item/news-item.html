@@ -1,0 +1,17 @@
+<img src="{{content.urlToImage}}"/>
+<ion-card-content>
+  <ion-card-title>
+    {{content.title}}
+    <p>{{content.publishedAt | date:'dd.MM.yyyy'}}</p>
+  </ion-card-title>
+  <p>
+    {{content.description}}
+  </p>
+</ion-card-content>
+<ion-row no-padding>
+  <ion-col text-right>
+    <button ion-button clear small color="primary">
+      <ion-icon name='heart'></ion-icon>
+    </button>
+  </ion-col>
+</ion-row>

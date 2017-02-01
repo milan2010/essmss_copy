@@ -16,7 +16,8 @@ export class HubService {
       let loading = this.loadingCtrl.create();
       loading.present();
 
-      this.http.get('https://newsapi.org/v1/articles?source=der-tagesspiegel&sortBy=latest&apiKey=4478789a687642268603344083123786', {})
+      // this.http.get('https://newsapi.org/v1/articles?source=der-tagesspiegel&sortBy=latest&apiKey=4478789a687642268603344083123786', {})
+      this.http.get('assets/responses/Hub.json', {})
         .toPromise()
         .then(res => {
           loading.dismiss();
