@@ -195,5 +195,11 @@ calendar {
       display: inline-block;
       font-size: 20px;
     }
+
+    .days-count {
+      float: right;
+      line-height: 27px;
+      color: #989898;
+    }
   }
 }

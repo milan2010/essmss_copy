@@ -57,7 +57,6 @@ export class Calendar {
   };
 
   buildMonth = function (start) {
-    console.log(start);
     this.weeks = [];
     let done = false;
     let date = start.clone();
