@@ -4,16 +4,20 @@ import {NavController} from "ionic-angular";
 
 import {TeamService} from "../team.service";
 import {TeamMemberDetailsPage} from "../memberdetails/member-details.component";
+import {UserService} from "../../../services/user.service";
 
 @Component({
   selector: 'page-team-members',
   templateUrl: 'members.html',
-  providers: [TeamService]
+  providers: [TeamService, UserService]
 })
 export class TeamMembersPage {
+  userData: Object = null;
   team: Object = null;
 
-  constructor(private teamService: TeamService, public navCtrl: NavController) {
+  constructor(private userService: UserService, private teamService: TeamService, public navCtrl: NavController) {
+    this.userData = this.userService.getData();
+      
     teamService.getTeam()
       .then(data => {
         this.team = data;

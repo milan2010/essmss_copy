@@ -7,9 +7,12 @@ import {UserService} from "../../services/user.service";
 export class TeamService {
 
   private team: Object = null;
+  userData: Object = null;
 
-  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController, private userService: UserService) {
-
+  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController, 
+          @Inject(UserService) private userService: UserService) {
+      
+      this.userData = this.userService.getData();
   }
 
   getTeam() {
