@@ -48,11 +48,27 @@
   "SETTINGS": {
     "TITLE": "Settings",
     "HEADER-GENERAL": "General",
+    "LOGOUT": "Logout",
     "SOUND": {
       "LABEL": "Sound"
     },
     "VIBRATION": {
       "LABEL": "Vibration"
+    },
+    "FEED": {
+      "TITLE": "News-Feed",
+      "CALENDAR": {
+        "TITLE": "Calendar"
+      },
+      "NEWS": {
+        "TITLE": "News"
+      },
+      "EXPENSE": {
+        "TITLE": "Expense"
+      },
+      "MESSAGE": {
+        "TITLE": "Message"
+      }
     },
     "LANGUAGESELECT": {
       "LABEL": "Language",
