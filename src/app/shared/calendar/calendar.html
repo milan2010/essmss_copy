@@ -1,6 +1,6 @@
 <div class="calendar-header">
   <ion-icon name="arrow-back" (click)="previous()" class="left-arrow"></ion-icon>
-  <span>{{ monthName }}</span>
+  <span>{{ monthName }} {{ month.format("YYYY") }}</span>
   <ion-icon name="arrow-forward" (click)="next()" class="right-arrow"></ion-icon>
 </div>
 
@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<div class="selected-day-info" *ngIf="selected.date && showSelectedDay">
+<div class="selected-day-info" *ngIf="selected.plan && selected.plan.begin && showSelectedDay">
   <div class="long-date-format">
     <h3>{{getLongDateFormat()}}</h3>
   </div>

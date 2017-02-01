@@ -10,7 +10,7 @@ export class Calendar {
   @Input() data = [];
   @Input() types = [];
   @Input() showSelectedDay = true;
-  weekDays = [];
+  weekDays = ["Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa.", "So."];
   monthName = '';
   selected = {
     date: null,
@@ -20,7 +20,8 @@ export class Calendar {
   weeks = [];
 
   constructor() {
-    this.weekDays = moment().locale('de').localeData().weekdaysShort();
+    // TODO: Start from monday if its DE
+    // this.weekDays = moment().locale('de').localeData().weekdaysShort();
   }
 
   ngOnChanges() {
@@ -29,7 +30,7 @@ export class Calendar {
 
     let start = this.selected.date.clone();
     start.date(1);
-    this.removeTime(start.day(0));
+    this.removeTime(start.startOf('month').startOf('week'));
     this.buildMonth(start);
   }
 
@@ -56,6 +57,7 @@ export class Calendar {
   };
 
   buildMonth = function (start) {
+    console.log(start);
     this.weeks = [];
     let done = false;
     let date = start.clone();
@@ -117,7 +119,7 @@ export class Calendar {
     return days;
   };
 
-  getBackground = function(type) {
+  getBackground = function (type) {
     for (let t = 0; t < this.types.length; t++) {
       if (this.types[t].symbol === type) {
         return this.types[t].background;
