@@ -52,13 +52,15 @@ export class Calendar {
   };
 
   removeTime = function (date) {
-    return date.day(0).hour(0).minute(0).second(0).millisecond(0);
+    return date.hour(0).minute(0).second(0).millisecond(0);
   };
 
   buildMonth = function (start) {
     this.weeks = [];
-    // this.types = [];
-    let done = false, date = start.clone(), monthIndex = date.month(), count = 0;
+    let done = false;
+    let date = start.clone();
+    let monthIndex = date.month();
+    let count = 0;
     while (!done) {
       this.weeks.push({days: this.buildWeek(date.clone(), this.month)});
       date.add(1, "w");
