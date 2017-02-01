@@ -15,7 +15,8 @@
     "TITLE": "Mon Profil",
     "USERDATA": {
       "POSITION": {
-        "P1": "Referent pour la planification"
+        "P1": "Directeur",
+        "P2": "Le porte-parole de l'équipe"
       },
       "ORGANISATION":{
         "O1": "Projet mobile travail - OE-A"

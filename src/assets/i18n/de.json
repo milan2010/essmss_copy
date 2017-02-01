@@ -15,7 +15,8 @@
     "TITLE": "Mein Profil",
     "USERDATA": {
       "POSITION": {
-        "P1": "Fachreferent/in für Planung"
+        "P1": "Manager",
+        "P2": "Teamsprecher"
       },
       "ORGANISATION":{
         "O1": "Projekt mobile Arbeit - OE-A"
