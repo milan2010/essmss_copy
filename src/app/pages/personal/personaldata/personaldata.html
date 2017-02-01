@@ -15,11 +15,11 @@
     <ion-list-header>Name</ion-list-header>
     <ion-item>
       <ion-label>Vorname</ion-label>
-      <ion-input type="text" value="Bernd" disabled="{{ !edit }}"></ion-input>
+      <ion-input type="text" value="{{ personalData.firstname }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Nachname</ion-label>
-      <ion-input type="text" value="Möller" disabled="{{ !edit }}"></ion-input>
+      <ion-input type="text" value="{{ personalData.lastname }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>
 
@@ -27,19 +27,19 @@
     <ion-list-header>Adresse</ion-list-header>
     <ion-item>
       <ion-label>Straße</ion-label>
-      <ion-input type="text" value="Kirchgasse" disabled="{{ !edit }}"></ion-input>
+      <ion-input type="text" value="{{ personalData.street }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Hausnummer</ion-label>
-      <ion-input type="text" value="4" disabled="{{ !edit }}"></ion-input>
+      <ion-input type="text" value="{{ personalData.number }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Postleitzahl</ion-label>
-      <ion-input type="text" value="10115" disabled="{{ !edit }}"></ion-input>
+      <ion-input type="text" value="{{ personalData.postcode }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Stadt</ion-label>
-      <ion-input type="text" value="Berlin" disabled="{{ !edit }}"></ion-input>
+      <ion-input type="text" value="{{ personalData.city }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>
 
@@ -47,11 +47,11 @@
     <ion-list-header>Kontakt</ion-list-header>
     <ion-item>
       <ion-label>Email</ion-label>
-      <ion-input type="text" value="bernd.moeller@vw.de" disabled="{{ !edit }}"></ion-input>
+      <ion-input type="text" value="{{ personalData.email }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Mobil</ion-label>
-      <ion-input type="text" value="0170-1234567" disabled="{{ !edit }}"></ion-input>
+      <ion-input type="text" value="{{ personalData.mobile }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>
 </ion-content>
