@@ -9,9 +9,9 @@
 				"media_src": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/$value"
 			},
 			"Employeenumber": "00016218",
-			"Ename": "Josef Hermann",
+			"Ename": "Wilhelm Ackert",
 			"ContentType": "",
-			"PhotoUrl": "assets/img/JosefHermann.jpg",
+			"PhotoUrl": "assets/img/WilhelmAckert.jpg",
 			"BldingNo": "",
 			"RoomNo": "",
 			"Phone": "",
