@@ -1,24 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>TEAMMITGLIEDER</ion-title>
+    <ion-title>Teammitglieder</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding no-bounce>
   <ion-list *ngIf="team">
-    <ion-item *ngFor="let member of team.members" class="no-padding">
+    <ion-item *ngFor="let member of team.members" (click)="goToMemberDetails(member)" class="no-padding">
       <ion-avatar item-left>
-        <img src="{{member.image}}">
+        <img src="{{member.PhotoUrl}}">
       </ion-avatar>
-      <ion-icon *ngIf="member.status === 'available'" name="radio-button-on" item-left class="status available"></ion-icon>
-      <ion-icon *ngIf="member.status === 'away'" name="radio-button-on" item-left class="status away"></ion-icon>
-      <ion-icon *ngIf="member.status === 'not-available'" name="radio-button-on" item-left class="status not-available"></ion-icon>
+      <ion-icon *ngIf="member.Status === 'available'" name="radio-button-on" item-left class="status available"></ion-icon>
+      <ion-icon *ngIf="member.Status === 'away'" name="radio-button-on" item-left class="status away"></ion-icon>
+      <ion-icon *ngIf="member.Status === 'not-available'" name="radio-button-on" item-left class="status not-available"></ion-icon>
 
-      <h2>{{member.name}}</h2>
-      <p>{{member.role}}</p>
+      <h2>{{member.Ename}}</h2>
+      <p>{{member.PositionTxt}}</p>
 
-      <ion-icon name="md-mail" item-right class="blue-icon"></ion-icon>
-      <ion-icon name="call" item-right class="blue-icon"></ion-icon>
+      <ion-icon name="md-mail" item-right class="blue-icon" (click)="sendEmail($event, member.Email)"></ion-icon>
+      <ion-icon name="call" item-right class="blue-icon" (click)="callPhone($event, member.Phone)"></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>

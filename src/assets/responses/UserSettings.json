@@ -1,0 +1,14 @@
+{
+  "d": {
+    "results": [
+      {
+        "feed":{
+          "calendar": true,
+          "news": true,
+          "expense": true,
+          "message": true
+        }
+      }
+    ]
+  }
+}

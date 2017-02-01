@@ -6,8 +6,8 @@ import {ContactpersonPage} from "./contactperson/contactperson.components";
 import {AbsencePage} from "./absence/absence.components";
 import {WorkingtimePage} from "./workingtime/workingtime.components";
 import {UserService} from "../../services/user.service";
-//import {LoginPage} from "../login/login.component";
-import {NavController} from "ionic-angular";
+import {LoginPage} from "../login/login.component";
+import {NavController, App} from "ionic-angular";
 import {SettingsPage} from "../settings/settings.component";
 
 @Component({
@@ -21,7 +21,7 @@ export class PersonalPage {
   options: any;
   userData: Object = null;
 
-  constructor(private userService: UserService, public navCtrl: NavController) {
+  constructor(private userService: UserService, public navCtrl: NavController, private app: App) {
     this.userData = this.userService.getData();
 
     this.personalMenu = [
@@ -85,13 +85,10 @@ export class PersonalPage {
 
   }
 
-  ionViewDidLoad() {
-    console.log('Hello PersonalPage Page');
-  }
-
   logOut = function () {
     this.userService.logOut();
-    window.location.reload();
+    this.app.getRootNav().setRoot(LoginPage);
+//    window.location.reload();
   };
 
   goToSettings = function () {

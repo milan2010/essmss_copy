@@ -15,7 +15,8 @@
     "TITLE": "Mon Profil",
     "USERDATA": {
       "POSITION": {
-        "P1": "Referent pour la planification"
+        "P1": "Chef d'équipe",
+        "P2": "Editor machine 1"
       },
       "ORGANISATION":{
         "O1": "Projet mobile travail - OE-A"
@@ -47,20 +48,36 @@
   "SETTINGS": {
     "TITLE": "Paramètres",
     "HEADER-GENERAL": "Général",
+    "LOGOUT": "Déconnecter",
     "SOUND": {
       "LABEL": "Sons"
     },
     "VIBRATION": {
       "LABEL": "Vibration"
     },
+    "FEED": {
+      "TITLE": "News-Feed",
+      "CALENDAR": {
+        "TITLE": "Calendrier"
+      },
+      "NEWS": {
+        "TITLE": "Nouvelles"
+      },
+      "EXPENSE": {
+        "TITLE": "Dépense"
+      },
+      "MESSAGE": {
+        "TITLE": "Notifications"
+      }
+    },
     "LANGUAGESELECT": {
       "LABEL": "Langue",
       "OKTEXT": "Ok",
       "CANCELTEXT": "Annuler",
       "OPTIONS": {
-        "DE": "DE",
-        "EN": "EN",
-        "FR": "FR"
+        "DE": "Deutsch",
+        "EN": "English",
+        "FR": "Francais"
       }
     }
   }

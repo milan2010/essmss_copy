@@ -15,7 +15,8 @@
     "TITLE": "My Profile",
     "USERDATA": {
       "POSITION": {
-        "P1": "Planning expert"
+        "P1": "Foreman",
+        "P2": "Monteur Machine 1"
       },
       "ORGANISATION":{
         "O1": "Project mobile work - OE-A"
@@ -47,20 +48,36 @@
   "SETTINGS": {
     "TITLE": "Settings",
     "HEADER-GENERAL": "General",
+    "LOGOUT": "Logout",
     "SOUND": {
       "LABEL": "Sound"
     },
     "VIBRATION": {
       "LABEL": "Vibration"
     },
+    "FEED": {
+      "TITLE": "News-Feed",
+      "CALENDAR": {
+        "TITLE": "Calendar"
+      },
+      "NEWS": {
+        "TITLE": "News"
+      },
+      "EXPENSE": {
+        "TITLE": "Expense"
+      },
+      "MESSAGE": {
+        "TITLE": "Message"
+      }
+    },
     "LANGUAGESELECT": {
       "LABEL": "Language",
       "OKTEXT": "Ok",
       "CANCELTEXT": "Cancel",
       "OPTIONS": {
-        "DE": "DE",
-        "EN": "EN",
-        "FR": "FR"
+        "DE": "Deutsch",
+        "EN": "English",
+        "FR": "Francais"
       }
     }
   }

@@ -15,6 +15,7 @@ export class UserService {
   logOut() {
     this.user = null;
     localStorage.removeItem('user');
+    localStorage.removeItem('usersettings');
   }
 
   isLoggedIn(): boolean {

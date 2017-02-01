@@ -12,10 +12,11 @@
     "TITLE": "Meine Arbeit"
   },
   "PERSONAL": {
-    "TITLE": "Meine Profil",
+    "TITLE": "Mein Profil",
     "USERDATA": {
       "POSITION": {
-        "P1": "Fachreferent/in für Planung"
+        "P1": "Meister",
+        "P2": "Monteur Maschine 1"
       },
       "ORGANISATION":{
         "O1": "Projekt mobile Arbeit - OE-A"
@@ -47,20 +48,36 @@
   "SETTINGS": {
     "TITLE": "Einstellungen",
     "HEADER-GENERAL": "Allgemein",
+    "LOGOUT": "Abmelden",
     "SOUND": {
       "LABEL": "Ton"
     },
     "VIBRATION": {
       "LABEL": "Vibration"
     },
+    "FEED": {
+      "TITLE": "Nachrichten-Feed",
+      "CALENDAR": {
+        "TITLE": "Kalender"
+      },
+      "NEWS": {
+        "TITLE": "Nachrichten"
+      },
+      "EXPENSE": {
+        "TITLE": "Ausgaben"
+      },
+      "MESSAGE": {
+        "TITLE": "Benachrichtigungen"
+      }
+    },
     "LANGUAGESELECT": {
       "LABEL": "Sprache",
       "OKTEXT": "Übernehmen",
       "CANCELTEXT": "Abbrechen",
       "OPTIONS": {
-        "DE": "DE",
-        "EN": "EN",
-        "FR": "FR"
+        "DE": "Deutsch",
+        "EN": "English",
+        "FR": "Francais"
       }
     }
   }

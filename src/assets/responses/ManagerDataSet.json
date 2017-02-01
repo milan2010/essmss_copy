@@ -9,9 +9,9 @@
         "media_src": "http://ipe.wob.vw.vwg:5000/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/EmployeeDataSet('00016218')/$value"
       },
       "Employeenumber": "00016217",
-      "Ename": "Manager Name",
+      "Ename": "Mark Meier",
       "ContentType": "",
-      "PhotoUrl": "assets/img/JosefHermann.jpg",
+      "PhotoUrl": "assets/img/MarkMeier.jpg",
       "BldingNo": "",
       "RoomNo": "",
       "Phone": "",

@@ -10,7 +10,8 @@ export class Calendar {
   @Input() data = [];
   @Input() types = [];
   @Input() showSelectedDay = true;
-  weekDays = [];
+  weekDays = ["Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa.", "So."];
+  monthName = '';
   selected = {
     date: null,
     plan: null
@@ -19,16 +20,17 @@ export class Calendar {
   weeks = [];
 
   constructor() {
-    this.weekDays = moment().localeData().weekdaysShort();
+    // TODO: Start from monday if its DE
+    // this.weekDays = moment().locale('de').localeData().weekdaysShort();
   }
 
   ngOnChanges() {
-    this.selected.date = this.removeTime(this.selected.date || moment());
+    this.selected.date = this.removeTime(this.selected.date || moment().locale('de'));
     this.month = this.selected.date.clone();
 
     let start = this.selected.date.clone();
     start.date(1);
-    this.removeTime(start.day(0));
+    this.removeTime(start.startOf('month').startOf('week'));
     this.buildMonth(start);
   }
 
@@ -51,19 +53,23 @@ export class Calendar {
   };
 
   removeTime = function (date) {
-    return date.day(0).hour(0).minute(0).second(0).millisecond(0);
+    return date.hour(0).minute(0).second(0).millisecond(0);
   };
 
   buildMonth = function (start) {
     this.weeks = [];
-    // this.types = [];
-    let done = false, date = start.clone(), monthIndex = date.month(), count = 0;
+    let done = false;
+    let date = start.clone();
+    let monthIndex = date.month();
+    let count = 0;
     while (!done) {
       this.weeks.push({days: this.buildWeek(date.clone(), this.month)});
       date.add(1, "w");
       done = count++ > 2 && monthIndex !== date.month();
       monthIndex = date.month();
     }
+
+    this.monthName = this.month.localeData().months()[this.month.get('month')];
   };
 
   buildWeek = function (date, month) {
@@ -112,7 +118,7 @@ export class Calendar {
     return days;
   };
 
-  getBackground = function(type) {
+  getBackground = function (type) {
     for (let t = 0; t < this.types.length; t++) {
       if (this.types[t].symbol === type) {
         return this.types[t].background;
@@ -130,5 +136,5 @@ export class Calendar {
   getLongDateFormat = function () {
     return this.selected.date.format('dddd, DD. MMMM YYYY');
     // return 'Donnerstag, 06. Dezember 2016';
-  }
+  };
 }
