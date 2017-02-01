@@ -1,0 +1,108 @@
+{
+  "status": "ok",
+  "source": "der-tagesspiegel",
+  "sortBy": "latest",
+  "articles": [
+    {
+      "author": null,
+      "title": "Erste Einigung zwischen Sky und Eurosport",
+      "description": "Sky-Kunden können auch weiterhin die Sender der Discovery-Gruppe sehen. Die Einigung gilt jedoch nicht für die Bundesliga-Spiele, die Eurosport ab der kommenden Saison überträgt.",
+      "url": "http://www.tagesspiegel.de/sport/tv-rechte-erste-einigung-zwischen-sky-und-eurosport/19330916.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/abosender-sky-deutschland-bundesliga/19330948/1-format530.jpg",
+      "publishedAt": "2017-02-01T08:03:45Z",
+      "type": 1
+    },
+    {
+      "title": "Entgeltnachweis Dezember 2016",
+      "type": 3
+    },
+    {
+      "title": "Termin Meeting",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "photoUrl": "assets/img/SylviaGerber.jpg",
+      "sender": "Sylvia Gerber",
+      "type": 2
+    },
+    {
+      "author": "Sandra Dassler",
+      "title": "Keine Koffer im Berlinale-Kino",
+      "description": "Berlinale-Chef Dieter Kosslick setzt auf Sicherheit, aber so diskret wie möglich. Besucher müssen verstärkt mit Taschenkontrollen rechnen.",
+      "url": "http://www.tagesspiegel.de/berlin/sicherheitsvorkehrungen-bei-der-berlinale-keine-koffer-im-berlinale-kino/19329560.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/pressekonferenz-internationale-filmfestspiele-berlin/19330024/1-format530.jpg",
+      "publishedAt": "2017-02-01T07:57:16Z",
+      "type": 1
+    },
+    {
+      "author": "Stephan-Andreas Casdorff",
+      "title": "Kalbitz: Einer vom Schlage Höckes soll AfD-Chef in Brandenburg werden",
+      "description": "Bei der Wahl im September hofft die AfD auf ein zweistelliges Ergebnis. In Brandenburg soll jemand Chef werden, dem eine rechtsextremistische Orientierung bescheinigt wurde.",
+      "url": "http://www.tagesspiegel.de/politik/casdorffs-agenda-kalbitz-einer-vom-schlage-hoeckes-soll-afd-chef-in-brandenburg-werden/19330890.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/andreas-kalbitz/19330898/1-format530.jpg",
+      "publishedAt": "2017-02-01T07:53:26Z",
+      "type": 1
+    },
+    {
+      "author": null,
+      "title": "\"Bei uns gibt es keine Fake News!\"",
+      "description": "Dieter Kosslick über Mexiko und die USA, den Jury-Präsidenten, 60 000 Kids im Publikum und ein Traumschloss für die Berlinale der Zukunft.",
+      "url": "http://www.tagesspiegel.de/kultur/interview-mit-berlinale-chef-dieter-kosslick-bei-uns-gibt-es-keine-fake-news/19329780.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/berlinale-direktor-dieter-kosslick-waehrend-der-programmpressekonferenz-anlaesslich-des-bevorstehenden/19329874/4-format530.jpg",
+      "publishedAt": "2017-02-01T07:51:35Z",
+      "type": 1
+    },
+    {
+      "author": "André Görke",
+      "title": "Wo illegaler Müll abgeladen wird - Bezirk für Bezirk",
+      "description": "Bürger kippen ihren Dreck einfach auf die Straße. Dessen Beseitigung kostet Berlin Millionen. Das Problem ist in den Bezirken unterschiedlich groß.",
+      "url": "http://www.tagesspiegel.de/berlin/berlin-uebersicht-wo-illegaler-muell-abgeladen-wird-bezirk-fuer-bezirk/19329428.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/heprodimagesfotos83120170201heinrich_303_1_20170131115517693-jpg/19329436/2-format530.jpg",
+      "publishedAt": "2017-02-01T07:28:18Z",
+      "type": 1
+    },
+    {
+      "author": null,
+      "title": "Aubameyang denkt offen über Wechsel im Sommer nach",
+      "description": "Die Gerüchte über einen baldigen Abschied des Bundesliga-Toptorjägers halten sich seit langem. Pierre-Emerick Aubameyangs Aussagen im französischen Radio heizen diese weiter an.",
+      "url": "http://www.tagesspiegel.de/sport/stuermer-von-borussia-dortmund-aubameyang-denkt-offen-ueber-wechsel-im-sommer-nach/19330830.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/fsv-mainz-05-borussia-dortmund/19330846/1-format530.jpg",
+      "publishedAt": "2017-02-01T07:28:07Z",
+      "type": 1
+    },
+    {
+      "author": "Claus Vetter",
+      "title": "Wichtiger 1:0-Sieg gegen die Schwenninger Wild Wings",
+      "description": "Neuzugang Charles Linglet gibt gegen Schwenningen sein Debüt - ein erfolgreiches. Die Eisbären klettern damit in der Tabelle auf Rang acht. Mehr im Saisonblog.",
+      "url": "http://www.tagesspiegel.de/sport/liveblog/die-eisbaeren-berlin-in-der-eishockey-saison-2016-2017-wichtiger-1-0-sieg-gegen-die-schwenninger-wild-wings/14539956.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/ebbsww3101/19330230/1-format530.jpg",
+      "publishedAt": "2017-02-01T07:19:27Z",
+      "type": 1
+    },
+    {
+      "author": null,
+      "title": "„So viele Zuschauer wie in Berlin kommen zu keinem anderen Turnier“",
+      "description": "Am Mittwoch beginnt das German Masters in Berlin. Barry Hearn vermarktet Snooker und Darts – mit beiden Sportarten hat er in Deutschland noch viel vor.",
+      "url": "http://www.tagesspiegel.de/sport/german-masters-im-snooker-so-viele-zuschauer-wie-in-berlin-kommen-zu-keinem-anderen-turnier/19329284.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/englands-ronnie-osullivan-lines-up-a-shot-during-his-first-round-match-against-chinas-liang-wenbo-during-the-masters-snooker-tournament-at-alexandra-palace-in-london-on-january-15-2017-afp-photo-adrian-dennis/19329804/1-format530.jpg",
+      "publishedAt": "2017-02-01T07:17:34Z",
+      "type": 1
+    },
+    {
+      "author": "André Görke",
+      "title": "Jetzt ist's fix:  Lollapalooza zieht nach Hoppegarten",
+      "description": "Mehr als 100.000 Menschen zieht's in den Osten: Das Musikfest hat einen Ort gefunden. Zu den Bands gehören die Foo Fighters.",
+      "url": "http://www.tagesspiegel.de/berlin/festival-auf-der-rennbahn-jetzt-ists-fix-lollapalooza-zieht-nach-hoppegarten/19330674.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/festival-lollapalooza-berlin/19330682/1-format530.jpg",
+      "publishedAt": "2017-02-01T06:56:25Z",
+      "type": 1
+    },
+    {
+      "author": null,
+      "title": "Eine Festnahme bei Großrazzia gegen Terrorverdächtige in Hessen",
+      "description": "In mehreren Städten Hessens haben Ermittler am frühen Morgen Wohnungen, Büros und Moscheen durchsucht. Im Visier waren radikale Islamisten. Ein Festgenommener soll Schleuser für den IS sein.",
+      "url": "http://www.tagesspiegel.de/politik/kampf-gegen-terrorismus-eine-festnahme-bei-grossrazzia-gegen-terrorverdaechtige-in-hessen/19330632.html",
+      "urlToImage": "http://www.tagesspiegel.de/images/durchsuchungen-wegen-terrorverdachts-in-ganz-hessen/19330700/1-format530.jpg",
+      "publishedAt": "2017-02-01T06:44:11Z",
+      "type": 1
+    }
+  ]
+}

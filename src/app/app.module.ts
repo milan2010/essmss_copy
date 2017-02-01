@@ -20,8 +20,11 @@ import {TeamMembersPage} from "./pages/team/members/members.components";
 import {Calendar} from "./shared/calendar/calendar.component";
 import {SettingsPage} from "./pages/settings/settings.component";
 import {ChatPage} from "./pages/chat/chat.component";
-import {ExpenseItemList} from "./pages/personal/paystub/expenseitemlist/expense-item-list";
+import {ExpenseItemList} from "./pages/personal/paystub/expense-item-list/expense-item-list";
 import {TeamMemberDetailsPage} from "./pages/team/memberdetails/member-details.component";
+import {NewsItem} from "./pages/hub/news-item/news-item.component";
+import {MessageItem} from "./pages/hub/message-item/message-item.component";
+import {ExpenseItem} from "./pages/hub/expense-item/expense-item.component";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -48,7 +51,10 @@ export function createTranslateLoader(http: Http) {
     Calendar,
     SettingsPage,
     ChatPage,
-    ExpenseItemList
+    ExpenseItemList,
+    NewsItem,
+    MessageItem,
+    ExpenseItem
   ],
   imports: [
     HttpModule,
@@ -77,7 +83,10 @@ export function createTranslateLoader(http: Http) {
     AbsencePage,
     WorkingtimePage,
     SettingsPage,
-    ChatPage
+    ChatPage,
+    NewsItem,
+    MessageItem,
+    ExpenseItem
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
