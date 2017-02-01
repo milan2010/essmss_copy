@@ -19,6 +19,23 @@ export class LoginPage {
     password: ['12345678'],
   });
 
+  slides = [
+    {
+      title: "Willkommen zu V.io",
+      description: "Dein persönlicher Zugang zu den Volkswagen Services",
+      image: "assets/img/iconuser.png",
+    },
+    {
+      title: "Was kann V.io",
+      description: "Deine Urlaubs- und Stundenzeiten immer im Blick",
+      image: "assets/img/Iconurlaub.png",
+    },
+    {
+      title: "Gehalt?",
+      description: "Deine Finanzen immer im Blick!",
+      image: "assets/img/iconGeld.png",
+    }
+  ];
   constructor(private formBuilder: FormBuilder, public navCtrl: NavController, private loginService: LoginService, private userService: UserService) {
   }
 
