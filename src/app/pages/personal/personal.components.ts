@@ -7,7 +7,7 @@ import {AbsencePage} from "./absence/absence.components";
 import {WorkingtimePage} from "./workingtime/workingtime.components";
 import {UserService} from "../../services/user.service";
 import {LoginPage} from "../login/login.component";
-import {NavController, App} from "ionic-angular";
+import {NavController} from "ionic-angular";
 import {SettingsPage} from "../settings/settings.component";
 
 @Component({
@@ -17,44 +17,48 @@ import {SettingsPage} from "../settings/settings.component";
 })
 export class PersonalPage {
   test: string;
-  personalMenu: any[];
   options: any;
   userData: Object = null;
+  menuItems: Array<{title: string, subtitle:string, icon:string, subicon:string, link:Object }> = [
+    {
+      title: "PERSONAL.MENU.WORKTIME.TITLE",
+      subtitle: "PERSONAL.MENU.WORKTIME.SUBTITLE",
+      icon: "md-time",
+      subicon: "",
+      link: WorkingtimePage
+    },
+    {
+      title: 'PERSONAL.MENU.HOLIDAY.TITLE',
+      subtitle: 'PERSONAL.MENU.HOLIDAY.SUBTITLE',
+      icon: 'md-plane',
+      subicon: "",
+      link: AbsencePage
+    },
+    {
+      title: 'PERSONAL.MENU.PAYMENT.TITLE',
+      subtitle: 'PERSONAL.MENU.PAYMENT.SUBTITLE',
+      icon: 'md-document',
+      subicon: "",
+      link: PaystubPage
+    },
+    {
+      title: 'PERSONAL.MENU.DATA.TITLE',
+      subtitle: 'PERSONAL.MENU.DATA.SUBTITLE',
+      icon: 'ios-contact',
+      subicon: "",
+      link: PersonaldataPage
+    },
+    {
+      title: 'PERSONAL.MENU.CONTACT.TITLE',
+      subtitle: 'PERSONAL.MENU.CONTACT.SUBTITLE',
+      icon: 'ios-contacts',
+      subicon: "",
+      link: ContactpersonPage
+    }
+  ];
 
-  constructor(private userService: UserService, public navCtrl: NavController, private app: App) {
+  constructor(private userService: UserService, public navCtrl: NavController) {
     this.userData = this.userService.getData();
-
-    this.personalMenu = [
-      {
-        icon: 'md-time',
-        title: 'PERSONAL.MENU.WORKTIME.TITLE',
-        subtitle: 'PERSONAL.MENU.WORKTIME.SUBTITLE',
-        link: WorkingtimePage
-      },
-      {
-        icon: 'md-plane',
-        title: 'PERSONAL.MENU.HOLIDAY.TITLE',
-        subtitle: 'PERSONAL.MENU.HOLIDAY.SUBTITLE',
-        link: AbsencePage
-      },
-      {
-        icon: 'md-document',
-        title: 'PERSONAL.MENU.PAYMENT.TITLE',
-        subtitle: 'PERSONAL.MENU.PAYMENT.SUBTITLE',
-        link: PaystubPage
-      },
-      {
-        icon: 'ios-contact',
-        title: 'PERSONAL.MENU.DATA.TITLE',
-        subtitle: 'PERSONAL.MENU.DATA.SUBTITLE',
-        link: PersonaldataPage
-      },
-      {
-        icon: 'ios-contacts',
-        title: 'PERSONAL.MENU.CONTACT.TITLE',
-        subtitle: 'PERSONAL.MENU.CONTACT.SUBTITLE',
-        link: ContactpersonPage
-      }];
 
     this.options = {
       background: {
@@ -84,12 +88,6 @@ export class PersonalPage {
     };
 
   }
-
-  logOut = function () {
-    this.userService.logOut();
-    this.app.getRootNav().setRoot(LoginPage);
-//    window.location.reload();
-  };
 
   goToSettings = function () {
     this.navCtrl.push(SettingsPage);

@@ -13,10 +13,26 @@ import {UserService} from "../../services/user.service";
 export class TeamPage {
   userData: Object = null;
   team = null;
+  menuItems: Array<{title: string, subtitle:string, icon:string, subicon:string, link:Object }> = [
+    {
+      title: "TEAM.MENU.TEAMMEMBERS.TITLE",
+      subtitle: "TEAM.MENU.TEAMMEMBERS.SUBTITLE",
+      icon: "md-people",
+      subicon: "md-people",
+      link: TeamMembersPage
+    },
+    {
+      title: 'TEAM.MENU.HOLIDAY.TITLE',
+      subtitle: 'TEAM.MENU.HOLIDAY.SUBTITLE',
+      icon: 'md-calendar',
+      subicon: "md-calendar",
+      link: TeamMembersPage
+    }
+  ];
 
   constructor(private userService: UserService, private nav: NavController, private teamService: TeamService) {
     this.userData = this.userService.getData();
-    
+
     teamService.getTeam()
       .then(data => {
         this.team = data;
@@ -26,7 +42,4 @@ export class TeamPage {
       })
   }
 
-  goToMembers() {
-    this.nav.push(TeamMembersPage);
-  }
 }

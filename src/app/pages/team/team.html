@@ -4,26 +4,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding no-bounce>
+<ion-content no-bounce>
   <ion-list>
-    <ion-item class="no-padding" (click)="goToMembers()">
-      <ion-avatar item-left class="item-avatar">
-        <ion-icon name="md-people"></ion-icon>
-      </ion-avatar>
-
-      <h2>Teammitglieder</h2>
-      <p class="subline"><ion-icon name="md-person" item-left></ion-icon>6 Mitarbeiter</p>
-      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-
-    <ion-item class="no-padding">
-      <ion-avatar item-left class="item-avatar">
-        <ion-icon name="md-calendar"></ion-icon>
-      </ion-avatar>
-      <h2>Jahresurlaub</h2>
-      <p class="subline"><ion-icon name="md-calendar" item-left></ion-icon>2016</p>
-      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-
+    <list-item *ngFor="let menuItem of menuItems" [content]="menuItem"></list-item>
   </ion-list>
 </ion-content>

@@ -9,9 +9,9 @@ export class TeamService {
   private team: Object = null;
   userData: Object = null;
 
-  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController, 
+  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController,
           @Inject(UserService) private userService: UserService) {
-      
+
       this.userData = this.userService.getData();
   }
 
@@ -19,7 +19,7 @@ export class TeamService {
     return new Promise<Object>((resolve, reject) => {
       let loading = this.loadingCtrl.create();
       loading.present();
-      
+
       let teamJsonFile = 'Team';
       if(this.userService.isEmployee()) {
           teamJsonFile += '-Employee';

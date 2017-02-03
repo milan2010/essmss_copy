@@ -22,12 +22,15 @@ import {SettingsPage} from "./pages/settings/settings.component";
 import {ChatPage} from "./pages/chat/chat.component";
 import {ExpenseItemList} from "./pages/personal/paystub/expense-item-list/expense-item-list";
 import {TeamMemberDetailsPage} from "./pages/team/memberdetails/member-details.component";
+import {PresswerkPage} from "./pages/work/presswerk/presswerk.components";
+import {CanteenPage} from "./pages/work/canteen/canteen.component";
+
+/* COMPONENTS */
 import {NewsItem} from "./pages/hub/news-item/news-item.component";
 import {MessageItem} from "./pages/hub/message-item/message-item.component";
 import {ExpenseItem} from "./pages/hub/expense-item/expense-item.component";
 import {CalendarItem} from "./pages/hub/calendar-item/calendar-item.component";
-import {PresswerkPage} from "./pages/work/presswerk/presswerk.components";
-import {CanteenPage} from "./pages/work/canteen/canteen.component";
+import {ListItemComponent} from "./components/listitem/listitem.component";
 
 
 export function createTranslateLoader(http: Http) {
@@ -61,7 +64,8 @@ export function createTranslateLoader(http: Http) {
     ExpenseItem,
     CalendarItem,
     PresswerkPage,
-    CanteenPage
+    CanteenPage,
+    ListItemComponent
   ],
   imports: [
     HttpModule,
@@ -96,7 +100,8 @@ export function createTranslateLoader(http: Http) {
     ExpenseItem,
     CalendarItem,
     PresswerkPage,
-    CanteenPage
+    CanteenPage,
+    ListItemComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

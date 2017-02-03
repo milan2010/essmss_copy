@@ -3,7 +3,17 @@
     "TITLE": "Meine Infos"
   },
   "TEAM": {
-    "TITLE": "Mein Team"
+    "TITLE": "Mein Team",
+    "MENU": {
+      "TEAMMEMBERS": {
+        "TITLE": "Teammitglieder",
+        "SUBTITLE": "6 Mitarbeiter"
+      },
+      "HOLIDAY": {
+        "TITLE": "Jahresurlaub",
+        "SUBTITLE": "2016"
+      }
+    }
   },
   "CHAT": {
     "TITLE": "Chat"
@@ -32,7 +42,7 @@
         "SUBTITLE": "Aktueller Stand"
       },
       "PAYMENT": {
-        "TITLE": "Entgeldnachweis",
+        "TITLE": "Entgeltnachweis",
         "SUBTITLE": "Aktueller Stand"
       },
       "DATA": {

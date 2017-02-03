@@ -3,7 +3,17 @@
     "TITLE": "My Information"
   },
   "TEAM": {
-    "TITLE": "My Team"
+    "TITLE": "My Team",
+    "MENU": {
+      "TEAMMEMBERS": {
+        "TITLE": "Team members",
+        "SUBTITLE": "6 members"
+      },
+      "HOLIDAY": {
+        "TITLE": "Holiday",
+        "SUBTITLE": "2016"
+      }
+    }
   },
   "CHAT": {
     "TITLE": "Chat"
