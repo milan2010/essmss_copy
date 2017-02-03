@@ -3,6 +3,7 @@ import {UserService} from "../../services/user.service";
 import {HubService} from "../hub/hub.service";
 import {UserSettingsService} from "../../services/usersettings.service";
 import {FabContainer} from "ionic-angular";
+import {Icon} from "ionic-angular";
 
 @Component({
   selector: 'page-home',
@@ -15,6 +16,7 @@ export class HubPage {
   news: Object = null;
   filtered: Array<Object> = [];
   filterType: Number = 0;
+  selectedFilterIcon:string = "funnel";
   userSettings: { feed:{ calendar:boolean, news:boolean, expense:boolean, message:boolean } } = {
     feed:{
       calendar: true,
@@ -25,9 +27,6 @@ export class HubPage {
   };
 
   constructor(private userService: UserService, private hubService: HubService, private userSettingsService: UserSettingsService) {
-
-
-
   }
 
   ionViewDidLoad() {
@@ -67,7 +66,8 @@ export class HubPage {
     }
   };
 
-  setFilter = function (type, fab: FabContainer) {
+  setFilter = function (type, fab: FabContainer, icon) {
+    this.selectedFilterIcon = icon === undefined ? "funnel" : icon;
     this.filterType = type;
     this.filterItems();
     if (fab) {
