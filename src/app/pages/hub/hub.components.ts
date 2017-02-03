@@ -3,7 +3,6 @@ import {UserService} from "../../services/user.service";
 import {HubService} from "../hub/hub.service";
 import {UserSettingsService} from "../../services/usersettings.service";
 import {FabContainer} from "ionic-angular";
-import {Icon} from "ionic-angular";
 
 @Component({
   selector: 'page-home',

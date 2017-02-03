@@ -2,4 +2,8 @@ page-personaldata{
   .item-input ion-label {
     width: 10rem;
   }
+
+  .text-input[disabled] {
+    opacity: 0.8;
+  }
 }

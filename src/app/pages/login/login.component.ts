@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Validators, FormBuilder} from '@angular/forms';
+import {FormBuilder} from '@angular/forms';
 import {NavController} from 'ionic-angular';
 import {TabsPage} from '../tabs/tabs.component';
 
