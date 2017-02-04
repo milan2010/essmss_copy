@@ -22,10 +22,13 @@ page-home {
 
     ion-fab {
       bottom: -25px;
-      button {
-        background-color: #2875aa;
-        ion-icon {
-          //color: white;
+
+      ion-fab-list {
+        button {
+          border: 1px solid color($colors, primary);
+          ion-icon {
+            color: color($colors, primary);
+          }
         }
       }
     }

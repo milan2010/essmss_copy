@@ -22,17 +22,15 @@
 $colors: (
 
   //primary:    #00b1f3,
-  primary:   #2284b9,
+  primary:   #2284b9, // dark blue
   secondary: #0c74b0,
+  tertiary:   #2875aa, // blue
   danger:     #f61425,
   light:      #f3f4f5,
   grey:       #495058,
   dark:       #1d1f20,
   success:    #6abb00,
-  titlebar:(
-    base: #2284b9,
-    contrast: #FFF
-  )
+  primary-contrast: #FFF
 );
 
 $grey-light: lighten(color($colors, grey), 25%);

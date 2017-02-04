@@ -17,12 +17,16 @@
 
 ion-header {
   .toolbar-background {
-    background:  color($colors, titlebar, base);
-    border-bottom: color($colors, titlebar, base);
+    background:  color($colors, primary);
+    border-bottom: color($colors,primary);
   }
 
   .toolbar-title {
-    color: color($colors, titlebar, contrast);
+    color: color($colors,primary-contrast);
+  }
+
+  .back-button {
+    color: color($colors,primary-contrast);
   }
 }
 
