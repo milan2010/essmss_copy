@@ -21,14 +21,18 @@
 // The "primary" color is the only required color in the map.
 $colors: (
 
-  primary:    #00b1f3,
+  //primary:    #00b1f3,
+  primary:   #2284b9,
   secondary: #0c74b0,
   danger:     #f61425,
   light:      #f3f4f5,
   grey:       #495058,
   dark:       #1d1f20,
-  success:    #6abb00
-
+  success:    #6abb00,
+  titlebar:(
+    base: #2284b9,
+    contrast: #FFF
+  )
 );
 
 $grey-light: lighten(color($colors, grey), 25%);

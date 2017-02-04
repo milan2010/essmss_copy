@@ -8,6 +8,22 @@ import {CanteenPage} from "./canteen/canteen.component";
   templateUrl: 'work.html'
 })
 export class WorkPage {
+  menuItems: Array<{title: string, subtitle:string, icon:string, subicon:string, link:Object }> = [
+    {
+      title: "WORK.MENU.PRESS.TITLE",
+      subtitle: "WORK.MENU.PRESS.SUBTITLE",
+      icon: "briefcase",
+      subicon: "",
+      link: PresswerkPage
+    },
+    {
+      title: 'WORK.MENU.CANTEEN.TITLE',
+      subtitle: 'WORK.MENU.CANTEEN.SUBTITLE',
+      icon: 'pizza',
+      subicon: "",
+      link: CanteenPage
+    }
+  ];
 
   constructor(public nav: NavController) {
   }

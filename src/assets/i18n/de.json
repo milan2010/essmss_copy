@@ -19,7 +19,17 @@
     "TITLE": "Chat"
   },
   "WORK": {
-    "TITLE": "Meine Arbeit"
+    "TITLE": "Meine Arbeit",
+    "MENU": {
+      "PRESS": {
+        "TITLE": "Presswerk",
+        "SUBTITLE": "Maschine 1"
+      },
+      "CANTEEN": {
+        "TITLE": "Kantine ",
+        "SUBTITLE": "Tageskarte"
+      }
+    }
   },
   "PERSONAL": {
     "TITLE": "Mein Profil",

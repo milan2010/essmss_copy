@@ -15,6 +15,17 @@
 //@import 'theme/variables.scss';
 @import "basscss";
 
+ion-header {
+  .toolbar-background {
+    background:  color($colors, titlebar, base);
+    border-bottom: color($colors, titlebar, base);
+  }
+
+  .toolbar-title {
+    color: color($colors, titlebar, contrast);
+  }
+}
+
 .padding {
   padding: 15px;
 }
@@ -36,7 +47,7 @@ ion-avatar {
 
 .main-tabs {
   .tab-button[aria-selected=true] {
-    border-top: 1px solid #00b1f3;
+    border-top: 1px solid color($colors, primary);
   }
   .tab-button {
     border-top: 1px solid #ccc;
