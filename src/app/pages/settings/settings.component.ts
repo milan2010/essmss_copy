@@ -18,8 +18,8 @@ export class SettingsPage {
   settings: { feed:{ calendar:boolean, news:boolean, expense:boolean, message:boolean } } = {
     feed:{
       calendar: true,
-      news: false,
-      expense: false,
+      news: true,
+      expense: true,
       message: true
     }
   };

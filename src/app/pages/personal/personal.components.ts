@@ -6,7 +6,6 @@ import {ContactpersonPage} from "./contactperson/contactperson.components";
 import {AbsencePage} from "./absence/absence.components";
 import {WorkingtimePage} from "./workingtime/workingtime.components";
 import {UserService} from "../../services/user.service";
-import {LoginPage} from "../login/login.component";
 import {NavController} from "ionic-angular";
 import {SettingsPage} from "../settings/settings.component";
 
