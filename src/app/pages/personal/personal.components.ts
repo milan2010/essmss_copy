@@ -23,35 +23,35 @@ export class PersonalPage {
     {
       title: "PERSONAL.MENU.WORKTIME.TITLE",
       subtitle: "PERSONAL.MENU.WORKTIME.SUBTITLE",
-      icon: "md-time",
+      icon: "time",
       subicon: "",
       link: WorkingtimePage
     },
     {
-      title: 'PERSONAL.MENU.HOLIDAY.TITLE',
-      subtitle: 'PERSONAL.MENU.HOLIDAY.SUBTITLE',
-      icon: 'md-plane',
+      title: 'PERSONAL.MENU.ABSENCE.TITLE',
+      subtitle: 'PERSONAL.MENU.ABSENCE.SUBTITLE',
+      icon: 'plane',
       subicon: "",
       link: AbsencePage
     },
     {
-      title: 'PERSONAL.MENU.PAYMENT.TITLE',
-      subtitle: 'PERSONAL.MENU.PAYMENT.SUBTITLE',
-      icon: 'md-document',
+      title: 'PERSONAL.MENU.PAYSTUB.TITLE',
+      subtitle: 'PERSONAL.MENU.PAYSTUB.SUBTITLE',
+      icon: 'document',
       subicon: "",
       link: PaystubPage
     },
     {
-      title: 'PERSONAL.MENU.DATA.TITLE',
-      subtitle: 'PERSONAL.MENU.DATA.SUBTITLE',
-      icon: 'ios-contact',
+      title: 'PERSONAL.MENU.PERSONALDATA.TITLE',
+      subtitle: 'PERSONAL.MENU.PERSONALDATA.SUBTITLE',
+      icon: 'contact',
       subicon: "",
       link: PersonaldataPage
     },
     {
-      title: 'PERSONAL.MENU.CONTACT.TITLE',
-      subtitle: 'PERSONAL.MENU.CONTACT.SUBTITLE',
-      icon: 'ios-contacts',
+      title: 'PERSONAL.MENU.CONTACTPERSON.TITLE',
+      subtitle: 'PERSONAL.MENU.CONTACTPERSON.SUBTITLE',
+      icon: 'contacts',
       subicon: "",
       link: ContactpersonPage
     }

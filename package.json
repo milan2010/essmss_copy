@@ -34,6 +34,7 @@
   "devDependencies": {
     "@ionic/app-scripts": "^1.0.0",
     "@types/moment": "^2.13.0",
+    "typedoc": "^0.5.5",
     "typescript": "2.0.6"
   },
   "cordovaPlugins": [

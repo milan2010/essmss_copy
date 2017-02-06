@@ -17,15 +17,15 @@ export class TeamPage {
     {
       title: "TEAM.MENU.TEAMMEMBERS.TITLE",
       subtitle: "TEAM.MENU.TEAMMEMBERS.SUBTITLE",
-      icon: "md-people",
-      subicon: "md-people",
+      icon: "people",
+      subicon: "people",
       link: TeamMembersPage
     },
     {
       title: 'TEAM.MENU.HOLIDAY.TITLE',
       subtitle: 'TEAM.MENU.HOLIDAY.SUBTITLE',
-      icon: 'md-calendar',
-      subicon: "md-calendar",
+      icon: 'calendar',
+      subicon: "calendar",
       link: TeamMembersPage
     }
   ];

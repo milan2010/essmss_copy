@@ -1,4 +1,21 @@
 {
+  "TABS": {
+    "HUB": {
+      "TITLE": "Infos"
+    },
+    "TEAM": {
+      "TITLE": "Team"
+    },
+    "CHAT": {
+      "TITLE": "Chat"
+    },
+    "WORK": {
+      "TITLE": "Arbeit"
+    },
+    "PROFILE": {
+      "TITLE": "Profil"
+    }
+  },
   "HUB": {
     "TITLE": "Meine Infos"
   },
@@ -13,6 +30,12 @@
         "TITLE": "Jahresurlaub",
         "SUBTITLE": "2016"
       }
+    },
+    "TEAMMEMBERS": {
+      "TITLE": "Teammitglieder"
+    },
+    "TEAMMEMBER-DETAILS": {
+      "TITLE": "Profil"
     }
   },
   "CHAT": {
@@ -39,6 +62,12 @@
         "TITLE": "Kantine ",
         "SUBTITLE": "Tageskarte"
       }
+    },
+    "PRESS": {
+      "TITLE": "Presswerk"
+    },
+    "CANTEEN": {
+      "TITLE": "Kantine"
     }
   },
   "PERSONAL": {
@@ -57,22 +86,37 @@
         "TITLE": "Arbeitszeit",
         "SUBTITLE": "Aktueller Stand"
       },
-      "HOLIDAY": {
+      "ABSENCE": {
         "TITLE": "Urlaub & Abwesenheit",
         "SUBTITLE": "Aktueller Stand"
       },
-      "PAYMENT": {
+      "PAYSTUB": {
         "TITLE": "Entgeltnachweis",
         "SUBTITLE": "Aktueller Stand"
       },
-      "DATA": {
+      "PERSONALDATA": {
         "TITLE": "Stammdaten",
         "SUBTITLE": "Aktueller Stand"
       },
-      "CONTACT": {
+      "CONTACTPERSON": {
         "TITLE": "Ansprechpartner",
         "SUBTITLE": "Aktueller Stand"
       }
+    },
+    "WORKTIME": {
+      "TITLE": "Arbeitszeit"
+    },
+    "ABSENCE": {
+      "TITLE": "Urlaub & Abwesenheit"
+    },
+    "PAYSTUB": {
+      "TITLE": "Entgeltnachweis"
+    },
+    "PERSONALDATA": {
+      "TITLE": "Stammdaten"
+    },
+    "CONTACTPERSON": {
+      "TITLE": "Ansprechpartner"
     }
   },
   "SETTINGS": {
