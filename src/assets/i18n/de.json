@@ -23,7 +23,17 @@
     "MENU": {
       "PRESS": {
         "TITLE": "Presswerk",
-        "SUBTITLE": "Maschine 1"
+        "SUBTITLE": "Maschine 1",
+        "MENU": {
+          "CONTACT": {
+            "TITLE": "Ansprechpartner",
+            "SUBTITLE": "Kontakte"
+          },
+          "REPORTS": {
+            "TITLE": "Störmeldung",
+            "SUBTITLE": "Keine Meldungen"
+          }
+        }
       },
       "CANTEEN": {
         "TITLE": "Kantine ",
