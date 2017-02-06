@@ -1,6 +1,7 @@
 import { TestBed, ComponentFixture, async } from '@angular/core/testing';
 import { IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { } from 'jasmine';
 import { LoginPage } from './pages/login/login.component';
 import { TranslateService, TranslateLoader, TranslateParser } from 'ng2-translate';
 

@@ -1,0 +1,40 @@
+page-home {
+
+  .home-header {
+    position: relative;
+
+    .welcome-header {
+      background: #2284b9;
+      padding: 15px;
+      margin-bottom: -1px;
+      span {
+        color: white;
+        font-size: 28px;
+        display: block;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    ion-profile-header {
+      padding-bottom: 10px;
+    }
+
+    ion-fab {
+      bottom: -25px;
+
+      ion-fab-list {
+        button {
+          border: 1px solid color($colors, primary);
+          ion-icon {
+            color: color($colors, primary);
+          }
+        }
+      }
+    }
+  }  
+
+  .scroll-content {
+    background-color: #E2E2E2;
+  }
+}
