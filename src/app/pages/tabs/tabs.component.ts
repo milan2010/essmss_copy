@@ -6,11 +6,10 @@ import {PersonalPage} from '../personal/personal.components';
 import {ChatPage} from '../chat/chat.component';
 
 @Component({
+  selector: 'tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  // this tells the tabs component which Pages
-  // should be each tab's root Page
   tab1Root: any = HubPage;
   tab2Root: any = TeamPage;
   tab3Root: any = WorkPage;
@@ -18,6 +17,5 @@ export class TabsPage {
   tab5Root: any = ChatPage;
 
   constructor() {
-
   }
 }

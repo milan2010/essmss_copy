@@ -49,15 +49,6 @@ ion-avatar {
   }
 }
 
-.main-tabs {
-  .tab-button[aria-selected=true] {
-    border-top: 1px solid color($colors, primary);
-  }
-  .tab-button {
-    border-top: 1px solid #ccc;
-  }
-}
-
 .item-avatar {
   font-size: 32px;
   text-align: center;

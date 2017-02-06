@@ -1,0 +1,13 @@
+tabs {
+
+  .tabs .tabbar {
+    background: #FFF;
+    
+    .tab-button[aria-selected=true] {
+      border-top: 1px solid color($colors, primary);
+    }
+    .tab-button {
+      border-top: 1px solid #ccc;
+    }
+  }
+}
