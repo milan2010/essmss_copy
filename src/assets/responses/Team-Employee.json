@@ -9,7 +9,7 @@
             "PositionTxt" : "Meister",
             "Email" : "jhermann@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "",
+            "Status" : "not-available",
             "PhotoUrl" : "assets/img/MarkMeier.jpg"
           },
           {
@@ -18,7 +18,7 @@
             "PositionTxt" : "Teamsprecher",
             "Email" : "omuller@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "",
+            "Status" : "away",
             "PhotoUrl" : "assets/img/OlafMueller.jpg"
           },
           {
@@ -27,7 +27,7 @@
             "PositionTxt" : "Teamsprecher",
             "Email" : "jhermann@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "",
+            "Status" : "not-available",
             "PhotoUrl" : "assets/img/JosefHermann.jpg"
           },
           {
@@ -36,7 +36,7 @@
             "PositionTxt" : "Monteur Maschine 2",
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "",
+            "Status" : "away",
             "PhotoUrl" : "assets/img/SebastianSaal.jpg"
           },
           {
@@ -45,7 +45,7 @@
             "PositionTxt" : "Monteur Maschine 3",
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "",
+            "Status" : "available",
             "PhotoUrl" : "assets/img/ChristianHarnisch.jpg"
           },
           {
@@ -54,7 +54,7 @@
             "PositionTxt" : "Monteur Maschine 4",
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "",
+            "Status" : "available",
             "PhotoUrl" : "assets/img/JohnAlbrecht.jpg"
           }
         ],

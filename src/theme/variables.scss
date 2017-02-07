@@ -20,8 +20,6 @@
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 $colors: (
-
-  //primary:    #00b1f3,
   primary:   #2284b9, // dark blue
   secondary: #0c74b0,
   tertiary:   #2875aa,
@@ -30,7 +28,11 @@ $colors: (
   grey:       #495058,
   dark:       #1d1f20,
   success:    #6abb00,
-  primary-contrast: #FFF
+  primary-contrast: #FFF,
+
+  yellow: #FAAA00,
+  green: #51AE30,
+  red: #E4002C
 );
 
 $grey-light: lighten(color($colors, grey), 25%);

@@ -1,31 +1,21 @@
 page-team-members {
-  $AVAILABLE: green;
-  $NOTAVAILABLE: red;
-  $AWAY: #FAC914;
 
-  ion-icon {
-    &.ion-md-mail {
-      margin-right: 25px !important;
+  ion-avatar {
+    img {
+      border: 2px solid;
     }
 
-    &.status {
-      position: absolute;
-      bottom: 0;
-      left: 45px;
-      min-height: auto;
-      font-size: 20px;
+    &.available img{
+      border-color: color($colors, green);
     }
 
-    &.available {
-      color: $AVAILABLE;
+    &.away img{
+      border-color: color($colors, red);
     }
 
-    &.away {
-      color: $AWAY;
-    }
-
-    &.not-available {
-      color: $NOTAVAILABLE;
+    &.not-available img{
+      border-color: color($colors, yellow);
     }
   }
+
 }

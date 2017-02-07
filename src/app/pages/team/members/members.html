@@ -7,12 +7,12 @@
 <ion-content padding no-bounce>
   <ion-list *ngIf="team">
     <ion-item *ngFor="let member of team.members" (click)="goToMemberDetails(member)" class="no-padding">
-      <ion-avatar item-left>
+      <ion-avatar item-left class="{{member.Status}}">
         <img src="{{member.PhotoUrl}}">
       </ion-avatar>
-      <ion-icon *ngIf="member.Status === 'available'" name="radio-button-on" item-left class="status available"></ion-icon>
+      <!-- <ion-icon *ngIf="member.Status === 'available'" name="radio-button-on" item-left class="status available"></ion-icon>
       <ion-icon *ngIf="member.Status === 'away'" name="radio-button-on" item-left class="status away"></ion-icon>
-      <ion-icon *ngIf="member.Status === 'not-available'" name="radio-button-on" item-left class="status not-available"></ion-icon>
+      <ion-icon *ngIf="member.Status === 'not-available'" name="radio-button-on" item-left class="status not-available"></ion-icon> -->
 
       <h2>{{member.Ename}}</h2>
       <p>{{member.PositionTxt}}</p>
