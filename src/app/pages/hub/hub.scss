@@ -1,15 +1,20 @@
 page-home {
+  $PRIMARY: color($colors, primary);
+  $SECONDARY: color($colors, secondary);
 
   .home-header {
     position: relative;
-
+    background: color($colors, primary);
+    background: -moz-linear-gradient(top, color($colors, primary) 0%, color($colors, secondary) 100%);
+    background: -webkit-linear-gradient(top, color($colors, primary) 0%, color($colors, secondary) 100%);
+    background: linear-gradient(to bottom, color($colors, primary) 0%, color($colors, secondary) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='color($colors, primary)', endColorstr='color($colors, secondary)',GradientType=0 );
     .welcome-header {
-      background: #2284b9;
       padding: 15px;
       margin-bottom: -1px;
       span {
-        color: white;
-        font-size: 28px;
+        color: color($colors, primary-contrast);
+        font-size: 2.3em; //28px;
         display: block;
         margin: auto;
         text-align: center;
@@ -18,11 +23,19 @@ page-home {
 
     ion-profile-header {
       padding-bottom: 10px;
+      ion-item.item.item-block {
+        background: none;
+        .item-inner {
+          border-bottom: none;
+          p.user-name {
+            //font-size: 1.5em;
+          }
+        }
+      }
     }
 
     ion-fab {
       bottom: -25px;
-
       ion-fab-list {
         button {
           border: 1px solid color($colors, primary);
@@ -32,7 +45,7 @@ page-home {
         }
       }
     }
-  }  
+  }
 
   .scroll-content {
     background-color: #E2E2E2;

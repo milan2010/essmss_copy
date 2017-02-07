@@ -10,14 +10,13 @@ import {TabsPage} from './pages/tabs/tabs.component';
 import {TeamPage} from "./pages/team/team.components";
 import {PersonalPage} from "./pages/personal/personal.components";
 import {WorkPage} from "./pages/work/work.components";
-import {IonProfileHeader} from "./pages/personal/profileheader/ion-profile-header.components";
 import {PaystubPage} from "./pages/personal/paystub/paystub.components";
 import {PersonaldataPage} from "./pages/personal/personaldata/personaldata.components";
 import {ContactpersonPage} from "./pages/personal/contactperson/contactperson.components";
 import {AbsencePage} from "./pages/personal/absence/absence.components";
 import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.components";
 import {TeamMembersPage} from "./pages/team/members/members.components";
-import {Calendar} from "./shared/calendar/calendar.component";
+
 import {SettingsPage} from "./pages/settings/settings.component";
 import {ChatPage} from "./pages/chat/chat.component";
 import {ExpenseItemList} from "./pages/personal/paystub/expense-item-list/expense-item-list";
@@ -31,6 +30,8 @@ import {MessageItem} from "./pages/hub/message-item/message-item.component";
 import {ExpenseItem} from "./pages/hub/expense-item/expense-item.component";
 import {CalendarItem} from "./pages/hub/calendar-item/calendar-item.component";
 import {ListItemComponent} from "./components/listitem/listitem.component";
+import {IonProfileHeader} from "./components/profileheader/ion-profile-header.components";
+import {Calendar} from "./components/calendar/calendar.component";
 
 
 export function createTranslateLoader(http: Http) {
