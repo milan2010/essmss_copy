@@ -1,0 +1,10 @@
+.porsche-theme {
+  $background: green;
+
+  ion-header {
+    .toolbar-background {
+      background:  $background;
+      border-bottom: $background;
+    }
+  }
+}

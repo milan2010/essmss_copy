@@ -15,7 +15,7 @@ calendar {
     //float:left;
     width: 100%;
     height: $header-height;
-    color: #9a9a9a;
+    color: $calendar-header-text-color;
 
     > * {
       height: $header-height;
@@ -76,14 +76,14 @@ calendar {
 
       &.names {
         > span {
-          color: #a0a0a0;
+          color: $calendar-weeks-day-text-color;
           font-weight: bold;
           font-size: 14px;
         }
 
         .day {
           height: 40px;
-          background: #e1e1e1;
+          background: $calendar-weeks-day-background-color;
           border-left: solid 1px #e1e1e1;
         }
       }
@@ -109,16 +109,16 @@ calendar {
         }
 
         &.today {
-          background: #E3F2FF;
+          background: $calendar-today-background-color;
         }
 
         &.different-month {
-          color: #C0C0C0;
+          color: $calendar-different-month-text-color;
         }
 
         &.selected {
-          border: 3px solid #CCC;
-          border-left: 4px solid #ccc;
+          border: 3px solid $calendar-selected-border-color;
+          border-left: 4px solid $calendar-selected-border-color;
           padding: 0;
         }
 
@@ -146,7 +146,7 @@ calendar {
   }
 
   .selected-day-info {
-    background: #efefef;
+    background: $calendar-info-background-color;
     float: left;
     width: 100%;
     color: black;

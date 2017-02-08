@@ -1,6 +1,7 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
 @import "ionic.globals";
+// @import "variables.porsche.scss"; // @import "variables.vw.scss"; // @import "variables.man.scss"; // @import "variables.porsche.scss";
 
 // Shared Variables
 // --------------------------------------------------
@@ -21,22 +22,28 @@
 // The "primary" color is the only required color in the map.
 $colors: (
   primary:    #2274AC, // dark blue
-  secondary:  #00B1EB, // 0c74b0
-  tertiary:   #2875aa,
-  danger:     #f61425,
-  light:      #f3f4f5,
+  secondary:  #00B1EB,  // light blue
+  tertiary: #000,
+  tertiary-darkest: #333333,
+  tertiary-darker: #666666,
+  tertiary-dark: #999999,
+  tertiary-light: #CFD7D9,
+  tertiary-lighter: #E5E5E5,
+  tertiary-ligthest: #FFF,
+  away: #FAAA00,          // yellow
+  available: #51AE30,     // green
+  not-available: #E4002C, // red,
+  chat-in: #CFD7D9,
+  chat-out: #B9C900,
+  calendar-today: #E3F2FF,
+  // default
+  danger:     #E4002C,
   grey:       #495058,
   dark:       #1d1f20,
-  success:    #6abb00,
-  primary-contrast: #FFF,
-
-  yellow: #FAAA00,
-  green: #51AE30,
-  red: #E4002C
+  success:    #6abb00
 );
 
-$grey-light: lighten(color($colors, grey), 25%);
-$grey-dark: darken(color($colors, grey), 5%);
+
 
 
 
@@ -94,6 +101,96 @@ $toolbar-inactive-color:     #8c8c8c !default;
 $list-text-color:            $text-color !default;
 $list-background-color:      $background-color !default;
 $list-border-color:          #c8c7cc !default;
+
+$grey-light: lighten(color($colors, grey), 25%);
+$grey-dark: darken(color($colors, grey), 5%);
+
+
+
+// myV-specific variables
+// ----------------------------------
+
+// header
+$header-background:          color($colors, primary);
+$header-text-color:          color($colors, tertiary-ligthest);
+
+// tabbar
+$tabbar-background-color:    color($colors, tertiary-ligthest);
+$tabbar-border-top:          color($colors, tertiary-light);
+$tabbar-border-top-selected: color($colors, secondary);
+$tabbar-tab-color:           color($colors, secondary);
+
+// availability indicators
+$indicator-available:        color($colors, available);
+$indicator-not-available:    color($colors, not-available);
+$indicator-away:             color($colors, away);
+
+// list-items
+$listitem-avatar-background-color: color($colors, primary);
+$listitem-avatar-text-color:       color($colors, tertiary-ligthest);
+$listitem-label-text-color:        color($colors, tertiary-darkest);
+$listitem-sublabel-text-color:     color($colors, tertiary-dark);
+$listitem-sublabel-icon-color:     color($colors, tertiary-dark);
+$listitem-border-bottom:           color($colors, tertiary-lighter);
+$listitem-icon-forward:            color($colors, tertiary-dark);
+
+// infos
+$infos-header-background-color-from:   color($colors, primary);
+$infos-header-background-color-to:     color($colors, secondary);
+$infos-header-welcome-text-color:      color($colors, tertiary-ligthest);
+$infos-fab-background-color:           color($colors, primary);
+$infos-fab-icon-color:                 color($colors, tertiary-ligthest);
+$infos-fab-in-list-background-color:   color($colors, tertiary-ligthest);
+$infos-fab-in-list-border-color:       color($colors, primary);
+$infos-fab-in-list-icon-color:         color($colors, primary);
+$infos-header-profile-text-color:      color($colors, tertiary-ligthest);
+$infos-news-background-color:          color($colors, tertiary-lighter);
+$infos-news-card-background-color:     color($colors, tertiary-ligthest);
+$infos-news-card-title-color:          color($colors, tertiary-darkest);
+$infos-news-card-heart-color-selected: color($colors, secondary);
+$infos-news-card-sender-text-color:    color($colors, tertiary-darkest);
+$infos-news-card-location-color:       color($colors, tertiary-dark);
+$infos-news-card-time-color:           color($colors, tertiary-dark);
+$infos-news-card-title-date-color:     color($colors, tertiary-dark);
+$infos-news-card-subtitle-text-color:  color($colors, tertiary-darkest);
+$infos-news-card-content-text-color:   color($colors, tertiary-darker);
+$infos-news-card-expense-item-color:   color($colors, tertiary-darker);
+
+// profile
+$profile-header-background-color-from: color($colors, primary);
+$profile-header-background-color-to:   color($colors, secondary);
+$profile-header-profile-text-color:    color($colors, tertiary-ligthest);
+
+// settings
+$settings-list-header-title-color:        color($colors, tertiary-darkest);
+$settings-list-item-label-color:          color($colors, tertiary-darkest);
+$settings-list-item-select-color:         color($colors, tertiary-darkest);
+$settings-list-item-icon-color:           color($colors, primary);
+$settings-list-item-label-color:          color($colors, tertiary-darkest);
+$settings-logout-button-background-color: color($colors, danger);
+$settings-logout-button-text-color:       color($colors, tertiary-ligthest);
+
+// chat
+$chat-message-background-color-outgoing:  color($colors, chat-out);
+$chat-message-background-color-incoming:  color($colors, chat-in);
+$chat-message-title-text-color:           color($colors, tertiary-darker);
+$chat-message-date-text-color:            color($colors, tertiary-darker);
+$chat-message-text-color:                 color($colors, tertiary-darkest);
+$chat-footer-background-color:            color($colors, tertiary-ligthest);
+$chat-footer-button-border-color:         color($colors, primary);
+$chat-footer-button-label-color:          color($colors, primary);
+
+// calendar
+$calendar-header-text-color:              color($colors, tertiary-dark);
+$calendar-weeks-day-background-color:     color($colors, tertiary-lighter);
+$calendar-weeks-day-text-color:           color($colors, tertiary-dark);
+$calendar-different-month-text-color:     color($colors, tertiary-light);
+$calendar-today-background-color:         color($colors, calendar-today);
+$calendar-selected-border-color:          color($colors, tertiary-lighter);
+$calendar-info-background-color:          color($colors, tertiary-lighter);
+
+
+
 
 // Ionicons
 // --------------------------------------------------

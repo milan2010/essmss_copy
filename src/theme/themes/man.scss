@@ -1,0 +1,10 @@
+.man-theme {
+  $background: orange;
+
+  ion-header {
+    .toolbar-background {
+      background:  $background;
+      border-bottom: $background;
+    }
+  }
+}

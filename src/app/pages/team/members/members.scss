@@ -6,15 +6,15 @@ page-team-members {
     }
 
     &.available img{
-      border-color: color($colors, green);
+      border-color: $indicator-available;
     }
 
     &.away img{
-      border-color: color($colors, red);
+      border-color: $indicator-away;
     }
 
     &.not-available img{
-      border-color: color($colors, yellow);
+      border-color: $indicator-not-available;
     }
   }
 

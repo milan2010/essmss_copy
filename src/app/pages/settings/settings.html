@@ -26,6 +26,12 @@
     <ion-option value="fr">{{ 'SETTINGS.LANGUAGESELECT.OPTIONS.FR' | translate }}</ion-option>
   </ion-select>
 </ion-item>
+<ion-item>
+  <ion-label>{{ 'SETTINGS.THEMESELECT.LABEL' | translate }}</ion-label>
+  <ion-select cancelText="{{ 'SETTINGS.THEMESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.THEMESELECT.OKTEXT' | translate }}" (ionChange)="setTheme($event)">
+    <ion-option *ngFor='let theme of availableThemes' [value]="theme.className" [selected]="theme.className === selectedTheme">{{ theme.prettyName }}</ion-option>  
+</ion-select>
+</ion-item>
 </ion-list>
 
 <ion-list>
@@ -48,7 +54,7 @@
   </button>
 </ion-list>
 
-<button ion-button full color="danger" (click)="logOut()">
+<button ion-button full color="danger" class="logout" (click)="logOut()">
   {{ 'SETTINGS.LOGOUT' | translate | uppercase }}
 </button>
 </ion-content>

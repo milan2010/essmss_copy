@@ -2,29 +2,21 @@ ion-profile-header {
   display: block;
 
   ion-item {
-    // Needs latest Compass, add '@import "compass"' to your scss
-    // Permalink - use to edit and share this gradient:
-    // http://colorzilla.com/gradient-editor/#2284b9+0,04ace5+100
-    background-color: #2284b9; // Old browsers
-    @include gradient-vertical(#2284b9, #04ace5);
-
-    p {
-      color: white !important;
-    }
-
     .user-name {
-      font-size: 1.3em;
+      font-size: 1em;
+      font-weight: bold;
       letter-spacing: 1px;
     }
 
     .user-position {
       font-style: italic;
-      font-size: 0.95em;
+      font-size: 0.9em;
     }
 
     .user-orgaunit {
       ion-icon {
-        margin-right: 5px;
+        font-size: 1em;
+        margin-right: 3px;
       }
     }
   }

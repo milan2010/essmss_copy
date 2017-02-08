@@ -153,6 +153,11 @@
         "EN": "English",
         "FR": "Francais"
       }
+    },
+    "THEMESELECT": {
+      "LABEL": "Farbschema",
+      "OKTEXT": "Übernehmen",
+      "CANCELTEXT": "Abbrechen"
     }
   }
 }

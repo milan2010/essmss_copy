@@ -1,3 +1,31 @@
 page-settings {
+  .list {
+    .list-header {
+      .label {
+        color: $settings-list-header-title-color;
+      }
+    }
+    .item-select {
+      .label {
+        color: $settings-list-item-label-color;
+      }
+      .select {
+        color: $settings-list-item-select-color;
+      }
+    }
+    button.item {
+      .icon {
+        color: $settings-list-item-icon-color;
+      }
+      .label {
+          color: $settings-list-item-label-color;
+      }
+    }
+  }
+
+  button.logout {
+    background-color: $settings-logout-button-background-color;
+    color: $settings-logout-button-text-color;
+  }
 
 }

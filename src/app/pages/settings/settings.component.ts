@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 import { UserService } from "../../services/user.service";
 import { UserSettingsService } from "../../services/usersettings.service";
+import { SettingsService } from './settings.service';
 
 @Component({
   selector: 'page-settings',
@@ -13,6 +14,16 @@ import { UserSettingsService } from "../../services/usersettings.service";
 * Class for the SettingsPage.
 */
 export class SettingsPage {
+
+  /**
+  * The current theme.
+  */
+  selectedTheme: string;
+
+  /**
+  * All themes available for the app.
+  */
+  availableThemes: { className: string, prettyName: string }[];
 
   /**
   * The object storing user-data.
@@ -44,7 +55,7 @@ export class SettingsPage {
   * @param userService UserService stores user-related properties.
   * @param userSettingsService UserSettingsService stores the settings of the user.
   */
-  constructor(private navCtrl: NavController, private translate: TranslateService, private userService: UserService, private userSettingsService: UserSettingsService) {
+  constructor(private navCtrl: NavController, private translate: TranslateService, private userService: UserService, private userSettingsService: UserSettingsService, private settingsService: SettingsService) {
     this.userData = this.userService.getData();
 
     this.userSettingsService.getData()
@@ -56,6 +67,9 @@ export class SettingsPage {
     });
 
     this.language = this.translate.currentLang;
+
+    this.settingsService.getTheme().subscribe(val => this.selectedTheme = val);
+    this.availableThemes = this.settingsService.availableThemes;
   }
 
   /**
@@ -113,5 +127,9 @@ export class SettingsPage {
   */
   toggleMessage() {
     this.settings.feed.message = !this.settings.feed.message;
+  }
+
+  setTheme(e) {
+    this.settingsService.setTheme(e);
   }
 }

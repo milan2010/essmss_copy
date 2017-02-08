@@ -1,13 +1,19 @@
 tabs {
 
   .tabs .tabbar {
-    background: #FFF;
-    
-    .tab-button[aria-selected=true] {
-      border-top: 1px solid color($colors, primary);
-    }
+    background: $tabbar-background-color;
+
     .tab-button {
-      border-top: 1px solid #ccc;
+      border-top: 2px solid $tabbar-border-top;
+
+      &[aria-selected=true]{
+        border-top: 2px solid $tabbar-border-top-selected;
+        color: $tabbar-tab-color;
+      }
+
+      &:hover:not(.disable-hover){
+        color: $tabbar-tab-color;
+      }
     }
   }
 }

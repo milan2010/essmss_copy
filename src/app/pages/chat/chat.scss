@@ -1,14 +1,40 @@
-.chat {
-  margin-bottom: .5em;
-  &-incoming {
-    text-align: left;
-    background-color: rgba(0, 177, 243, 0.29);
-    border-radius: 0 1rem 1rem 1rem;
+page-chat {
+  .chat {
+    margin-bottom: .5em;
+    &-incoming {
+      text-align: left;
+      background-color: $chat-message-background-color-incoming;
+      border-radius: 0 1rem 1rem 1rem;
+    }
+
+    &-outgoing{
+      text-align: right;
+      background-color: $chat-message-background-color-outgoing;
+      border-radius: 1rem 1rem 0 1rem;
+    }
+
+    .label {
+      h2 {
+        color: $chat-message-title-text-color;
+      }
+      small {
+        color: $chat-message-date-text-color;
+      }
+      p {
+        color: $chat-message-text-color;
+      }
+    }
   }
 
-  &-outgoing{
-    text-align: right;
-    background-color: rgba(106, 187, 0, 0.29);
-    border-radius: 1rem 1rem 0 1rem;
+  .footer {
+    .item {
+      background-color: $chat-footer-background-color;
+
+      button {
+        border-color: $chat-footer-button-border-color;
+        color: $chat-footer-button-label-color;
+      }
+    }
   }
+
 }

@@ -1,18 +1,20 @@
 page-personal {
 
-  ion-header {
-    .toolbar-background {
-      background: #2284b9;
-      border-bottom: #2284b9;
-    }
-
-    .toolbar-title {
-      color: white;
-    }
-
-    .bar-button-default {
-      color: white;
-      font-size: 14px;
+  ion-profile-header {
+    background: $profile-header-background-color-from;
+    background: -moz-linear-gradient(top, $profile-header-background-color-from 0%, $profile-header-background-color-to 100%);
+    background: -webkit-linear-gradient(top, $profile-header-background-color-from 0%, $profile-header-background-color-to 100%);
+    background: linear-gradient(to bottom, $profile-header-background-color-from 0%, $profile-header-background-color-to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$profile-header-background-color-from', endColorstr='$profile-header-background-color-to',GradientType=0 );
+    padding-bottom: 10px;
+    ion-item.item.item-block {
+      background: none;
+      .item-inner {
+        border-bottom: none;
+        p {
+          color: $profile-header-profile-text-color;
+        }
+      }
     }
   }
 }

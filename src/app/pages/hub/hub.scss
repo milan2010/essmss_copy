@@ -1,19 +1,18 @@
 page-home {
-  $PRIMARY: color($colors, primary);
-  $SECONDARY: color($colors, secondary);
-
   .home-header {
     position: relative;
-    background: color($colors, primary);
-    background: -moz-linear-gradient(top, color($colors, primary) 0%, color($colors, secondary) 100%);
-    background: -webkit-linear-gradient(top, color($colors, primary) 0%, color($colors, secondary) 100%);
-    background: linear-gradient(to bottom, color($colors, primary) 0%, color($colors, secondary) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='color($colors, primary)', endColorstr='color($colors, secondary)',GradientType=0 );
+    background: $infos-header-background-color-from;
+    background: -moz-linear-gradient(top, $infos-header-background-color-from 0%, $infos-header-background-color-to 100%);
+    background: -webkit-linear-gradient(top, $infos-header-background-color-from 0%, $infos-header-background-color-to 100%);
+    background: linear-gradient(to bottom, $infos-header-background-color-from 0%, $infos-header-background-color-to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$infos-header-background-color-from', endColorstr='$infos-header-background-color-to',GradientType=0 );
+
     .welcome-header {
       padding: 15px;
       margin-bottom: -1px;
+
       span {
-        color: color($colors, primary-contrast);
+        color: $infos-header-welcome-text-color;
         font-size: 2.3em; //28px;
         display: block;
         margin: auto;
@@ -27,8 +26,8 @@ page-home {
         background: none;
         .item-inner {
           border-bottom: none;
-          p.user-name {
-            //font-size: 1.5em;
+          p {
+            color: $infos-header-profile-text-color;
           }
         }
       }
@@ -36,11 +35,20 @@ page-home {
 
     ion-fab {
       bottom: -25px;
+      .fab {
+        background-color: $infos-fab-background-color;
+        .fab-close-icon {
+          color: $infos-fab-icon-color;
+        }
+      }
       ion-fab-list {
+        .fab.fab-in-list {
+          background-color: $infos-fab-in-list-background-color;
+        }
         button {
-          border: 1px solid color($colors, primary);
+          border: 1px solid $infos-fab-in-list-border-color;
           ion-icon {
-            color: color($colors, primary);
+            color: $infos-fab-in-list-icon-color;
           }
         }
       }
@@ -48,6 +56,47 @@ page-home {
   }
 
   .scroll-content {
-    background-color: #E2E2E2;
+    background-color: $infos-news-background-color;
   }
+  .card{
+    background: $infos-news-card-background-color;
+    .card-content {
+      .location {
+        color: $infos-news-card-location-color;
+      }
+      .time {
+        color: $infos-news-card-time-color;
+      }
+      p {
+        color: $infos-news-card-content-text-color;
+      }
+      .card-title {
+        color: $infos-news-card-title-color;
+        p {
+          color: $infos-news-card-title-date-color;
+        }
+      }
+    }
+    ion-row {
+      ion-col.title {
+        span {
+          color: $infos-news-card-subtitle-text-color;
+        }
+      }
+      .sender {
+        span {
+          color: $infos-news-card-sender-text-color;
+        }
+      }
+      .icon[name=heart]{
+        color: $infos-news-card-heart-color-selected;
+      }
+    }
+    expense-item {
+      .icon {
+        color: $infos-news-card-expense-item-color;
+      }
+    }
+  }
+
 }
