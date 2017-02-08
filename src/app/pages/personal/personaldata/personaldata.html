@@ -12,45 +12,45 @@
 <ion-content>
 
   <ion-list>
-    <ion-list-header>Name</ion-list-header>
+    <ion-list-header>{{ 'PERSONAL.LISTS.NAME.TITLE' | translate }}</ion-list-header>
     <ion-item>
-      <ion-label>Vorname</ion-label>
+      <ion-label>{{ 'PERSONAL.LISTS.NAME.FIRSTNAME' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.firstname }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Nachname</ion-label>
+      <ion-label>{{ 'PERSONAL.LISTS.NAME.LASTNAME' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.lastname }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>
 
   <ion-list>
-    <ion-list-header>Adresse</ion-list-header>
+    <ion-list-header>{{ 'PERSONAL.LISTS.ADDRESS.TITLE' | translate }}</ion-list-header>
     <ion-item>
-      <ion-label>Straße</ion-label>
+      <ion-label>{{ 'PERSONAL.LISTS.ADDRESS.STREET' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.street }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Hausnummer</ion-label>
+      <ion-label>{{ 'PERSONAL.LISTS.ADDRESS.HOUSENUMBER' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.number }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Postleitzahl</ion-label>
+      <ion-label>{{ 'PERSONAL.LISTS.ADDRESS.POSTALCODE' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.postcode }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Stadt</ion-label>
+      <ion-label>{{ 'PERSONAL.LISTS.ADDRESS.CITY' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.city }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>
 
   <ion-list>
-    <ion-list-header>Kontakt</ion-list-header>
+    <ion-list-header>{{ 'PERSONAL.LISTS.CONTACT.TITLE' | translate }}</ion-list-header>
     <ion-item>
-      <ion-label>Email</ion-label>
+      <ion-label>{{ 'PERSONAL.LISTS.CONTACT.EMAIL' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.email }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Mobil</ion-label>
+      <ion-label>{{ 'PERSONAL.LISTS.CONTACT.MOBILE' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.mobile }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>

@@ -21,8 +21,8 @@
   <ion-list class="mar-no">
   <form [formGroup]="chatForm" (ngSubmit)="sendMessage()">
     <ion-item>
-      <ion-input formControlName="message" type="text" placeholder="Deine Nachricht"></ion-input>
-      <button ion-button outline item-right>Senden</button>
+      <ion-input formControlName="message" type="text" placeholder="{{ 'CHAT.PLACEHOLDER' | translate }}"></ion-input>
+      <button ion-button outline item-right>{{ 'CHAT.SEND' | translate }}</button>
     </ion-item>
   </form>
   </ion-list>

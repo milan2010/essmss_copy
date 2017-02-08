@@ -1,4 +1,15 @@
 {
+  "LOGIN": {
+    "TITLE": "Viel Spaß mit V.io",
+    "START": "Start",
+    "LOGIN": "Anmelden",
+    "FORGOTPASSWORD": "Passwort vergessen",
+    "CHANGELINK": "Hier ändern",
+    "PLACEHOLDER":{
+      "USERID": "User-ID",
+      "PASSWORD": "Passwort"
+    }
+  },
   "TABS": {
     "HUB": {
       "TITLE": "Infos"
@@ -39,7 +50,9 @@
     }
   },
   "CHAT": {
-    "TITLE": "Chat"
+    "TITLE": "Chat",
+    "SEND": "Senden",
+    "PLACEHOLDER": "Deine Nachricht"
   },
   "WORK": {
     "TITLE": "Meine Arbeit",
@@ -96,7 +109,26 @@
       },
       "PERSONALDATA": {
         "TITLE": "Stammdaten",
-        "SUBTITLE": "Aktueller Stand"
+        "SUBTITLE": "Aktueller Stand",
+        "LISTS": {
+          "NAME": {
+            "TITLE": "Name",
+            "FIRSTNAME": "Vorname",
+            "LASTNAME": "Nachname"
+          },
+          "ADDRESS": {
+            "TITLE": "Adresse",
+            "STREET": "Straße",
+            "HOUSENUMBER": "Hausnummer",
+            "POSTALCODE": "Postleitzahl",
+            "CITY": "Stadt"
+          },
+          "CONTACT": {
+            "TITLE": "Kontakt",
+            "EMAIL": "Email",
+            "MOBILE": "Mobil"
+          }
+        }
       },
       "CONTACTPERSON": {
         "TITLE": "Ansprechpartner",
@@ -123,12 +155,6 @@
     "TITLE": "Einstellungen",
     "HEADER-GENERAL": "Allgemein",
     "LOGOUT": "Abmelden",
-    "SOUND": {
-      "LABEL": "Ton"
-    },
-    "VIBRATION": {
-      "LABEL": "Vibration"
-    },
     "FEEDCHANNELS": {
       "TITLE": "Nachrichten-Feed",
       "CALENDAR": {

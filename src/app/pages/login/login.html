@@ -9,10 +9,10 @@
       </ion-slide>
       <ion-slide>
         <img src="assets/img/viologowhite.png" class="slide-image"/>
-        <h2 class="slide-title"> Viel Spaß mit V.io</h2>
+        <h2 class="slide-title">{{ 'LOGIN.TITLE' | translate }}</h2>
         <ion-row>
           <ion-col>
-            <button ion-button round (click)="showStart = false;">Start</button>
+            <button ion-button round (click)="showStart = false;">{{ 'LOGIN.START' | translate }}</button>
           </ion-col>
         </ion-row>
       </ion-slide>
@@ -32,15 +32,15 @@
           <ion-list>
             <ion-item>
   				<ion-icon name="person" item-left></ion-icon>
-              	<ion-input type="text" placeholder="User-ID" formControlName="username"></ion-input>
+              	<ion-input type="text" placeholder="{{ 'LOGIN.PLACEHOLDER.USERID' | translate }}" formControlName="username"></ion-input>
             </ion-item>
             <ion-item>
               <ion-icon name="lock" item-left></ion-icon>
-              <ion-input type="password" placeholder="Passwort" formControlName="password"></ion-input>
+              <ion-input type="password" placeholder="{{ 'LOGIN.PLACEHOLDER.PASSWORD' | translate }}" formControlName="password"></ion-input>
             </ion-item>
           </ion-list>
-          <button ion-button round type="submit">Anmelden</button>
-          <div class="forgot-password">Passwort vergessen? <span><a href="">Hier &auml;ndern</a></span></div>
+          <button ion-button round type="submit">{{ 'LOGIN.LOGIN' | translate }}</button>
+          <div class="forgot-password">{{ 'LOGIN.FORGOTPASSWORD' | translate }} <span><a href="">{{ 'LOGIN.CHANGELINK' | translate}}</a></span></div>
         </form>
       </ion-col>
     </ion-row>
