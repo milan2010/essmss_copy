@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TranslateService } from 'ng2-translate';
 import { UserService } from "../../services/user.service";
-import { UserSettingsService } from "../../services/usersettings.service";
 import { SettingsService } from './settings.service';
 
 @Component({
   selector: 'page-settings',
   templateUrl: 'settings.html',
-  providers: [UserService, UserSettingsService]
+  providers: [UserService]
 })
 /**
 * Class for the SettingsPage.
@@ -26,50 +24,36 @@ export class SettingsPage {
   availableThemes: { className: string, prettyName: string }[];
 
   /**
-  * The object storing user-data.
-  */
-  userData: Object = null;
-
-  /**
   * The language used for i18n.
   */
-  language:string = "de";
+  selectedLanguage:string;
 
   /**
-  * Settings storing feed-data.
+  * All languages available for the app.
   */
-  settings: { feed:{ calendar:boolean, news:boolean, expense:boolean, message:boolean } } = {
-    feed:{
-      calendar: true,
-      news: true,
-      expense: true,
-      message: true
-    }
-  };
+  availableLanguages: { className:string, prettyName:string }[];
+
+  /**
+  * The channels used on the information page.
+  */
+  feedChannels: {channelName:string, filterId:number, icon:string, shown:boolean}[];
+
 
   /**
   * Constructor for SettingsPage.
   *
   * @param navCtrl The NavController used for navigation.
-  * @param translate The ng2-translate TranslationService.
   * @param userService UserService stores user-related properties.
-  * @param userSettingsService UserSettingsService stores the settings of the user.
+  * @param SettingsService SettingsService stores the settings.
   */
-  constructor(private navCtrl: NavController, private translate: TranslateService, private userService: UserService, private userSettingsService: UserSettingsService, private settingsService: SettingsService) {
-    this.userData = this.userService.getData();
-
-    this.userSettingsService.getData()
-    .then(data => {
-      this.settings = data;
-    })
-    .catch(error => {
-      console.log(error);
-    });
-
-    this.language = this.translate.currentLang;
+  constructor(private navCtrl: NavController, private userService: UserService, private settingsService: SettingsService) {
+    this.settingsService.getLanguage().subscribe(val => this.selectedLanguage = val);
+    this.availableLanguages = this.settingsService.availableLanguages;
 
     this.settingsService.getTheme().subscribe(val => this.selectedTheme = val);
     this.availableThemes = this.settingsService.availableThemes;
+
+    this.feedChannels = this.settingsService.getFeedChannels();
   }
 
   /**
@@ -81,55 +65,24 @@ export class SettingsPage {
   }
 
   /**
-  * Sets the user-settings after leaving the page.
-  */
-  ionViewWillLeave() {
-    this.setUserSettings();
-  }
-
-  /**
-  * Sets the user settings.
-  */
-  setUserSettings(){
-    this.userSettingsService.setData(this.settings);
-  }
-
-  /**
   * Sets the i18n language.
   */
-  setLanguage() {
-    this.translate.use(this.language);
+  setLanguage(language) {
+    this.settingsService.setLanguage(language);
   }
 
   /**
-  * Shows or hides the feed-calendar.
+  * Toggles the visibilty of a channel.
   */
-  toggleCalendar() {
-    this.settings.feed.calendar = !this.settings.feed.calendar;
+  toggle(channel){
+    channel.shown = !channel.shown;
+    this.settingsService.setFeedChannels(this.feedChannels);
   }
 
   /**
-  * Shows or hides the feed-news.
+  * Sets the theme.
   */
-  toggleNews() {
-    this.settings.feed.news = !this.settings.feed.news;
-  }
-
-  /**
-  * Shows or hides the feed-expense.
-  */
-  toggleExpense() {
-    this.settings.feed.expense = !this.settings.feed.expense;
-  }
-
-  /**
-  * Shows or hides the feed-message.
-  */
-  toggleMessage() {
-    this.settings.feed.message = !this.settings.feed.message;
-  }
-
-  setTheme(e) {
-    this.settingsService.setTheme(e);
+  setTheme(theme) {
+    this.settingsService.setTheme(theme);
   }
 }

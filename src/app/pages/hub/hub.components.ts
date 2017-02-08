@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
 import {UserService} from "../../services/user.service";
 import {HubService} from "../hub/hub.service";
-import {UserSettingsService} from "../../services/usersettings.service";
 import {FabContainer} from "ionic-angular";
+import { SettingsService } from '../settings/settings.service';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'hub.html',
-  providers: [UserService, HubService, UserSettingsService]
+  providers: [UserService, HubService]
 })
 
 export class HubPage {
@@ -16,16 +16,10 @@ export class HubPage {
   filtered: Array<Object> = [];
   filterType: Number = 0;
   selectedFilterIcon:string = "funnel";
-  userSettings: { feed:{ calendar:boolean, news:boolean, expense:boolean, message:boolean } } = {
-    feed:{
-      calendar: true,
-      news: false,
-      expense: false,
-      message: true
-    }
-  };
+  feedChannels: {channelName:string, filterId:number, icon:string, shown:boolean}[];
 
-  constructor(private userService: UserService, private hubService: HubService, private userSettingsService: UserSettingsService) {
+  constructor(private userService: UserService, private hubService: HubService, private settingsService: SettingsService) {
+    this.feedChannels = this.settingsService.getFeedChannels();
   }
 
   ionViewDidLoad() {
@@ -35,16 +29,6 @@ export class HubPage {
     .then(data => {
       this.news = data;
       this.filterItems();
-    })
-    .catch(error => {
-      console.log(error);
-    });
-  }
-
-  ionViewWillEnter(){
-    this.userSettingsService.getData()
-    .then(data => {
-      this.userSettings = data;
     })
     .catch(error => {
       console.log(error);
@@ -65,9 +49,9 @@ export class HubPage {
     }
   };
 
-  setFilter = function (type, fab: FabContainer, icon) {
+  setFilter = function (filterId, icon, fab: FabContainer) {
     this.selectedFilterIcon = icon === undefined ? "funnel" : icon;
-    this.filterType = type;
+    this.filterType = filterId;
     this.filterItems();
     if (fab) {
       fab.close();

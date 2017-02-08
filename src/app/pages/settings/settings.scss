@@ -15,7 +15,12 @@ page-settings {
     }
     button.item {
       .icon {
-        color: $settings-list-item-icon-color;
+        &.enabled{
+          color: $settings-list-item-icon-color;
+        }
+        &.disabled{
+          color: $settings-list-item-icon-disabled-color;
+        }
       }
       .label {
           color: $settings-list-item-label-color;

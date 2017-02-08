@@ -129,7 +129,7 @@
     "VIBRATION": {
       "LABEL": "Vibration"
     },
-    "FEED": {
+    "FEEDCHANNELS": {
       "TITLE": "Nachrichten-Feed",
       "CALENDAR": {
         "TITLE": "Kalender"
@@ -147,12 +147,7 @@
     "LANGUAGESELECT": {
       "LABEL": "Sprache",
       "OKTEXT": "Übernehmen",
-      "CANCELTEXT": "Abbrechen",
-      "OPTIONS": {
-        "DE": "Deutsch",
-        "EN": "English",
-        "FR": "Francais"
-      }
+      "CANCELTEXT": "Abbrechen"
     },
     "THEMESELECT": {
       "LABEL": "Farbschema",

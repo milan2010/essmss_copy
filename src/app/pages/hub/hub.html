@@ -24,18 +24,11 @@
           <ion-icon [name]="selectedFilterIcon" (click)="setFilter(0)" #fabicon></ion-icon>
         </button>
         <ion-fab-list side="left">
-          <button ion-fab (click)="setFilter(3, fab, 'logo-euro') " *ngIf="userSettings.feed.expense">
-            <ion-icon name="logo-euro"></ion-icon>
-          </button>
-          <button ion-fab (click)="setFilter(4, fab, 'calendar')" *ngIf="userSettings.feed.calendar">
-            <ion-icon name="calendar"></ion-icon>
-          </button>
-          <button ion-fab (click)="setFilter(2, fab, 'information')" *ngIf="userSettings.feed.message">
-            <ion-icon name="information"></ion-icon>
-          </button>
-          <button ion-fab (click)="setFilter(1, fab, 'paper')" *ngIf="userSettings.feed.news">
-            <ion-icon name="paper"></ion-icon>
-          </button>
+          <ng-container *ngFor="let channel of feedChannels">
+            <button ion-fab *ngIf="channel.shown" (click)="setFilter(channel.filterId, channel.icon, fab)">
+              <ion-icon [name]="channel.icon"></ion-icon>
+            </button>
+          </ng-container>
         </ion-fab-list>
       </ion-fab>
     </ion-col>
