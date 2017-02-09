@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ 'PERSONAL.PERSONALDATA.TITLE' | translate }}</ion-title>
+    <ion-title>{{ 'PERSONAL.MENU.PERSONALDATA.TITLE' | translate }}</ion-title>
     <!-- <ion-buttons right>
       <button *ngIf="!edit" ion-button clear (click)="editPersonalData()">Bearbeiten</button>
       <button *ngIf="edit" ion-button clear (click)="savePersonalData()">Speichern</button>
@@ -12,45 +12,45 @@
 <ion-content>
 
   <ion-list>
-    <ion-list-header>{{ 'PERSONAL.LISTS.NAME.TITLE' | translate }}</ion-list-header>
+    <ion-list-header>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.NAME.TITLE' | translate }}</ion-list-header>
     <ion-item>
-      <ion-label>{{ 'PERSONAL.LISTS.NAME.FIRSTNAME' | translate }}</ion-label>
+      <ion-label>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.NAME.FIRSTNAME' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.firstname }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>{{ 'PERSONAL.LISTS.NAME.LASTNAME' | translate }}</ion-label>
+      <ion-label>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.NAME.LASTNAME' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.lastname }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>
 
   <ion-list>
-    <ion-list-header>{{ 'PERSONAL.LISTS.ADDRESS.TITLE' | translate }}</ion-list-header>
+    <ion-list-header>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.ADDRESS.TITLE' | translate }}</ion-list-header>
     <ion-item>
-      <ion-label>{{ 'PERSONAL.LISTS.ADDRESS.STREET' | translate }}</ion-label>
+      <ion-label>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.ADDRESS.STREET' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.street }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>{{ 'PERSONAL.LISTS.ADDRESS.HOUSENUMBER' | translate }}</ion-label>
+      <ion-label>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.ADDRESS.HOUSENUMBER' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.number }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>{{ 'PERSONAL.LISTS.ADDRESS.POSTALCODE' | translate }}</ion-label>
+      <ion-label>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.ADDRESS.POSTALCODE' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.postcode }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>{{ 'PERSONAL.LISTS.ADDRESS.CITY' | translate }}</ion-label>
+      <ion-label>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.ADDRESS.CITY' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.city }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>
 
   <ion-list>
-    <ion-list-header>{{ 'PERSONAL.LISTS.CONTACT.TITLE' | translate }}</ion-list-header>
+    <ion-list-header>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.CONTACT.TITLE' | translate }}</ion-list-header>
     <ion-item>
-      <ion-label>{{ 'PERSONAL.LISTS.CONTACT.EMAIL' | translate }}</ion-label>
+      <ion-label>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.CONTACT.EMAIL' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.email }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>{{ 'PERSONAL.LISTS.CONTACT.MOBILE' | translate }}</ion-label>
+      <ion-label>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.CONTACT.MOBILE' | translate }}</ion-label>
       <ion-input type="text" value="{{ personalData.mobile }}" disabled="{{ !edit }}"></ion-input>
     </ion-item>
   </ion-list>

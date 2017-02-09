@@ -7,35 +7,46 @@ import {NavParams} from "ionic-angular";
 })
 export class TeamMemberDetailsPage {
   userData: Object = null;
-  userMenu: any[];
+  menuItems: Array<{title: string, subtitle:string, icon:string, subicon:string, link:Object }> = [
+    {
+      title: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.QUALIFICATIONS.TITLE",
+      subtitle: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.QUALIFICATIONS.SUBTITLE",
+      icon: "star-outline",
+      subicon: "",
+      link: ""
+    },
+    {
+      title: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.INFO.TITLE",
+      subtitle: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.INFO.SUBTITLE",
+      icon: "information-circle-outline",
+      subicon: "",
+      link: ""
+    },
+    {
+      title: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.ABSENCE.TITLE",
+      subtitle: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.ABSENCE.SUBTITLE",
+      icon: "plane",
+      subicon: "",
+      link: ""
+    },
+    {
+      title: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.LIMITATIONS.TITLE",
+      subtitle: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.LIMITATIONS.SUBTITLE",
+      icon: "information-circle-outline",
+      subicon: "",
+      link: ""
+    },
+    {
+      title: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.INSTRUCTIONS.TITLE",
+      subtitle: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.INSTRUCTIONS.SUBTITLE",
+      icon: "folder-open",
+      subicon: "",
+      link: ""
+    }
+  ];
+
 
   constructor(private navParams: NavParams) {
     this.userData = navParams.data;
-    this.userMenu = [
-      {
-        icon: 'md-star-outline',
-        title: 'Qualifikationen',
-        subtitle: '2 Scheine'
-      },
-      {
-        icon: 'ios-information-circle-outline',
-        title: 'Mitarbeiterinfo',
-        subtitle: 'Siehe Infos'
-      },
-      {
-        icon: 'md-plane',
-        title: 'Urlaub & Abwesenheit',
-        subtitle: 'Noch 5 Tage Urlaub'
-      },
-      {
-        icon: 'ios-information-circle-outline',
-        title: 'Einschränkung',
-        subtitle: 'Keine Einschränkung'
-      },
-      {
-        icon: 'md-folder-open',
-        title: 'Belehrung',
-        subtitle: 'Noch ausstehend'
-      }];
   }
 }

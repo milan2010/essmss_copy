@@ -6,19 +6,7 @@
 
 <ion-content class="content-stable" no-bounce>
   <ion-profile-header [data]="userData"></ion-profile-header>
-
   <ion-list>
-
-    <ion-item *ngFor="let value of userMenu" [navPush]='value.link'>
-
-      <ion-avatar item-left class="item-avatar">
-        <ion-icon name="{{ value.icon }}"></ion-icon>
-      </ion-avatar>
-
-      <h2>{{ value.title | translate }}</h2>
-      <p>{{ value.subtitle | translate }}</p>
-      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-
+    <list-item *ngFor="let menuItem of menuItems" [content]="menuItem"></list-item>
   </ion-list>
 </ion-content>

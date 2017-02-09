@@ -35,7 +35,31 @@
     "MENU": {
       "TEAMMEMBERS": {
         "TITLE": "Teammitglieder",
-        "SUBTITLE": "6 Mitarbeiter"
+        "SUBTITLE": "6 Mitarbeiter",
+        "DETAILS": {
+          "MENU": {
+            "QUALIFICATIONS": {
+              "TITLE": "Qualifikationen",
+              "SUBTITLE": "2 Scheine"
+            },
+            "INFO": {
+              "TITLE": "Mitarbeiterinfo",
+              "SUBTITLE": "Siehe Infos"
+            },
+            "ABSENCE": {
+              "TITLE": "Urlaub & Abwesenheit",
+              "SUBTITLE": "Noch 5 Tage Urlaub"
+            },
+            "LIMITATIONS": {
+              "TITLE": "Einschränkung",
+              "SUBTITLE": "Keine Einschränkung"
+            },
+            "INSTRUCTIONS": {
+              "TITLE": "Belehrung",
+              "SUBTITLE": "Noch ausstehend"
+            }
+          }
+        }
       },
       "HOLIDAY": {
         "TITLE": "Jahresurlaub",
