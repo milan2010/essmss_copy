@@ -1,7 +1,10 @@
+import {Injectable, Inject} from "@angular/core";
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { UserService } from "../../services/user.service";
 import { SettingsService } from './settings.service';
+import { AuthorizationService } from '../../services/authorization.service';
+
 
 @Component({
   selector: 'page-settings',
@@ -38,7 +41,6 @@ export class SettingsPage {
   */
   feedChannels: {channelName:string, filterId:number, icon:string, shown:boolean}[];
 
-
   /**
   * Constructor for SettingsPage.
   *
@@ -46,7 +48,7 @@ export class SettingsPage {
   * @param userService UserService stores user-related properties.
   * @param SettingsService SettingsService stores the settings.
   */
-  constructor(private navCtrl: NavController, private userService: UserService, private settingsService: SettingsService) {
+  constructor(private navCtrl: NavController, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
     this.settingsService.getLanguage().subscribe(val => this.selectedLanguage = val);
     this.availableLanguages = this.settingsService.availableLanguages;
 
@@ -84,5 +86,12 @@ export class SettingsPage {
   */
   setTheme(theme) {
     this.settingsService.setTheme(theme);
+  }
+
+  /**
+  * Call authorizationService to update authorizations.
+  */
+  updateAuthorizations(){
+    this.authorizationService.forceUpdate();
   }
 }

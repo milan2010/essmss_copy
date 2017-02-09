@@ -43,7 +43,7 @@ export class SettingsService {
   }
 
   getLanguage() {
-    return this.selectedLanguage.asObservable();
+      return this.selectedLanguage.asObservable();
   }
 
   setTheme(val) {

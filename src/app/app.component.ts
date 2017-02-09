@@ -8,17 +8,18 @@ import {TabsPage} from './pages/tabs/tabs.component';
 
 import {UserService} from './services/user.service';
 import { SettingsService } from './pages/settings/settings.service';
+import { AuthorizationService } from './services/authorization.service';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [UserService, SettingsService]
+  providers: [UserService, SettingsService, AuthorizationService]
 })
 
 export class MyApp {
   rootPage: any = this.userService.isLoggedIn() ? TabsPage : LoginPage;
   chosenTheme: string;
 
-  constructor(platform: Platform, private userService: UserService, translate: TranslateService, private settingsService: SettingsService) {
+  constructor(platform: Platform, private userService: UserService, translate: TranslateService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
     // Subscribe to theme changes and set a default chosen theme
     this.settingsService.getTheme().subscribe(val => this.chosenTheme = val);
 

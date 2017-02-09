@@ -8,6 +8,8 @@ import {WorkingtimePage} from "./workingtime/workingtime.components";
 import {UserService} from "../../services/user.service";
 import {NavController} from "ionic-angular";
 import {SettingsPage} from "../settings/settings.component";
+import { AuthorizationService } from '../../services/authorization.service';
+
 
 @Component({
   selector: 'page-personal',
@@ -18,8 +20,9 @@ export class PersonalPage {
   test: string;
   options: any;
   userData: Object = null;
-  menuItems: Array<{title: string, subtitle:string, icon:string, subicon:string, link:Object }> = [
+  menuItems: Array<{id:string, title:string, subtitle:string, icon:string, subicon:string, link:Object }> = [
     {
+      id: "app-worktime",
       title: "PERSONAL.MENU.WORKTIME.TITLE",
       subtitle: "PERSONAL.MENU.WORKTIME.SUBTITLE",
       icon: "time",
@@ -27,6 +30,7 @@ export class PersonalPage {
       link: WorkingtimePage
     },
     {
+      id: "app-absence",
       title: 'PERSONAL.MENU.ABSENCE.TITLE',
       subtitle: 'PERSONAL.MENU.ABSENCE.SUBTITLE',
       icon: 'plane',
@@ -34,6 +38,7 @@ export class PersonalPage {
       link: AbsencePage
     },
     {
+      id: "app-paystub",
       title: 'PERSONAL.MENU.PAYSTUB.TITLE',
       subtitle: 'PERSONAL.MENU.PAYSTUB.SUBTITLE',
       icon: 'document',
@@ -41,6 +46,7 @@ export class PersonalPage {
       link: PaystubPage
     },
     {
+      id: "app-personaldata",
       title: 'PERSONAL.MENU.PERSONALDATA.TITLE',
       subtitle: 'PERSONAL.MENU.PERSONALDATA.SUBTITLE',
       icon: 'contact',
@@ -48,6 +54,7 @@ export class PersonalPage {
       link: PersonaldataPage
     },
     {
+      id: "app-contactperson",
       title: 'PERSONAL.MENU.CONTACTPERSON.TITLE',
       subtitle: 'PERSONAL.MENU.CONTACTPERSON.SUBTITLE',
       icon: 'contacts',
@@ -56,7 +63,7 @@ export class PersonalPage {
     }
   ];
 
-  constructor(private userService: UserService, public navCtrl: NavController) {
+  constructor(private userService: UserService, public navCtrl: NavController, private authorizationService: AuthorizationService) {
     this.userData = this.userService.getData();
 
     this.options = {

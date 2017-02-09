@@ -22,6 +22,12 @@
         <ion-option *ngFor="let theme of availableThemes" [value]="theme.className" [selected]="theme.className === selectedTheme">{{ theme.prettyName }}</ion-option>
       </ion-select>
     </ion-item>
+    <ion-item>
+      <button ion-button item-right (click)="updateAuthorizations()">{{ 'SETTINGS.UPDATEAUTORIZATIONS.BUTTONTEXT' | translate }}</button>
+      <ion-label>
+        {{ 'SETTINGS.UPDATEAUTORIZATIONS.LABEL' | translate }}
+      </ion-label>
+    </ion-item>
   </ion-list>
   <ion-list>
     <ion-list-header>{{ 'SETTINGS.FEEDCHANNELS.TITLE' | translate }}</ion-list-header>
