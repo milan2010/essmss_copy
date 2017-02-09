@@ -10,14 +10,14 @@ export class AuthorizationService {
   constructor(public http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
     this.getAuthorizations();
   }
-
+  
   private getAuthorizations() {
     let loading = this.loadingCtrl.create();
     loading.present();
 
     this.http.get('assets/responses/AuthorizationData.json').map(res => res.json()).subscribe(data => {
-        this.appAuthorizations = data.d.results[0].authorizations;
-        loading.dismiss();
+      this.appAuthorizations = data.d.results[0].authorizations;
+      loading.dismiss();
     }, err => {
       loading.dismiss();
     });

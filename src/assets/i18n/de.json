@@ -134,6 +134,9 @@
       "PERSONALDATA": {
         "TITLE": "Stammdaten",
         "SUBTITLE": "Aktueller Stand",
+        "EDITTEXT": "Bearbeiten",
+        "CANCELTEXT": "Abbrechen",
+        "SAVETEXT": "Speichern",
         "LISTS": {
           "NAME": {
             "TITLE": "Name",

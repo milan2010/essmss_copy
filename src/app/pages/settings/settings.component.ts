@@ -45,8 +45,9 @@ export class SettingsPage {
   * Constructor for SettingsPage.
   *
   * @param navCtrl The NavController used for navigation.
-  * @param userService UserService stores user-related properties.
-  * @param SettingsService SettingsService stores the settings.
+  * @param u  serService UserService stores user-related properties.
+  * @param settingsService SettingsService stores the settings.
+  * @param authorizationService AuthorizationService stores the authorizations.
   */
   constructor(private navCtrl: NavController, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
     this.settingsService.getLanguage().subscribe(val => this.selectedLanguage = val);
@@ -69,14 +70,14 @@ export class SettingsPage {
   /**
   * Sets the i18n language.
   */
-  setLanguage(language) {
+  setLanguage(language:string) {
     this.settingsService.setLanguage(language);
   }
 
   /**
   * Toggles the visibilty of a channel.
   */
-  toggle(channel){
+  toggle(channel:any){
     channel.shown = !channel.shown;
     this.settingsService.setFeedChannels(this.feedChannels);
   }
@@ -84,7 +85,7 @@ export class SettingsPage {
   /**
   * Sets the theme.
   */
-  setTheme(theme) {
+  setTheme(theme:string) {
     this.settingsService.setTheme(theme);
   }
 
