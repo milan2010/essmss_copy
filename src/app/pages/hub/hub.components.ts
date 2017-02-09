@@ -7,7 +7,7 @@ import { SettingsService } from '../settings/settings.service';
 @Component({
   selector: 'page-home',
   templateUrl: 'hub.html',
-  providers: [UserService, HubService]
+  providers: [HubService]
 })
 
 export class HubPage {
@@ -23,7 +23,6 @@ export class HubPage {
   }
 
   ionViewDidLoad() {
-    this.userData = this.userService.getData();
 
     this.hubService.getNews()
     .then(data => {

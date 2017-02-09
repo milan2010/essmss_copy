@@ -12,7 +12,7 @@ import {SettingsPage} from "../settings/settings.component";
 @Component({
   selector: 'page-personal',
   templateUrl: 'personal.html',
-  providers: [UserService]
+  providers: []
 })
 export class PersonalPage {
   test: string;

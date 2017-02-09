@@ -6,7 +6,7 @@ import {UserService} from "../../../services/user.service";
 @Component({
   selector: 'page-personaldata',
   templateUrl: 'personaldata.html',
-  providers: [UserService, PersonalDataService]
+  providers: [PersonalDataService]
 })
 export class PersonaldataPage {
   edit:boolean = false;
@@ -23,7 +23,6 @@ export class PersonaldataPage {
   };
 
   constructor(public navCtrl: NavController, private userService: UserService, private personalDataService: PersonalDataService) {
-    this.userData = this.userService.getData();
 
     this.personalDataService.getData(this.userService.isManager())
     .then(data => {
