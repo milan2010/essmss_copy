@@ -13,6 +13,8 @@
   <ion-profile-header [data]="userData"></ion-profile-header>
 
   <ion-list>
-    <list-item *ngFor="let menuItem of menuItems" [content]="menuItem"></list-item>
+    <ng-container *ngFor="let menuItem of menuItems">
+      <list-item *ngIf="authorizationService.isAuthorized(menuItem.id)" [content]="menuItem"></list-item>
+    </ng-container>
   </ion-list>
 </ion-content>

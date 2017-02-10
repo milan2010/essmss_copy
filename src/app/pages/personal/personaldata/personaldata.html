@@ -1,16 +1,17 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton="{{edit}}">
+    <ion-buttons left>
+      <button *ngIf="edit" ion-button clear (click)="cancelEditData()">{{ 'PERSONAL.MENU.PERSONALDATA.CANCELTEXT' | translate }}</button>
+    </ion-buttons>
     <ion-title>{{ 'PERSONAL.MENU.PERSONALDATA.TITLE' | translate }}</ion-title>
-    <!-- <ion-buttons right>
-      <button *ngIf="!edit" ion-button clear (click)="editPersonalData()">Bearbeiten</button>
-      <button *ngIf="edit" ion-button clear (click)="savePersonalData()">Speichern</button>
-    </ion-buttons> -->
+    <ion-buttons right>
+      <button *ngIf="!edit" ion-button clear (click)="editData()">{{ 'PERSONAL.MENU.PERSONALDATA.EDITTEXT' | translate }}</button>
+      <button *ngIf="edit" ion-button clear (click)="saveData()">{{ 'PERSONAL.MENU.PERSONALDATA.SAVETEXT' | translate }}</button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content>
-
   <ion-list>
     <ion-list-header>{{ 'PERSONAL.MENU.PERSONALDATA.LISTS.NAME.TITLE' | translate }}</ion-list-header>
     <ion-item>

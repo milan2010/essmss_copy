@@ -33,11 +33,15 @@ export class PersonaldataPage {
     });
   }
 
-  editPersonalData(){
+  editData(){
     this.edit = true;
   }
 
-  savePersonalData() {
+  saveData() {
+    this.edit = false;
+  }
+
+  cancelEditData(){
     this.edit = false;
   }
 

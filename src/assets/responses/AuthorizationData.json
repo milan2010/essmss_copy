@@ -1,0 +1,15 @@
+{
+  "d": {
+    "results": [
+      {
+        "authorizations": [
+          { "id": "app-worktime" },
+          { "id": "app-absence" },
+          { "id": "app-paystub" },
+          { "id": "app-personaldata" },
+          { "id": "app-contactperson" }
+        ]
+      }
+    ]
+  }
+}

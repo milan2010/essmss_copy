@@ -134,6 +134,9 @@
       "PERSONALDATA": {
         "TITLE": "Stammdaten",
         "SUBTITLE": "Aktueller Stand",
+        "EDITTEXT": "Bearbeiten",
+        "CANCELTEXT": "Abbrechen",
+        "SAVETEXT": "Speichern",
         "LISTS": {
           "NAME": {
             "TITLE": "Name",
@@ -203,6 +206,10 @@
       "LABEL": "Farbschema",
       "OKTEXT": "Übernehmen",
       "CANCELTEXT": "Abbrechen"
+    },
+    "UPDATEAUTORIZATIONS": {
+      "LABEL": "Berechtigungen",
+      "BUTTONTEXT": "Updaten"
     }
   }
 }

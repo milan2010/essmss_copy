@@ -27,7 +27,7 @@
             "PositionTxt" : "Teamsprecher",
             "Email" : "jhermann@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "not-available",
+            "Status" : "",
             "PhotoUrl" : "assets/img/JosefHermann.jpg"
           },
           {
