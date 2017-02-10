@@ -1,16 +1,25 @@
+
 page-chat {
   .chat {
-    margin-bottom: .5em;
+    margin-bottom: .75em;
+    width: auto;
+
     &-incoming {
-      text-align: left;
+      text-align: right;
       background-color: $chat-message-background-color-incoming;
-      border-radius: 0 1rem 1rem 1rem;
+      border-radius: 2rem 2rem 0 2rem;
+      margin-left: 1em;
+      padding-right: 1em;
     }
 
     &-outgoing{
-      text-align: right;
+      text-align: left;
       background-color: $chat-message-background-color-outgoing;
-      border-radius: 1rem 1rem 0 1rem;
+      border-radius: 0 2rem 2rem 2rem;
+      margin-right: 1em;
+      ion-avatar {
+        margin-left: 1em;
+      }
     }
 
     .label {
@@ -24,6 +33,10 @@ page-chat {
         color: $chat-message-text-color;
       }
     }
+  }
+
+  .list-ios .item-block .item-inner{
+    border-bottom: none;
   }
 
   .footer {
