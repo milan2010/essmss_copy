@@ -13,6 +13,16 @@
 			"Details" : "false",
             "PhotoUrl" : "assets/img/HerbertMeiser.jpg"
 		  },
+          {
+            "Ename" : "Josef Hermann",
+            "OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Teamsprecher",
+            "Email" : "jhermann@volkswagen.com",
+            "Phone" : "1234567890",
+            "Status" : "available",
+			"Details" : "true",
+            "PhotoUrl" : "assets/img/JosefHermann.jpg"
+          },
 		  {
 			"Ename" : "Peter Berner",
 			"OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",

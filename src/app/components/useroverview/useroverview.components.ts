@@ -13,12 +13,20 @@ import {UserService} from "../../services/user.service";
 })
 export class UserOverviewPage {
   team: Object = null;
-
+  
   constructor(private userService: UserService, private personService: PersonService, public navCtrl: NavController,
           private navParams: NavParams) {
   
     this.team = navParams.data;
     
+  }
+  
+  getStatus = function(member) {
+      if(this.userService.isEmployee()) {
+          return "not-allowed";
+      } else {
+          return member.Status;
+      }
   }
 
   sendEmail = function (e, email) {
@@ -32,7 +40,7 @@ export class UserOverviewPage {
   };
 
   goToMemberDetails = function (member) {
-    if(member.Details === "true") {
+    if(this.userService.isManager() && member.Details === "true") {
         this.navCtrl.push(UserDetailsPage, member);    
     }  
   }

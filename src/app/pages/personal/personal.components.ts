@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 import {PaystubPage} from "./paystub/paystub.components";
 import {PersonaldataPage} from "./personaldata/personaldata.components";
-import {UserOverviewPage} from "../../components/useroverview/useroverview.components";
+import {ContactpersonPage} from "./contactperson/contactperson.components";
 import {AbsencePage} from "./absence/absence.components";
 import {WorkingtimePage} from "./workingtime/workingtime.components";
 import {UserService} from "../../services/user.service";
@@ -73,7 +73,7 @@ export class PersonalPage {
           subtitle: 'PERSONAL.MENU.CONTACTPERSON.SUBTITLE',
           icon: 'contacts',
           subicon: "",
-          link: UserOverviewPage, 
+          link: ContactpersonPage, 
           params: this.team
         }
       ];

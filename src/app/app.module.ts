@@ -16,8 +16,6 @@ import {ContactpersonPage} from "./pages/personal/contactperson/contactperson.co
 import {AbsencePage} from "./pages/personal/absence/absence.components";
 import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.components";
 import {TeamMembersPage} from "./pages/team/members/members.components";
-import {UserDetailsPage} from "./components/userdetails/user-details.component";
-import {UserOverviewPage} from "./components/useroverview/useroverview.components";
 import {SettingsPage} from "./pages/settings/settings.component";
 import {ChatPage} from "./pages/chat/chat.component";
 import {ExpenseItemList} from "./pages/personal/paystub/expense-item-list/expense-item-list";
@@ -33,7 +31,8 @@ import {CalendarItem} from "./pages/hub/calendar-item/calendar-item.component";
 import {ListItemComponent} from "./components/listitem/listitem.component";
 import {IonProfileHeader} from "./components/profileheader/ion-profile-header.components";
 import {Calendar} from "./components/calendar/calendar.component";
-
+import {UserDetailsPage} from "./components/userdetails/user-details.component";
+import {UserOverviewPage} from "./components/useroverview/useroverview.components";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');

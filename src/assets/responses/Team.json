@@ -19,7 +19,7 @@
             "PositionTxt" : "Teamsprecher",
             "Email" : "jhermann@volkswagen.com",
             "Phone" : "1234567890",
-            "Status" : "not-available",
+            "Status" : "available",
 			"Details" : "true",
             "PhotoUrl" : "assets/img/JosefHermann.jpg"
           },
@@ -29,7 +29,7 @@
             "PositionTxt" : "Monteur Maschine 1",
             "Email" : "olaf@email.com",
             "Phone" : "1234567890",
-            "Status" : "available",
+            "Status" : "not-available",
 			"Details" : "true",
             "PhotoUrl" : "assets/img/WilhelmAckert.jpg"
           },

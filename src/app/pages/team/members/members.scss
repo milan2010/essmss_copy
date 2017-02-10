@@ -1,26 +1,3 @@
 page-team-members {
 
-  ion-avatar {
-    img {
-      border: 2px solid;
-    }
-
-    &.available img{
-      border-color: $indicator-available;
-    }
-
-    &.away img{
-      border-color: $indicator-away;
-    }
-
-    &.not-available img{
-      border-color: $indicator-not-available;
-    }
-    
-    &.not-allowed img{
-      border-color: $indicator-not-allowed;
-    }
-    
-  }
-
 }
