@@ -3,6 +3,12 @@
     "results": [
       {
         "authorizations": [
+          {"id": "app-teammembers"},
+          {"id": "app-holiday"},
+
+          {"id": "app-press"},
+          {"id": "app-canteen" },
+
           { "id": "app-worktime" },
           { "id": "app-absence" },
           { "id": "app-paystub" },

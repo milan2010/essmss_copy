@@ -20,7 +20,7 @@
 <ion-footer>
   <ion-toolbar>
     <ion-list class="mar-no" >
-      <form [formGroup]="chatForm" (ngSubmit)="sendMessage()">
+      <form [formGroup]="chatForm" (ngSubmit)="sendMessage()" action>
         <ion-item>
           <ion-input #chat_input formControlName="message" type="text" placeholder="{{ 'CHAT.PLACEHOLDER' | translate }}"></ion-input>
           <button type="submit" ion-button outline item-right>{{ 'CHAT.SEND' | translate }}</button>

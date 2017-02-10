@@ -23,14 +23,13 @@ export class PersonalPage {
   team = null;
   menuItems: Array<{id: string, title: string, subtitle:string, icon:string, subicon:string, link:Object, params:Object}> = [];
 
-  constructor(private userService: UserService, public navCtrl: NavController, private personService: PersonService,
-          private authorizationService: AuthorizationService) {
+  constructor(private userService: UserService, public navCtrl: NavController, private personService: PersonService, private authorizationService: AuthorizationService) {
     this.userData = this.userService.getData();
-    
+
     personService.getContacts()
     .then(data => {
       this.team = data;
-      
+
       this.menuItems = [{
           id: "app-worktime",
           title: "PERSONAL.MENU.WORKTIME.TITLE",
@@ -73,16 +72,16 @@ export class PersonalPage {
           subtitle: 'PERSONAL.MENU.CONTACTPERSON.SUBTITLE',
           icon: 'contacts',
           subicon: "",
-          link: ContactpersonPage, 
+          link: ContactpersonPage,
           params: this.team
         }
       ];
-      
+
     })
     .catch(error => {
       console.log(error);
     })
-    
+
     this.options = {
       background: {
         url: "assets/img/header1.jpeg",
