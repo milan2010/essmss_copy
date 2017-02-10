@@ -10,6 +10,7 @@
             "Email" : "omuller@volkswagen.com",
             "Phone" : "1234567890",
             "Status" : "available",
+			"Details" : "true",
             "PhotoUrl" : "assets/img/OlafMueller.jpg"
           },
           {
@@ -19,6 +20,7 @@
             "Email" : "jhermann@volkswagen.com",
             "Phone" : "1234567890",
             "Status" : "not-available",
+			"Details" : "true",
             "PhotoUrl" : "assets/img/JosefHermann.jpg"
           },
           {
@@ -28,6 +30,7 @@
             "Email" : "olaf@email.com",
             "Phone" : "1234567890",
             "Status" : "available",
+			"Details" : "true",
             "PhotoUrl" : "assets/img/WilhelmAckert.jpg"
           },
           {
@@ -37,6 +40,7 @@
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
             "Status" : "away",
+			"Details" : "true",
             "PhotoUrl" : "assets/img/SebastianSaal.jpg"
           },
           {
@@ -46,6 +50,7 @@
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
             "Status" : "away",
+			"Details" : "true",
             "PhotoUrl" : "assets/img/ChristianHarnisch.jpg"
           },
           {
@@ -55,6 +60,7 @@
             "Email" : "ssaal@volkswagen.com",
             "Phone" : "1234567890",
             "Status" : "not-available",
+			"Details" : "true",
             "PhotoUrl" : "assets/img/JohnAlbrecht.jpg"
           }
         ],

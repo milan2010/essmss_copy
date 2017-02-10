@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'TEAM.TEAMMEMBER-DETAILS.TITLE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="content-stable" no-bounce>
+  <ion-profile-header [data]="userData"></ion-profile-header>
+  <ion-list>
+    <list-item *ngFor="let menuItem of menuItems" [content]="menuItem"></list-item>
+  </ion-list>
+</ion-content>

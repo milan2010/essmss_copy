@@ -1,7 +1,7 @@
 import {NgModule, ErrorHandler} from '@angular/core';
-import { HttpModule, Http } from '@angular/http';
+import {HttpModule, Http} from '@angular/http';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
-import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
+import {TranslateModule, TranslateLoader, TranslateStaticLoader} from 'ng2-translate';
 
 import {MyApp} from './app.component';
 import {LoginPage} from './pages/login/login.component';
@@ -16,6 +16,8 @@ import {ContactpersonPage} from "./pages/personal/contactperson/contactperson.co
 import {AbsencePage} from "./pages/personal/absence/absence.components";
 import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.components";
 import {TeamMembersPage} from "./pages/team/members/members.components";
+import {UserDetailsPage} from "./components/userdetails/user-details.component";
+import {UserOverviewPage} from "./components/useroverview/useroverview.components";
 import {SettingsPage} from "./pages/settings/settings.component";
 import {ChatPage} from "./pages/chat/chat.component";
 import {ExpenseItemList} from "./pages/personal/paystub/expense-item-list/expense-item-list";
@@ -46,6 +48,8 @@ export function createTranslateLoader(http: Http) {
     TeamPage,
     TeamMembersPage,
     TeamMemberDetailsPage,
+    UserDetailsPage,
+    UserOverviewPage,
     PersonalPage,
     WorkPage,
     TabsPage,
@@ -83,6 +87,8 @@ export function createTranslateLoader(http: Http) {
     TeamPage,
     TeamMembersPage,
     TeamMemberDetailsPage,
+    UserDetailsPage,
+    UserOverviewPage,
     PersonalPage,
     WorkPage,
     TabsPage,

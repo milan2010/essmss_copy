@@ -1,24 +1,21 @@
 import {Component} from "@angular/core";
 import {InAppBrowser} from 'ionic-native';
 import {NavController} from "ionic-angular";
-
-import {TeamService} from "../team.service";
+import {PersonService} from "../../../services/person.service";
 import {TeamMemberDetailsPage} from "../memberdetails/member-details.component";
 import {UserService} from "../../../services/user.service";
 
 @Component({
   selector: 'page-team-members',
   templateUrl: 'members.html',
-  providers: [TeamService, UserService]
+  providers: [PersonService]
 })
 export class TeamMembersPage {
-  userData: Object = null;
   team: Object = null;
 
-  constructor(private userService: UserService, private teamService: TeamService, public navCtrl: NavController) {
-    this.userData = this.userService.getData();
+  constructor(private userService: UserService, private personService: PersonService, public navCtrl: NavController) {
       
-    teamService.getTeam()
+    personService.getTeam()
       .then(data => {
         this.team = data;
       })
@@ -38,6 +35,8 @@ export class TeamMembersPage {
   };
 
   goToMemberDetails = function (member) {
-    this.navCtrl.push(TeamMemberDetailsPage, member);
+    if(member.Details === "true") {
+        this.navCtrl.push(TeamMemberDetailsPage, member);    
+    }  
   }
 }

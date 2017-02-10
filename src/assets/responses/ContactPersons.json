@@ -1,0 +1,62 @@
+{
+  "d": {
+    "results": [
+		  {
+			"members": [
+		  {
+			"Ename" : "Herbert Meiser",
+			"OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+            "PositionTxt" : "Meister",
+            "Email" : "herbert.meister@email.com",
+            "Phone" : "1234567890",
+            "Status" : "not-allowed",
+			"Details" : "false",
+            "PhotoUrl" : "assets/img/HerbertMeiser.jpg"
+		  },
+		  {
+			"Ename" : "Peter Berner",
+			"OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+			"PositionTxt" : "Teamsprecher",
+			"Email" : "peter.berner@email.com",
+			"Phone" : "1234567890",
+            "Status" : "not-allowed",
+			"Details" : "false",
+			"PhotoUrl" : "assets/img/PeterBerner.png"
+		  },
+		  {
+			"Ename" : "Claudia Kleber",
+			"OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+			"PositionTxt" : "Personalreferentin",
+			"Email" : "ClaudiaKleber@email.com",
+			"Phone" : "1234567890",
+			"Status" : "not-allowed",
+			"Details" : "false",
+			"PhotoUrl" : "assets/img/ClaudiaKleber.jpg"
+		  },
+		  {
+			"Ename" : "Markus Maier",
+			"OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+			"PositionTxt" : "Unterabteilungsleiter",
+			"Email" : "MarkusMeier@email.com",
+			"Phone" : "1234567890",
+			"Status" : "not-allowed",
+			"Details" : "false",
+			"PhotoUrl" : "assets/img/MarkusMeier.jpg"
+		  },
+		  {
+			"Ename" : "Sylvia Gerber",
+			"OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
+			"PositionTxt" : "Vertrauensfrau",
+			"Email" : "SylviaGerber@email.com",
+			"Phone" : "1234567890",
+			"Status" : "not-allowed",
+			"Details" : "true",
+			"PhotoUrl" : "assets/img/SylviaGerber.jpg"
+		  }
+        ],
+        "calendar": {
+        }
+      }
+    ]
+  }
+}
