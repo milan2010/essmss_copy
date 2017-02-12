@@ -9,12 +9,11 @@ import {AuthorizationService} from '../../services/authorization.service';
 
 @Component({
   selector: 'page-team',
-  templateUrl: 'team.html',
-  providers: [PersonService]
+  templateUrl: 'team.html'
 })
 export class TeamPage {
   team = null;
-  menuItems: Array<{id: string, title: string, subtitle:string, icon:string, subicon:string, link:Object, params:Object }> = [];
+  menuItems: Array<{id: string, title: string, subtitleprefix:string, subtitle:string, icon:string, subicon:string, link:Object, params:Object }> = [];
 
   constructor(private userService: UserService, private nav: NavController, private personService: PersonService, private authorizationService: AuthorizationService) {
 
@@ -25,6 +24,7 @@ export class TeamPage {
             {
               id: "app-teammembers",
               title: "TEAM.MENU.TEAMMEMBERS.TITLE",
+              subtitleprefix: this.team.members.length, 
               subtitle: "TEAM.MENU.TEAMMEMBERS.SUBTITLE",
               icon: "people",
               subicon: "people",
@@ -34,6 +34,7 @@ export class TeamPage {
             {
               id: "app-holiday",
               title: 'TEAM.MENU.HOLIDAY.TITLE',
+              subtitleprefix : "",
               subtitle: 'TEAM.MENU.HOLIDAY.SUBTITLE',
               icon: 'calendar',
               subicon: "calendar",
@@ -43,6 +44,7 @@ export class TeamPage {
           ];
 
         console.log(this.team);
+        console.log(this.team.members.length);
         console.log(this.menuItems);
 
       })

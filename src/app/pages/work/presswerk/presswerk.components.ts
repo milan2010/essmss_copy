@@ -3,8 +3,7 @@ import {NavController} from "ionic-angular";
 
 @Component({
   selector: 'page-presswerk',
-  templateUrl: 'presswerk.html',
-  providers: []
+  templateUrl: 'presswerk.html'
 })
 export class PresswerkPage {
   userData: Object = null;

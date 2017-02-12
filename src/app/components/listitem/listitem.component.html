@@ -3,6 +3,6 @@
     <ion-icon name="{{ content.icon }}"></ion-icon>
   </ion-avatar>
   <h2>{{ content.title | translate }}</h2>
-  <p><ion-icon *ngIf="content.subicon" name="{{ content.subicon }}" item-left></ion-icon>{{ content.subtitle | translate }}</p>
+  <p><ion-icon *ngIf="content.subicon" name="{{ content.subicon }}" item-left></ion-icon>{{ content.subtitleprefix }}{{ content.subtitle | translate }}</p>
   <ion-icon name="ios-arrow-forward" item-right></ion-icon>
 </ion-item>

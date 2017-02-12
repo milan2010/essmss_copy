@@ -7,12 +7,13 @@ import {LoginPage} from './pages/login/login.component';
 import {TabsPage} from './pages/tabs/tabs.component';
 
 import {UserService} from './services/user.service';
+import {PersonService} from "./services/person.service";
 import { SettingsService } from './pages/settings/settings.service';
 import { AuthorizationService } from './services/authorization.service';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [UserService, SettingsService, AuthorizationService]
+  providers: [UserService, SettingsService, AuthorizationService, PersonService]
 })
 
 export class MyApp {

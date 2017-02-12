@@ -2,23 +2,18 @@ import {Component} from "@angular/core";
 import {InAppBrowser} from 'ionic-native';
 import {NavController} from "ionic-angular";
 import {NavParams} from "ionic-angular";
-import {PersonService} from "../../services/person.service";
 import {UserDetailsPage} from "../userdetails/user-details.component";
 import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'page-user-overview',
-  templateUrl: 'useroverview.html',
-  providers: [PersonService]
+  templateUrl: 'useroverview.html'
 })
 export class UserOverviewPage {
   team: Object = null;
   
-  constructor(private userService: UserService, private personService: PersonService, public navCtrl: NavController,
-          private navParams: NavParams) {
-  
+  constructor(private userService: UserService, public navCtrl: NavController, private navParams: NavParams) {
     this.team = navParams.data;
-    
   }
   
   getStatus = function(member) {

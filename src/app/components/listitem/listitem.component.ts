@@ -6,7 +6,7 @@ import {Component, Input} from "@angular/core";
 })
 
 export class ListItemComponent {
-  @Input() content: Array<{title: string, subtitle:string, icon:string, subicon:string, link:Object, params:Object }> = null;
+  @Input() content: Array<{title: string, subtitleprefix: string, subtitle:string, icon:string, subicon:string, link:Object, params:Object }> = null;
 
   constructor() { }
 }

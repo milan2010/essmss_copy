@@ -13,8 +13,7 @@ import {AuthorizationService} from '../../services/authorization.service';
 
 @Component({
   selector: 'page-personal',
-  templateUrl: 'personal.html',
-  providers: [PersonService]
+  templateUrl: 'personal.html'
 })
 export class PersonalPage {
   test: string;
