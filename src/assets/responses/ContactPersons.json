@@ -52,16 +52,6 @@
 			"Status" : "not-allowed",
 			"Details" : "false",
 			"PhotoUrl" : "assets/img/MarkusMeier.jpg"
-		  },
-		  {
-			"Ename" : "Sylvia Gerber",
-			"OrgunitTxt": "PERSONAL.USERDATA.ORGANISATION.O1",
-			"PositionTxt" : "Vertrauensfrau",
-			"Email" : "SylviaGerber@email.com",
-			"Phone" : "1234567890",
-			"Status" : "not-allowed",
-			"Details" : "true",
-			"PhotoUrl" : "assets/img/SylviaGerber.jpg"
 		  }
         ],
         "calendar": {
