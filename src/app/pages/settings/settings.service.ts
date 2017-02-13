@@ -30,10 +30,10 @@ export class SettingsService {
     ];
 
     this.feedChannels = [
-      {channelName: "SETTINGS.FEEDCHANNELS.CALENDAR.TITLE", filterId:4, icon:"calendar", shown: true},
-      {channelName: "SETTINGS.FEEDCHANNELS.NEWS.TITLE", filterId:1, icon:"paper", shown: true},
-      {channelName: "SETTINGS.FEEDCHANNELS.EXPENSE.TITLE", filterId:3, icon:"logo-euro", shown: true},
-      {channelName: "SETTINGS.FEEDCHANNELS.MESSAGE.TITLE", filterId:2, icon:"information", shown: true}
+      {channelName: "SETTINGS.GENERAL.FEEDCHANNELS.CALENDAR.TITLE", filterId:4, icon:"calendar", shown: true},
+      {channelName: "SETTINGS.GENERAL.FEEDCHANNELS.NEWS.TITLE", filterId:1, icon:"paper", shown: true},
+      {channelName: "SETTINGS.GENERAL.FEEDCHANNELS.EXPENSE.TITLE", filterId:3, icon:"logo-euro", shown: true},
+      {channelName: "SETTINGS.GENERAL.FEEDCHANNELS.MESSAGE.TITLE", filterId:2, icon:"information", shown: true}
     ]
   }
 

@@ -24,6 +24,8 @@ export class HubPage {
 
   ionViewDidLoad() {
 
+this.userData = this.userService.getData();
+
     this.hubService.getNews()
     .then(data => {
       this.news = data;

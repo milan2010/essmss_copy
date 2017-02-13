@@ -180,36 +180,76 @@
   },
   "SETTINGS": {
     "TITLE": "Einstellungen",
-    "HEADER-GENERAL": "Allgemein",
-    "LOGOUT": "Abmelden",
-    "FEEDCHANNELS": {
-      "TITLE": "Nachrichten-Feed",
-      "CALENDAR": {
-        "TITLE": "Kalender"
+    "GENERAL":{
+      "TITLE": "Allgemein",
+      "APPEARANCE":{
+        "TITLE": "Darstellung",
+        "LANGUAGESELECT": {
+          "LABEL": "Sprache",
+          "OKTEXT": "Übernehmen",
+          "CANCELTEXT": "Abbrechen"
+        },
+        "THEMESELECT": {
+          "LABEL": "Farbschema",
+          "OKTEXT": "Übernehmen",
+          "CANCELTEXT": "Abbrechen"
+        }
       },
-      "NEWS": {
-        "TITLE": "Nachrichten"
+      "FEEDCHANNELS": {
+        "TITLE": "Nachrichten-Feed",
+        "CALENDAR": {
+          "TITLE": "Kalender"
+        },
+        "NEWS": {
+          "TITLE": "Nachrichten"
+        },
+        "EXPENSE": {
+          "TITLE": "Ausgaben"
+        },
+        "MESSAGE": {
+          "TITLE": "Benachrichtigungen"
+        }
       },
-      "EXPENSE": {
-        "TITLE": "Ausgaben"
-      },
-      "MESSAGE": {
-        "TITLE": "Benachrichtigungen"
+      "LOGOUT": {
+        "TEXT": "Abmelden"
       }
     },
-    "LANGUAGESELECT": {
-      "LABEL": "Sprache",
-      "OKTEXT": "Übernehmen",
-      "CANCELTEXT": "Abbrechen"
+    "FEEDBACK":{
+      "TITLE": "Feedback",
+      "FEEDBACK": {
+        "TITLE": "Feedback",
+        "HOTLINE": {
+          "LABEL": "Hotline anrufen"
+        },
+        "MESSAGE": {
+          "LABEL": "Nachricht schreiben"
+        }
+      }
     },
-    "THEMESELECT": {
-      "LABEL": "Farbschema",
-      "OKTEXT": "Übernehmen",
-      "CANCELTEXT": "Abbrechen"
+    "INFO":{
+      "TITLE": "Info",
+      "INFORMATION": {
+        "TITLE": "Informationen",
+        "TUTORIAL": {
+          "LABEL": "Tutorial ansehen"
+        },
+        "VERSION": {
+          "LABEL": "Version"
+        },
+        "ABOUT": {
+          "LABEL": "Über ESSMSS"
+        }
+      }
     },
-    "UPDATEAUTORIZATIONS": {
-      "LABEL": "Berechtigungen",
-      "BUTTONTEXT": "Updaten"
+    "DEBUG":{
+      "TITLE": "[DEBUG]",
+      "DEBUG": {
+        "TITLE": "Debug Informationen",
+        "UPDATEAUTORIZATIONS": {
+          "LABEL": "Berechtigungen",
+          "BUTTONTEXT": "Updaten"
+        }
+      }
     }
   }
 }

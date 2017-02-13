@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { InAppBrowser } from 'ionic-native';
 import { UserService } from "../../services/user.service";
 import { SettingsService } from './settings.service';
 import { AuthorizationService } from '../../services/authorization.service';
@@ -14,6 +15,7 @@ import { AuthorizationService } from '../../services/authorization.service';
 * Class for the SettingsPage.
 */
 export class SettingsPage {
+  selectedSettings: string = "general";
 
   /**
   * The current theme.
@@ -93,5 +95,10 @@ export class SettingsPage {
   */
   updateAuthorizations(){
     this.authorizationService.forceUpdate();
+  }
+
+  callHotline(e){
+    e.stopPropagation();
+    new InAppBrowser('tel:0123456789');
   }
 }

@@ -1,43 +1,89 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>{{ 'SETTINGS.TITLE' | translate }}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content>
+  <div padding>
 
-  <ion-list>
-    <ion-list-header>{{ 'SETTINGS.HEADER-GENERAL' | translate }}</ion-list-header>
-    <ion-item>
-      <ion-label>{{ 'SETTINGS.LANGUAGESELECT.LABEL' | translate }}</ion-label>
-      <ion-select cancelText="{{ 'SETTINGS.LANGUAGESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.LANGUAGESELECT.OKTEXT' | translate }}" (ionChange)="setLanguage($event)">
-        <ion-option *ngFor="let language of availableLanguages" [value]="language.className" [selected]="language.className === selectedLanguage">{{ language.prettyName }}</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>{{ 'SETTINGS.THEMESELECT.LABEL' | translate }}</ion-label>
-      <ion-select cancelText="{{ 'SETTINGS.THEMESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.THEMESELECT.OKTEXT' | translate }}" (ionChange)="setTheme($event)">
-        <ion-option *ngFor="let theme of availableThemes" [value]="theme.className" [selected]="theme.className === selectedTheme">{{ theme.prettyName }}</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <button ion-button item-right (click)="updateAuthorizations()">{{ 'SETTINGS.UPDATEAUTORIZATIONS.BUTTONTEXT' | translate }}</button>
-      <ion-label>
-        {{ 'SETTINGS.UPDATEAUTORIZATIONS.LABEL' | translate }}
-      </ion-label>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-list-header>{{ 'SETTINGS.FEEDCHANNELS.TITLE' | translate }}</ion-list-header>
-    <button ion-item detail-none *ngFor="let channel of feedChannels" (click)="toggle(channel)">
-      <ion-label>{{ channel.channelName | translate }}</ion-label>
-      <ion-icon [name]="channel.icon" [ngClass]="channel.shown ? 'enabled' : 'disabled'" item-left></ion-icon>
-    </button>
-  </ion-list>
+    <ion-segment color="primary" [(ngModel)]="selectedSettings">
+      <ion-segment-button value="general">{{ 'SETTINGS.GENERAL.TITLE' | translate }}</ion-segment-button>
+      <ion-segment-button value="feedback">{{ 'SETTINGS.FEEDBACK.TITLE' | translate }}</ion-segment-button>
+      <ion-segment-button value="info">{{ 'SETTINGS.INFO.TITLE' | translate }}</ion-segment-button>
+      <ion-segment-button value="debug">{{ 'SETTINGS.DEBUG.TITLE' | translate }}</ion-segment-button>
+    </ion-segment>
+  </div>
 
-  <button ion-button full color="danger" class="logout" (click)="logOut()">
-    {{ 'SETTINGS.LOGOUT' | translate | uppercase }}
-  </button>
+  <div [ngSwitch]="selectedSettings">
+
+    <div *ngSwitchCase="'general'">
+      <ion-list >
+        <ion-list-header>{{ 'SETTINGS.GENERAL.APPEARANCE.TITLE' | translate }}</ion-list-header>
+        <ion-item>
+          <ion-label>{{ 'SETTINGS.GENERAL.APPEARANCE.LANGUAGESELECT.LABEL' | translate }}</ion-label>
+          <ion-select cancelText="{{ 'SETTINGS.GENERAL.APPEARANCE.LANGUAGESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.GENERAL.APPEARANCE.LANGUAGESELECT.OKTEXT' | translate }}" (ionChange)="setLanguage($event)">
+            <ion-option *ngFor="let language of availableLanguages" [value]="language.className" [selected]="language.className === selectedLanguage">{{ language.prettyName }}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{ 'SETTINGS.GENERAL.APPEARANCE.THEMESELECT.LABEL' | translate }}</ion-label>
+          <ion-select cancelText="{{ 'SETTINGS.GENERAL.APPEARANCE.THEMESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.GENERAL.APPEARANCE.THEMESELECT.OKTEXT' | translate }}" (ionChange)="setTheme($event)">
+            <ion-option *ngFor="let theme of availableThemes" [value]="theme.className" [selected]="theme.className === selectedTheme">{{ theme.prettyName }}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>{{ 'SETTINGS.GENERAL.FEEDCHANNELS.TITLE' | translate }}</ion-list-header>
+        <button ion-item detail-none *ngFor="let channel of feedChannels" (click)="toggle(channel)">
+          <ion-label>{{ channel.channelName | translate }}</ion-label>
+          <ion-toggle [checked]="channel.shown"></ion-toggle>
+          <ion-icon [name]="channel.icon" item-left></ion-icon>
+        </button>
+      </ion-list>
+      <button ion-button full color="danger" class="logout" (click)="logOut()">{{ 'SETTINGS.GENERAL.LOGOUT.TEXT' | translate | uppercase }}</button>
+    </div>
+
+    <div *ngSwitchCase="'feedback'">
+      <ion-list>
+        <ion-list-header>{{ 'SETTINGS.FEEDBACK.FEEDBACK.TITLE' | translate }}</ion-list-header>
+        <button ion-item detail-none (click)="callHotline($event)">
+          <ion-icon name="call" item-left></ion-icon>
+          {{ 'SETTINGS.FEEDBACK.FEEDBACK.HOTLINE.LABEL' | translate }}
+        </button>
+        <ion-item detail-push>
+          <ion-label>{{ 'SETTINGS.FEEDBACK.FEEDBACK.MESSAGE.LABEL' | translate }}</ion-label>
+          <ion-icon name="thumbs-up" item-left></ion-icon>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'info'">
+      <ion-list>
+        <ion-list-header>{{ 'SETTINGS.INFO.INFORMATION.TITLE' | translate }}</ion-list-header>
+        <ion-item detail-push>
+          <ion-label>{{ 'SETTINGS.INFO.INFORMATION.TUTORIAL.LABEL' | translate }}</ion-label>
+        </ion-item>
+        <ion-item detail-push>
+          <ion-label>{{ 'SETTINGS.INFO.INFORMATION.ABOUT.LABEL' | translate }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{ 'SETTINGS.INFO.INFORMATION.VERSION.LABEL' | translate }}</ion-label>
+          <ion-note item-right>0.1.0213</ion-note>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'debug'">
+      <ion-list>
+        <ion-list-header>{{ 'SETTINGS.DEBUG.DEBUG.TITLE' | translate }}</ion-list-header>
+        <ion-item>
+          <button ion-button item-right (click)="updateAuthorizations()">{{ 'SETTINGS.DEBUG.DEBUG.UPDATEAUTORIZATIONS.BUTTONTEXT' | translate }}</button>
+          <ion-label>{{ 'SETTINGS.DEBUG.DEBUG.UPDATEAUTORIZATIONS.LABEL' | translate }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </div>
+
 </ion-content>
