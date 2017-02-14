@@ -1,21 +1,22 @@
 import {Injectable} from "@angular/core";
+import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class UserService {
-  user = JSON.parse(localStorage.getItem("user"));
+  user:any = this.storage.get("user").then(data => this.user = JSON.parse(data));
 
-  constructor() {
+  constructor(private storage: Storage) {
   }
 
   setUser(userData) {
     this.user = userData;
-    localStorage.setItem('user', JSON.stringify(this.user));
+    this.storage.set("user", JSON.stringify(this.user));
   }
 
   logOut() {
     this.user = null;
-    localStorage.removeItem('user');
-    localStorage.removeItem('usersettings');
+    this.storage.remove("user");
+    this.storage.remove("usersettings");
   }
 
   isLoggedIn(): boolean {

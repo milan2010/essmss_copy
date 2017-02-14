@@ -1,6 +1,7 @@
 import {NgModule, ErrorHandler} from '@angular/core';
 import {HttpModule, Http} from '@angular/http';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 import {TranslateModule, TranslateLoader, TranslateStaticLoader} from 'ng2-translate';
 
 import {MyApp} from './app.component';
@@ -23,6 +24,7 @@ import {TeamMemberDetailsPage} from "./pages/team/memberdetails/member-details.c
 import {PresswerkPage} from "./pages/work/presswerk/presswerk.components";
 import {CanteenPage} from "./pages/work/canteen/canteen.component";
 import {AccountPage} from "./pages/settings/account/account.component";
+import {TutorialPage} from "./pages/tutorial/tutorial.component";
 
 /* COMPONENTS */
 import {NewsItem} from "./pages/hub/news-item/news-item.component";
@@ -70,6 +72,7 @@ export function createTranslateLoader(http: Http) {
     PresswerkPage,
     CanteenPage,
     AccountPage,
+    TutorialPage,
     ListItemComponent
   ],
   imports: [
@@ -109,9 +112,10 @@ export function createTranslateLoader(http: Http) {
     PresswerkPage,
     CanteenPage,
     AccountPage,
+    TutorialPage,
     ListItemComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })
 export class AppModule {
 }
