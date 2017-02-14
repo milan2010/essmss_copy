@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons left>
+      <button ion-button navPop>{{ 'SETTINGS.GENERAL.ACCOUNT.ACCOUNTPAGE.CANCELTEXT' | translate }}</button>
+    </ion-buttons>
+    <ion-title>{{ 'SETTINGS.GENERAL.ACCOUNT.ACCOUNTPAGE.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button navPop (click)="saveAccountSettings()">{{ 'SETTINGS.GENERAL.ACCOUNT.ACCOUNTPAGE.SAVETEXT' | translate }}</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>{{ 'SETTINGS.GENERAL.ACCOUNT.ACCOUNTPAGE.TITLE' | translate }}</ion-list-header>
+  </ion-list>
+</ion-content>

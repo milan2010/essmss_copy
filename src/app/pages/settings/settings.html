@@ -11,22 +11,31 @@
       <ion-segment-button value="general">{{ 'SETTINGS.GENERAL.TITLE' | translate }}</ion-segment-button>
       <ion-segment-button value="feedback">{{ 'SETTINGS.FEEDBACK.TITLE' | translate }}</ion-segment-button>
       <ion-segment-button value="info">{{ 'SETTINGS.INFO.TITLE' | translate }}</ion-segment-button>
-      <ion-segment-button value="debug">{{ 'SETTINGS.DEBUG.TITLE' | translate }}</ion-segment-button>
+      <ion-segment-button value="debug" color="danger">{{ 'SETTINGS.DEBUG.TITLE' | translate }}</ion-segment-button>
     </ion-segment>
   </div>
 
   <div [ngSwitch]="selectedSettings">
 
     <div *ngSwitchCase="'general'">
-      <ion-list >
+      <ion-list>
+        <ion-list-header>{{ 'SETTINGS.GENERAL.ACCOUNT.TITLE' | translate }}</ion-list-header>
+        <button ion-item detail-push (click)="goToAccount()">
+          <ion-icon name="person" item-left></ion-icon>
+          {{ 'SETTINGS.GENERAL.ACCOUNT.ACCOUNTBUTTON.LABEL' | translate }}
+        </button>
+      </ion-list>
+      <ion-list>
         <ion-list-header>{{ 'SETTINGS.GENERAL.APPEARANCE.TITLE' | translate }}</ion-list-header>
         <ion-item>
+          <ion-icon name="globe" item-left></ion-icon>
           <ion-label>{{ 'SETTINGS.GENERAL.APPEARANCE.LANGUAGESELECT.LABEL' | translate }}</ion-label>
           <ion-select cancelText="{{ 'SETTINGS.GENERAL.APPEARANCE.LANGUAGESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.GENERAL.APPEARANCE.LANGUAGESELECT.OKTEXT' | translate }}" (ionChange)="setLanguage($event)">
             <ion-option *ngFor="let language of availableLanguages" [value]="language.className" [selected]="language.className === selectedLanguage">{{ language.prettyName }}</ion-option>
           </ion-select>
         </ion-item>
         <ion-item>
+          <ion-icon name="color-palette" item-left></ion-icon>
           <ion-label>{{ 'SETTINGS.GENERAL.APPEARANCE.THEMESELECT.LABEL' | translate }}</ion-label>
           <ion-select cancelText="{{ 'SETTINGS.GENERAL.APPEARANCE.THEMESELECT.CANCELTEXT' | translate }}" okText="{{ 'SETTINGS.GENERAL.APPEARANCE.THEMESELECT.OKTEXT' | translate }}" (ionChange)="setTheme($event)">
             <ion-option *ngFor="let theme of availableThemes" [value]="theme.className" [selected]="theme.className === selectedTheme">{{ theme.prettyName }}</ion-option>
@@ -41,7 +50,7 @@
           <ion-icon [name]="channel.icon" item-left></ion-icon>
         </button>
       </ion-list>
-      <button ion-button full color="danger" class="logout" (click)="logOut()">{{ 'SETTINGS.GENERAL.LOGOUT.TEXT' | translate | uppercase }}</button>
+      <button ion-button full color="danger" class="logout" (click)="logOut()">{{ 'SETTINGS.GENERAL.LOGOUT.TEXT' | translate | uppercase }}</button>      
     </div>
 
     <div *ngSwitchCase="'feedback'">
@@ -63,12 +72,15 @@
         <ion-list-header>{{ 'SETTINGS.INFO.INFORMATION.TITLE' | translate }}</ion-list-header>
         <ion-item detail-push>
           <ion-label>{{ 'SETTINGS.INFO.INFORMATION.TUTORIAL.LABEL' | translate }}</ion-label>
+          <ion-icon name="book" item-left></ion-icon>
         </ion-item>
         <ion-item detail-push>
           <ion-label>{{ 'SETTINGS.INFO.INFORMATION.ABOUT.LABEL' | translate }}</ion-label>
+          <ion-icon name="information-circle" item-left></ion-icon>
         </ion-item>
         <ion-item>
           <ion-label>{{ 'SETTINGS.INFO.INFORMATION.VERSION.LABEL' | translate }}</ion-label>
+          <ion-icon name="download" item-left></ion-icon>
           <ion-note item-right>0.1.0213</ion-note>
         </ion-item>
       </ion-list>
@@ -80,6 +92,7 @@
         <ion-item>
           <button ion-button item-right (click)="updateAuthorizations()">{{ 'SETTINGS.DEBUG.DEBUG.UPDATEAUTORIZATIONS.BUTTONTEXT' | translate }}</button>
           <ion-label>{{ 'SETTINGS.DEBUG.DEBUG.UPDATEAUTORIZATIONS.LABEL' | translate }}</ion-label>
+          <ion-icon name="unlock" item-left></ion-icon>
         </ion-item>
       </ion-list>
     </div>

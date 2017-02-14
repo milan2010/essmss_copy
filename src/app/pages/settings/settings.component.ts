@@ -4,6 +4,7 @@ import { InAppBrowser } from 'ionic-native';
 import { UserService } from "../../services/user.service";
 import { SettingsService } from './settings.service';
 import { AuthorizationService } from '../../services/authorization.service';
+import { AccountPage } from "./account/account.component";
 
 
 @Component({
@@ -58,6 +59,10 @@ export class SettingsPage {
     this.availableThemes = this.settingsService.availableThemes;
 
     this.feedChannels = this.settingsService.getFeedChannels();
+  }
+
+  goToAccount = function () {
+    this.navCtrl.push(AccountPage);
   }
 
   /**

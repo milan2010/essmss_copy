@@ -23,7 +23,7 @@ page-settings {
         }
       }
       .label {
-          color: $settings-list-item-label-color;
+        color: $settings-list-item-label-color;
       }
     }
   }
@@ -33,4 +33,11 @@ page-settings {
     color: $settings-logout-button-text-color;
   }
 
+  .segment-button[color=danger]{
+    color: color($colors, danger);
+    &.segment-activated{
+      background-color: color($colors, danger);
+      border-color: color($colors, danger);
+    }
+  }
 }

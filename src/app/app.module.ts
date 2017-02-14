@@ -22,6 +22,7 @@ import {ExpenseItemList} from "./pages/personal/paystub/expense-item-list/expens
 import {TeamMemberDetailsPage} from "./pages/team/memberdetails/member-details.component";
 import {PresswerkPage} from "./pages/work/presswerk/presswerk.components";
 import {CanteenPage} from "./pages/work/canteen/canteen.component";
+import {AccountPage} from "./pages/settings/account/account.component";
 
 /* COMPONENTS */
 import {NewsItem} from "./pages/hub/news-item/news-item.component";
@@ -68,6 +69,7 @@ export function createTranslateLoader(http: Http) {
     CalendarItem,
     PresswerkPage,
     CanteenPage,
+    AccountPage,
     ListItemComponent
   ],
   imports: [
@@ -106,6 +108,7 @@ export function createTranslateLoader(http: Http) {
     CalendarItem,
     PresswerkPage,
     CanteenPage,
+    AccountPage,
     ListItemComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
