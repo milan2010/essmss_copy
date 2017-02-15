@@ -1,0 +1,25 @@
+<ion-header no-border>
+  <ion-navbar hideBackButton>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title" class="text-color-white"></h2>
+      <p [innerHTML]="slide.description" class="text-color-white"></p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/viologowhite.png" class="slide-image"/>
+      <h2 class="slide-title" class="text-color-white">{{ 'LOGIN.TITLE' | translate }}</h2>
+      <button ion-button icon-right large clear (click)="startApp()" class="text-color-white">{{ 'LOGIN.START' | translate }}</button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
