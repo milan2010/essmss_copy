@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {UserService} from "../../services/user.service";
 import {HubService} from "../hub/hub.service";
 import {FabContainer} from "ionic-angular";
-import { SettingsService } from '../settings/settings.service';
+import {SettingsService} from '../settings/settings.service';
 
 @Component({
   selector: 'page-home',
@@ -15,26 +15,31 @@ export class HubPage {
   news: Object = null;
   filtered: Array<Object> = [];
   filterType: Number = 0;
-  selectedFilterIcon:string = "funnel";
-  feedChannels: {channelName:string, filterId:number, icon:string, shown:boolean}[];
+  selectedFilterIcon: string = "funnel";
+  feedChannels: {channelName: string, filterId: number, icon: string, shown: boolean}[];
 
   constructor(private userService: UserService, private hubService: HubService, private settingsService: SettingsService) {
     this.feedChannels = this.settingsService.getFeedChannels();
   }
 
   ionViewDidLoad() {
-
-this.userData = this.userService.getData();
-
-    this.hubService.getNews()
-    .then(data => {
-      this.news = data;
-      this.filterItems();
-    })
-    .catch(error => {
-      console.log(error);
-    });
+    this.userData = this.userService.getData();
+    this.doRefresh(false);
   }
+
+  doRefresh = function(refresher) {
+    this.hubService.getNews()
+      .then(data => {
+        this.news = data;
+        this.filterItems();
+        if (refresher) {
+          refresher.complete();
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
   filterItems = function () {
     if (this.filterType === 0) {
