@@ -1,25 +1,6 @@
 <ion-content class="login-content tutorial-page" no-bounce>
-  <div *ngIf=showStart class="start-content">
-
-    <ion-slides pager>
-      <ion-slide *ngFor="let slide of slides">
-        <img [src]="slide.image" class="slide-image"/>
-        <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-        <p [innerHTML]="slide.description" class="text-color-white"></p>
-      </ion-slide>
-      <ion-slide>
-        <img src="assets/img/viologowhite.png" class="slide-image"/>
-        <h2 class="slide-title">{{ 'LOGIN.TITLE' | translate }}</h2>
-        <ion-row>
-          <ion-col>
-            <button ion-button round (click)="showStart = false;">{{ 'LOGIN.START' | translate }}</button>
-          </ion-col>
-        </ion-row>
-      </ion-slide>
-    </ion-slides>
-  </div>
-
-  <div *ngIf=!showStart class="login-content">
+  
+  <div class="login-content">
     <ion-row>
       <ion-col>
         <ion-img src="assets/img/viologowhite.png"></ion-img>
@@ -31,8 +12,8 @@
         <form [formGroup]="data" (ngSubmit)="login()">
           <ion-list>
             <ion-item>
-  				<ion-icon name="person" item-left></ion-icon>
-              	<ion-input type="text" placeholder="{{ 'LOGIN.PLACEHOLDER.USERID' | translate }}" formControlName="username"></ion-input>
+              <ion-icon name="person" item-left></ion-icon>
+              <ion-input type="text" placeholder="{{ 'LOGIN.PLACEHOLDER.USERID' | translate }}" formControlName="username"></ion-input>
             </ion-item>
             <ion-item>
               <ion-icon name="lock" item-left></ion-icon>

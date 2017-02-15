@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
 import { NavController } from 'ionic-angular';
 import { InAppBrowser } from 'ionic-native';
 import { UserService } from "../../services/user.service";
 import { SettingsService } from './settings.service';
 import { AuthorizationService } from '../../services/authorization.service';
 import { AccountPage } from "./account/account.component";
+import { TutorialPage } from "../tutorial/tutorial.component";
 
 
 @Component({
@@ -51,7 +53,7 @@ export class SettingsPage {
   * @param settingsService SettingsService stores the settings.
   * @param authorizationService AuthorizationService stores the authorizations.
   */
-  constructor(private navCtrl: NavController, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
+  constructor(private navCtrl: NavController, private storage: Storage, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
     this.settingsService.getLanguage().subscribe(val => this.selectedLanguage = val);
     this.availableLanguages = this.settingsService.availableLanguages;
 
@@ -61,8 +63,13 @@ export class SettingsPage {
     this.feedChannels = this.settingsService.getFeedChannels();
   }
 
-  goToAccount = function () {
+  goToAccount() {
     this.navCtrl.push(AccountPage);
+  }
+
+  goToTutorial(){
+    this.storage.set("tutorialStartedFromSettings", true);
+    this.navCtrl.push(TutorialPage);
   }
 
   /**
@@ -70,6 +77,7 @@ export class SettingsPage {
   */
   logOut(){
     this.userService.logOut();
+  //  this.storage.remove("hasSeenTutorial");
     window.location.reload();
   }
 
@@ -105,5 +113,10 @@ export class SettingsPage {
   callHotline(e){
     e.stopPropagation();
     new InAppBrowser('tel:0123456789');
+  }
+
+  resetTutorial() {
+    this.storage.remove("hasSeenTutorial");
+    this.storage.remove("tutorialStartedFromSettings");
   }
 }

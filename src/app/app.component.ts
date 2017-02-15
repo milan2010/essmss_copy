@@ -23,20 +23,38 @@ export class MyApp {
   chosenTheme: string;
 
   constructor(private platform: Platform, private storage: Storage, private userService: UserService, private translate: TranslateService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
-this.storage.clear();
 
-    this.storage.get('hasSeenTutorial')
+    this.storage.get("hasSeenTutorial")
       .then((hasSeenTutorial) => {
-        if (hasSeenTutorial) {
-          this.userService.isLoggedIn();
-          this.rootPage = TabsPage;
+
+        if(hasSeenTutorial){
+          if(this.userService.isLoggedIn()){
+            this.rootPage = TabsPage;
+          } else {
+            this.rootPage = LoginPage;
+          }
         } else {
-          this.rootPage = this.userService.isLoggedIn() ? TutorialPage : LoginPage;
+          if(this.userService.isLoggedIn()){
+            this.rootPage = TabsPage;
+          } else {
+            this.rootPage = TutorialPage;
+          }
         }
+
+
+        // if(this.userService.isLoggedIn()){
+        //   this.rootPage = hasSeenTutorial ? TabsPage : TutorialPage;
+        // } else {
+        //   this.rootPage = LoginPage;
+        // }
+          //
+          // if (hasSeenTutorial) {
+          //     this.rootPage = this.userService.isLoggedIn() ? TabsPage : LoginPage;
+          // } else {
+          //   this.rootPage = this.userService.isLoggedIn() ? TutorialPage : LoginPage;
+          // }
         this.platformReady()
-      })
-
-
+      });
   }
 
   platformReady(){
