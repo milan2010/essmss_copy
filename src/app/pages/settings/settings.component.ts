@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Storage } from '@ionic/storage';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 import { InAppBrowser } from 'ionic-native';
 import { UserService } from "../../services/user.service";
 import { SettingsService } from './settings.service';
 import { AuthorizationService } from '../../services/authorization.service';
 import { AccountPage } from "./account/account.component";
 import { TutorialPage } from "../tutorial/tutorial.component";
+import { StorageService } from '../../services/storage.service';
 
 
 @Component({
@@ -53,7 +53,7 @@ export class SettingsPage {
   * @param settingsService SettingsService stores the settings.
   * @param authorizationService AuthorizationService stores the authorizations.
   */
-  constructor(private navCtrl: NavController, private storage: Storage, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
+  constructor(private navCtrl: NavController, private toastCtrl: ToastController, private storageService: StorageService, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
     this.settingsService.getLanguage().subscribe(val => this.selectedLanguage = val);
     this.availableLanguages = this.settingsService.availableLanguages;
 
@@ -68,8 +68,7 @@ export class SettingsPage {
   }
 
   goToTutorial(){
-    this.storage.set("tutorialStartedFromSettings", true);
-    this.navCtrl.push(TutorialPage);
+    this.navCtrl.push(TutorialPage, { reviewd: true });
   }
 
   /**
@@ -77,7 +76,7 @@ export class SettingsPage {
   */
   logOut(){
     this.userService.logOut();
-  //  this.storage.remove("hasSeenTutorial");
+    //  this.storage.remove("hasSeenTutorial");
     window.location.reload();
   }
 
@@ -108,6 +107,7 @@ export class SettingsPage {
   */
   updateAuthorizations(){
     this.authorizationService.forceUpdate();
+    this.showToast("Authorizations got updated...");
   }
 
   callHotline(e){
@@ -116,7 +116,15 @@ export class SettingsPage {
   }
 
   resetTutorial() {
-    this.storage.remove("hasSeenTutorial");
-    this.storage.remove("tutorialStartedFromSettings");
+    this.storageService.remove(StorageService.TUTORIAL_SHOWN);
+    this.showToast("Tutorial storage was reset...");
+  }
+
+  showToast(message){
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
   }
 }

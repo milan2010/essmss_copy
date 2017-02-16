@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, Slides } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
-import { HubPage } from '../hub/hub.components';
+import { NavController, NavParams, Slides } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs.component';
 import { LoginPage } from '../login/login.component';
 import { UserService } from '../../services/user.service';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'page-tutorial',
@@ -13,6 +12,7 @@ import { UserService } from '../../services/user.service';
 
 export class TutorialPage {
   showSkip:boolean = true;
+  isReview:boolean = false;
   slides = [
     {
       title: "Willkommen zu V.io",
@@ -31,26 +31,25 @@ export class TutorialPage {
     }
   ];
 
-  constructor(private navCtrl: NavController, private storage: Storage, private userService: UserService) { }
+  constructor(private navCtrl: NavController, private storageService: StorageService, private userService: UserService, private navParams: NavParams) {
+    this.isReview = navParams.get("reviewd");
+  }
 
   startApp() {
-    this.storage.get("tutorialStartedFromSettings")
-    .then((tutorialStartedFromSettings) => {
-      if (tutorialStartedFromSettings) {
-        this.storage.remove("tutorialStartedFromSettings");
-        this.navCtrl.pop();
+    if (this.isReview) {
+      this.navCtrl.pop();
+    } else {
+      if(this.userService.isLoggedIn()){
+        this.navCtrl.push(TabsPage).then(() => {
+          this.storageService.set(StorageService.TUTORIAL_SHOWN, true);
+        });
       } else {
-        if(this.userService.isLoggedIn()){
-          this.navCtrl.push(TabsPage).then(() => {
-            this.storage.set("hasSeenTutorial", true);
-          });
-        } else {
-          this.navCtrl.push(LoginPage).then(() => {
-            this.storage.set("hasSeenTutorial", true);
-          });
-        }
+        this.navCtrl.push(LoginPage).then(() => {
+          this.storageService.set(StorageService.TUTORIAL_SHOWN, true);
+        });
       }
-    });
+    }
+
   }
 
   onSlideChangeStart(slider: Slides) {

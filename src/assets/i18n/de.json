@@ -10,6 +10,9 @@
       "PASSWORD": "Passwort"
     }
   },
+  "TUTORIAL": {
+    "SKIP": "Überspringen"
+  },
   "TABS": {
     "HUB": {
       "TITLE": "Infos"

@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {Platform} from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 import {StatusBar, Splashscreen} from 'ionic-native';
-import { Storage } from '@ionic/storage';
 
 import {LoginPage} from './pages/login/login.component';
 import {TabsPage} from './pages/tabs/tabs.component';
@@ -12,19 +11,19 @@ import {UserService} from './services/user.service';
 import {PersonService} from "./services/person.service";
 import { SettingsService } from './pages/settings/settings.service';
 import { AuthorizationService } from './services/authorization.service';
+import { StorageService } from './services/storage.service';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [UserService, SettingsService, AuthorizationService, PersonService]
+  providers: [UserService, SettingsService, AuthorizationService, PersonService, StorageService]
 })
 
 export class MyApp {
   rootPage: any;
   chosenTheme: string;
 
-  constructor(private platform: Platform, private storage: Storage, private userService: UserService, private translate: TranslateService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
-
-    this.storage.get("hasSeenTutorial")
+  constructor(private platform: Platform, private storageService: StorageService, private userService: UserService, private translate: TranslateService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
+    this.storageService.get(StorageService.TUTORIAL_SHOWN)
       .then((hasSeenTutorial) => {
 
         if(hasSeenTutorial){
@@ -41,19 +40,7 @@ export class MyApp {
           }
         }
 
-
-        // if(this.userService.isLoggedIn()){
-        //   this.rootPage = hasSeenTutorial ? TabsPage : TutorialPage;
-        // } else {
-        //   this.rootPage = LoginPage;
-        // }
-          //
-          // if (hasSeenTutorial) {
-          //     this.rootPage = this.userService.isLoggedIn() ? TabsPage : LoginPage;
-          // } else {
-          //   this.rootPage = this.userService.isLoggedIn() ? TutorialPage : LoginPage;
-          // }
-        this.platformReady()
+        this.platformReady();
       });
   }
 
