@@ -36,6 +36,7 @@ import {IonProfileHeader} from "./components/profileheader/ion-profile-header.co
 import {Calendar} from "./components/calendar/calendar.component";
 import {UserDetailsPage} from "./components/userdetails/user-details.component";
 import {UserOverviewPage} from "./components/useroverview/useroverview.components";
+import {LikeButton} from "./components/likebutton/likebutton.component";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -73,7 +74,8 @@ export function createTranslateLoader(http: Http) {
     CanteenPage,
     AccountPage,
     TutorialPage,
-    ListItemComponent
+    ListItemComponent,
+    LikeButton
   ],
   imports: [
     HttpModule,
@@ -112,8 +114,7 @@ export function createTranslateLoader(http: Http) {
     PresswerkPage,
     CanteenPage,
     AccountPage,
-    TutorialPage,
-    ListItemComponent
+    TutorialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })

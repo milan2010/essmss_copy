@@ -13,8 +13,6 @@
     <span>{{content.sender}}</span>
   </ion-col>
   <ion-col text-right>
-    <button ion-button clear small>
-      <ion-icon name='heart'></ion-icon>
-    </button>
+    <like-button [content]="content"></like-button>
   </ion-col>
 </ion-row>

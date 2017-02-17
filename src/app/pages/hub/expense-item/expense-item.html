@@ -7,8 +7,6 @@
     <span>{{content.title}}</span>
   </ion-col>
   <ion-col width-20 text-right>
-    <button ion-button clear small>
-      <ion-icon name='heart'></ion-icon>
-    </button>
+    <like-button [content]="content"></like-button>
   </ion-col>
 </ion-row>

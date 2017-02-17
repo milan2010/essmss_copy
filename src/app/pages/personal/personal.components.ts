@@ -29,7 +29,8 @@ export class PersonalPage {
     .then(data => {
       this.team = data;
 
-      this.menuItems = [{
+      this.menuItems = [
+        {
           id: "app-worktime",
           title: "PERSONAL.MENU.WORKTIME.TITLE",
           subtitle: "PERSONAL.MENU.WORKTIME.SUBTITLE",

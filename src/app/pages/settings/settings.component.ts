@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Http, Response} from "@angular/http";
+import { Http } from "@angular/http";
 import { NavController, ToastController } from 'ionic-angular';
 import { InAppBrowser, Geolocation } from 'ionic-native';
 import { UserService } from "../../services/user.service";

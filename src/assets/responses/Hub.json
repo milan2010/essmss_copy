@@ -10,10 +10,12 @@
       "url": "http://www.tagesspiegel.de/sport/tv-rechte-erste-einigung-zwischen-sky-und-eurosport/19330916.html",
       "urlToImage": "http://www.tagesspiegel.de/images/abosender-sky-deutschland-bundesliga/19330948/1-format530.jpg",
       "publishedAt": "2017-02-01T08:03:45Z",
+      "liked": true,
       "type": 1
     },
     {
       "title": "Entgeltnachweis Dezember 2016",
+      "liked": false,
       "type": 3
     },
     {
@@ -21,6 +23,7 @@
       "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "photoUrl": "assets/img/SylviaGerber.jpg",
       "sender": "Sylvia Gerber",
+      "liked": false,
       "type": 2
     },
     {
@@ -30,6 +33,7 @@
       "time": "01.02.17 17:00hs",
       "photoUrl": "assets/img/PeterBerner.png",
       "sender": "Peter Berner",
+      "liked": true,
       "type": 4
     },
     {
@@ -39,6 +43,7 @@
       "url": "http://www.tagesspiegel.de/berlin/sicherheitsvorkehrungen-bei-der-berlinale-keine-koffer-im-berlinale-kino/19329560.html",
       "urlToImage": "http://www.tagesspiegel.de/images/pressekonferenz-internationale-filmfestspiele-berlin/19330024/1-format530.jpg",
       "publishedAt": "2017-02-01T07:57:16Z",
+      "liked": false,
       "type": 1
     },
     {
@@ -48,6 +53,7 @@
       "url": "http://www.tagesspiegel.de/politik/casdorffs-agenda-kalbitz-einer-vom-schlage-hoeckes-soll-afd-chef-in-brandenburg-werden/19330890.html",
       "urlToImage": "http://www.tagesspiegel.de/images/andreas-kalbitz/19330898/1-format530.jpg",
       "publishedAt": "2017-02-01T07:53:26Z",
+      "liked": true,
       "type": 1
     },
     {
@@ -57,6 +63,7 @@
       "url": "http://www.tagesspiegel.de/kultur/interview-mit-berlinale-chef-dieter-kosslick-bei-uns-gibt-es-keine-fake-news/19329780.html",
       "urlToImage": "http://www.tagesspiegel.de/images/berlinale-direktor-dieter-kosslick-waehrend-der-programmpressekonferenz-anlaesslich-des-bevorstehenden/19329874/4-format530.jpg",
       "publishedAt": "2017-02-01T07:51:35Z",
+      "liked": true,
       "type": 1
     },
     {
@@ -66,6 +73,7 @@
       "url": "http://www.tagesspiegel.de/berlin/berlin-uebersicht-wo-illegaler-muell-abgeladen-wird-bezirk-fuer-bezirk/19329428.html",
       "urlToImage": "http://www.tagesspiegel.de/images/heprodimagesfotos83120170201heinrich_303_1_20170131115517693-jpg/19329436/2-format530.jpg",
       "publishedAt": "2017-02-01T07:28:18Z",
+      "liked": false,
       "type": 1
     },
     {
@@ -75,6 +83,7 @@
       "url": "http://www.tagesspiegel.de/sport/stuermer-von-borussia-dortmund-aubameyang-denkt-offen-ueber-wechsel-im-sommer-nach/19330830.html",
       "urlToImage": "http://www.tagesspiegel.de/images/fsv-mainz-05-borussia-dortmund/19330846/1-format530.jpg",
       "publishedAt": "2017-02-01T07:28:07Z",
+      "liked": true,
       "type": 1
     },
     {
@@ -84,6 +93,7 @@
       "url": "http://www.tagesspiegel.de/sport/liveblog/die-eisbaeren-berlin-in-der-eishockey-saison-2016-2017-wichtiger-1-0-sieg-gegen-die-schwenninger-wild-wings/14539956.html",
       "urlToImage": "http://www.tagesspiegel.de/images/ebbsww3101/19330230/1-format530.jpg",
       "publishedAt": "2017-02-01T07:19:27Z",
+      "liked": true,
       "type": 1
     },
     {
@@ -93,6 +103,7 @@
       "url": "http://www.tagesspiegel.de/sport/german-masters-im-snooker-so-viele-zuschauer-wie-in-berlin-kommen-zu-keinem-anderen-turnier/19329284.html",
       "urlToImage": "http://www.tagesspiegel.de/images/englands-ronnie-osullivan-lines-up-a-shot-during-his-first-round-match-against-chinas-liang-wenbo-during-the-masters-snooker-tournament-at-alexandra-palace-in-london-on-january-15-2017-afp-photo-adrian-dennis/19329804/1-format530.jpg",
       "publishedAt": "2017-02-01T07:17:34Z",
+      "liked": true,
       "type": 1
     },
     {
@@ -102,6 +113,7 @@
       "url": "http://www.tagesspiegel.de/berlin/festival-auf-der-rennbahn-jetzt-ists-fix-lollapalooza-zieht-nach-hoppegarten/19330674.html",
       "urlToImage": "http://www.tagesspiegel.de/images/festival-lollapalooza-berlin/19330682/1-format530.jpg",
       "publishedAt": "2017-02-01T06:56:25Z",
+      "liked": true,
       "type": 1
     },
     {
@@ -111,6 +123,7 @@
       "url": "http://www.tagesspiegel.de/politik/kampf-gegen-terrorismus-eine-festnahme-bei-grossrazzia-gegen-terrorverdaechtige-in-hessen/19330632.html",
       "urlToImage": "http://www.tagesspiegel.de/images/durchsuchungen-wegen-terrorverdachts-in-ganz-hessen/19330700/1-format530.jpg",
       "publishedAt": "2017-02-01T06:44:11Z",
+      "liked": true,
       "type": 1
     }
   ]

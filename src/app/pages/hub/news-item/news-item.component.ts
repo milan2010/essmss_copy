@@ -8,7 +8,5 @@ import {Component, Input} from "@angular/core";
 export class NewsItem {
   @Input() content: Object = null;
 
-  constructor() {
-
-  }
+  constructor() { }
 }
