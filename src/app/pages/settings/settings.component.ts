@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import {Http, Response} from "@angular/http";
 import { NavController, ToastController } from 'ionic-angular';
-import { InAppBrowser } from 'ionic-native';
+import { InAppBrowser, Geolocation } from 'ionic-native';
 import { UserService } from "../../services/user.service";
 import { SettingsService } from './settings.service';
 import { AuthorizationService } from '../../services/authorization.service';
 import { AccountPage } from "./account/account.component";
 import { TutorialPage } from "../tutorial/tutorial.component";
 import { StorageService } from '../../services/storage.service';
+
 
 
 @Component({
@@ -45,6 +47,8 @@ export class SettingsPage {
   */
   feedChannels: {channelName:string, filterId:number, icon:string, shown:boolean}[];
 
+  location: {longitude:number, latitude:number, name:string} = { longitude: 0, latitude: 0, name: "" };
+
   /**
   * Constructor for SettingsPage.
   *
@@ -53,7 +57,7 @@ export class SettingsPage {
   * @param settingsService SettingsService stores the settings.
   * @param authorizationService AuthorizationService stores the authorizations.
   */
-  constructor(private navCtrl: NavController, private toastCtrl: ToastController, private storageService: StorageService, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
+  constructor(private navCtrl: NavController,private http: Http, private toastCtrl: ToastController, private storageService: StorageService, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
     this.settingsService.getLanguage().subscribe(val => this.selectedLanguage = val);
     this.availableLanguages = this.settingsService.availableLanguages;
 
@@ -61,6 +65,24 @@ export class SettingsPage {
     this.availableThemes = this.settingsService.availableThemes;
 
     this.feedChannels = this.settingsService.getFeedChannels();
+
+    this.initializeLocation();
+  }
+
+  initializeLocation() {
+    Geolocation.getCurrentPosition().then((resp) => {
+      this.location.longitude = resp.coords.longitude;
+      this.location.latitude = resp.coords.latitude;
+
+      this.http.get("http://api.openweathermap.org/data/2.5/weather?lat=" + this.location.latitude + "&lon=" + this.location.longitude + "&appid=a43f713ecdb556d0eb126d2a5acb75f9")
+      .map(res => res.json())
+      .subscribe(data => {
+        this.location.name = data.name;
+        console.log(data);
+      });
+    }).catch((error) => {
+      console.log("Error getting location", error);
+    });
   }
 
   goToAccount() {
@@ -76,7 +98,6 @@ export class SettingsPage {
   */
   logOut(){
     this.userService.logOut();
-    //  this.storage.remove("hasSeenTutorial");
     window.location.reload();
   }
 
