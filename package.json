@@ -16,6 +16,7 @@
     "@angular/compiler": "2.2.1",
     "@angular/compiler-cli": "2.2.1",
     "@angular/core": "2.2.1",
+    "@angular/cli": "1.0.0-beta.28.3",
     "@angular/forms": "2.2.1",
     "@angular/http": "2.2.1",
     "@angular/platform-browser": "2.2.1",
@@ -26,12 +27,24 @@
     "@types/lodash": "ts2.0",
     "@types/moment": "2.13.0",
     "@types/node": "7.0.5",
-    "angular-cli": "1.0.0-beta.28.3",
     "basscss-sass": "4.0.0",
     "codecov": "1.0.1",
     "ionic-angular": "2.0.1",
     "ionic-native": "2.4.1",
     "ionicons": "3.0.0",
+    "moment": "^2.17.1",
+    "ng2-translate": "5.0.0",
+    "rxjs": "5.0.0-beta.12",
+    "sw-toolbox": "3.4.0",
+    "zone.js": "0.6.26"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "1.1.0",
+    "typescript": "2.0.9",
+    "ts-node": "2.0.0",
+    "tslint": "4.4.2",
+    "tslint-eslint-rules": "3.3.0",
+    "typedoc": "0.5.5",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "3.2.0",
     "karma": "1.4.1",
@@ -39,20 +52,7 @@
     "karma-jasmine": "1.1.0",
     "karma-mocha-reporter": "2.2.2",
     "karma-remap-istanbul": "0.5.0",
-    "moment": "^2.17.1",
-    "ng2-translate": "5.0.0",
-    "rxjs": "5.0.0-beta.12",
-    "sw-toolbox": "3.4.0",
-    "ts-node": "2.0.0",
-    "tslint": "4.4.2",
-    "tslint-eslint-rules": "3.3.0",
-    "typedoc": "0.5.5",
-    "typings": "2.1.0",
-    "zone.js": "0.6.26"
-  },
-  "devDependencies": {
-    "@ionic/app-scripts": "1.1.0",
-    "typescript": "2.0.9"
+    "typings": "2.1.0"
   },
   "cordovaPlugins": [
     "ionic-plugin-keyboard",
@@ -60,7 +60,9 @@
     "cordova-plugin-statusbar",
     "cordova-plugin-splashscreen",
     "cordova-plugin-whitelist",
-    "cordova-plugin-device"
+    "cordova-plugin-device",
+    "cordova-plugin-inappbrowser",
+    "cordova-plugin-3dtouch"
   ],
   "cordovaPlatforms": [
     "ios",
