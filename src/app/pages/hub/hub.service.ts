@@ -5,7 +5,7 @@ import {Http, Response} from "@angular/http";
 @Injectable()
 export class HubService {
 
-  private news: Object = null;
+  private news:{status:string, source:string, sortBy:string, articles:{uuid:string, author:string, title:string, description:string, url:string, urlToImage:string, publishedAt, liked:boolean, type:number}[]} = null;
 
   constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
 

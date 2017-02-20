@@ -14,9 +14,9 @@ export class UserService {
   }
 
   logOut() {
+    let promises = [this.storageService.remove(StorageService.USER), this.storageService.remove(StorageService.USERSETTINGS)];
     this.user = null;
-    this.storageService.remove(StorageService.USER);
-    this.storageService.remove(StorageService.USERSETTINGS);
+    return Promise.all(promises);
   }
 
   isLoggedIn(): boolean {

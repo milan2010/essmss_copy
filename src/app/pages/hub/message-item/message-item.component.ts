@@ -6,7 +6,8 @@ import {Component, Input} from "@angular/core";
 })
 
 export class MessageItem {
-  @Input() content: Object = null;
+  @Input() content:Object;
+  @Input() liked:boolean;
 
   constructor() { }
 }

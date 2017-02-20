@@ -8,7 +8,7 @@ export class SettingsService {
   private selectedTheme: BehaviorSubject<string>;
   availableThemes: {className: string, prettyName: string}[];
 
-  defaultLanguage: string = "de";
+  public static DEFAULT_LANGUAGE: string = "de";
   private selectedLanguage: BehaviorSubject<string>;
   availableLanguages: {className: string, prettyName: string}[];
 
@@ -22,7 +22,7 @@ export class SettingsService {
       {className: "porsche-theme", prettyName: "Porsche"}
     ];
 
-    this.selectedLanguage = new BehaviorSubject(this.defaultLanguage);
+    this.selectedLanguage = new BehaviorSubject(SettingsService.DEFAULT_LANGUAGE);
     this.availableLanguages = [
       {className: "de", prettyName: "Deutsch"},
       {className: "en", prettyName: "English"},

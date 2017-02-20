@@ -3,6 +3,7 @@ import {UserService} from "../../services/user.service";
 import {HubService} from "../hub/hub.service";
 import {FabContainer} from "ionic-angular";
 import {SettingsService} from '../settings/settings.service';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'page-home',
@@ -12,13 +13,15 @@ import {SettingsService} from '../settings/settings.service';
 
 export class HubPage {
   userData: Object = null;
-  news: Object = null;
+  news:{status:string, source:string, sortBy:string, articles:{uuid:string, author:string, title:string, description:string, url:string, urlToImage:string, publishedAt, liked:boolean, type:number}[]} = null;
   filtered: Array<Object> = [];
   filterType: Number = 0;
   selectedFilterIcon: string = "funnel";
   feedChannels: {channelName: string, filterId: number, icon: string, shown: boolean}[];
 
-  constructor(private userService: UserService, private hubService: HubService, private settingsService: SettingsService) {
+  likedArticles:Array<string>;
+
+  constructor(private storageService: StorageService, private userService: UserService, private hubService: HubService, private settingsService: SettingsService) {
     this.feedChannels = this.settingsService.getFeedChannels();
   }
 
@@ -29,16 +32,17 @@ export class HubPage {
 
   doRefresh = function(refresher) {
     this.hubService.getNews()
-      .then(data => {
-        this.news = data;
-        this.filterItems();
-        if (refresher) {
-          refresher.complete();
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    .then(data => {
+      this.news = data;
+      this.getLikes();
+      this.filterItems();
+      if (refresher) {
+        refresher.complete();
+      }
+    })
+    .catch(error => {
+      console.log(error);
+    });
   };
 
   filterItems = function () {
@@ -63,4 +67,11 @@ export class HubPage {
       fab.close();
     }
   };
+
+  getLikes(){
+    this.likedArticles = this.storageService.getLikedArticles();
+    for(let article of this.news.articles){
+      article.liked = this.likedArticles.includes(article.uuid) ? true : false;
+    }
+  }
 }

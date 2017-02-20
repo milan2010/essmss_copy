@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from "@angular/http";
-import { NavController, ToastController } from 'ionic-angular';
+import { NavController, ToastController, Platform } from 'ionic-angular';
 import { InAppBrowser, Geolocation } from 'ionic-native';
 import { UserService } from "../../services/user.service";
 import { SettingsService } from './settings.service';
@@ -49,6 +49,8 @@ export class SettingsPage {
 
   location: {longitude:number, latitude:number, name:string} = { longitude: 0, latitude: 0, name: "" };
 
+  // appVersion:string = "0";
+
   /**
   * Constructor for SettingsPage.
   *
@@ -57,7 +59,7 @@ export class SettingsPage {
   * @param settingsService SettingsService stores the settings.
   * @param authorizationService AuthorizationService stores the authorizations.
   */
-  constructor(private navCtrl: NavController,private http: Http, private toastCtrl: ToastController, private storageService: StorageService, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
+  constructor(private navCtrl: NavController,private http: Http, private platform: Platform, private toastCtrl: ToastController, private storageService: StorageService, private userService: UserService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
     this.settingsService.getLanguage().subscribe(val => this.selectedLanguage = val);
     this.availableLanguages = this.settingsService.availableLanguages;
 
@@ -78,10 +80,8 @@ export class SettingsPage {
       .map(res => res.json())
       .subscribe(data => {
         this.location.name = data.name;
-        console.log(data);
       });
     }).catch((error) => {
-      console.log("Error getting location", error);
     });
   }
 
@@ -97,8 +97,10 @@ export class SettingsPage {
   * Logs out the user
   */
   logOut(){
-    this.userService.logOut();
-    window.location.reload();
+    this.userService.logOut().then(data => {
+      //this.platform.exitApp();
+      window.location.reload();
+    });
   }
 
   /**

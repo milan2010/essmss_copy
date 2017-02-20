@@ -6,7 +6,8 @@ import {Component, Input} from "@angular/core";
 })
 
 export class ExpenseItem {
-  @Input() content: Object = null;
+  @Input() content:Object;
+  @Input() liked:boolean;
 
   constructor() { }
 }

@@ -24,24 +24,25 @@ export class MyApp {
 
   constructor(private platform: Platform, private storageService: StorageService, private userService: UserService, private translate: TranslateService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
     this.storageService.get(StorageService.TUTORIAL_SHOWN)
-      .then((hasSeenTutorial) => {
+    .then((hasSeenTutorial) => {
 
-        if(hasSeenTutorial){
-          if(this.userService.isLoggedIn()){
-            this.rootPage = TabsPage;
-          } else {
-            this.rootPage = LoginPage;
-          }
+      if(hasSeenTutorial){
+        if(this.userService.isLoggedIn()){
+          this.rootPage = TabsPage;
         } else {
-          if(this.userService.isLoggedIn()){
-            this.rootPage = TabsPage;
-          } else {
-            this.rootPage = TutorialPage;
-          }
+          this.rootPage = LoginPage;
         }
+      } else {
+        if(this.userService.isLoggedIn()){
+          this.rootPage = TabsPage;
+        } else {
+          this.rootPage = TutorialPage;
+        }
+      }
 
-        this.platformReady();
-      });
+    });
+
+    this.platformReady();
   }
 
   platformReady(){
@@ -53,9 +54,9 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
       // this language will be used as a fallback when a translation isn't found in the current language
-      this.translate.setDefaultLang(this.settingsService.defaultLanguage);
+      this.translate.setDefaultLang(SettingsService.DEFAULT_LANGUAGE);
       // the lang to use, if the lang isn't available, it will use the current loader to get them
-      this.translate.use(this.settingsService.defaultLanguage);
+      this.translate.use(SettingsService.DEFAULT_LANGUAGE);
     });
   }
 }

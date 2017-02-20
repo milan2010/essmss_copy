@@ -1,24 +1,52 @@
 import { Component, Input } from "@angular/core";
-import { ToastController } from 'ionic-angular';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'like-button',
   templateUrl: 'likebutton.html'
 })
-
+/**
+* LikeButton displays a like-icon that can be clicked.
+* The related uuid is then stored in (or removed from) the list of liked articles.
+*/
 export class LikeButton {
-  @Input() content: any = null;
+  /**
+  * The uuid of the article that can be dis/liked.
+  */
+  @Input() uuid:string;
+  /**
+  * Represents the status of the LikeButton.
+  */
+  @Input() isLiked:boolean;
 
-  constructor(private toastCtrl: ToastController) { }
+  /**
+  * Constructor for StorageService.
+  *
+  * @param storageService StorageService used to store key value pairs.
+  */
+  constructor(private storageService: StorageService) {
+  }
 
-  onLikeClicked(data) {
-    data.liked = !data.liked;
+  /**
+  * Dis/likes depending on the current state.
+  */
+  onLikeClicked(uuid:string) {
+    this.isLiked ? this.dislike(uuid) : this.like(uuid);
+  }
 
-    let toast = this.toastCtrl.create({
-      message: data.liked ? "Liked..." : "Disliked...",
-      duration: 1000,
-      position: "middle"
-    });
-    toast.present();
+  /**
+  * Adds the uuid to the list of liked articles and marks the icon as liked.
+  */
+  like(uuid:string){
+    this.storageService.addLikedArticle(uuid);
+    this.isLiked = true;
+  }
+
+  /**
+  * Removes the uuid from the list of liked articles and marks the icon as not liked.
+  */
+  dislike(uuid:string){
+    this.storageService.removeLikedArticle(uuid);
+    this.isLiked = false;
   }
 }

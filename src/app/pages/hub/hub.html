@@ -38,10 +38,10 @@
   </ion-row>
   <ion-list *ngIf="news">
     <ion-card *ngFor="let article of filtered" [ngSwitch]="article.type">
-      <news-item *ngSwitchCase="1" [content]="article"></news-item>
-      <message-item *ngSwitchCase="2" [content]="article"></message-item>
-      <expense-item *ngSwitchCase="3" [content]="article"></expense-item>
-      <calendar-item *ngSwitchCase="4" [content]="article"></calendar-item>
+      <news-item *ngSwitchCase="1" [content]="article" [liked]="article.liked"></news-item>
+      <message-item *ngSwitchCase="2" [content]="article" [liked]="article.liked"></message-item>
+      <expense-item *ngSwitchCase="3" [content]="article" [liked]="article.liked"></expense-item>
+      <calendar-item *ngSwitchCase="4" [content]="article" [liked]="article.liked"></calendar-item>
     </ion-card>
   </ion-list>
 </ion-content>

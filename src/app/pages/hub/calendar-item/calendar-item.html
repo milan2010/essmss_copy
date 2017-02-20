@@ -15,6 +15,6 @@
     <span>{{content.sender}}</span>
   </ion-col>
   <ion-col text-right>
-    <like-button [content]="content"></like-button>
+    <like-button [uuid]="content.uuid" [isLiked]="content.liked"></like-button>
   </ion-col>
 </ion-row>
