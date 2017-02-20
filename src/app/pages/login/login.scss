@@ -14,17 +14,17 @@ page-login {
       text-transform: uppercase;
     }
   }
-    
+
   .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus) {
   	border-bottom-color: none;
   	box-shadow: none !important;
   }
-	
+
   .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
    	border-bottom-color: none;
    	box-shadow: none;
   }
-    
+
   .button {
     color: #00b1f3;
     background-color: white;
@@ -122,6 +122,11 @@ page-login {
       margin: auto;
       padding-top: 15vh;
     }
+
+    ion-col {
+      padding: 0;
+    }
+
   }
 
   .start-content {
@@ -180,6 +185,10 @@ page-login {
     b {
       color: #000000;
     }
+  }
+
+  .swiper-pagination-bullets {
+    display: none;
   }
 
 }

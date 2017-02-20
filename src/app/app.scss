@@ -29,6 +29,12 @@ ion-header {
     color: $header-text-color;
   }
 
+  .toolbar {
+    .bar-button {
+      color: #FFF;
+    }
+  }
+
   .back-button {
     color: $header-text-color;
   }
@@ -37,6 +43,7 @@ ion-header {
     color: $header-text-color;
     font-size: 14px;
   }
+
 }
 
 .list list-item .item-block .item-inner {
@@ -51,7 +58,14 @@ ion-header {
   padding: 0 !important;
 }
 
-ion-avatar {
+.item-md ion-avatar ion-img, .item-md ion-avatar img,
+.item-ios ion-avatar ion-img, .item-ios ion-avatar img {
+  width: auto;
+  height: auto;
+}
+
+.item-md ion-avatar,
+.item-ios ion-avatar {
   width: 60px;
   height: 60px;
 
