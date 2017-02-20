@@ -3,6 +3,8 @@ import {HttpModule, Http} from '@angular/http';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import {TranslateModule, TranslateLoader, TranslateStaticLoader} from 'ng2-translate';
+import 'intl';
+import 'intl/locale-data/jsonp/en';
 
 import {MyApp} from './app.component';
 import {LoginPage} from './pages/login/login.component';
@@ -37,6 +39,7 @@ import {Calendar} from "./components/calendar/calendar.component";
 import {UserDetailsPage} from "./components/userdetails/user-details.component";
 import {UserOverviewPage} from "./components/useroverview/useroverview.components";
 import {LikeButton} from "./components/likebutton/likebutton.component";
+
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');

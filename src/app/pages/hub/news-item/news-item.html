@@ -1,8 +1,8 @@
-<img src="{{content.urlToImage}}"/>
+<img [src]="content.urlToImage"/>
 <ion-card-content>
   <ion-card-title>
     {{content.title}}
-    <p>{{content.publishedAt | date:'dd.MM.yyyy'}}</p>
+    <p>{{ content.publishedAt | date:'dd.MM.yyyy'}}</p>
   </ion-card-title>
   <p>
     {{content.description}}
