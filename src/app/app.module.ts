@@ -82,7 +82,9 @@ export function createTranslateLoader(http: Http) {
   ],
   imports: [
     HttpModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      backButtonText: ""
+    }),
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
