@@ -44,4 +44,9 @@
       <calendar-item *ngSwitchCase="4" [content]="article" [liked]="article.liked"></calendar-item>
     </ion-card>
   </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
 </ion-content>

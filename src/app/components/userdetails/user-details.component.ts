@@ -19,7 +19,7 @@ export class UserDetailsPage {
     {
       title: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.INFO.TITLE",
       subtitle: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.INFO.SUBTITLE",
-      icon: "information-circle-outline",
+      icon: "information-circle",
       subicon: "",
       link: "",
       params: ""
@@ -35,7 +35,7 @@ export class UserDetailsPage {
     {
       title: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.LIMITATIONS.TITLE",
       subtitle: "TEAM.MENU.TEAMMEMBERS.DETAILS.MENU.LIMITATIONS.SUBTITLE",
-      icon: "information-circle-outline",
+      icon: "information-circle",
       subicon: "",
       link: "",
       params: ""
