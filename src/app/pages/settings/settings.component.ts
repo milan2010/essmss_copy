@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Http } from "@angular/http";
 import { NavController, ToastController, Platform } from 'ionic-angular';
-import { InAppBrowser, Geolocation } from 'ionic-native';
+import { InAppBrowser, Geolocation, Vibration } from 'ionic-native';
 import { UserService } from "../../services/user.service";
 import { SettingsService } from './settings.service';
 import { AuthorizationService } from '../../services/authorization.service';
@@ -141,6 +141,10 @@ export class SettingsPage {
   resetTutorial() {
     this.storageService.remove(StorageService.TUTORIAL_SHOWN);
     this.showToast("Tutorial storage was reset...");
+  }
+
+  vibrate(){
+    Vibration.vibrate(1000);
   }
 
   showToast(message){
