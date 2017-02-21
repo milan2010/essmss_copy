@@ -56,7 +56,9 @@ export class MyApp {
       this.settingsService.getTheme().subscribe(val => this.chosenTheme = val);
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
+      // StatusBar.styleDefault();
+      StatusBar.overlaysWebView(false);
+      StatusBar.backgroundColorByHexString("#2274AC");
       Splashscreen.hide();
       // this language will be used as a fallback when a translation isn't found in the current language
       this.translate.setDefaultLang(SettingsService.DEFAULT_LANGUAGE);
