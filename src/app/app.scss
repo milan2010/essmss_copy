@@ -19,10 +19,11 @@
 @import "theme/themes/man";
 @import "theme/themes/porsche";
 
-ion-header {
+ion-header.header {
   .toolbar-background {
     background:  $header-background;
     border-bottom: $header-background;
+    border: none;
   }
 
   .toolbar-title {
