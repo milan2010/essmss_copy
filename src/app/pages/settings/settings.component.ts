@@ -10,7 +10,6 @@ import { TutorialPage } from "../tutorial/tutorial.component";
 import { StorageService } from '../../services/storage.service';
 
 
-
 @Component({
   selector: 'page-settings',
   templateUrl: 'settings.html',

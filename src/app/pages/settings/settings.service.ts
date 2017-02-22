@@ -26,7 +26,8 @@ export class SettingsService {
     this.availableLanguages = [
       {className: "de", prettyName: "Deutsch"},
       {className: "en", prettyName: "English"},
-      {className: "fr", prettyName: "Français"}
+      {className: "fr", prettyName: "Français"},
+      {className: "cn", prettyName: "中國"}
     ];
 
     this.feedChannels = [

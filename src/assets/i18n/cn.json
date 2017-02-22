@@ -1,0 +1,267 @@
+{
+  "LOGIN": {
+    "TITLE": "欢迎使用 V.io",
+    "START": "开始",
+    "LOGIN": "登陆",
+    "FORGOTPASSWORD": "忘记密码",
+    "CHANGELINK": "更改",
+    "PLACEHOLDER":{
+      "USERID": "用户名",
+      "PASSWORD": "密码"
+    }
+  },
+  "TABS": {
+    "HUB": {
+      "TITLE": "动态"
+    },
+    "TEAM": {
+      "TITLE": "团队"
+    },
+    "CHAT": {
+      "TITLE": "聊天"
+    },
+    "WORK": {
+      "TITLE": "工作"
+    },
+    "PROFILE": {
+      "TITLE": "个人信息"
+    }
+  },
+  "HUB": {
+    "TITLE": "我的消息"
+  },
+  "TEAM": {
+    "TITLE": "我的团队",
+    "MENU": {
+      "TEAMMEMBERS": {
+        "TITLE": "成员",
+        "SUBTITLE": " 同事",
+        "DETAILS": {
+          "MENU": {
+            "QUALIFICATIONS": {
+              "TITLE": "继续学习",
+              "SUBTITLE": "2 Scheine"
+            },
+            "INFO": {
+              "TITLE": "同事信息",
+              "SUBTITLE": "见信息"
+            },
+            "ABSENCE": "假期 & 缺勤",
+            "TITLE": "",
+            "SUBTITLE": "还有5天就是假期"
+          },
+          "LIMITATIONS": {
+            "TITLE": "限制",
+            "SUBTITLE": "无限制"
+          },
+          "INSTRUCTIONS": {
+            "TITLE": "教学",
+            "SUBTITLE": "待完成"
+          }
+        }
+      }
+    },
+    "HOLIDAY": {
+      "TITLE": "年假",
+      "SUBTITLE": "2016"
+    }
+  },
+  "TEAMMEMBERS": {
+    "TITLE": "成员列表"
+  },
+  "TEAMMEMBER-DETAILS": {
+    "TITLE": "个人信息"
+  },
+  "CHAT": {
+    "TITLE": "聊天",
+    "SEND": "发生",
+    "PLACEHOLDER": "你的消息"
+  },
+  "WORK": {
+    "TITLE": "我的工作",
+    "MENU": {
+      "PRESS": {
+        "TITLE": "冲压车间",
+        "SUBTITLE": "1号机器",
+        "MENU": {
+          "CONTACT": {
+            "TITLE": "联系人",
+            "SUBTITLE": "地址簿"
+          },
+          "REPORTS": {
+            "TITLE": "报告故障信息",
+            "SUBTITLE": "无消息"
+          }
+        }
+      },
+      "CANTEEN": {
+        "TITLE": "餐饮服务",
+        "SUBTITLE": "菜单"
+      }
+    },
+    "PRESS": {
+      "TITLE": "冲压车间"
+    },
+    "CANTEEN": {
+      "TITLE": "餐饮服务"
+    }
+  },
+  "PERSONAL": {
+    "TITLE": "个人信息",
+    "USERDATA": {
+      "POSITION": {
+        "P1": "车间工长",
+        "P2": "1号机装配工"
+      },
+      "ORGANISATION":{
+        "O1": "活动办公项目 - OE-A"
+      }
+    },
+    "MENU": {
+      "WORKTIME": {
+        "TITLE": "工作时间",
+        "SUBTITLE": "现况"
+      },
+      "ABSENCE": {
+        "TITLE": "假期 & 缺勤",
+        "SUBTITLE": "现况"
+      },
+      "PAYSTUB": {
+        "TITLE": "工资",
+        "SUBTITLE": "现况"
+      },
+      "PERSONALDATA": {
+        "TITLE": "身份信息",
+        "SUBTITLE": "现况",
+        "EDITTEXT": "设置",
+        "CANCELTEXT": "取消",
+        "SAVETEXT": "保存",
+        "LISTS": {
+          "NAME": {
+            "TITLE": "姓名",
+            "FIRSTNAME": "名",
+            "LASTNAME": "姓"
+          },
+          "ADDRESS": {
+            "TITLE": "地址",
+            "STREET": "街道",
+            "HOUSENUMBER": "门牌号",
+            "POSTALCODE": "邮编",
+            "CITY": "城市"
+          },
+          "CONTACT": {
+            "TITLE": "联系信息",
+            "EMAIL": "Email地址",
+            "MOBILE": "手机号码"
+          }
+        }
+      },
+      "CONTACTPERSON": {
+        "TITLE": "联系人列表",
+        "SUBTITLE": "现况"
+      }
+    },
+    "WORKTIME": {
+      "TITLE": "工作时间"
+    },
+    "ABSENCE": {
+      "TITLE": "假期 & 缺勤"
+    },
+    "PAYSTUB": {
+      "TITLE": "工资表"
+    },
+    "PERSONALDATA": {
+      "TITLE": "身份信息"
+    },
+    "CONTACTPERSON": {
+      "TITLE": "联系人r"
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "设置",
+    "GENERAL":{
+      "TITLE": "通用",
+
+      "ACCOUNT": {
+        "TITLE": "账户",
+        "ACCOUNTBUTTON": {
+          "LABEL": "账户设置"
+        },
+        "ACCOUNTPAGE": {
+          "TITLE": "我的账户",
+          "CANCELTEXT": "取消",
+          "SAVETEXT": "保存"
+        }
+      },
+
+      "APPEARANCE":{
+        "TITLE": "显示和语言设置",
+        "LANGUAGESELECT": {
+          "LABEL": "语言",
+          "OKTEXT": "确定",
+          "CANCELTEXT": "取消"
+        },
+        "THEMESELECT": {
+          "LABEL": "配色",
+          "OKTEXT": "确定",
+          "CANCELTEXT": "取消"
+        }
+      },
+      "FEEDCHANNELS": {
+        "TITLE": "Nachrichten-Feed",
+        "CALENDAR": {
+          "TITLE": "日历"
+        },
+        "NEWS": {
+          "TITLE": "消息"
+        },
+        "EXPENSE": {
+          "TITLE": "提交"
+        },
+        "MESSAGE": {
+          "TITLE": "消息"
+        }
+      },
+      "LOGOUT": {
+        "TEXT": "退出登录"
+      }
+    },
+    "FEEDBACK":{
+      "TITLE": "反馈",
+      "FEEDBACK": {
+        "TITLE": "反馈",
+        "HOTLINE": {
+          "LABEL": "拨打热线电话"
+        },
+        "MESSAGE": {
+          "LABEL": "输入信息"
+        }
+      }
+    },
+    "INFO":{
+      "TITLE": "信息",
+      "INFORMATION": {
+        "TITLE": "信息",
+        "TUTORIAL": {
+          "LABEL": "观看演示"
+        },
+        "VERSION": {
+          "LABEL": "版本"
+        },
+        "ABOUT": {
+          "LABEL": "关于 ESSMSS"
+        }
+      }
+    },
+    "DEBUG":{
+      "TITLE": "[调试]",
+      "DEBUG": {
+        "TITLE": "调试信息",
+        "UPDATEAUTORIZATIONS": {
+          "LABEL": "权利所有",
+          "BUTTONTEXT": "更新"
+        }
+      }
+    }
+  }
+}
