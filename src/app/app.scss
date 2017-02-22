@@ -44,8 +44,12 @@ ion-header.header {
     color: $header-text-color;
     font-size: 14px;
   }
-
+  &.header-md::after{
+    background: none;
+  }
 }
+
+
 
 .list list-item .item-block .item-inner {
   border-bottom: 0.55px solid $listitem-border-bottom;

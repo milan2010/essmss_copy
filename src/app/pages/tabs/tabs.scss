@@ -13,6 +13,10 @@ tabs {
       &[aria-selected=true]{
         border-top: 2px solid $tabbar-border-top-selected;
         color: $tabbar-tab-color;
+
+        .tab-button-icon {
+          color: $tabbar-tab-color;
+        }
       }
 
       &:hover:not(.disable-hover){

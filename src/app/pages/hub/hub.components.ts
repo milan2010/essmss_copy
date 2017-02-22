@@ -16,7 +16,7 @@ export class HubPage {
   news:{uuid:string, author:string, title:string, description:string, url:string, urlToImage:string, publishedAt:string , liked:boolean, type:number}[] = null;
   filtered: Array<Object> = [];
   filterType: Number = 0;
-  selectedFilterIcon: string = "funnel";
+  selectedFilterIcon: string = "md-funnel";
   feedChannels: {channelName: string, filterId: number, icon: string, shown: boolean}[];
 
   likedArticles:Array<string>;
@@ -35,7 +35,7 @@ export class HubPage {
 
   doRefresh = function(refresher) {
     // if refresher is pulled, re-enable infinite scrolling and reset startArticles
-    if(refresher && this.infinite){      
+    if(refresher && this.infinite){
       this.infinite.enable(true);
       this.startArticles = 0;
     }
@@ -69,7 +69,7 @@ export class HubPage {
   };
 
   setFilter = function (filterId, icon, fab: FabContainer) {
-    this.selectedFilterIcon = icon === undefined ? "funnel" : icon;
+    this.selectedFilterIcon = icon === undefined ? "md-funnel" : icon;
     this.filterType = filterId;
     this.filterItems();
     if (fab) {
