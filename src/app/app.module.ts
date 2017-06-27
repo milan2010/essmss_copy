@@ -27,6 +27,7 @@ import {PresswerkPage} from "./pages/work/presswerk/presswerk.components";
 import {CanteenPage} from "./pages/work/canteen/canteen.component";
 import {AccountPage} from "./pages/settings/account/account.component";
 import {TutorialPage} from "./pages/tutorial/tutorial.component";
+import {NewsPage} from "./pages/news/news.component";
 
 /* COMPONENTS */
 import {NewsItem} from "./pages/hub/news-item/news-item.component";
@@ -44,7 +45,7 @@ import {LikeButton} from "./components/likebutton/likebutton.component";
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
-
+{{}}
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ export function createTranslateLoader(http: Http) {
     AccountPage,
     TutorialPage,
     ListItemComponent,
+    NewsPage,
     LikeButton
   ],
   imports: [
@@ -119,6 +121,7 @@ export function createTranslateLoader(http: Http) {
     PresswerkPage,
     CanteenPage,
     AccountPage,
+    NewsPage,
     TutorialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
