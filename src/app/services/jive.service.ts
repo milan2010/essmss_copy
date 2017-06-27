@@ -1,33 +1,35 @@
-import {Injectable, Inject} from "@angular/core";
-import {LoadingController} from "ionic-angular";
-import {Http, Response} from "@angular/http";
-import {UserService} from "./user.service";
+import { Injectable, Inject } from "@angular/core";
+import { LoadingController } from "ionic-angular";
+import { Http, Response, Headers } from "@angular/http";
+import { UserService } from "./user.service";
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
+import { StorageService } from "./storage.service";
 
 @Injectable()
 export class JiveService {
-    
+
   private apiUrl = "https://soco.volkswagen.com/sbc/api/core/v3/";
 
-  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController,
-          @Inject(UserService) private userService: UserService) {
+  constructor( @Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController,
+    @Inject(UserService) private userService: UserService, private storageService: StorageService) {
   }
-  
-  getDiscussions() : Observable<Discussion[]>  {
-      return this.http.get(this.apiUrl + "places/464287/contents?filter=type(discussion)")
-        .map(this.extractData)
-        .catch(this.handleError);
+
+  getDiscussions(): Observable<Discussion[]> {
+    let requestOptions = { headers: new Headers({ "Authorization": this.storageService.get(StorageService.USER_CREDENTIALS)})}
+    return this.http.get(this.apiUrl + "places/464287/contents?filter=type(discussion)", requestOptions)
+      .map(this.extractData)
+      .catch(this.handleError);
   }
-  
-private extractData(res: Response) : Discussion[] {
+
+  private extractData(res: Response): Discussion[] {
     let body = res.json();
-    return body.list || { };
+    return body.list || {};
   }
- 
-  private handleError (error: Response | any) {
+
+  private handleError(error: Response | any) {
     // In a real world app, you might use a remote logging infrastructure
     let errMsg: string;
     if (error instanceof Response) {
@@ -48,9 +50,9 @@ export class Discussion {
 }
 
 class Content {
-  constructor(text: String) {}
+  constructor(text: String) { }
 }
 
 class Author {
-  constructor(displayName: String) {}
+  constructor(displayName: String) { }
 }
