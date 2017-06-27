@@ -1,3 +1,4 @@
+import { JiveService } from './services/jive.service';
 import {Component, ViewChild} from '@angular/core';
 import {Platform, NavController} from 'ionic-angular';
 import {TranslateService} from 'ng2-translate';
@@ -19,7 +20,7 @@ import {WorkingtimePage} from "./pages/personal/workingtime/workingtime.componen
 
 @Component({
   templateUrl: 'app.html',
-  providers: [UserService, SettingsService, AuthorizationService, PersonService, StorageService]
+  providers: [UserService, SettingsService, AuthorizationService, PersonService, StorageService, JiveService]
 })
 
 export class MyApp {
@@ -28,6 +29,7 @@ export class MyApp {
   chosenTheme: string;
 
   constructor(private platform: Platform, private storageService: StorageService, private userService: UserService, private translate: TranslateService, private settingsService: SettingsService, private authorizationService: AuthorizationService) {
+    this.storageService.clear();
     this.storageService.get(StorageService.TUTORIAL_SHOWN)
       .then((hasSeenTutorial) => {
 
