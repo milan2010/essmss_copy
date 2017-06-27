@@ -23,10 +23,6 @@ export class StorageService {
   */
   public static LIKED_ARTICLES:string = "liked_articles";
   /**
-  * Key name for user credentials.
-  */
-  public static USER_CREDENTIALS:string = "user_credentials";
-  /**
   * Array of uuids of liked articles.
   */
   private likedArticles:Array<string>;
