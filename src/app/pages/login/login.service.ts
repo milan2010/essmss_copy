@@ -3,11 +3,12 @@ import {Http, Response, Headers} from '@angular/http';
 import {LoadingController} from 'ionic-angular';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
+import { StorageService } from "../../services/storage.service";
 
 @Injectable()
 export class LoginService {
 
-  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
+  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController, private storageService: StorageService) {
   }
 
   auth(username, password) {
@@ -17,9 +18,13 @@ export class LoginService {
 
       let url = 'assets/responses/' + (username.toLowerCase() === 'manager' ? 'ManagerDataSet.json' : 'EmployeeDataSet.json');
 
+      let credentials = "Basic " + btoa(username + ":" + password);
+      this.storageService.set(StorageService.USER_CREDENTIALS, credentials);
+
       let headers = new Headers();
-      headers.append("Authorization", "Basic " + btoa(username + ":" + password));
+      headers.append("Authorization", credentials);
       headers.append("Content-Type", "application/x-www-form-urlencoded");
+            
       this.http.get(url, {})
         .toPromise()
         .then(function (res: Response) {
