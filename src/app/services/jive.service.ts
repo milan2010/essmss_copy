@@ -18,8 +18,10 @@ export class JiveService {
   }
 
   getDiscussions(): Observable<Discussion[]> {
+    let headers: Headers = new Headers();
+    headers.append("Authorization", "Basic ZGF6cms4Nzp3ZzI0NjVFLiwuQUE=");
     let requestOptions = { headers: new Headers({ "Authorization": this.storageService.get(StorageService.USER_CREDENTIALS)})}
-    return this.http.get(this.apiUrl + "places/464287/contents?filter=type(discussion)", requestOptions)
+    return this.http.get(this.apiUrl + "places/464287/contents?filter=type(discussion)", {headers: headers})
       .map(this.extractData)
       .catch(this.handleError);
   }
@@ -49,10 +51,10 @@ export class Discussion {
   }
 }
 
-class Content {
+export class Content {
   constructor(text: String) { }
 }
 
-class Author {
+export class Author {
   constructor(displayName: String) { }
 }

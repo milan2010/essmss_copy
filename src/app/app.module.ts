@@ -1,3 +1,4 @@
+import { requestOptionsProvider } from './../default-request-options.service';
 import {NgModule, ErrorHandler} from '@angular/core';
 import {HttpModule, Http} from '@angular/http';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
@@ -45,7 +46,7 @@ import {LikeButton} from "./components/likebutton/likebutton.component";
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
-{{}}
+
 
 @NgModule({
   declarations: [

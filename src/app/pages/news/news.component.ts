@@ -12,12 +12,12 @@ dicussions: Discussion[];
 
   constructor(private jiveService: JiveService) {
   }
-  
+
   loadData() {
     this.jiveService.getDiscussions()
       .subscribe(result => {
         this.dicussions = result;
-        console.log('# Discussions read' + this.dicussions.length);
+        console.log('# Discussions read' + result.toString());
       })
   }
 }
