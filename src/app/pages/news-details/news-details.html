@@ -16,7 +16,7 @@
   </ion-slides>
 
   <ion-card-content>
-    <p>{{discussion.content.text}}</p>
+    <span [innerHtml]="discussion.content.text"></span>
   </ion-card-content>
   <div *ngIf="discussion.isNotImportant">
   <ion-row>
