@@ -4,50 +4,71 @@
   </ion-navbar>
 </ion-header>
 <ion-content class="home-page-content" no-bounce>
+  <ion-segment [(ngModel)]="newsFilter">
+    <ion-segment-button value="a" (click)="updateFilter()">
+      Alles
+    </ion-segment-button>
+    <ion-segment-button value="f" (click)="updateFilter()">
+      Favoriten
+    </ion-segment-button>
+    <ion-segment-button value="g" (click)="updateFilter()">
+      Gelesen
+    </ion-segment-button>
+  </ion-segment>
 <ion-searchbar></ion-searchbar>
+
 <ion-list>
   <ion-item-group>
-    <ion-item-divider color="secondary">Komponenten News</ion-item-divider>
-  <ion-item-sliding>
-    <Button ion-item (click)="loadData()">
-      <h2>Breaking News</h2>
+    <ion-item-divider color="secondary" *ngIf="discussionFiltered">Komponenten News</ion-item-divider>
+  <ion-item-sliding *ngFor="let discussion of discussionsFiltered">
+    <Button ion-item (click)="showDetails(discussion);discussion.hasRead=true;">
+          <ion-row>
+    <ion-col>
+      <h2><ion-icon name="star" *ngIf="discussion.isFavorite" style="padding-right: 10px" color="away"></ion-icon>{{discussion.subject}}</h2>
+      <p>{{discussion.content.text}}</p>
       <p>Erste Zeile. aslkdfjölaksjdfölkjasdöfl</p>
       <p>Erste Zeile. aslkdfjölaksjdfölkjasdöfl</p>
-      <p>Erste Zeile. aslkdfjölaksjdfölkjasdöfl</p>
-      <ion-badge item-right>260k</ion-badge>
+      </ion-col>
+          <ion-col>
+      <ion-thumbnail item-right>
+      <img src="{{discussion.imageURL}}">
+    </ion-thumbnail>
+          </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{discussion.likeCount}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>{{discussion.replyCount}} Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+         <ion-icon name="time"></ion-icon>
+        {{discussion.published.getHours()}}h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
     </Button>
     <ion-item-options side="left">
-      <button ion-button color="danger">
+      <button ion-button color="danger" (click)="deleteDiscussion(discussion)">
         <ion-icon name="trash"></ion-icon>
         Delete
       </button>
     </ion-item-options>
     <ion-item-options side="right">
-      <button ion-button color="away">
+      <button ion-button color="away" (click)="setFavorite(discussion)">
         <ion-icon name="star"></ion-icon>
         Favorite
       </button>
     </ion-item-options>
   </ion-item-sliding>
   </ion-item-group>
-   <ion-item-sliding>
-    <ion-item>
-      <h2>Es gibt Kuchen</h2>
-      <p>begrenzte Stückzahl!!!</p>
-      <ion-badge item-right>26M</ion-badge>
-    </ion-item>
-    <ion-item-options side="left">
-      <button ion-button color="danger">
-        <ion-icon name="trash"></ion-icon>
-        Delete
-      </button>
-    </ion-item-options>
-    <ion-item-options side="right">
-      <button ion-button color="away">
-        <ion-icon name="star"></ion-icon>
-        Favorite
-      </button>
-    </ion-item-options>
-  </ion-item-sliding>
 </ion-list>
 </ion-content>

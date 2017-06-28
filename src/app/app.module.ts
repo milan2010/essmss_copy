@@ -29,6 +29,7 @@ import {CanteenPage} from "./pages/work/canteen/canteen.component";
 import {AccountPage} from "./pages/settings/account/account.component";
 import {TutorialPage} from "./pages/tutorial/tutorial.component";
 import {NewsPage} from "./pages/news/news.component";
+import {NewsDetailsPage} from "./pages/news-details/news-details.component";
 
 /* COMPONENTS */
 import {NewsItem} from "./pages/hub/news-item/news-item.component";
@@ -81,6 +82,7 @@ export function createTranslateLoader(http: Http) {
     TutorialPage,
     ListItemComponent,
     NewsPage,
+    NewsDetailsPage,
     LikeButton
   ],
   imports: [
@@ -123,6 +125,7 @@ export function createTranslateLoader(http: Http) {
     CanteenPage,
     AccountPage,
     NewsPage,
+    NewsDetailsPage,
     TutorialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
