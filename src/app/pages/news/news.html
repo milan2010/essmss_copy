@@ -40,9 +40,14 @@
         Delete
       </button>
     </ion-item-options>
+    <ion-item-options side="right">
+      <button ion-button color="away" (click)="setFavorite(discussion)">
+        <ion-icon name="star"></ion-icon>
+        Favorite
+      </button>
+    </ion-item-options>
     </ion-item-sliding>
   </ion-item-group>
-
   <ion-item-group>
     <ion-item-divider color="secondary" *ngIf="discussionsFiltered.length > 0">Komponenten News</ion-item-divider>
   <ion-item-sliding *ngFor="let discussion of discussionsFiltered">

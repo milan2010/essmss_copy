@@ -36,6 +36,9 @@ timer = Observable.timer(5000,1000);
       this.discussions.push(new Discussion(205, new Date(), 3,4,"Der neue E-Motor", 
       new Content("Die Produktion des neuen Elektromotors startet in der Komponente."), null, null,false,false,false,'assets/img/emotor.jpg',
       ['assets/img/emotor.jpg', 'assets/img/elektrowagen.jpg'],['Testkommentar','Testkommentar2'],true));
+
+      this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Thomas Schmall, bisher Präsident und CEO von Volkswagen do Brasil, wird mit Wirkung zum 1. Januar 2015 Mitglied des Markenvorstands Volkswagen für den Geschäftsbereich Komponente. "), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/vw.jpg','assets/img/elektrowagen.jpg'],[],false));
+
       //this.jiveService.getDiscussions().subscribe(x => {
       //  console.log(x);
       //  x.forEach(d => this.discussions.push(d));
@@ -47,15 +50,15 @@ timer = Observable.timer(5000,1000);
     this.timer.subscribe(t=> {
       if (!this.hasPushed) {
       let toast = this.toastCtrl.create({
-      message: 'Neue Top News eingetroffen.',
+      message: 'Neue News: Neue APP-Funktion für E-Tankstellen.',
       duration: 2000,
       position: 'top'
     });
     toast.present();
-          this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Thomas Schmall, bisher Präsident und CEO von Volkswagen do Brasil, wird mit Wirkung zum 1. Januar 2015 Mitglied des Markenvorstands Volkswagen für den Geschäftsbereich Komponente. "), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/vw.jpg','assets/img/elektrowagen.jpg'],[],false));
-        this.hasPushed=true;
+      this.discussionsVIP.push(new Discussion(205, new Date(), 0,0,"Neue APP-Funktion für E-Tankstellen", new Content("Neue Ladensäulen Suchfuktion in der der APP verfügbar."), null, null,false,false,false,'assets/img/ladestation.jpg',['assets/img/ladestation.jpg'],[],false));
+      this.hasPushed=true;
+      this.updateFilter();
       }
-
 });
   }
 

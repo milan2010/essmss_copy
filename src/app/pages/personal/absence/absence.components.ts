@@ -13,7 +13,8 @@ export class AbsencePage {
   absenceData: Array<Object> = [];
   absenceTypes: Array<Object> = [];
   img1Visible = false;
-  constructor(private absenceService: AbsenceService, private absenceTypesService: AbsenceTypesService,public modalCtrl: ModalController) {
+  constructor(private absenceService: AbsenceService, 
+  private absenceTypesService: AbsenceTypesService,public modalCtrl: ModalController) {
 
     absenceTypesService.getData()
       .then(data => {
@@ -31,7 +32,7 @@ export class AbsencePage {
         console.log(error);
       });
   }
-  
+
   image1ClickEvent(event: any) {
   
   }
@@ -39,6 +40,6 @@ export class AbsencePage {
   addEvent() {
       let commentsModal = this.modalCtrl.create(AddMeetingPage);
       commentsModal.present();
-      this.img1Visible=false;
+      //this.img1Visible=true;
   }
 }

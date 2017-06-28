@@ -1,3 +1,4 @@
+import { ContactsPage } from './../contacts/contacts.component';
 import { JiveService, Discussion, Content } from './../../services/jive.service';
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
@@ -48,7 +49,8 @@ showComments() {
           text: 'Teile mit Kontakten',
           role: 'destructive',
           handler: () => {
-            console.log('Destructive clicked');
+        let commentsModal = this.modalCtrl.create(ContactsPage);
+      commentsModal.present();
           }
         },{
           text: 'Teile mit Gruppe',
@@ -68,5 +70,8 @@ showComments() {
   }
   ionViewDidLoad() {
     this.discussion.hasRead =true;
+  }
+  showContacts() {
+
   }
 }

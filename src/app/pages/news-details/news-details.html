@@ -40,6 +40,20 @@
     </ion-col>
   </ion-row>
   </div>
+  <div *ngIf="!discussion.isNotImportant">
+  <ion-row>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-right clear small>
+        <ion-icon name="time" style="padding-right: 5px"></ion-icon>
+        <div>{{discussion.published.getHours()}}h ago</div>
+      </button>
+    </ion-col>
+  </ion-row>
+  </div>
 </ion-card>
 </ion-content>
 
@@ -62,4 +76,16 @@
     </ion-list>
   </ion-toolbar>
   </div>
+    <div *ngIf="!discussion.isNotImportant">
+  <ion-toolbar>
+    <ion-list class="mar-no" >
+        <ion-item>
+          <button ion-button item-right (click)="shareContent()">
+            <ion-icon name="md-share"></ion-icon>
+          </button> 
+        </ion-item>
+    </ion-list>
+  </ion-toolbar>
+  </div>
+
 </ion-footer>

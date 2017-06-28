@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+<!--    <div style="color:white; margin-left:10px;"> 
+      <ion-icon name="md-share" style="padding-right:3px"></ion-icon>
+      KOKO 
+    </div>-->
+    <img src="assets/img/Logo_KoKo_weiss.png" style="width: 100px; margin-left:10px;">
+  </ion-navbar>
+</ion-header>
+<ion-content class="home-page-content" no-bounce>
+<ion-searchbar></ion-searchbar>
+<ion-list>
+    <ion-item-group>
+    <ion-item-divider color="away">Meine Kontakte</ion-item-divider>
+    <Button ion-item (click)="closeModal()">
+      <h2>Leonie Völkel</h2>
+      <p>leonie.voelkel@volkswagen.de</p>
+    </Button>
+        <Button ion-item (click)="closeModal()">
+      <h2>Carsten Griese</h2>
+      <p>carsten.griese@volkswagen.de</p>
+    </Button>
+        <Button ion-item (click)="closeModal()">
+      <h2>Jens Schulz</h2>
+      <p>jens.schulz@volkswagen.de</p>
+    </Button>
+  </ion-item-group>
+</ion-list>
+</ion-content>

@@ -1,3 +1,4 @@
+import { ContactsPage } from './pages/contacts/contacts.component';
 import { AddMeetingPage } from './pages/add-meeting/add-meeting.component';
 import {NgModule, ErrorHandler} from '@angular/core';
 import {HttpModule, Http} from '@angular/http';
@@ -89,6 +90,7 @@ export function createTranslateLoader(http: Http) {
     FoodPlanPage,
     FoodPlanDetailsPage,
     AddMeetingPage,
+    ContactsPage,
     LikeButton
   ],
   imports: [
@@ -136,6 +138,7 @@ export function createTranslateLoader(http: Http) {
     FoodPlanPage,
     FoodPlanDetailsPage,
     AddMeetingPage,
+    ContactsPage,
     TutorialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
