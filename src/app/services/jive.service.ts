@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class JiveService {
 
-  userCredentials: string;
+  public static userCredentials: string;
   private apiUrl = "https://soco.volkswagen.com/sbc/api/core/v3/";
 
   constructor( @Inject(Http) private http: Http) {
@@ -16,7 +16,7 @@ export class JiveService {
 
   getDiscussions(): Observable<Discussion[]> {
     let headers = new Headers();
-    headers.append("Authorization", this.userCredentials);
+    headers.append("Authorization", JiveService.userCredentials);
 
     return this.http.get(this.apiUrl + "places/464287/contents?filter=type(discussion)&abridged=true", { headers: headers })
       .map(x => x.json().list)
