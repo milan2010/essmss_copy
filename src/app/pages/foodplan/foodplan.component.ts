@@ -14,13 +14,12 @@ export class FoodPlanPage {
   }
   
   ionViewDidLoad() { 
-    this.foodentrys.push(new FoodEntry("@Network",""));
-    this.foodentrys.push(new FoodEntry("(M)esslabor",""));
-    this.foodentrys.push(new FoodEntry("Oase",""));
-    this.foodentrys.push(new FoodEntry("Hafenblick",""));
-    this.foodentrys.push(new FoodEntry("Eat & Meet",""));
-    this.foodentrys.push(new FoodEntry("Alt Nürnberg",""));
-    this.foodentrys.push(new FoodEntry("Treffpunkt",""));
+    this.foodentrys.push(new FoodEntry("(M)esslabor","assets/img/Messlabor.jpg"));
+    this.foodentrys.push(new FoodEntry("Oase","assets/img/Oase.jpg"));
+    this.foodentrys.push(new FoodEntry("Hafenblick","assets/img/Hafenblick.jpg"));
+    this.foodentrys.push(new FoodEntry("Eat & Meet","assets/img/MeetAEat.jpg"));
+    this.foodentrys.push(new FoodEntry("Alt Nürnberg","assets/img/AltNuernberg.jpg"));
+    this.foodentrys.push(new FoodEntry("Treffpunkt","assets/img/Treffpunkt.jpg"));
   }
   openDetails() {
     this.nav.push(FoodPlanDetailsPage);
