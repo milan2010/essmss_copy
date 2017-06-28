@@ -1,7 +1,9 @@
+import { Observable } from 'rxjs/Observable';
 import { JiveService, Discussion, Content } from './../../services/jive.service';
 import {Component} from '@angular/core';
 import {NavController} from "ionic-angular";
 import {NewsDetailsPage} from "./../news-details/news-details.component";
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'news-Page',
@@ -14,7 +16,10 @@ discussions: Discussion[] = [];
 discussionsVIP: Discussion[] = [];
 discussionsFiltered: Discussion[] = [];
 newsFilter:string = 'a';
-  constructor(private jiveService: JiveService, private nav: NavController) {
+hasPushed: boolean= false;
+timer = Observable.timer(5000,1000);
+  constructor(private jiveService: JiveService, private nav: NavController,
+  public toastCtrl: ToastController) {
   }
 
   loadData() {
@@ -30,8 +35,21 @@ newsFilter:string = 'a';
       this.discussions.push(new Discussion(205, new Date(), 3,4,"Der neue E-Motor", 
       new Content("Die Produktion des neuen Elektromotors startet in der Komponente."), null, null,false,false,false,'assets/img/emotor.jpg',
       ['assets/img/emotor.jpg', 'assets/img/elektrowagen.jpg'],['Testkommentar','Testkommentar2'],true));
-      this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Thomas Schmall, bisher Präsident und CEO von Volkswagen do Brasil, wird mit Wirkung zum 1. Januar 2015 Mitglied des Markenvorstands Volkswagen für den Geschäftsbereich Komponente. "), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/vw.jpg','assets/img/elektrowagen.jpg'],[],false));
       this.updateFilter();
+
+    this.timer.subscribe(t=> {
+      if (!this.hasPushed) {
+      let toast = this.toastCtrl.create({
+      message: 'Neue Top News eingetroffen.',
+      duration: 2000,
+      position: 'top'
+    });
+    toast.present();
+          this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Thomas Schmall, bisher Präsident und CEO von Volkswagen do Brasil, wird mit Wirkung zum 1. Januar 2015 Mitglied des Markenvorstands Volkswagen für den Geschäftsbereich Komponente. "), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/vw.jpg','assets/img/elektrowagen.jpg'],[],false));
+        this.hasPushed=true;
+      }
+
+});
   }
 
 
