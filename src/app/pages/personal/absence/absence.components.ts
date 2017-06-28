@@ -10,7 +10,7 @@ import {AbsenceTypesService} from "./absence-types.service";
 export class AbsencePage {
   absenceData: Array<Object> = [];
   absenceTypes: Array<Object> = [];
-  
+  img1Visible = false;
   constructor(private absenceService: AbsenceService, private absenceTypesService: AbsenceTypesService) {
 
     absenceTypesService.getData()
@@ -29,9 +29,11 @@ export class AbsencePage {
         console.log(error);
       });
   }
-
-  addEvent() {
-    this.
+  image1ClickEvent(event: any) {
+    
   }
-
+  
+  addEvent() {
+    this.img1Visible=true;
+  }
 }

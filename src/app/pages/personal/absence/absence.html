@@ -1,10 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Meine Events</ion-title>
+    <img src="assets/img/Logo_KoKo_weiss.png" style="width: 100px; margin-left:10px;">
   </ion-navbar>
 </ion-header>
 
 <ion-content no-bounce>
+  <div *ngIf="img1Visible">
+    <img width="100%" height="100%" src="assets/img/vw.jpg" (click)="image1ClickEvent($Event)">
+  </div>
+  <div *ngIf="!img1Visible">
   <calendar *ngIf="absenceData" [data]="absenceData" [types]="absenceTypes" [showSelectedDay]="false"></calendar>
     <ion-fab right bottom>
       <button ion-fab color="light"><ion-icon name="add"></ion-icon></button>
@@ -12,4 +16,5 @@
       <button ion-fab  (click)="addEvent()" ><ion-icon name="calendar"></ion-icon></button>
     </ion-fab-list>
     </ion-fab>
+    </div>
 </ion-content>
