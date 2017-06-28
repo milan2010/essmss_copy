@@ -18,18 +18,26 @@ export class JiveService {
     let headers = new Headers();
     headers.append("Authorization", JiveService.userCredentials);
 
-    let retVal = this.http.get(this.apiUrl + "jive/places/464287/contents?filter=type(discussion)&abridged=true", { headers: headers })
-      .map(x => x.json().list)
+    let retVal = this.http.get(this.apiUrl + "jive/places/464287/contents?filter=type(discussion)", { headers: headers })
+      .map(x => x.json().list.map(x => {
+        x.published = new Date(x.published);
+        x.isDeleted = false; 
+        x.isFavorite = false; 
+        x.hasRead = false; 
+        x.isNotImportant = true; 
+        x.imageURL = this.apiUrl + "images/" + x.imageURL;
+        return x;
+      }))
       .catch(this.handleError)
-    retVal.subscribe(x => console.log(x));
-    return retVal;  
+    //retVal.subscribe(x => console.log(x));
+    return retVal;
   }
 
   getDiscussion(id): Observable<Discussion> {
     let headers = new Headers();
     headers.append("Authorization", JiveService.userCredentials);
 
-    return this.http.get(this.apiUrl + "jive/places/464287/contents/" + id , { headers: headers })
+    return this.http.get(this.apiUrl + "jive/contents/" + id, { headers: headers })
       .map(x => x.json())
       .catch(this.handleError)
   }
@@ -57,10 +65,10 @@ export class JiveService {
 }
 
 export class Discussion {
-  public constructor(public viewCount: number, public published: Date, public likeCount: number, public replyCount: number, 
-  public subject: String, public content: Content, public author: Author, public contentID: number,
-  public hasRead: boolean, public isFavorite: boolean, public isDeleted: boolean, public imageURL: string,
-  public articleImageURLs: string[], public comments: string[], public isNotImportant: boolean) {}
+  public constructor(public viewCount: number, public published: Date, public likeCount: number, public replyCount: number,
+    public subject: String, public content: Content, public author: Author, public contentID: number,
+    public hasRead: boolean, public isFavorite: boolean, public isDeleted: boolean, public imageURL: string,
+    public articleImageURLs: string[], public comments: string[], public isNotImportant: boolean) { }
 }
 
 export class Content {

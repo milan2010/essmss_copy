@@ -25,11 +25,11 @@ newsFilter:string = 'a';
   }
 
   ionViewDidLoad() {
-      this.discussions.push(new Discussion(205, new Date(), 3,4,"Der neue E-Motor", 
-      new Content("Dein täglicher mobiler Begleiter zum Finden von Personen, Themen und Applikationen!"), null, null,false,false,false,'assets/img/emotor.jpg',
-      ['assets/img/HerbertMeiser.jpg', 'assets/img/OlafMueller.jpg', 'assets/img/SylviaGerber.jpg'],['Testkommentar','Testkommentar2'],true));
-      this.discussions.push(new Discussion(205, new Date(), 23,1,"Der neue Artheon ist da", new Content("Diese hier ist der Content"), null, null,false,false,false,'assets/img/arteon.jpg',[],[],true));
-      this.discussions.push(new Discussion(205, new Date(), 83,2,"Batterienforschung", new Content("Diese hier ist der Content"), null, null,false,false,false,'assets/img/SylviaGerber.jpg',[],[],true));
+      this.jiveService.getDiscussions().subscribe(x => {
+        console.log(x);
+        x.forEach(d => this.discussions.push(d));
+        this.updateFilter();
+      });
       this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/elektrowagen.jpg','assets/img/emotor.jpg'],[],false));
       this.updateFilter();
   }
