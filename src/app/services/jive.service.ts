@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 export class JiveService {
 
   public static userCredentials: string;
-  private apiUrl = "https://soco.volkswagen.com/sbc/api/core/v3/";
+  private apiUrl = "http://localhost:8080/";
 
   constructor( @Inject(Http) private http: Http) {
   }
@@ -18,8 +18,19 @@ export class JiveService {
     let headers = new Headers();
     headers.append("Authorization", JiveService.userCredentials);
 
-    return this.http.get(this.apiUrl + "places/464287/contents?filter=type(discussion)&abridged=true", { headers: headers })
+    let retVal = this.http.get(this.apiUrl + "jive/places/464287/contents?filter=type(discussion)&abridged=true", { headers: headers })
       .map(x => x.json().list)
+      .catch(this.handleError)
+    retVal.subscribe(x => console.log(x));
+    return retVal;  
+  }
+
+  getDiscussion(id): Observable<Discussion> {
+    let headers = new Headers();
+    headers.append("Authorization", JiveService.userCredentials);
+
+    return this.http.get(this.apiUrl + "jive/places/464287/contents/" + id , { headers: headers })
+      .map(x => x.json())
       .catch(this.handleError)
   }
 
