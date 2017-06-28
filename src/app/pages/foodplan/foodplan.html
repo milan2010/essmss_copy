@@ -9,11 +9,11 @@
 <ion-list>
     <ion-item-group>
     <ion-item-divider>Wolfsburg</ion-item-divider>
-    <ion-item-sliding *ngFor="let factory of factorys">
+    <ion-item-sliding *ngFor="let foodentry of foodentrys">
     <Button ion-item (click)="openDetails()">
-      <h2>{{factory}}</h2>
+      <h2>{{foodentry.name}}</h2>
       <ion-thumbnail item-left>
-        <img src="">
+        <img src="{{foodentry.imageURL}}">
       </ion-thumbnail>
     </Button>
     </ion-item-sliding>
