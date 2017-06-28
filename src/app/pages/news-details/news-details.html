@@ -21,9 +21,10 @@
   <ion-card-content>
     <p>{{discussion.content.text}}</p>
   </ion-card-content>
+  <div *ngIf="discussion.isNotImportant">
   <ion-row>
     <ion-col>
-      <button ion-button icon-left clear small>
+      <button ion-button icon-left clear small (click)="likeComment()">
         <ion-icon name="thumbs-up"></ion-icon>
         <div>{{discussion.likeCount}} Likes</div>
       </button>
@@ -34,30 +35,34 @@
         <div>{{discussion.replyCount}} Comments</div>
       </button>
     </ion-col>
-    <ion-col center text-center>
-      <ion-note>
-        {{discussion.published.getHours()}}h ago
-      </ion-note>
+    <ion-col>
+      <button ion-button icon-right clear small>
+        <ion-icon name="time" style="padding-right: 5px"></ion-icon>
+        <div>{{discussion.published.getHours()}}h ago</div>
+      </button>
     </ion-col>
   </ion-row>
-
+  </div>
 </ion-card>
 </ion-content>
+
 <ion-footer>
+  <div *ngIf="discussion.isNotImportant">
   <ion-toolbar>
     <ion-list class="mar-no" >
       <form [formGroup]="commentForm" (ngSubmit)="sendMessage()" action>
         <ion-item>
           <ion-input formControlName="message" type="text" placeholder="Dein Kommentar"></ion-input>
-          <button ion-button item-right>
+          <button ion-button item-right (click)="showComments()">
             <ion-icon name="text" style="padding-right: 5px"></ion-icon>
             {{discussion.replyCount}}
           </button> 
-          <button ion-button item-right>
+          <button ion-button item-right (click)="shareContent()">
             <ion-icon name="md-share"></ion-icon>
           </button> 
         </ion-item>
       </form>
     </ion-list>
   </ion-toolbar>
+  </div>
 </ion-footer>

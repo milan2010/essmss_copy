@@ -1,3 +1,5 @@
+import { FoodPlanPage } from './../foodplan/foodplan.component';
+import { AbsencePage } from './../personal/absence/absence.components';
 import {Component} from '@angular/core';
 import {NewsPage} from '../news/news.component';
 import {TeamPage} from '../team/team.components';
@@ -11,10 +13,10 @@ import {ChatPage} from '../chat/chat.component';
 })
 export class TabsPage {
   tab1Root: any = NewsPage;
-  tab2Root: any = TeamPage;
-  tab3Root: any = WorkPage;
+  tab2Root: any = AbsencePage;
+  tab3Root: any = ChatPage;
   tab4Root: any = PersonalPage;
-  tab5Root: any = ChatPage;
+  tab5Root: any = FoodPlanPage;
 
   constructor() {
   }

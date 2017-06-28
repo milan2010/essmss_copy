@@ -1,0 +1,26 @@
+<ion-header color="white">
+  <ion-navbar>
+    <ion-title start>{{ 'HUB.TITLE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="home-page-content" no-bounce>
+<ion-list>
+  <ion-item-group>
+    <ion-item-divider color="secondary">Kommentare</ion-item-divider>
+    <ion-item *ngFor="let comment of comments">
+      <h2>{{comment}}</h2>
+      </ion-item>
+  </ion-item-group>
+</ion-list>
+</ion-content>
+<ion-footer>
+  <button ion-button full color="danger" ion-bottum (click)="closeComments()">Schließen</button>
+  <ion-toolbar>
+    <ion-list class="mar-no" >
+       <ion-item>
+          <ion-input type="text" [(ngModel)]="textValue" placeholder="Dein Kommentar"></ion-input>
+          <button ion-button item-right (click)="postComment()">Senden</button>
+        </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-footer>

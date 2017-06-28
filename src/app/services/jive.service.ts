@@ -50,7 +50,7 @@ export class Discussion {
   public constructor(public viewCount: number, public published: Date, public likeCount: number, public replyCount: number, 
   public subject: String, public content: Content, public author: Author, public contentID: number,
   public hasRead: boolean, public isFavorite: boolean, public isDeleted: boolean, public imageURL: string,
-  public articleImageURLs: string[]) {
+  public articleImageURLs: string[], public comments: string[], public isNotImportant: boolean) {
   }
 }
 
