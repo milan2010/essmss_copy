@@ -3,12 +3,12 @@ import {Http, Response, Headers} from '@angular/http';
 import {LoadingController} from 'ionic-angular';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
-import { StorageService } from "../../services/storage.service";
+import { JiveService } from '../../services/jive.service';
 
 @Injectable()
 export class LoginService {
 
-  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController, private storageService: StorageService) {
+  constructor(@Inject(Http) private http: Http, @Inject(LoadingController) private loadingCtrl: LoadingController) {
   }
 
   auth(username, password) {
@@ -19,7 +19,7 @@ export class LoginService {
       let url = 'assets/responses/' + (username.toLowerCase() === 'manager' ? 'ManagerDataSet.json' : 'EmployeeDataSet.json');
 
       let credentials = "Basic " + btoa(username + ":" + password);
-      this.storageService.set(StorageService.USER_CREDENTIALS, credentials);
+      JiveService.userCredentials = credentials;
 
       let headers = new Headers();
       headers.append("Authorization", credentials);
