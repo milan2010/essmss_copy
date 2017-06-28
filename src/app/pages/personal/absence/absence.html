@@ -1,12 +1,15 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>{{ 'PERSONAL.ABSENCE.TITLE' | translate }}</ion-title>
+    <ion-title>Meine Events</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content no-bounce>
   <calendar *ngIf="absenceData" [data]="absenceData" [types]="absenceTypes" [showSelectedDay]="false"></calendar>
+    <ion-fab right bottom>
+      <button ion-fab color="light"><ion-icon name="add"></ion-icon></button>
+          <ion-fab-list side="top">
+      <button ion-fab  (click)="addEvent()" ><ion-icon name="calendar"></ion-icon></button>
+    </ion-fab-list>
+    </ion-fab>
 </ion-content>

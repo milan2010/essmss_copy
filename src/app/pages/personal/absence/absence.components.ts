@@ -10,7 +10,7 @@ import {AbsenceTypesService} from "./absence-types.service";
 export class AbsencePage {
   absenceData: Array<Object> = [];
   absenceTypes: Array<Object> = [];
-
+  
   constructor(private absenceService: AbsenceService, private absenceTypesService: AbsenceTypesService) {
 
     absenceTypesService.getData()
@@ -29,4 +29,9 @@ export class AbsencePage {
         console.log(error);
       });
   }
+
+  addEvent() {
+    this.
+  }
+
 }

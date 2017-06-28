@@ -25,17 +25,18 @@ newsFilter:string = 'a';
   }
 
   ionViewDidLoad() {
+      this.discussions.push(new Discussion(205, new Date(), 23,1,"Standortsymposium in BS", new Content("Der Zukunftspakt gibt den Fahrplan für den Umbau des Autobauers VW vor. Was sich durch die Vereinbarung im Werk Braunschweig verändert, welche Probleme bewältigt werden müssen und welche Chancen sich ergeben, erläutern Werkleiter Otto Joos und Betriebsratschef Uwe Fritsch im Interview mit Armin Maus und Andreas Schweiger."), null, null,false,false,false,'assets/img/bv_BS.jpeg',['assets/img/bv_BS.jpeg'],[],true));
+      this.discussions.push(new Discussion(205, new Date(), 83,2,"Halle 31 in TPM Stufe 3", new Content("In der Lenkungsmontage der Halle 31 sind die Bereiche MQB (Modularer Quer Baukasten) und RC-EPS (rack concentric electric power steering) nun komplett in der TPM-Stufe 3."), null, null,false,false,false,'assets/img/tpm.jpg',['assets/img/tpm.jpg'],[],true));
       this.discussions.push(new Discussion(205, new Date(), 3,4,"Der neue E-Motor", 
-      new Content("Dein täglicher mobiler Begleiter zum Finden von Personen, Themen und Applikationen!"), null, null,false,false,false,'assets/img/emotor.jpg',
-      ['assets/img/HerbertMeiser.jpg', 'assets/img/OlafMueller.jpg', 'assets/img/SylviaGerber.jpg'],['Testkommentar','Testkommentar2'],true));
-      this.discussions.push(new Discussion(205, new Date(), 23,1,"Der neue Artheon ist da", new Content("Diese hier ist der Content"), null, null,false,false,false,'assets/img/arteon.jpg',[],[],true));
-      this.discussions.push(new Discussion(205, new Date(), 83,2,"Batterienforschung", new Content("Diese hier ist der Content"), null, null,false,false,false,'assets/img/SylviaGerber.jpg',[],[],true));
-      this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/elektrowagen.jpg','assets/img/emotor.jpg'],[],false));
+      new Content("Die Produktion des neuen Elektromotors startet in der Komponente."), null, null,false,false,false,'assets/img/emotor.jpg',
+      ['assets/img/emotor.jpg', 'assets/img/elektrowagen.jpg'],['Testkommentar','Testkommentar2'],true));
+      this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Thomas Schmall, bisher Präsident und CEO von Volkswagen do Brasil, wird mit Wirkung zum 1. Januar 2015 Mitglied des Markenvorstands Volkswagen für den Geschäftsbereich Komponente. "), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/vw.jpg','assets/img/elektrowagen.jpg'],[],false));
       this.updateFilter();
   }
 
 
   updateFilter() {
+    this.discussionsVIP = this.discussionsVIP.filter(x=>x.isDeleted === false);
     switch (this.newsFilter) {
       case 'a':
         this.discussionsFiltered = this.discussions.filter(x=>x.isDeleted===false);    
