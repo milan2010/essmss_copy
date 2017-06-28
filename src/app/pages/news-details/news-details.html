@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title start>{{ 'HUB.TITLE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="home-page-content" no-bounce><ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="{{discussion.imageURL}}">
+    </ion-avatar>
+    <h2>{{discussion.subject}}</h2>
+  </ion-item>
+
+  <ion-slides pager>
+  <ion-slide *ngFor="let discussionImage of discussion.articleImageURLs">
+      <img src="{{discussionImage}}">
+  </ion-slide>
+  </ion-slides>
+
+  <ion-card-content>
+    <p>{{discussion.content.text}}</p>
+  </ion-card-content>
+  <div *ngIf="discussion.isNotImportant">
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small (click)="likeComment()">
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{discussion.likeCount}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>{{discussion.replyCount}} Comments</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-right clear small>
+        <ion-icon name="time" style="padding-right: 5px"></ion-icon>
+        <div>{{discussion.published.getHours()}}h ago</div>
+      </button>
+    </ion-col>
+  </ion-row>
+  </div>
+</ion-card>
+</ion-content>
+
+<ion-footer>
+  <div *ngIf="discussion.isNotImportant">
+  <ion-toolbar>
+    <ion-list class="mar-no" >
+      <form [formGroup]="commentForm" (ngSubmit)="sendMessage()" action>
+        <ion-item>
+          <ion-input formControlName="message" type="text" placeholder="Dein Kommentar"></ion-input>
+          <button ion-button item-right (click)="showComments()">
+            <ion-icon name="text" style="padding-right: 5px"></ion-icon>
+            {{discussion.replyCount}}
+          </button> 
+          <button ion-button item-right (click)="shareContent()">
+            <ion-icon name="md-share"></ion-icon>
+          </button> 
+        </ion-item>
+      </form>
+    </ion-list>
+  </ion-toolbar>
+  </div>
+</ion-footer>

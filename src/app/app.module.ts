@@ -1,4 +1,3 @@
-import { requestOptionsProvider } from './../default-request-options.service';
 import {NgModule, ErrorHandler} from '@angular/core';
 import {HttpModule, Http} from '@angular/http';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
@@ -29,6 +28,10 @@ import {CanteenPage} from "./pages/work/canteen/canteen.component";
 import {AccountPage} from "./pages/settings/account/account.component";
 import {TutorialPage} from "./pages/tutorial/tutorial.component";
 import {NewsPage} from "./pages/news/news.component";
+import {NewsDetailsPage} from "./pages/news-details/news-details.component";
+import {NewsCommentsPage} from "./pages/news-comments/news-comments.component";
+import { FoodPlanPage } from './pages/foodplan/foodplan.component';
+import { FoodPlanDetailsPage } from './pages/foodplan-details/foodplan-details.component';
 
 /* COMPONENTS */
 import {NewsItem} from "./pages/hub/news-item/news-item.component";
@@ -41,7 +44,6 @@ import {Calendar} from "./components/calendar/calendar.component";
 import {UserDetailsPage} from "./components/userdetails/user-details.component";
 import {UserOverviewPage} from "./components/useroverview/useroverview.components";
 import {LikeButton} from "./components/likebutton/likebutton.component";
-
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -81,6 +83,10 @@ export function createTranslateLoader(http: Http) {
     TutorialPage,
     ListItemComponent,
     NewsPage,
+    NewsDetailsPage,
+    NewsCommentsPage,
+    FoodPlanPage,
+    FoodPlanDetailsPage,
     LikeButton
   ],
   imports: [
@@ -123,6 +129,10 @@ export function createTranslateLoader(http: Http) {
     CanteenPage,
     AccountPage,
     NewsPage,
+    NewsDetailsPage,
+    NewsCommentsPage,
+    FoodPlanPage,
+    FoodPlanDetailsPage,
     TutorialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]

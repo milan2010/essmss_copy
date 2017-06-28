@@ -1,53 +1,94 @@
 <ion-header>
   <ion-navbar>
-    <ion-title start>{{ 'HUB.TITLE' | translate }}</ion-title>
+<!--    <div style="color:white; margin-left:10px;"> 
+      <ion-icon name="md-share" style="padding-right:3px"></ion-icon>
+      KOKO 
+    </div>-->
+    <img src="assets/img/Logo_KoKo_weiss.png" style="width: 100px; margin-left:10px;">
   </ion-navbar>
 </ion-header>
 <ion-content class="home-page-content" no-bounce>
+  <ion-segment [(ngModel)]="newsFilter">
+    <ion-segment-button value="a" (click)="updateFilter()">
+      Alles
+    </ion-segment-button>
+    <ion-segment-button value="f" (click)="updateFilter()">
+      Favoriten
+    </ion-segment-button>
+    <ion-segment-button value="g" (click)="updateFilter()">
+      Gelesen
+    </ion-segment-button>
+  </ion-segment>
 <ion-searchbar></ion-searchbar>
+
 <ion-list>
+    <ion-item-group>
+    <ion-item-divider color="away">Top News</ion-item-divider>
+    <ion-item-sliding *ngFor="let discussion of discussionsVIP">
+    <Button ion-item (click)="showDetails(discussion);discussion.hasRead=true;">
+      <h2 *ngIf="!discussion.hasRead">{{discussion.subject}}</h2>
+      <p>{{discussion.content.text.slice(0,30)}}</p>
+      <p>{{discussion.content.text.slice(30,60)}}</p>
+      <p>{{discussion.content.text.slice(60,90)}}</p>
+      <ion-thumbnail item-right>
+      <img src="{{discussion.imageURL}}">
+      </ion-thumbnail>
+    </Button>
+     <ion-item-options side="left">
+      <button ion-button color="danger" (click)="deleteDiscussion(discussion)">
+        <ion-icon name="trash"></ion-icon>
+        Delete
+      </button>
+    </ion-item-options>
+    </ion-item-sliding>
+  </ion-item-group>
+
   <ion-item-group>
     <ion-item-divider color="secondary">Komponenten News</ion-item-divider>
-  <ion-item-sliding>
-    <Button ion-item (click)="loadData()">
-      <h2>Breaking News</h2>
-      <p>Erste Zeile. aslkdfjölaksjdfölkjasdöfl</p>
-      <p>Erste Zeile. aslkdfjölaksjdfölkjasdöfl</p>
-      <p>Erste Zeile. aslkdfjölaksjdfölkjasdöfl</p>
-      <ion-badge item-right>260k</ion-badge>
+  <ion-item-sliding *ngFor="let discussion of discussionsFiltered">
+    <Button ion-item (click)="showDetails(discussion);discussion.hasRead=true;">
+      <h2 *ngIf="!discussion.hasRead"><ion-icon name="star" *ngIf="discussion.isFavorite" style="padding-right: 10px" color="away"></ion-icon>{{discussion.subject}}</h2>
+      <h3 *ngIf="discussion.hasRead"><ion-icon name="star" *ngIf="discussion.isFavorite" style="padding-right: 10px" color="away"></ion-icon>{{discussion.subject}}</h3>
+      <p>{{discussion.content.text.slice(0,30)}}</p>
+      <p>{{discussion.content.text.slice(30,60)}}</p>
+      <p>{{discussion.content.text.slice(60,90)}}</p>
+      <ion-thumbnail item-right>
+      <img src="{{discussion.imageURL}}">
+    </ion-thumbnail>
+    <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{discussion.likeCount}}</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>{{discussion.replyCount}}</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+         <ion-icon name="time"></ion-icon>
+        {{discussion.published.getHours()}}h
+        </button>
+    </ion-col>
+  </ion-row>
     </Button>
     <ion-item-options side="left">
-      <button ion-button color="danger">
+      <button ion-button color="danger" (click)="deleteDiscussion(discussion)">
         <ion-icon name="trash"></ion-icon>
         Delete
       </button>
     </ion-item-options>
     <ion-item-options side="right">
-      <button ion-button color="away">
+      <button ion-button color="away" (click)="setFavorite(discussion)">
         <ion-icon name="star"></ion-icon>
         Favorite
       </button>
     </ion-item-options>
   </ion-item-sliding>
   </ion-item-group>
-   <ion-item-sliding>
-    <ion-item>
-      <h2>Es gibt Kuchen</h2>
-      <p>begrenzte Stückzahl!!!</p>
-      <ion-badge item-right>26M</ion-badge>
-    </ion-item>
-    <ion-item-options side="left">
-      <button ion-button color="danger">
-        <ion-icon name="trash"></ion-icon>
-        Delete
-      </button>
-    </ion-item-options>
-    <ion-item-options side="right">
-      <button ion-button color="away">
-        <ion-icon name="star"></ion-icon>
-        Favorite
-      </button>
-    </ion-item-options>
-  </ion-item-sliding>
 </ion-list>
 </ion-content>

@@ -57,14 +57,16 @@ export class JiveService {
 }
 
 export class Discussion {
-  public constructor(viewCount: number, published: Date, likeCount: number, replyCount: number, subject: String, content: Content, author: Author, contentID: number) {
-  }
+  public constructor(public viewCount: number, public published: Date, public likeCount: number, public replyCount: number, 
+  public subject: String, public content: Content, public author: Author, public contentID: number,
+  public hasRead: boolean, public isFavorite: boolean, public isDeleted: boolean, public imageURL: string,
+  public articleImageURLs: string[], public comments: string[], public isNotImportant: boolean) {}
 }
 
 export class Content {
-  public constructor(text: String) { }
+  constructor(public text: String) { }
 }
 
 export class Author {
-  public constructor(displayName: String) { }
+  constructor(public displayName: String) { }
 }

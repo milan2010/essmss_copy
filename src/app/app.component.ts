@@ -46,9 +46,7 @@ export class MyApp {
             this.rootPage = TutorialPage;
           }
         }
-
       });
-
     this.platformReady();
   }
 
