@@ -25,22 +25,17 @@ export class NewsDetailsPage {
     });
   }
 
-  loadData() {
-//    this.jiveService.getDiscussions()
-//      .subscribe(result => {
-//        this.discussions = result;
-//        console.log('# Discussions read' + result.toString());
-//      })
-  }
-showComments() {
+  showComments() {
    let commentsModal = this.modalCtrl.create(NewsCommentsPage);
    commentsModal.present();
- }
+  }
 
   sendMessage() {}
+  
   likeComment() {
     this.discussion.likeCount++;
   }
+
   shareContent() {
     let actionSheet = this.actionSheetCtrl.create({
       title: 'Teile diese News',
@@ -68,10 +63,8 @@ showComments() {
     });
     actionSheet.present();
   }
+
   ionViewDidLoad() {
     this.discussion.hasRead =true;
-  }
-  showContacts() {
-
   }
 }

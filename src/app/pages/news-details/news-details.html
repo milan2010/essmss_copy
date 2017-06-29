@@ -18,6 +18,7 @@
   <ion-card-content>
     <span [innerHtml]="discussion.content.text"></span>
   </ion-card-content>
+
   <div *ngIf="discussion.isNotImportant">
   <ion-row>
     <ion-col>
@@ -40,6 +41,7 @@
     </ion-col>
   </ion-row>
   </div>
+
   <div *ngIf="!discussion.isNotImportant">
   <ion-row>
     <ion-col>
@@ -76,7 +78,8 @@
     </ion-list>
   </ion-toolbar>
   </div>
-    <div *ngIf="!discussion.isNotImportant">
+
+  <div *ngIf="!discussion.isNotImportant">
   <ion-toolbar>
     <ion-list class="mar-no" >
         <ion-item>
@@ -87,5 +90,4 @@
     </ion-list>
   </ion-toolbar>
   </div>
-
 </ion-footer>

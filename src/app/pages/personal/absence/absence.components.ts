@@ -34,15 +34,10 @@ export class AbsencePage {
       });
   }
 
-  image1ClickEvent(event: any) {
-  
-  }
-
-  addEvent() {
-
+  startSlideshow() {
       let commentsModal = this.modalCtrl.create(AddMeetingPage);
       commentsModal.present();
-setTimeout(() => this.absenceService.getData2()
+        setTimeout(() => this.absenceService.getData2()
           .then(data => {
             this.absenceData = data;
           })
