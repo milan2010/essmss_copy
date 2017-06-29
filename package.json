@@ -12,23 +12,26 @@
     "ionic_sass": "./config/sass.config.js"
   },
   "dependencies": {
+    "@angular/cli": "1.0.0-beta.28.3",
     "@angular/common": "2.2.1",
     "@angular/compiler": "2.2.1",
     "@angular/compiler-cli": "2.2.1",
     "@angular/core": "2.2.1",
-    "@angular/cli": "1.0.0-beta.28.3",
     "@angular/forms": "2.2.1",
     "@angular/http": "2.2.1",
     "@angular/platform-browser": "2.2.1",
     "@angular/platform-browser-dynamic": "2.2.1",
     "@angular/platform-server": "2.2.1",
     "@ionic/storage": "1.1.7",
+    "@types/html-entities": "^1.2.15",
     "@types/jasmine": "2.5.41",
     "@types/lodash": "ts2.0",
     "@types/moment": "2.13.0",
     "@types/node": "7.0.5",
     "basscss-sass": "4.0.0",
     "codecov": "1.0.1",
+    "html-entities": "^1.2.1",
+    "intl": "^1.2.5",
     "ionic-angular": "2.0.1",
     "ionic-native": "2.4.1",
     "ionicons": "3.0.0",
@@ -36,8 +39,7 @@
     "ng2-translate": "5.0.0",
     "rxjs": "5.0.0-beta.12",
     "sw-toolbox": "3.4.0",
-    "zone.js": "0.6.26",
-    "intl": "^1.2.5"
+    "zone.js": "0.6.26"
   },
   "devDependencies": {
     "@ionic/app-scripts": "1.1.0",
