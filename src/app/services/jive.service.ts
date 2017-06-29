@@ -5,6 +5,7 @@ import { AllHtmlEntities } from 'html-entities';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
+import * as moment from 'moment';
 
 @Injectable()
 export class JiveService {
@@ -23,7 +24,7 @@ export class JiveService {
 
     let retVal = this.http.get(this.apiUrl + "jive/places/464287/contents?filter=type(discussion)", { headers: headers })
       .map(x => x.json().list.map(x => {
-        x.published = new Date(x.published);
+        x.published = moment(x.published).toDate();
         x.isDeleted = false; 
         x.isFavorite = false; 
         x.hasRead = false; 
