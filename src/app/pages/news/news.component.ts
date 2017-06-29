@@ -34,7 +34,7 @@ timer = Observable.timer(5000,1000);
         x.forEach(d => this.discussions.push(d));
         this.updateFilter();
       });
-      this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/elektrowagen.jpg','assets/img/emotor.jpg'],[],false));
+      this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("","Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/elektrowagen.jpg','assets/img/emotor.jpg'],[],false));
       this.updateFilter();
 
     this.timer.subscribe(t=> {
@@ -45,7 +45,7 @@ timer = Observable.timer(5000,1000);
       position: 'top'
     });
     toast.present();
-      this.discussionsVIP.push(new Discussion(205, new Date(), 0,0,"Neue APP-Funktion für E-Tankstellen", new Content("Neue Ladensäulen Suchfuktion in der der APP verfügbar."), null, null,false,false,false,'assets/img/ladestation.jpg',['assets/img/ladestation.jpg'],[],false));
+      this.discussionsVIP.push(new Discussion(205, new Date(), 0,0,"Neue APP-Funktion für E-Tankstellen", new Content("","Neue Ladensäulen Suchfuktion in der der APP verfügbar."), null, null,false,false,false,'assets/img/ladestation.jpg',['assets/img/ladestation.jpg'],[],false));
       this.hasPushed=true;
       this.updateFilter();
       }
