@@ -49,7 +49,7 @@ timer = Observable.timer(5000,1000);
       //this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/elektrowagen.jpg','assets/img/emotor.jpg'],[],false));
       this.updateFilter();
 
-    this.timer.subscribe(t=> {
+    /*this.timer.subscribe(t=> {
       if (!this.hasPushed) {
       let toast = this.toastCtrl.create({
       message: 'Neue News: Neue APP-Funktion für E-Tankstellen.',
@@ -62,7 +62,7 @@ timer = Observable.timer(5000,1000);
       this.updateFilter();
       }
 });
-
+*/
 this.localNotifications.schedule({
    text: 'Neue News: Neue APP-Funktion für E-Tankstellen.',
    at: new Date(new Date().getTime() + 5),
