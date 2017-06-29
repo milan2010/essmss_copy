@@ -11,7 +11,7 @@ export class JiveService {
 
   private entities = new AllHtmlEntities();
   public static userCredentials: string;
-  private apiUrl = "http://localhost:8080/";
+  private apiUrl = "https://my-komponenten-app-rest.cfapps.io/";
 
   constructor( @Inject(Http) private http: Http) {
   }
@@ -31,6 +31,7 @@ export class JiveService {
         x.imageURL = this.apiUrl + "images/" + x.imageURL;
         x.articleImageURLs = x.articleImageURLs.map(y => this.apiUrl + "images/" + y);
         x.subject = this.entities.decode(x.subject);
+        x.content.summary = this.entities.decode(x.content.summary);
         return x;
       }))
       .catch(this.handleError)
@@ -77,7 +78,7 @@ export class Discussion {
 }
 
 export class Content {
-  constructor(public text: String) { }
+  constructor(public text: String, public summary: String) { }
 }
 
 export class Author {
