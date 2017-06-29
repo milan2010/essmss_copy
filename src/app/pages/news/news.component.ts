@@ -17,7 +17,7 @@ discussionsVIP: Discussion[] = [];
 discussionsFiltered: Discussion[] = [];
 newsFilter:string = 'a';
 hasPushed: boolean= false;
-timer = Observable.timer(5000,1000);
+timer = Observable.timer(107000,100000);
   constructor(private jiveService: JiveService, private nav: NavController,
   public toastCtrl: ToastController, private platform: Platform) {
   }
