@@ -13,6 +13,7 @@ export class AbsencePage {
   absenceData: Array<Object> = [];
   absenceTypes: Array<Object> = [];
   img1Visible = false;
+
   constructor(private absenceService: AbsenceService, 
   private absenceTypesService: AbsenceTypesService,public modalCtrl: ModalController) {
 
@@ -38,8 +39,15 @@ export class AbsencePage {
   }
 
   addEvent() {
+
       let commentsModal = this.modalCtrl.create(AddMeetingPage);
       commentsModal.present();
-      //this.img1Visible=true;
+setTimeout(() => this.absenceService.getData2()
+          .then(data => {
+            this.absenceData = data;
+          })
+          .catch(error => {
+            console.log(error);
+          }), 1000)
   }
 }
