@@ -1,13 +1,11 @@
 <ion-header>
   <ion-navbar>
-<!--    <div style="color:white; margin-left:10px;"> 
+    <!--    <div style="color:white; margin-left:10px;"> 
       <ion-icon name="md-share" style="padding-right:3px"></ion-icon>
       KOKO 
     </div>-->
     <img src="assets/img/Logo_KoKo_weiss.png" style="width: 100px; margin-left:10px;">
   </ion-navbar>
-</ion-header>
-<ion-content class="home-page-content" no-bounce>
   <ion-segment [(ngModel)]="newsFilter">
     <ion-segment-button value="a" (click)="updateFilter()">
       Alles
@@ -19,13 +17,17 @@
       Gelesen
     </ion-segment-button>
   </ion-segment>
-<ion-searchbar></ion-searchbar>
-
-<ion-list>
+  <ion-searchbar></ion-searchbar>
+</ion-header>
+<ion-content class="home-page-content" no-bounce>
+  <ion-refresher (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
     <ion-item-group>
-    <ion-item-divider color="away" *ngIf="discussionsVIP.length > 0">Top News</ion-item-divider>
-    <ion-item-sliding *ngFor="let discussion of discussionsVIP">
-    <Button ion-item (click)="showDetails(discussion);discussion.hasRead=true;" *ngIf="!discussion.isDeleted">
+      <ion-item-divider color="away" *ngIf="discussionsVIP.length > 0">Top News</ion-item-divider>
+      <ion-item-sliding *ngFor="let discussion of discussionsVIP">
+        <Button ion-item (click)="showDetails(discussion);discussion.hasRead=true;" *ngIf="!discussion.isDeleted">
     <h2><ion-icon name="star" *ngIf="discussion.isFavorite" style="padding-right: 10px" color="away"></ion-icon>{{discussion.subject}}</h2>
       <p>{{discussion.content.summary.slice(0,36)}}</p>
       <p>{{discussion.content.summary.slice(36,72)}}</p>
@@ -34,24 +36,24 @@
       <img src="{{discussion.imageURL}}">
       </ion-thumbnail>
     </Button>
-     <ion-item-options side="left">
-      <button ion-button color="danger" (click)="deleteDiscussion(discussion)">
+        <ion-item-options side="left">
+          <button ion-button color="danger" (click)="deleteDiscussion(discussion)">
         <ion-icon name="trash"></ion-icon>
         Delete
       </button>
-    </ion-item-options>
-    <ion-item-options side="right">
-      <button ion-button color="away" (click)="setFavorite(discussion)">
+        </ion-item-options>
+        <ion-item-options side="right">
+          <button ion-button color="away" (click)="setFavorite(discussion)">
         <ion-icon name="star"></ion-icon>
         Favorite
       </button>
-    </ion-item-options>
-    </ion-item-sliding>
-  </ion-item-group>
-  <ion-item-group>
-    <ion-item-divider color="secondary" *ngIf="discussionsFiltered.length > 0">Komponenten News</ion-item-divider>
-  <ion-item-sliding *ngFor="let discussion of discussionsFiltered">
-    <Button ion-item (click)="showDetails(discussion);discussion.hasRead=true;">
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="secondary" *ngIf="discussionsFiltered.length > 0">Komponenten News</ion-item-divider>
+      <ion-item-sliding *ngFor="let discussion of discussionsFiltered">
+        <Button ion-item (click)="showDetails(discussion);discussion.hasRead=true;">
       <h2 *ngIf="!discussion.hasRead"><ion-icon name="star" *ngIf="discussion.isFavorite" style="padding-right: 10px" color="away"></ion-icon>{{discussion.subject}}</h2>
       <h3 *ngIf="discussion.hasRead"><ion-icon name="star" *ngIf="discussion.isFavorite" style="padding-right: 10px" color="away"></ion-icon>{{discussion.subject}}</h3>
       <p>{{discussion.content.summary.slice(0,36)}}</p>
@@ -66,34 +68,34 @@
         <ion-icon name="thumbs-up"></ion-icon>
         <div>{{discussion.likeCount}}</div>
       </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
         <ion-icon name="text"></ion-icon>
         <div>{{discussion.replyCount}}</div>
       </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
          <ion-icon name="time"></ion-icon>
-        {{discussion.published.getHours()}}h
+        {{discussion.publishedDiff}}
         </button>
-    </ion-col>
-  </ion-row>
-    </Button>
-    <ion-item-options side="left">
-      <button ion-button color="danger" (click)="deleteDiscussion(discussion)">
+        </ion-col>
+        </ion-row>
+        </Button>
+        <ion-item-options side="left">
+          <button ion-button color="danger" (click)="deleteDiscussion(discussion)">
         <ion-icon name="trash"></ion-icon>
         Delete
       </button>
-    </ion-item-options>
-    <ion-item-options side="right">
-      <button ion-button color="away" (click)="setFavorite(discussion)">
+        </ion-item-options>
+        <ion-item-options side="right">
+          <button ion-button color="away" (click)="setFavorite(discussion)">
         <ion-icon name="star"></ion-icon>
         Favorite
       </button>
-    </ion-item-options>
-  </ion-item-sliding>
-  </ion-item-group>
-</ion-list>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-item-group>
+  </ion-list>
 </ion-content>

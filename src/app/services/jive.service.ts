@@ -33,6 +33,7 @@ export class JiveService {
         x.articleImageURLs = x.articleImageURLs.map(y => this.apiUrl + "images/" + y);
         x.subject = this.entities.decode(x.subject);
         x.content.summary = this.entities.decode(x.content.summary);
+        x.publishedDiff = moment.duration(moment().diff(x.published)).humanize();
         return x;
       }))
       .catch(this.handleError)
@@ -75,7 +76,7 @@ export class Discussion {
   public constructor(public viewCount: number, public published: Date, public likeCount: number, public replyCount: number,
     public subject: String, public content: Content, public author: Author, public contentID: number,
     public hasRead: boolean, public isFavorite: boolean, public isDeleted: boolean, public imageURL: string,
-    public articleImageURLs: string[], public comments: string[], public isNotImportant: boolean) { }
+    public articleImageURLs: string[], public comments: string[], public isNotImportant: boolean, public publishedDiff: string) { }
 }
 
 export class Content {

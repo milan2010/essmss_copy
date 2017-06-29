@@ -3,7 +3,7 @@ import { JiveService, Discussion, Content } from './../../services/jive.service'
 import {Component} from '@angular/core';
 import {NavController} from "ionic-angular";
 import {NewsDetailsPage} from "./../news-details/news-details.component";
-import { ToastController, Platform } from 'ionic-angular';
+import { ToastController, Platform, LoadingController } from 'ionic-angular';
 
 @Component({
   selector: 'news-Page',
@@ -19,7 +19,7 @@ newsFilter:string = 'a';
 hasPushed: boolean= false;
 timer = Observable.timer(107000,100000);
   constructor(private jiveService: JiveService, private nav: NavController,
-  public toastCtrl: ToastController, private platform: Platform) {
+  public toastCtrl: ToastController, private platform: Platform, public loadingCtrl: LoadingController) {
   }
 
   loadData() {
@@ -29,12 +29,26 @@ timer = Observable.timer(107000,100000);
       this.nav.push(NewsDetailsPage,{'discussion': discussion});
   }
 
-  ionViewDidLoad() {
-      this.jiveService.getDiscussions().subscribe(x => {
+  refresh(refresher) {
+    console.log("Refresh triggered")
+    let loading = this.loadingCtrl.create({
+      content: 'Bitte warten...'
+    });
+    loading.present();
+    this.discussions = [];
+    this.jiveService.getDiscussions().subscribe(x => {
         x.forEach(d => this.discussions.push(d));
         this.updateFilter();
+        loading.dismiss();
+        if (refresher != null) {
+          refresher.complete();
+        }
       });
-      this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("","Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/elektrowagen.jpg','assets/img/emotor.jpg'],[],false));
+  }
+
+  ionViewDidLoad() {
+      this.refresh(null);
+      this.discussionsVIP.push(new Discussion(205, new Date(), 83,2,"Neue Struktur", new Content("","Thomas Schmall, bisher Präsident und CEO von Volkswagen do Brasil, wird mit Wirkung zum 1. Januar 2015 Mitglied des Markenvorstands Volkswagen für den Geschäftsbereich Komponente. "), null, null,false,false,false,'assets/img/schmall.jpg',['assets/img/vw.jpg','assets/img/elektrowagen.jpg'],[],false, "8 hours"));
       this.updateFilter();
 
     this.timer.subscribe(t=> {
@@ -45,7 +59,7 @@ timer = Observable.timer(107000,100000);
       position: 'top'
     });
     toast.present();
-      this.discussionsVIP.push(new Discussion(205, new Date(), 0,0,"Neue APP-Funktion für E-Tankstellen", new Content("","Neue Ladensäulen Suchfuktion in der der APP verfügbar."), null, null,false,false,false,'assets/img/ladestation.jpg',['assets/img/ladestation.jpg'],[],false));
+      this.discussionsVIP.push(new Discussion(205, new Date(), 0,0,"Neue APP-Funktion für E-Tankstellen", new Content("","Neue Ladensäulen Suchfuktion in der der APP verfügbar."), null, null,false,false,false,'assets/img/ladestation.jpg',['assets/img/ladestation.jpg'],[],false, "8 hours"));
       this.hasPushed=true;
       this.updateFilter();
       }
