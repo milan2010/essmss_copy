@@ -3,7 +3,8 @@ import { JiveService, Discussion, Content } from './../../services/jive.service'
 import {Component} from '@angular/core';
 import {NavController} from "ionic-angular";
 import {NewsDetailsPage} from "./../news-details/news-details.component";
-import { ToastController } from 'ionic-angular';
+import { ToastController, Platform } from 'ionic-angular';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @Component({
   selector: 'news-Page',
@@ -19,7 +20,8 @@ newsFilter:string = 'a';
 hasPushed: boolean= false;
 timer = Observable.timer(5000,1000);
   constructor(private jiveService: JiveService, private nav: NavController,
-  public toastCtrl: ToastController) {
+  public toastCtrl: ToastController,private localNotifications: LocalNotifications,
+  private platform: Platform) {
   }
 
   loadData() {
@@ -60,20 +62,40 @@ timer = Observable.timer(5000,1000);
       this.updateFilter();
       }
 });
+
+this.localNotifications.schedule({
+   text: 'Neue News: Neue APP-Funktion für E-Tankstellen.',
+   at: new Date(new Date().getTime() + 5),
+   led: 'FF0000',
+   sound: this.setSound()
+});
+
+
+
+
   }
 
+setSound() {
+    if (this.platform.is('android')) {
+      return 'file://assets/sounds/shame.mp3'
+    } else {
+      return 'file://assets/sounds/bell.mp3'
+    }
+  }
 
   updateFilter() {
-    this.discussionsVIP = this.discussionsVIP.filter(x=>x.isDeleted === false);
     switch (this.newsFilter) {
       case 'a':
         this.discussionsFiltered = this.discussions.filter(x=>x.isDeleted===false);    
+        this.discussionsVIP = this.discussionsVIP.filter(x=>x.isDeleted === false);
         break;
       case 'f':
         this.discussionsFiltered = this.discussions.filter(x=>x.isFavorite===true && x.isDeleted===false); 
+        this.discussionsVIP = this.discussionsVIP.filter(x=>x.isFavorite===true && x.isDeleted===false);
         break;
       case 'g':
         this.discussionsFiltered = this.discussions.filter(x=>x.hasRead===true && x.isDeleted===false);
+        this.discussionsVIP = this.discussionsVIP.filter(x=>x.hasRead===true && x.isDeleted===false);
         break;
       default:
         break;
