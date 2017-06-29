@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class JiveService {
 
+  private entities = new AllHtmlEntities();
   public static userCredentials: string;
   private apiUrl = "http://localhost:8080/";
 
@@ -19,7 +20,6 @@ export class JiveService {
     let headers = new Headers();
     headers.append("Authorization", JiveService.userCredentials);
 
-    const entities = new AllHtmlEntities();
 
     let retVal = this.http.get(this.apiUrl + "jive/places/464287/contents?filter=type(discussion)", { headers: headers })
       .map(x => x.json().list.map(x => {
@@ -30,7 +30,7 @@ export class JiveService {
         x.isNotImportant = true; 
         x.imageURL = this.apiUrl + "images/" + x.imageURL;
         x.articleImageURLs = x.articleImageURLs.map(y => this.apiUrl + "images/" + y);
-        x.subject = entities.decode(x.subject);
+        x.subject = this.entities.decode(x.subject);
         return x;
       }))
       .catch(this.handleError)
