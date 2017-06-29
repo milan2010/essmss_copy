@@ -26,7 +26,7 @@
     <ion-item-divider color="away" *ngIf="discussionsVIP.length > 0">Top News</ion-item-divider>
     <ion-item-sliding *ngFor="let discussion of discussionsVIP">
     <Button ion-item (click)="showDetails(discussion);discussion.hasRead=true;" *ngIf="!discussion.isDeleted">
-      <h2>{{discussion.subject}}</h2>
+    <h2><ion-icon name="star" *ngIf="discussion.isFavorite" style="padding-right: 10px" color="away"></ion-icon>{{discussion.subject}}</h2>
       <p>{{discussion.content.summary.slice(0,36)}}</p>
       <p>{{discussion.content.summary.slice(36,72)}}</p>
       <p>{{discussion.content.summary.slice(72,102)}} ...</p>

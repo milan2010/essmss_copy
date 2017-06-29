@@ -29,4 +29,22 @@ export class AbsenceService {
         });
     });
   }
+  getData2() {
+    return new Promise<Array<Object>>((resolve, reject) => {
+      let loading = this.loadingCtrl.create();
+      // loading.present();
+
+      this.http.get('assets/responses/AbsenceData2.json', {})
+        .toPromise()
+        .then(res => {
+          loading.dismiss();
+          this.data = res.json().d.results;
+          resolve(this.data);
+        })
+        .catch(function (error: Response) {
+          loading.dismiss();
+          reject(error);
+        });
+    });
+  }
 }

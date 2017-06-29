@@ -32,4 +32,28 @@ export class AbsenceTypesService {
         });
     });
   }
+
+  getData2() {
+    return new Promise<Array<String>>((resolve, reject) => {
+      let loading = this.loadingCtrl.create();
+      // loading.present();
+
+      if (this.data != null) {
+        loading.dismiss();
+        return this.data;
+      }
+
+      this.http.get('assets/responses/AbsenceTypes.json', {})
+        .toPromise()
+        .then(res => {
+          loading.dismiss();
+          this.data = res.json().d.results;
+          resolve(this.data);
+        })
+        .catch(function (error: Response) {
+          loading.dismiss();
+          reject(error);
+        });
+    });
+  }
 }
