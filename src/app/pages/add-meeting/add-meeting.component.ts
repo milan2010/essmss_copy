@@ -13,7 +13,8 @@ export class AddMeetingPage {
   img3Visible = false;
   img4Visible = false;
   img5Visible = false;
-
+  img6Visible = false;
+  
   constructor(private nav: NavController, private viewCtrl: ViewController) {
   }
 
